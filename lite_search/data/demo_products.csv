@@ -1,0 +1,887 @@
+id,title,category,brand,color,material,gender,sizes,price,description
+P001,Nike Air Zoom Pegasus Running Shoe,running shoes,Nike,black,mesh,men,"7,8,9,10,11",4800,"Cushioned responsive midsole for comfortable long-distance running, breathable mesh upper."
+P002,Nike Revolution 6 Running Shoe,running shoes,Nike,white,mesh,women,"5,6,7,8",3900,Lightweight everyday running shoe with soft foam for comfort.
+P003,Nike Downshifter 12 Running Shoe,running shoes,Nike,black,synthetic,men,"8,9,10",3500,Budget-friendly running shoe with durable outsole and a comfortable fit.
+P004,Nike Pegasus Trail Shoe,running shoes,Nike,green,mesh,men,"8,9,10,11",8900,Rugged trail running shoe with strong grip for muddy off-road paths.
+P005,Adidas Ultraboost Running Shoe,running shoes,Adidas,black,knit,men,"8,9,10,11",9800,"Premium boost cushioning with great energy return, very comfortable for marathon training."
+P006,Adidas Duramo SL Running Shoe,running shoes,Adidas,blue,mesh,women,"5,6,7,8",3600,Lightweight breathable running shoe for daily jogging.
+P007,Puma Softride Running Shoe,running shoes,Puma,black,mesh,men,"7,8,9,10",3200,"Soft cushioning running shoe, comfortable for all-day wear."
+P008,Puma RS-X Sneakers,sneakers,Puma,white,leather,unisex,"6,7,8,9,10",6500,Chunky retro style sneakers for casual street wear.
+P009,Adidas Stan Smith Sneakers,sneakers,Adidas,white,leather,unisex,"6,7,8,9,10",7200,Classic minimalist leather sneakers.
+P010,Nike Air Force 1 Sneakers,sneakers,Nike,white,leather,men,"8,9,10,11",9500,Iconic basketball-inspired casual sneakers.
+P011,Bata Formal Oxford Shoes,formal shoes,Bata,brown,leather,men,"7,8,9,10",3400,Classic leather oxford for office and formal events.
+P012,Bata Comfort Sandals,sandals,Bata,brown,leather,men,"8,9,10",1500,"Comfortable leather sandals, ideal for summer and casual wear."
+P013,Puma Flip Flops,sandals,Puma,black,rubber,unisex,"6,7,8,9,10",900,Lightweight waterproof flip flops for the beach and summer.
+P014,Adidas Adilette Slides,sandals,Adidas,black,rubber,unisex,"6,7,8,9,10",1800,Soft cushioned slides for post-workout comfort.
+P015,Levi's Slim Fit Jeans,jeans,Levi's,blue,denim,men,"30,32,34,36",4200,Classic slim fit stretch denim jeans.
+P016,Levi's High Rise Jeans,jeans,Levi's,black,denim,women,"26,28,30",4600,High rise skinny jeans with stretch for a flattering fit.
+P017,H&M Cotton T-Shirt,t-shirt,H&M,red,cotton,men,"S,M,L,XL",700,"Soft breathable cotton tee, lightweight for hot weather and summer."
+P018,H&M Cotton T-Shirt,t-shirt,H&M,white,cotton,women,"S,M,L",650,"Soft breathable cotton tee, lightweight for hot weather and summer."
+P019,Nike Dri-FIT Training T-Shirt,t-shirt,Nike,black,polyester,men,"S,M,L,XL",2200,Sweat-wicking quick-dry gym shirt.
+P020,Adidas Polo Shirt,shirt,Adidas,blue,cotton,men,"M,L,XL",2400,Classic polo with a soft collar for casual and golf wear.
+P021,H&M Linen Casual Shirt,shirt,H&M,beige,linen,men,"S,M,L,XL",1900,"Lightweight breathable linen shirt, perfect for summer travel and hot weather."
+P022,Zara Formal Cotton Shirt,shirt,Zara,red,cotton,men,"M,L",2500,Slim fit cotton shirt for parties and evenings out.
+P023,Zara Floral Summer Dress,dress,Zara,yellow,cotton,women,"S,M,L",3200,Light airy summer dress made of breathable fabric.
+P024,Columbia Waterproof Rain Jacket,jacket,Columbia,blue,nylon,men,"M,L,XL",7800,Waterproof breathable shell for rain and hiking.
+P025,Columbia Fleece Jacket,jacket,Columbia,grey,fleece,women,"S,M,L",5200,Warm soft fleece for winter and cold weather.
+P026,Nike Club Hoodie,hoodie,Nike,black,cotton,men,"M,L,XL",4400,Cozy fleece-lined hoodie for everyday wear.
+P027,Puma Track Pants,track pants,Puma,black,polyester,men,"M,L,XL",2600,Comfortable stretch track pants for running and the gym.
+P028,Levi's Trucker Denim Jacket,jacket,Levi's,blue,denim,unisex,"S,M,L,XL",6900,"Iconic denim jacket, durable and stylish."
+P029,Adidas Ankle Socks 3-Pack,socks,Adidas,white,cotton,unisex,"M,L",600,"Breathable cushioned socks, comfortable for running."
+P030,Nike Baseball Cap,cap,Nike,black,cotton,unisex,,1200,Adjustable cap offering sun protection for summer outings.
+P031,Columbia Quick-Dry Travel Shorts,shorts,Columbia,khaki,nylon,men,"M,L,XL",3000,Lightweight quick-dry shorts ideal for summer travel and the beach.
+P032,Puma Yoga Leggings,leggings,Puma,black,spandex,women,"S,M,L",2800,Stretchy comfortable leggings for yoga and the gym.
+P033,Wildcraft Hiking Backpack 40L,backpack,Wildcraft,blue,nylon,unisex,,3800,Waterproof rucksack for trekking and travel with padded straps for comfort.
+P034,Skybags Laptop Backpack,backpack,Skybags,black,polyester,unisex,,2200,Office and college backpack with a padded laptop compartment.
+P035,Nike Gym Duffel Bag,duffel bag,Nike,black,polyester,unisex,,3200,Roomy gym bag with a separate shoe compartment.
+P036,Wildcraft Travel Duffel 60L,travel bag,Wildcraft,green,nylon,unisex,,4900,Spacious durable bag for long trips and travel.
+P037,Fossil Leather Bifold Wallet,wallet,Fossil,brown,leather,men,,2500,Slim genuine leather wallet with card slots.
+P038,Fossil Leather Clutch Wallet,wallet,Fossil,red,leather,women,,3100,Elegant leather clutch wallet with zip closure.
+P039,Zara Faux Leather Wallet,wallet,Zara,black,faux leather,men,,900,Affordable minimalist wallet.
+P040,Fossil Leather Handbag,handbag,Fossil,black,leather,women,,9200,Structured leather handbag for work and evenings.
+P041,Ray-Ban Aviator Sunglasses,sunglasses,Ray-Ban,black,metal,unisex,,9500,Classic aviator sunglasses with polarized UV protection.
+P042,Puma Sports Sunglasses,sunglasses,Puma,black,plastic,unisex,,2800,Lightweight UV400 sunglasses for outdoor sport and summer.
+P043,Milton Steel Water Bottle 1L,water bottle,Milton,silver,steel,unisex,,700,Stainless steel bottle that keeps drinks cold for hours.
+P044,Milton Thermosteel Flask 500ml,water bottle,Milton,black,steel,unisex,,1100,"Vacuum insulated flask that keeps coffee hot for 24 hours, great for a long drive or travel."
+P045,Nike Sports Water Bottle,water bottle,Nike,blue,plastic,unisex,,800,Leakproof squeeze bottle for the gym.
+P046,Hydro Flask Insulated Travel Mug,travel mug,Hydro Flask,black,steel,unisex,,3200,Leakproof insulated mug that keeps coffee hot and fits a car cup holder.
+P047,Sony WH-1000XM5 Wireless Headphones,headphones,Sony,black,plastic,unisex,,28000,"Wireless over-ear headphones with industry-leading noise cancelling, ideal for flights and travel."
+P048,JBL Tune Wireless Earbuds,earbuds,JBL,blue,plastic,unisex,,4500,Wireless earbuds with deep bass and long battery life.
+P049,JBL Wired On-Ear Headphones,headphones,JBL,black,plastic,unisex,,2000,Affordable wired on-ear headphones.
+P050,Sony Bluetooth Speaker,speaker,Sony,black,plastic,unisex,,6500,Portable waterproof speaker for outdoor use.
+P051,Casio G-Shock Digital Watch,watch,Casio,black,resin,men,,8500,Rugged shock resistant and water resistant digital watch.
+P052,Casio Vintage Digital Watch,watch,Casio,silver,steel,unisex,,3200,Retro style digital watch with a steel strap.
+P053,Fossil Rose Gold Analog Watch,watch,Fossil,rose gold,steel,women,,11000,Elegant analog watch with a slim steel strap.
+P054,Samsung Galaxy Silicone Phone Case,phone case,Samsung,black,silicone,unisex,,900,Shockproof protective cover for Samsung Galaxy phones.
+P055,Apple iPhone Clear Case,phone case,Apple,clear,plastic,unisex,,1800,Transparent protective case for iPhone.
+P056,Anker Power Bank 20000mAh,power bank,Anker,black,plastic,unisex,,3400,"High-capacity portable charger, handy for travel."
+P057,LEGO Classic Building Blocks Set,toy,Lego,multicolor,plastic,unisex,,3500,"Colorful building blocks, a creative toy for toddlers who love building things."
+P058,Wooden Animal Puzzle,toy,Melissa & Doug,multicolor,wood,unisex,,1500,Educational wooden puzzle for toddlers.
+P059,Adidas Kids Running Shoes,running shoes,Adidas,red,mesh,boys,"3,4,5",2900,Durable lightweight running shoes for active boys.
+P060,Puma Girls Sneakers,sneakers,Puma,pink,synthetic,girls,"3,4,5",2700,Comfortable everyday sneakers for girls.
+P061,Decathlon Non-Slip Yoga Mat,yoga mat,Decathlon,purple,TPE,unisex,,1600,Cushioned 6mm non-slip yoga mat.
+P062,Nike Air Max SC Sneakers,sneakers,Nike,black,leather,men,"7,8,9,10,11",6800,Everyday cushioned sneakers with a visible air unit for comfort.
+P063,Nike Court Vision Low Sneakers,sneakers,Nike,white,synthetic leather,men,"7,8,9,10",5400,Basketball-inspired low-top sneakers for casual style.
+P064,Nike Air Zoom Winflo Running Shoe,running shoes,Nike,black,mesh,men,"7,8,9,10",4600,"Responsive cushioning for daily training, breathable and comfortable."
+P065,Nike Pegasus 40 Women's Running Shoe,running shoes,Nike,pink,mesh,women,"5,6,7,8",5200,Springy cushioned running shoe for women with a breathable upper.
+P066,Nike Flex Experience Running Shoe,running shoes,Nike,black,mesh,men,"8,9,10,11",3300,"Flexible lightweight running shoe, very comfortable and affordable."
+P067,Adidas Galaxy 6 Running Shoe,running shoes,Adidas,black,mesh,men,"7,8,9,10,11",3800,Comfortable cushioned running shoe for jogging and the gym.
+P068,Adidas Runfalcon 3 Women's Running Shoe,running shoes,Adidas,white,mesh,women,"5,6,7,8",3400,Lightweight breathable running shoe with soft cushioning.
+P069,Adidas Samba OG Sneakers,sneakers,Adidas,black,leather,unisex,"6,7,8,9,10",8200,Retro football-inspired sneakers with a gum sole.
+P070,Puma Smash V2 Sneakers,sneakers,Puma,white,leather,unisex,"6,7,8,9,10",3800,Clean low-top sneakers with a soft cushioned insole for everyday wear.
+P071,Puma Velocity Nitro Running Shoe,running shoes,Puma,blue,mesh,men,"8,9,10,11",7900,Lightweight road running shoe with nitro foam cushioning.
+P072,Puma Anzarun Women's Sneakers,sneakers,Puma,pink,synthetic,women,"5,6,7,8",3600,Comfortable lifestyle sneakers with soft cushioning.
+P073,Skechers Go Walk Slip-On Shoes,walking shoes,Skechers,grey,mesh,men,"8,9,10,11",5600,"Ultra-light slip-on shoes with a cushioned insole, comfortable for long walks."
+P074,Skechers Arch Fit Walking Shoes,walking shoes,Skechers,navy,knit,women,"5,6,7,8",6400,Arch support insole for all-day comfort while walking.
+P075,Bata Power Sports Shoes,running shoes,Bata,blue,mesh,men,"7,8,9,10",2400,Affordable sports shoes for jogging and the gym.
+P076,Apex Leather Formal Shoes,formal shoes,Apex,black,leather,men,"7,8,9,10",3900,Polished leather formal shoes for office and weddings.
+P077,Apex Ladies Leather Sandals,sandals,Apex,tan,leather,women,"5,6,7,8",1900,"Soft leather sandals with a cushioned footbed, great for summer."
+P078,Woodland Leather Hiking Boots,boots,Woodland,brown,leather,men,"7,8,9,10,11",7800,Rugged leather boots for hiking and outdoor trips.
+P079,Crocs Classic Clogs,clogs,Crocs,black,foam,unisex,"6,7,8,9,10",3300,"Lightweight waterproof clogs, comfortable for the beach and summer."
+P080,Reebok Nano Training Shoes,training shoes,Reebok,grey,mesh,men,"8,9,10,11",6900,Stable training shoes for weightlifting and gym workouts.
+P081,Bata Boys School Shoes,school shoes,Bata,black,synthetic,boys,"3,4,5,6",1800,Durable black school shoes with a cushioned sole.
+P082,Bata Girls Leather School Shoes,school shoes,Bata,black,leather,girls,"3,4,5,6",1900,Comfortable leather school shoes for girls.
+P083,Adidas Kids Sports Sneakers,sneakers,Adidas,white,mesh,girls,"3,4,5",3100,Lightweight breathable sneakers for active kids.
+P084,Puma Kids Running Shoes,running shoes,Puma,green,mesh,boys,"3,4,5",2600,Flexible running shoes for school sports day and play.
+P085,New Balance 574 Sneakers,sneakers,New Balance,grey,suede,unisex,"6,7,8,9,10",7600,Classic retro sneakers with an encapsulated cushioned midsole.
+P086,Hush Puppies Suede Loafers,loafers,Hush Puppies,brown,suede,men,"7,8,9,10",5900,Soft suede loafers for smart casual outfits.
+P087,Ladies Block Heel Sandals,heels,Aldo,black,synthetic,women,"5,6,7,8",4200,Stable block heel sandals for parties and evenings.
+P088,Women's Ballet Flats,flats,Zara,beige,synthetic,women,"5,6,7,8",2300,Lightweight flats comfortable for work and daily wear.
+P089,Nike Sportswear Club T-Shirt,t-shirt,Nike,white,cotton,men,"S,M,L,XL",1800,Soft everyday cotton tee with a relaxed fit.
+P090,Nike Pro Dri-FIT Compression Top,t-shirt,Nike,black,polyester,men,"S,M,L,XL",2900,Sweat-wicking compression top for intense workouts.
+P091,Adidas Essentials Logo T-Shirt,t-shirt,Adidas,navy,cotton,men,"S,M,L,XL",1600,Classic cotton t-shirt with a soft feel.
+P092,Adidas Women's Training Tee,t-shirt,Adidas,pink,polyester,women,"S,M,L",1900,Quick-dry breathable tee for the gym and running.
+P093,Puma Essentials Polo,shirt,Puma,red,cotton,men,"M,L,XL",2100,Casual polo with a soft collar for everyday wear.
+P094,Levi's Graphic Cotton Tee,t-shirt,Levi's,grey,cotton,men,"S,M,L,XL",1700,Soft cotton tee with a classic logo print.
+P095,Zara Oversized Cotton Tee,t-shirt,Zara,black,cotton,women,"S,M,L",1500,Relaxed oversized tee that stays breathable in summer.
+P096,H&M Slim Fit Oxford Shirt,shirt,H&M,white,cotton,men,"S,M,L,XL",2200,Crisp cotton oxford shirt for office and formal wear.
+P097,H&M Checked Flannel Shirt,shirt,H&M,red,cotton,men,"M,L,XL",2300,Warm brushed cotton flannel shirt for cool weather.
+P098,Zara Striped Linen Shirt,shirt,Zara,blue,linen,men,"S,M,L,XL",2800,Breathable linen shirt that keeps you cool in hot summer weather.
+P099,Easy Casual Check Shirt,shirt,Easy,blue,cotton,men,"M,L,XL",1400,Everyday casual check shirt with a comfortable regular fit.
+P100,Yellow Formal Business Shirt,shirt,Yellow,white,cotton,men,"M,L,XL",1700,Wrinkle-resistant business shirt for the office.
+P101,Levi's 511 Slim Jeans,jeans,Levi's,black,denim,men,"30,32,34,36",4500,Slim fit jeans with everyday stretch.
+P102,Levi's 501 Original Jeans,jeans,Levi's,blue,denim,men,"30,32,34,36,38",5200,"The original straight fit jeans, durable and timeless."
+P103,Zara Wide Leg Jeans,jeans,Zara,blue,denim,women,"26,28,30",4100,Trendy wide leg jeans with a high waist.
+P104,H&M Cotton Chino Trousers,trousers,H&M,khaki,cotton,men,"30,32,34,36",2900,Smart casual chinos for office and weekend.
+P105,Easy Formal Trousers,trousers,Easy,grey,polyester,men,"30,32,34,36",2200,Wrinkle-free formal trousers for work.
+P106,Aarong Cotton Panjabi,panjabi,Aarong,white,cotton,men,"M,L,XL,XXL",2900,Soft handcrafted cotton panjabi for Eid and festive occasions.
+P107,Aarong Embroidered Panjabi,panjabi,Aarong,navy,cotton,men,"M,L,XL",4200,Embroidered panjabi for weddings and festivals.
+P108,Yellow Casual Panjabi,panjabi,Yellow,maroon,cotton,men,"M,L,XL",2400,Lightweight cotton panjabi for Friday prayers and casual outings.
+P109,Aarong Handloom Saree,saree,Aarong,red,cotton,women,,5600,"Handloom cotton saree with a traditional border, for festivals and weddings."
+P110,Jamdani Silk Saree,saree,Aarong,green,silk,women,,12500,Elegant jamdani weave for weddings and special occasions.
+P111,Cotton Printed Kurti,kurti,Biba,yellow,cotton,women,"S,M,L,XL",1900,Light breathable cotton kurti for summer and everyday wear.
+P112,Salwar Kameez Three-Piece Set,salwar kameez,Yellow,blue,cotton,women,"S,M,L,XL",3600,"Three-piece cotton set with dupatta, comfortable for daily wear."
+P113,Nike Tech Fleece Hoodie,hoodie,Nike,grey,cotton,men,"M,L,XL",6900,Warm lightweight fleece hoodie for winter layering.
+P114,Adidas Essentials Hoodie,hoodie,Adidas,black,cotton,men,"M,L,XL",4600,Soft fleece-lined hoodie for cool days.
+P115,Zara Cropped Hoodie,hoodie,Zara,pink,cotton,women,"S,M,L",3300,Cozy cropped hoodie for casual outfits.
+P116,Columbia Windbreaker Jacket,jacket,Columbia,black,nylon,men,"M,L,XL",6200,Lightweight water-resistant windbreaker for travel and rain.
+P117,North Face Puffer Jacket,jacket,North Face,black,polyester,men,"M,L,XL",14500,Insulated puffer jacket for freezing winter weather.
+P118,Zara Leather Biker Jacket,jacket,Zara,black,faux leather,women,"S,M,L",8900,Edgy faux leather biker jacket.
+P119,H&M Wool Blend Sweater,sweater,H&M,grey,wool,men,"S,M,L,XL",3400,Warm wool blend sweater for cold winter days.
+P120,Zara Knit Cardigan,sweater,Zara,beige,wool,women,"S,M,L",3800,Soft knit cardigan to keep warm in winter.
+P121,Puma Training Shorts,shorts,Puma,black,polyester,men,"M,L,XL",1700,Lightweight breathable shorts for running and gym.
+P122,Nike Dri-FIT Running Shorts,shorts,Nike,blue,polyester,men,"M,L,XL",2300,Sweat-wicking running shorts with a built-in liner.
+P123,H&M Linen Beach Shorts,shorts,H&M,white,linen,men,"M,L,XL",1900,Airy linen shorts for beach and summer holidays.
+P124,Zara Midi Summer Dress,dress,Zara,blue,cotton,women,"S,M,L",3500,"Flowy midi dress, light and cool for hot summer days."
+P125,H&M Evening Maxi Dress,dress,H&M,black,polyester,women,"S,M,L",4800,Elegant maxi dress for parties and dinners.
+P126,Girls Floral Frock,dress,H&M,pink,cotton,girls,"3,4,5,6",1500,Soft cotton frock with a floral print for girls.
+P127,Boys Cotton Pajama Set,pajamas,H&M,blue,cotton,boys,"3,4,5,6",1200,Soft breathable cotton pajamas for comfortable sleep.
+P128,Men's Thermal Innerwear Set,thermals,Jockey,black,cotton blend,men,"M,L,XL",2100,Warm thermal top and bottom set for freezing winter.
+P129,Men's Cotton Boxer Briefs 3-Pack,innerwear,Jockey,black,cotton,men,"M,L,XL",1500,Soft breathable boxer briefs for all-day comfort.
+P130,Women's Sports Bra,sports bra,Nike,black,polyester,women,"S,M,L",2700,Medium support sports bra for running and yoga.
+P131,Woolen Winter Cap,cap,Columbia,grey,wool,unisex,,1100,Warm knitted beanie for cold weather.
+P132,Cotton Scarf Wrap,scarf,Zara,red,cotton,women,,900,Soft lightweight scarf for any season.
+P133,Winter Gloves Touchscreen,gloves,Columbia,black,fleece,unisex,"M,L",1300,Warm fleece gloves that work with touchscreens.
+P134,Rain Poncho Raincoat,raincoat,Wildcraft,yellow,pvc,unisex,"M,L,XL",1400,Foldable waterproof poncho for monsoon rain and commuting.
+P135,Compact Travel Umbrella,umbrella,Wildcraft,black,polyester,unisex,,800,"Foldable windproof umbrella that fits in a bag, great for rainy season."
+P136,American Tourister Hard Suitcase 24 inch,suitcase,American Tourister,blue,polycarbonate,unisex,,8900,"Hard shell spinner suitcase for long trips, lightweight and durable."
+P137,Safari Cabin Trolley Bag,suitcase,Safari,black,polycarbonate,unisex,,6400,Compact cabin trolley that meets airline carry-on limits.
+P138,Skybags School Backpack,backpack,Skybags,red,polyester,boys,,2100,Roomy school bag with padded straps and a water bottle pocket.
+P139,Skybags Girls School Bag,backpack,Skybags,pink,polyester,girls,,2000,Lightweight school backpack with multiple compartments.
+P140,Wildcraft Rain Cover Backpack 30L,backpack,Wildcraft,green,nylon,unisex,,2900,Waterproof daypack with rain cover for trekking and commuting.
+P141,Puma Laptop Backpack 15 inch,backpack,Puma,grey,polyester,unisex,,2500,"Padded laptop compartment, ideal for office and college."
+P142,Adidas Gym Sack,gym bag,Adidas,black,polyester,unisex,,1400,Drawstring gym sack for training kit.
+P143,Women's Tote Handbag,handbag,Zara,beige,faux leather,women,,3900,Spacious tote bag for office and shopping.
+P144,Crossbody Sling Bag,sling bag,Puma,black,polyester,unisex,,1600,Compact sling bag to carry phone and wallet while travelling.
+P145,Memory Foam Travel Neck Pillow,travel pillow,Samsonite,grey,memory foam,unisex,,1300,Comfortable neck pillow for flights and long bus rides.
+P146,Universal Travel Adapter,travel adapter,Anker,white,plastic,unisex,,1500,"Works in 150+ countries with USB ports, essential for international travel."
+P147,Luggage Weighing Scale,luggage scale,Samsonite,black,plastic,unisex,,600,Digital luggage scale to avoid airport overweight fees.
+P148,Fossil Leather Card Holder,wallet,Fossil,black,leather,men,,1900,Slim leather card holder for minimalists.
+P149,Leather Belt Reversible,belt,Fossil,black,leather,men,,1800,Reversible genuine leather belt for formal and casual wear.
+P150,Casio Edifice Chronograph Watch,watch,Casio,blue,steel,men,,13500,Sporty steel chronograph with a water resistant case.
+P151,Casio Baby-G Digital Watch,watch,Casio,pink,resin,women,,6900,Shock resistant sports watch with world time.
+P152,Fossil Gen 6 Smartwatch,smartwatch,Fossil,black,steel,unisex,,18500,Touchscreen smartwatch with heart rate and GPS.
+P153,Amazfit Bip Smartwatch,smartwatch,Amazfit,black,plastic,unisex,,5400,Lightweight fitness smartwatch with 30-day battery life and sleep tracking.
+P154,Xiaomi Mi Band 8,fitness band,Xiaomi,black,silicone,unisex,,3100,"Slim fitness tracker with heart rate, step counter and water resistance."
+P155,Fastrack Analog Watch,watch,Fastrack,black,leather,men,,3900,Trendy analog watch with a leather strap.
+P156,Titan Classic Dress Watch,watch,Titan,brown,leather,men,,7200,Elegant dress watch for formal occasions.
+P157,Ray-Ban Wayfarer Sunglasses,sunglasses,Ray-Ban,black,plastic,unisex,,9900,Iconic wayfarer frame with UV protection.
+P158,Polarized Driving Sunglasses,sunglasses,Fastrack,black,plastic,men,,2400,"Anti-glare polarized lenses with UV400 protection, ideal for driving."
+P159,Silver Chain Necklace,necklace,Tanishq,silver,silver,women,,4800,"Delicate sterling silver chain, a thoughtful gift."
+P160,Gold Plated Earrings,earrings,Zara,gold,brass,women,,1200,Lightweight statement earrings for parties.
+P161,Samsung Galaxy A15 Smartphone,smartphone,Samsung,blue,plastic,unisex,,24500,"6.5 inch AMOLED display, 50MP camera and long battery life."
+P162,Xiaomi Redmi Note 13,smartphone,Xiaomi,black,plastic,unisex,,21900,Great value phone with a 108MP camera and fast charging.
+P163,Apple iPhone 15,smartphone,Apple,black,glass,unisex,,89000,Premium smartphone with an excellent camera and A16 chip.
+P164,Walton Primo Smartphone,smartphone,Walton,grey,plastic,unisex,,12500,Budget smartphone with a large battery for everyday use.
+P165,Dell Inspiron 15 Laptop,laptop,Dell,silver,aluminum,unisex,,62000,15.6 inch laptop with Core i5 and 16GB RAM for work and study.
+P166,HP Pavilion Laptop,laptop,HP,silver,plastic,unisex,,58000,Reliable everyday laptop with SSD storage and a full HD screen.
+P167,Lenovo IdeaPad Slim 3,laptop,Lenovo,grey,plastic,unisex,,49000,"Thin and light laptop for students, with long battery life."
+P168,Asus ROG Gaming Laptop,laptop,Asus,black,aluminum,unisex,,145000,High-performance gaming laptop with RTX graphics and a 144Hz display.
+P169,Logitech Wireless Mouse,mouse,Logitech,black,plastic,unisex,,1200,Quiet wireless mouse with a comfortable ergonomic grip.
+P170,Redragon Mechanical Gaming Keyboard,keyboard,Redragon,black,plastic,unisex,,3400,RGB backlit mechanical keyboard for gaming.
+P171,Logitech C920 Webcam,webcam,Logitech,black,plastic,unisex,,6900,Full HD webcam for video calls and online classes.
+P172,Samsung 25W Fast Charger,charger,Samsung,white,plastic,unisex,,1500,USB-C fast charger for Galaxy phones.
+P173,Anker 65W GaN Charger,charger,Anker,black,plastic,unisex,,3900,"Compact fast charger that powers a laptop and phone together, great for travel."
+P174,Xiaomi Power Bank 10000mAh,power bank,Xiaomi,black,plastic,unisex,,2100,Slim portable charger that fits in a pocket.
+P175,Apple AirPods Pro,earbuds,Apple,white,plastic,unisex,,32000,Wireless earbuds with active noise cancellation and a comfortable fit.
+P176,Realme Buds Air Wireless Earbuds,earbuds,Realme,black,plastic,unisex,,3800,Affordable wireless earbuds with a low-latency gaming mode.
+P177,Sony WH-CH520 Wireless Headphones,headphones,Sony,blue,plastic,unisex,,5900,Lightweight wireless on-ear headphones with 50 hours battery.
+P178,JBL Flip 6 Bluetooth Speaker,speaker,JBL,blue,fabric,unisex,,11500,Powerful waterproof portable speaker for the beach and parties.
+P179,Kindle Paperwhite,e-reader,Amazon,black,plastic,unisex,,16500,"Glare-free e-reader with weeks of battery life, a great gift for book lovers."
+P180,Samsung Galaxy Tab A9 Tablet,tablet,Samsung,grey,aluminum,unisex,,19500,"8.7 inch tablet for streaming, study and kids."
+P181,GoPro Hero 11 Action Camera,camera,GoPro,black,plastic,unisex,,52000,"Waterproof action camera for travel, trekking and sports."
+P182,Canon EOS 1500D DSLR Camera,camera,Canon,black,plastic,unisex,,48000,Beginner DSLR camera for photography with a kit lens.
+P183,Samsung Galaxy S23 Case,phone case,Samsung,clear,plastic,unisex,,1100,Slim clear case with raised edges for protection.
+P184,iPhone 15 Silicone Case,phone case,Apple,blue,silicone,unisex,,3500,Soft-touch silicone case with a microfiber lining.
+P185,Tempered Glass Screen Protector,screen protector,Spigen,clear,glass,unisex,,700,9H hardness glass protects your phone screen from scratches.
+P186,Philips Air Fryer 4.1L,air fryer,Philips,black,plastic,unisex,,13500,"Cook crispy food with little oil, family size capacity."
+P187,Walton Rice Cooker 1.8L,rice cooker,Walton,white,aluminum,unisex,,3900,Automatic rice cooker with keep-warm function.
+P188,Panasonic Blender 1.5L,blender,Panasonic,white,plastic,unisex,,5200,"Powerful blender for smoothies, juices and sauces."
+P189,Prestige Electric Kettle 1.5L,kettle,Prestige,silver,steel,unisex,,1900,Stainless steel kettle boils water in minutes.
+P190,Milton Lunch Box Set,lunch box,Milton,blue,steel,unisex,,1300,Insulated lunch box that keeps food warm until lunchtime.
+P191,Tefal Non-Stick Frying Pan 28cm,cookware,Tefal,black,aluminum,unisex,,3200,Durable non-stick pan for healthy cooking with less oil.
+P192,Ceramic Coffee Mug Set of 4,mug,IKEA,white,ceramic,unisex,,1400,Microwave safe mugs for tea and coffee.
+P193,Nescafe Coffee Maker,coffee maker,Philips,black,plastic,unisex,,7800,Brews fresh filter coffee at home in minutes.
+P194,Dyson Cordless Vacuum Cleaner,vacuum cleaner,Dyson,purple,plastic,unisex,,58000,Powerful cordless vacuum with strong suction for the whole home.
+P195,Walton Table Fan 16 inch,fan,Walton,white,plastic,unisex,,2900,Quiet powerful fan to beat the summer heat.
+P196,Portable Rechargeable Mini Fan,fan,Xiaomi,white,plastic,unisex,,1100,Handheld fan with USB charging to stay cool in summer outdoors.
+P197,LED Desk Lamp,lamp,Philips,white,plastic,unisex,,1700,"Eye-care desk lamp with adjustable brightness, ideal for study."
+P198,Cotton Double Bedsheet Set,bedsheet,IKEA,blue,cotton,unisex,,2400,Soft breathable cotton bedsheet with two pillow covers.
+P199,Memory Foam Pillow,pillow,IKEA,white,memory foam,unisex,,1800,Supports your neck for a comfortable night's sleep.
+P200,Blackout Curtains Pair,curtains,IKEA,grey,polyester,unisex,,3100,Blocks sunlight for better sleep.
+P201,Insulated Steel Thermos 1L,thermos,Stanley,green,steel,unisex,,4800,"Keeps tea and coffee hot for 24 hours, perfect for camping and road trips."
+P202,Reusable Glass Water Bottle,water bottle,Contigo,clear,glass,unisex,,1400,BPA-free glass bottle with a protective sleeve.
+P203,Nivia Football Size 5,football,Nivia,white,rubber,unisex,,1500,Durable match football for grass and turf.
+P204,MRF Cricket Bat English Willow,cricket bat,MRF,brown,wood,men,,9800,Lightweight English willow bat for serious players.
+P205,Adjustable Dumbbell Set 20kg,dumbbells,Decathlon,black,iron,unisex,,5600,Adjustable weights for home workouts.
+P206,Skipping Rope Speed,skipping rope,Decathlon,red,pvc,unisex,,400,Adjustable speed rope for cardio and fitness.
+P207,Resistance Bands Set,resistance bands,Decathlon,multicolor,latex,unisex,,900,Set of 5 bands for strength training at home.
+P208,Cycling Helmet Adult,helmet,Decathlon,black,foam,unisex,"M,L",2800,Lightweight ventilated helmet with an adjustable fit.
+P209,Hero Mountain Bike 26 inch,bicycle,Hero,blue,steel,unisex,,18500,21-speed mountain bike for trails and city rides.
+P210,Quechua 2-Person Camping Tent,tent,Quechua,green,polyester,unisex,,9600,Waterproof tent that sets up in minutes for camping trips.
+P211,Sleeping Bag 0 Degree,sleeping bag,Wildcraft,orange,polyester,unisex,,4200,Warm sleeping bag for cold nights while camping.
+P212,Trekking Pole Pair,trekking pole,Wildcraft,black,aluminum,unisex,,2300,Lightweight adjustable poles for hiking and trekking.
+P213,Swimming Goggles Anti-Fog,goggles,Speedo,blue,silicone,unisex,,900,Anti-fog UV protection goggles for swimming.
+P214,Badminton Racket Pair,badminton racket,Yonex,black,graphite,unisex,,5200,Lightweight graphite rackets for club players.
+P215,Fitness Gloves Gym,gym gloves,Nike,black,leather,unisex,"M,L",1100,Padded palm gloves for lifting grip.
+P216,Nivea Sun Lotion SPF 50,sunscreen,Nivea,white,cream,unisex,,1300,"Protects skin from sunburn and UV in summer, water resistant."
+P217,Cetaphil Gentle Face Cleanser,face wash,Cetaphil,white,gel,unisex,,1500,Gentle cleanser for sensitive skin.
+P218,Neutrogena Hydro Boost Moisturizer,moisturizer,Neutrogena,blue,gel,unisex,,2200,Lightweight gel moisturizer that hydrates dry skin.
+P219,Dove Nourishing Shampoo 650ml,shampoo,Dove,white,liquid,unisex,,900,Repairs dry and damaged hair.
+P220,Bleu de Chanel Perfume 100ml,perfume,Chanel,blue,liquid,men,,18500,"Fresh woody fragrance, an ideal gift for him."
+P221,Zara Women Eau de Parfum,perfume,Zara,pink,liquid,women,,3500,Floral fruity fragrance for everyday wear.
+P222,Philips Beard Trimmer,trimmer,Philips,black,plastic,men,,3600,Cordless trimmer with adjustable length settings.
+P223,Braun Electric Shaver,shaver,Braun,black,plastic,men,,8900,Smooth electric shaver for sensitive skin.
+P224,Dyson Hair Dryer,hair dryer,Dyson,purple,plastic,women,,42000,Fast drying with controlled heat to protect hair shine.
+P225,Hot Wheels 20-Car Gift Pack,toy,Hot Wheels,multicolor,metal,boys,,3200,"Collectible toy cars, a perfect birthday gift for boys."
+P226,Barbie Dreamhouse Playset,toy,Barbie,pink,plastic,girls,,9800,"Multi-room dollhouse for imaginative play, a great gift for girls."
+P227,Fisher-Price Baby Rattle Set,toy,Fisher-Price,multicolor,plastic,unisex,,1100,Safe soft-grip rattles for infants.
+P228,Kids Drawing and Coloring Kit,toy,Faber-Castell,multicolor,paper,unisex,,1200,"Crayons, markers and sketchbook that encourage creativity in children."
+P229,Remote Control Racing Car,toy,Hot Wheels,red,plastic,boys,,2800,Fast rechargeable RC car for outdoor fun.
+P230,Classmate Notebook Pack of 6,notebook,Classmate,blue,paper,unisex,,700,Ruled notebooks for school and college.
+P231,Parker Jotter Ball Pen,pen,Parker,silver,steel,unisex,,1500,"Smooth writing pen, a classic gift for professionals."
+P232,Atomic Habits Book,book,Penguin,orange,paper,unisex,,1100,Bestselling book on building good habits and breaking bad ones.
+P233,Kids Story Book Collection,book,Penguin,multicolor,paper,unisex,,1800,Illustrated bedtime stories for toddlers.
+P234,Spiral Diary Planner,notebook,Moleskine,black,paper,unisex,,1300,Weekly planner to organize your schedule.
+P235,Wooden Chess Set,board game,Funskool,brown,wood,unisex,,1900,Classic chess board and pieces for family game night.
+P236,Scrabble Board Game,board game,Funskool,multicolor,plastic,unisex,,1700,"Word game that builds vocabulary, fun for the whole family."
+P237,Apple iPhone 15 Pro 128GB,smartphone,Apple,titanium,titanium,unisex,,142000,"Flagship smartphone with A17 Pro chip, Super Retina XDR display, and titanium design."
+P238,Samsung Galaxy S24 Ultra,smartphone,Samsung,gray,titanium,unisex,,155000,"Premium Android smartphone with Galaxy AI, S-Pen, and 200MP camera system."
+P239,Google Pixel 8 128GB,smartphone,Google,hazel,glass,unisex,,78000,AI-powered flagship phone with Google Tensor G3 chip and best-in-class photography.
+P240,OnePlus 12 5G 256GB,smartphone,OnePlus,green,glass,unisex,,89000,High performance smartphone with Snapdragon 8 Gen 3 and 100W SUPERVOOC fast charging.
+P241,Xiaomi Redmi Note 13 Pro+,smartphone,Xiaomi,black,glass,unisex,,39000,"Budget powerhouse smartphone with 200MP camera, curved AMOLED display and 120W charging."
+P242,Apple iPad Air 11-inch M2,tablet,Apple,blue,aluminum,unisex,,82000,"Versatile tablet with M2 chip, Liquid Retina display, and Apple Pencil Pro support."
+P243,Samsung Galaxy Tab S9 FE,tablet,Samsung,silver,metal,unisex,,52000,Water and dust resistant tablet with included S-Pen for creative work and studying.
+P244,Apple MacBook Air 13-inch M3,laptop,Apple,space gray,aluminum,unisex,,135000,"Ultra-thin laptop with M3 chip, up to 18 hours battery life, and 13.6-inch Liquid Retina display."
+P245,Dell XPS 13 Intel Core Ultra 7,laptop,Dell,platinum,aluminum,unisex,,168000,Compact premium ultrabook laptop with InfinityEdge display and carbon fiber palm rest.
+P246,Lenovo ThinkPad X1 Carbon Gen 11,laptop,Lenovo,black,carbon fiber,unisex,,175000,Legendary business laptop known for its lightweight durability and best-in-class keyboard.
+P247,ASUS ROG Zephyrus G14 Gaming Laptop,laptop,ASUS,white,magnesium,unisex,,185000,High performance gaming laptop with AMD Ryzen 9 and NVIDIA RTX 4070 graphics.
+P248,HP Pavilion 15 Core i5 16GB,laptop,HP,silver,plastic,unisex,,68000,Reliable everyday laptop for university students and home office productivity.
+P249,Logitech MX Master 3S Wireless Mouse,computer mouse,Logitech,graphite,plastic,unisex,,11500,Ergonomic wireless mouse with quiet clicks and 8K DPI any-surface tracking.
+P250,Keychron K2 Mechanical Wireless Keyboard,keyboard,Keychron,gray,aluminum,unisex,,9500,75% layout wireless mechanical keyboard with RGB backlighting and Mac/Windows compatibility.
+P251,Dell UltraSharp 27-inch 4K Monitor,monitor,Dell,black,plastic,unisex,,58000,Color-accurate 4K IPS monitor with USB-C hub connectivity for graphic designers.
+P252,Anker 735 65W GaN Fast Charger,phone charger,Anker,black,plastic,unisex,,4200,"Compact 3-port high-speed GaN wall charger for phones, tablets, and laptops."
+P253,Anker PowerCore 20000mAh Power Bank,power bank,Anker,black,plastic,unisex,,3800,High-capacity portable battery pack for multi-day smartphone and gadget recharging.
+P254,Samsung T7 Shield 1TB Portable SSD,storage,Samsung,blue,rubber,unisex,,13500,Rugged water and drop resistant external SSD with 1050 MB/s transfer speeds.
+P255,Sony WH-1000XM5 Noise Canceling Headphones,headphones,Sony,silver,synthetic,unisex,,38500,Industry-leading active noise canceling wireless over-ear headphones with exceptional sound.
+P256,Apple AirPods Pro 2 USB-C,earbuds,Apple,white,plastic,unisex,,29000,"Premium wireless earbuds with active noise cancellation, transparency mode, and spatial audio."
+P257,JBL Flip 6 Waterproof Bluetooth Speaker,speaker,JBL,black,fabric,unisex,,12500,Portable IP67 waterproof Bluetooth speaker with punchy bass and 12-hour playtime.
+P258,Bose QuietComfort 45 Wireless Headphones,headphones,Bose,black,synthetic,unisex,,32000,Comfortable lightweight over-ear headphones with renowned quiet mode noise cancellation.
+P259,Marshall Emberton II Bluetooth Speaker,speaker,Marshall,black,vinyl,unisex,,18500,Iconic vintage aesthetic compact speaker with 360-degree True Stereophonic sound.
+P260,Sennheiser HD 560S Audiophile Headphones,headphones,Sennheiser,black,velour,unisex,,19500,"Open-back audiophile studio monitoring headphones with neutral, transparent acoustic response."
+P261,Philips XXL Connected Air Fryer,air fryer,Philips,black,plastic,unisex,,26000,"Cook crispy meals with 90% less oil, 1.4kg basket capacity and smartphone app control."
+P262,Dyson V12 Detect Slim Vacuum Cleaner,vacuum cleaner,Dyson,yellow,aluminum,unisex,,68000,"Laser reveals microscopic dust, powerful cordless stick vacuum cleaner with anti-tangle bar."
+P263,Panasonic 27L Convection Microwave Oven,microwave oven,Panasonic,silver,steel,unisex,,23500,"Versatile microwave oven for baking cakes, grilling kebabs and reheating everyday food."
+P264,Havells Aqua Plus 1.5L Electric Kettle,electric kettle,Havells,black,steel,unisex,,2400,Double wall stainless steel electric kettle with auto shut-off and boil-dry safety protection.
+P265,Prestige Smart Induction Cooktop,cookware,Prestige,black,glass,unisex,,4200,Energy-efficient induction cooker with Indian and international preset cooking menus.
+P266,Tefal Hard Anodized Non-Stick Frying Pan 28cm,frying pan,Tefal,black,aluminum,unisex,,3600,Durable non-stick pan with Thermo-Spot heat indicator for easy low-oil frying.
+P267,Milton Thermosteel Flip Lid Bottle 1000ml,water bottle,Milton,silver,steel,unisex,,1250,Insulated stainless steel thermos keeps tea hot or water ice-cold for 24 hours.
+P268,Cuisinart 14-Piece Stainless Steel Knife Block Set,kitchen knife,Cuisinart,silver,steel,unisex,,9800,Superior high-carbon stainless steel blades for precision cutting and chopping.
+P269,Nike Air Force 1 07 Low Sneakers,sneakers,Nike,white,leather,unisex,"7,8,9,10,11",11500,Legendary basketball style sneakers with crisp leather and comfortable Air cushioning.
+P270,Adidas Samba Classic Indoor Soccer Shoes,sneakers,Adidas,black,leather,men,"7,8,9,10",9500,Iconic low-top casual street sneakers with suede overlay and gum rubber outsole.
+P271,Birkenstock Arizona Leather Slides,sandals,Birkenstock,brown,leather,unisex,"6,7,8,9,10",12000,Two-strap classic slide sandals with anatomical cork-latex footbed for superior comfort.
+P272,Timberland 6-Inch Premium Waterproof Boots,boots,Timberland,yellow,leather,men,"8,9,10,11",18500,Rugged nubuck leather waterproof work boots built for outdoor durability and style.
+P273,Clarks Tilden Cap Oxford Formal Shoes,formal shoes,Clarks,black,leather,men,"7,8,9,10",8900,Classic cap-toe leather dress shoes with OrthoLite footbed for corporate office wear.
+P274,Bata Comfit Slip-On Leather Loafers,loafers,Bata,brown,leather,men,"7,8,9,10",3800,Soft cushioned leather slip-on loafers for comfortable all-day casual and formal use.
+P275,Skechers GO WALK 6 Slip-Ins,walking shoes,Skechers,navy,mesh,women,"5,6,7,8",5800,Ultra-lightweight walking shoes with Hyper Pillar Technology for bounce and energy return.
+P276,Crocs Classic Clog Slip-Resistant,clogs,Crocs,white,foam,unisex,"6,7,8,9,10",4500,Lightweight water-friendly slip-on clogs with ventilation ports and pivoting heel straps.
+P277,Puma Future Play Turf Football Boots,sports shoes,Puma,blue,synthetic,boys,"6,7,8,9",4200,Agile soccer cleats designed for artificial turf and hard natural surfaces.
+P278,Zara Block Heel Strappy Sandals,heels,Zara,black,synthetic,women,"5,6,7,8",4900,Elegant mid-height block heel sandals with buckle fastening for evening party wear.
+P279,Levi's Original Denim Trucker Jacket,jacket,Levi's,blue,denim,men,"M,L,XL",7200,Timeless classic blue denim jacket with button flap chest pockets and side adjusters.
+P280,Zara Slim Fit Chino Trousers,trousers,Zara,beige,cotton,men,"30,32,34,36",3800,Tailored stretch cotton chinos suitable for both smart casual and office settings.
+P281,H&M Heavyweight Relaxed Fit Hoodie,hoodie,H&M,black,cotton,unisex,"S,M,L,XL",3200,Thick fleece-lined cotton hoodie with kangaroo pocket and ribbing at cuffs and hem.
+P282,The North Face Antora Waterproof Rain Jacket,raincoat,The North Face,black,nylon,men,"M,L,XL",11500,DryVent 2L windproof and waterproof breathable outdoor shell jacket with hood.
+P283,Aarong Handloom Silk Panjabi for Eid,panjabi,Aarong,maroon,silk,men,"38,40,42,44",5400,Exquisite handloom silk panjabi with delicate kantha stitch embroidery on neck and cuffs.
+P284,Traditional Dhakai Jamdani Saree,saree,Aarong,red,cotton,women,,14500,Authentic hand-woven Jamdani saree with floral geometric motifs for weddings and festivals.
+P285,Biba Embroidered Anarkali Kurta Set,kurti,Biba,green,georgette,women,"S,M,L,XL",6200,Festive flared Anarkali suit set with dupatta for wedding ceremonies and special occasions.
+P286,Nike Sportswear Club Fleece Joggers,trousers,Nike,gray,cotton,men,"M,L,XL",3900,Brushed-back fleece sweatpants with elastic waistband and ribbed ankle cuffs.
+P287,Puma Essentials Logo Women T-Shirt,t-shirt,Puma,pink,cotton,women,"XS,S,M,L",1800,Classic regular fit soft cotton crew neck t-shirt with rubberized chest logo.
+P288,Yellow Casual Polo Shirt,shirt,Yellow,navy,cotton,men,"M,L,XL,XXL",1600,Pique cotton short-sleeve polo shirt with ribbed collar and button placket.
+P289,H&M Linen Blend Summer Shirt,shirt,H&M,white,linen,men,"S,M,L,XL",2600,Breathable airy linen shirt with grandad mandarin collar for hot tropical weather.
+P290,Aarong Cotton Printed Lungi,lungi,Aarong,blue,cotton,men,,950,Soft pure cotton check-pattern lungi for comfortable traditional home wear.
+P291,Apple Watch Series 9 GPS 45mm,smartwatch,Apple,midnight,aluminum,unisex,,52000,"Advanced fitness and health tracker with ECG, blood oxygen, always-on retina display, and Double Tap."
+P292,Samsung Galaxy Watch 6 Classic,smartwatch,Samsung,black,steel,unisex,,36000,"Smartwatch with rotating bezel, sleep coaching, body composition analysis, and Wear OS."
+P293,Casio G-Shock GA-2100 CasiOak Watch,watch,Casio,black,resin,men,,9500,Shock-resistant slim octagonal case analog-digital watch with 200m water resistance.
+P294,Tissot PRX Powermatic 80 Automatic Watch,watch,Tissot,blue,steel,men,,78000,Swiss made luxury automatic wristwatch with integrated bracelet and 80-hour power reserve.
+P295,Ray-Ban Classic Aviator Sunglasses RB3025,sunglasses,Ray-Ban,gold,metal,unisex,,14500,Timeless aviator teardrop frame with G-15 green polarized lenses for 100% UV protection.
+P296,Oakley Holbrook Square Sunglasses,sunglasses,Oakley,black,plastic,men,,13800,Sporty lightweight O Matter frame with Prizm lenses to enhance color and contrast.
+P297,Dior Sauvage Eau de Parfum 100ml,perfume,Dior,black,liquid,men,,19500,Spicy woody masculine fragrance with notes of Calabrian bergamot and ambroxan.
+P298,The Ordinary Niacinamide 10% + Zinc 1%,skincare,The Ordinary,white,liquid,unisex,,1400,High-strength water-based vitamin and mineral blemish formula for oil and pore control.
+P299,La Roche-Posay Anthelios SPF 50+ Invisible Fluid,sunscreen,La Roche-Posay,white,liquid,unisex,,2700,"Ultra-light non-greasy broad spectrum face sunscreen, invisible on all skin tones."
+P300,Oral-B Pro 3 3000 Electric Toothbrush,electric toothbrush,Oral-B,white,plastic,unisex,,5200,Rechargeable electric toothbrush with 360-degree visible pressure sensor and 2-minute timer.
+P301,LEGO Star Wars Millennium Falcon Building Kit,building blocks,LEGO,gray,plastic,boys,,16500,Iconic Star Wars starship building kit with rotating gun turrets and character minifigures.
+P302,Monopoly Classic Family Board Game,board game,Hasbro,multicolor,cardboard,unisex,,1950,"The fast-dealing property trading board game for 2 to 6 players, great for family night."
+P303,Fisher-Price Laugh & Learn Smart Stages Table,toy,Fisher-Price,multicolor,plastic,unisex,,4800,Bilingual interactive musical learning activity table for toddlers aged 6 months and up.
+P304,Hot Wheels Monster Trucks 1:24 Scale,toy car,Hot Wheels,green,metal,boys,,1900,Durable die-cast metal monster truck with giant wheels for crushing and crashing action.
+P305,Barbie Fashionistas Doll with Wheelchair,dolls,Barbie,pink,plastic,girls,,2800,Inspires storytelling and inclusivity with a movable wheelchair and realistic accessories.
+P306,Wildcraft 45L Waterproof Trekking Rucksack,backpack,Wildcraft,orange,polyester,unisex,,4900,"Rugged ergonomic hiking backpack with rain cover, trekking pole loops and lumbar support."
+P307,Apple MacBook Pro 14-inch M3 Pro,laptop,Apple,space black,aluminum,unisex,,245000,"Liquid Retina XDR display, 18GB unified memory, and blazing-fast M3 Pro chip for professionals."
+P308,Apple Mac Studio M2 Max,desktop,Apple,silver,aluminum,unisex,,265000,"Compact workstation powerhouse with 12-core CPU, 30-core GPU, and comprehensive connectivity ports."
+P309,Apple Mac Mini M2 256GB,desktop,Apple,silver,aluminum,unisex,,74000,Compact desktop computer delivering fast M2 performance for office and home workstations.
+P310,Dell Alienware m16 R2 Gaming Laptop,laptop,Dell,dark metallic,magnesium,unisex,,215000,"High-end gaming laptop with Intel Core Ultra 9, RTX 4080, and 240Hz QHD+ display."
+P311,Dell Inspiron 14 2-in-1 Touch Laptop,laptop,Dell,silver,aluminum,unisex,,79000,Versatile folding touchscreen convertible laptop with stylus pen support for students.
+P312,HP Spectre x360 14 OLED Laptop,laptop,HP,nightfall black,aluminum,unisex,,185000,Stunning 2.8K OLED convertible laptop with 9MP webcam and Intel Evo Core Ultra 7 processor.
+P313,HP Omen 16 Gaming Laptop,laptop,HP,shadow black,aluminum,unisex,,165000,High-performance gaming machine with AMD Ryzen 7 7840HS and NVIDIA RTX 4060 graphics.
+P314,Lenovo Legion Pro 5i Gaming Laptop,laptop,Lenovo,onyx grey,aluminum,unisex,,172000,Esports-ready gaming laptop with 16-inch WQXGA 240Hz screen and Legion ColdFront 5.0 cooling.
+P315,Lenovo Yoga 9i Dual-Screen OLED Laptop,laptop,Lenovo,tidal teal,aluminum,unisex,,230000,Dual 13.3-inch PureSight OLED touchscreens with folio stand and Bluetooth keyboard for multitaskers.
+P316,Lenovo IdeaPad Slim 3 Core i3,laptop,Lenovo,arctic grey,plastic,unisex,,49000,"Affordable everyday laptop with FHD anti-glare display for school, typing, and web browsing."
+P317,Acer Predator Helios 16 Gaming Laptop,laptop,Acer,abyssal black,metal,unisex,,189000,Extreme gaming laptop with Mini LED 250Hz display and per-key RGB backlit mechanical keyboard.
+P318,Acer Swift Go 14 OLED Ultra Thin,laptop,Acer,steel gray,aluminum,unisex,,89000,Ultraportable lightweight laptop with vibrant 90Hz OLED display and 1440p QHD webcam.
+P319,ASUS TUF Gaming A15 Laptop,laptop,ASUS,mecha gray,plastic,unisex,,115000,Military-grade durability gaming laptop with AMD Ryzen 7 and NVIDIA RTX 4050 graphics.
+P320,ASUS Zenbook 14 OLED Core Ultra 7,laptop,ASUS,ponder blue,aluminum,unisex,,145000,Sleek 1.2kg ultrabook with 120Hz 3K Lumina OLED display and 75Wh all-day battery.
+P321,MSI Katana 15 Gaming Laptop,laptop,MSI,black,plastic,unisex,,128000,Powerful 13th Gen Intel Core i7 gaming laptop with 144Hz IPS display and Cooler Boost 5.
+P322,Razer Blade 15 Gaming Laptop,laptop,Razer,black,aluminum,unisex,,285000,CNC anodized aluminum gaming ultrabook with 240Hz QHD display and RTX 4070 GPU.
+P323,Razer DeathAdder V3 Pro Wireless Mouse,computer mouse,Razer,white,plastic,unisex,,14500,Ultra-lightweight 63g ergonomic esports gaming mouse with Focus Pro 30K optical sensor.
+P324,Razer BlackWidow V4 Pro Mechanical Keyboard,keyboard,Razer,black,aluminum,unisex,,22000,"Full-size gaming keyboard with Razer Green mechanical switches, dial controller, and underglow RGB."
+P325,Logitech G Pro X Superlight 2 Mouse,computer mouse,Logitech,black,plastic,unisex,,15800,Pro-grade 60g ultralight wireless competitive gaming mouse with HERO 2 sensor.
+P326,Logitech MX Keys S Advanced Wireless Keyboard,keyboard,Logitech,graphite,aluminum,unisex,,13500,Low-profile spherically-dished keys with smart illumination and fluid typing response.
+P327,Corsair Vengeance RGB DDR5 32GB RAM Kit,storage,Corsair,black,aluminum,unisex,,14200,High-speed 6000MHz DDR5 desktop memory with dynamic ten-zone RGB lighting.
+P328,Corsair K70 RGB PRO Mechanical Keyboard,keyboard,Corsair,black,aluminum,unisex,,17500,Durable brushed aluminum frame keyboard with Cherry MX switches and 8000Hz hyper-polling.
+P329,Western Digital WD Black SN850X 2TB NVMe SSD,storage,Western Digital,black,silicon,unisex,,19800,Blistering fast PCIe Gen4 internal SSD delivering up to 7300 MB/s read speeds for PC and PS5.
+P330,Seagate BarraCuda 4TB Internal Hard Drive,storage,Seagate,silver,metal,unisex,,9500,"Reliable 3.5-inch desktop HDD for massive file storage, gaming libraries, and backups."
+P331,LG UltraGear 27-inch QHD OLED Gaming Monitor,monitor,LG,black,plastic,unisex,,89000,0.03ms response time 240Hz OLED gaming monitor with true blacks and HDR10 support.
+P332,BenQ PD2705U 27-inch 4K Designer Monitor,monitor,BenQ,dark gray,plastic,unisex,,62000,Factory-calibrated 100% sRGB color accurate professional monitor with KVM switch and USB-C.
+P333,TP-Link Archer AX73 WiFi 6 Gigabit Router,router,TP-Link,black,plastic,unisex,,11500,Dual-band AX5400 WiFi 6 router with 6 high-gain antennas for 4K streaming and low-latency gaming.
+P334,ASUS RT-AX88U Pro Dual Band Gaming Router,router,ASUS,black,plastic,unisex,,28000,High-performance WiFi 6 router with dual 2.5G ports and dedicated mobile game boost.
+P335,Epson EcoTank L3250 All-in-One Wi-Fi Printer,printer,Epson,black,plastic,unisex,,23500,Ultra-low-cost ink tank colour printer with spill-free refill system and mobile Wi-Fi printing.
+P336,Canon PIXMA G3010 Wireless Ink Tank Printer,printer,Canon,black,plastic,unisex,,19800,High-volume color photo and document printing with transparent built-in ink tanks.
+P337,Samsung Galaxy Z Fold 5 512GB,smartphone,Samsung,phantom black,glass,unisex,,189000,Revolutionary foldable 7.6-inch Dynamic AMOLED 2X screen with multitasking flex mode.
+P338,Samsung Galaxy Z Flip 5 256GB,smartphone,Samsung,mint,glass,unisex,,105000,Pocket-sized clamshell folding smartphone with large 3.4-inch Flex Window cover screen.
+P339,Samsung Galaxy A55 5G 128GB,smartphone,Samsung,awesome navy,metal,unisex,,48500,"Premium metal frame smartphone with 50MP OIS camera, Super AMOLED 120Hz display, and IP67."
+P340,Samsung Galaxy S23 FE 5G,smartphone,Samsung,cream,aluminum,unisex,,64000,Fan edition flagship with pro-grade Nightography camera and durable water-resistant body.
+P341,Samsung Galaxy Fit 3 Smart Band,smartwatch,Samsung,gray,aluminum,unisex,,6500,"Sleek fitness tracker with 1.6-inch AMOLED display, sleep coaching, and 13-day battery."
+P342,Apple iPhone 15 Plus 128GB,smartphone,Apple,pink,glass,unisex,,112000,"Large 6.7-inch Super Retina XDR display, Dynamic Island, 48MP main camera, and all-day battery life."
+P343,Apple iPhone 14 128GB,smartphone,Apple,blue,aluminum,unisex,,86000,Fast A15 Bionic chip smartphone with advanced dual-camera system and Crash Detection.
+P344,Apple iPhone 13 128GB,smartphone,Apple,midnight,glass,unisex,,72000,"Reliable iPhone with Super Retina XDR OLED display, Cinematic mode, and Ceramic Shield front."
+P345,Apple Watch Ultra 2 GPS + Cellular 49mm,smartwatch,Apple,titanium,titanium,unisex,,108000,"Rugged endurance smartwatch with 3000 nits display, precision dual-frequency GPS, and 36h battery."
+P346,Apple Watch SE 2nd Gen 40mm,smartwatch,Apple,starlight,aluminum,unisex,,34000,"Essential fitness tracking, heart rate notifications, and emergency SOS at an accessible value."
+P347,Google Pixel 8 Pro 128GB,smartphone,Google,bay blue,glass,unisex,,105000,"Google flagship with Tensor G3, pro camera controls, temperature sensor, and best AI editing."
+P348,Google Pixel 7a 5G 128GB,smartphone,Google,charcoal,aluminum,unisex,,49500,High-value mid-range smartphone with flagship-tier computational photography and clean Android.
+P349,Google Pixel Watch 2 WiFi,smartwatch,Google,matte black,aluminum,unisex,,39000,"Heart rate tracking with Fitbit sensors, stress management tools, and seamless Wear OS apps."
+P350,OnePlus Open Foldable 512GB,smartphone,OnePlus,emerald dusk,glass,unisex,,179000,Ultra-thin lightweight foldable smartphone with Hasselblad camera and Open Canvas multitasking.
+P351,OnePlus Nord CE 4 5G,smartphone,OnePlus,celadon marble,plastic,unisex,,34500,Fast charging 100W SUPERVOOC smartphone with 5500mAh massive battery and Snapdragon 7 Gen 3.
+P352,OnePlus Watch 2 Dual-Engine,smartwatch,OnePlus,radiant steel,steel,unisex,,28500,Dual-engine architecture smartwatch with up to 100 hours battery life in full Smart Mode.
+P353,Xiaomi 14 Leica 512GB,smartphone,Xiaomi,white,glass,unisex,,96000,Compact flagship smartphone with Leica Summilux optical lenses and Snapdragon 8 Gen 3.
+P354,Xiaomi Poco X6 Pro 5G,smartphone,Xiaomi,yellow,plastic,unisex,,37500,High-performance gaming phone with Dimensity 8300-Ultra chip and CrystalRes 120Hz Flow AMOLED.
+P355,Xiaomi Redmi 13C 128GB,smartphone,Xiaomi,clover green,plastic,unisex,,15500,"Budget-friendly smartphone with 6.74-inch 90Hz display, 50MP AI camera, and 5000mAh battery."
+P356,Realme 12 Pro+ 5G 256GB,smartphone,Realme,submariner blue,leather,unisex,,44500,Luxury watch-inspired design phone with periscope telephoto portrait camera and curved screen.
+P357,Realme GT 6T 5G,smartphone,Realme,fluid silver,plastic,unisex,,42000,"Flagship killer with Snapdragon 7+ Gen 3, 5500mAh battery, and 120W ultra-fast charge."
+P358,Vivo V30 Pro 5G Zeiss,smartphone,Vivo,equatorial green,glass,unisex,,59000,Studio-quality portrait phone co-engineered with ZEISS optics and Aura Light portrait system.
+P359,Vivo Y200 5G 128GB,smartphone,Vivo,jungle green,glass,unisex,,26500,Slim fashionable smartphone with Smart Aura Light and 120Hz Ultra Vision AMOLED display.
+P360,Garmin Forerunner 265 GPS Running Watch,smartwatch,Garmin,black,plastic,unisex,,54000,"Dedicated runner smartwatch with bright AMOLED touchscreen, training readiness, and recovery metrics."
+P361,Garmin Fenix 7 Pro Solar Multisport Watch,smartwatch,Garmin,slate gray,titanium,unisex,,98000,"Ultimate outdoor GPS watch with solar charging sapphire lens, built-in LED flashlight, and topo maps."
+P362,Fitbit Charge 6 Fitness Tracker,smartwatch,Fitbit,obsidian,aluminum,unisex,,19500,"Advanced fitness tracker with Google apps, built-in GPS, YouTube Music controls, and ECG app."
+P363,Fitbit Versa 4 Health Smartwatch,smartwatch,Fitbit,waterfall blue,aluminum,women,,24500,"Thin lightweight health smartwatch with 40+ exercise modes, Daily Readiness Score, and Alexa."
+P364,Amazfit GTR 4 Smartwatch,smartwatch,Amazfit,superspeed black,aluminum,men,,19000,Classic round smartwatch with dual-band circularly-polarized GPS and 14-day ultra-long battery life.
+P365,Amazfit Bip 5 Large Display Smartwatch,smartwatch,Amazfit,soft black,plastic,unisex,,7800,Ultra-large 1.91-inch color touchscreen watch with Bluetooth phone calls and 120+ sports modes.
+P366,Baseus 65W GaN5 Pro USB-C Fast Charger,phone charger,Baseus,white,plastic,unisex,,3200,"Compact fast multi-port charger supporting QC 4.0 and PD 3.0 for phones, tablets, and MacBooks."
+P367,Sony Alpha ZV-E10 Mirrorless Vlog Camera,electronics,Sony,black,magnesium,unisex,,76000,Interchangeable lens 24.2MP APS-C camera with directional 3-capsule mic and product showcase setting.
+P368,Sony Alpha A7 IV Full-Frame Camera Body,electronics,Sony,black,magnesium,unisex,,248000,"Professional hybrid camera with 33MP Exmor R sensor, 4K 60p 10-bit recording, and real-time eye AF."
+P369,Sony WH-CH720N Wireless Noise Canceling Headphones,headphones,Sony,blue,plastic,unisex,,12500,Lightweight 192g over-ear headphones with Dual Noise Sensor technology and up to 35 hours battery.
+P370,Sony WF-1000XM5 True Wireless Earbuds,earbuds,Sony,silver,plastic,unisex,,31500,Astonishing sound quality and noise cancellation with Dynamic Driver X and bone conduction mics.
+P371,Sony SRS-XB100 Compact Bluetooth Speaker,speaker,Sony,orange,silicone,unisex,,6200,Ultra-portable waterproof IP67 mini speaker with Sound Diffusion Processor and 16h battery.
+P372,Canon EOS R50 Mirrorless Camera with 18-45mm Lens,electronics,Canon,white,plastic,unisex,,79000,Compact lightweight 24.2MP 4K creator camera with Dual Pixel CMOS AF II and vari-angle touch LCD.
+P373,Canon EOS R6 Mark II Camera Body,electronics,Canon,black,magnesium,unisex,,275000,Versatile full-frame mirrorless camera shooting 40 fps electronic shutter and uncropped 4K 60p.
+P374,GoPro HERO 12 Black Waterproof Action Camera,electronics,GoPro,black,plastic,unisex,,48000,Rugged waterproof action camera recording 5.3K 60fps HDR video with HyperSmooth 6.0 stabilization.
+P375,DJI Mini 4 Pro Drone with RC 2 Controller,electronics,DJI,gray,plastic,unisex,,118000,Sub-249g ultra-light foldable drone with omnidirectional obstacle sensing and 4K/60fps HDR video.
+P376,DJI Osmo Pocket 3 Gimbal Camera,electronics,DJI,black,plastic,unisex,,67000,Pocket handheld 1-inch CMOS sensor camera with 3-axis mechanical gimbal stabilization and 2-inch rotatable screen.
+P377,DJI Mic 2 Wireless Microphone System,electronics,DJI,shadow black,metal,unisex,,38000,All-in-one dual-channel wireless clip-on mic with 32-bit float internal recording and intelligent noise cancelling.
+P378,Shure SM7B Cardioid Dynamic Vocal Microphone,electronics,Shure,dark gray,steel,unisex,,46000,"Legendary broadcast studio microphone deliver smooth, warm, and flat frequency response for podcasts."
+P379,Shure MV7 USB and XLR Podcast Microphone,electronics,Shure,black,metal,unisex,,28500,Hybrid USB/XLR dynamic microphone with voice isolation technology and touch panel controls.
+P380,Blue Yeti USB Studio Condenser Microphone,electronics,Blue,black,metal,unisex,,13800,"Versatile multi-pattern USB microphone for streaming, podcasting, gaming, and musical instruments."
+P381,Elgato Stream Deck MK.2 Studio Controller,electronics,Elgato,white,plastic,unisex,,17500,"15 customizable LCD keys to trigger streaming apps, scene transitions, and audio mixers."
+P382,Elgato Facecam Full HD 60fps Webcam,webcam,Elgato,black,plastic,unisex,,16500,Pro-grade uncompressed 1080p60 studio webcam with Sony STARVIS sensor and prime glass lens.
+P383,Bose SoundLink Flex Waterproof Bluetooth Speaker,speaker,Bose,carmine red,silicone,unisex,,16800,Rugged outdoor portable speaker engineered with PositionIQ technology for rich audio everywhere.
+P384,Bose QuietComfort Ultra Noise Cancelling Earbuds,earbuds,Bose,white smoke,plastic,unisex,,34500,Breakthrough spatial audio and world-class quiet mode with custom-tune personalized ear fitting.
+P385,Audio-Technica ATH-M50x Professional Studio Monitor Headphones,headphones,Audio-Technica,black,leather,unisex,,16500,Critically acclaimed professional studio monitor headphones with 45mm large-aperture drivers.
+P386,Audio-Technica AT-LP60X Fully Automatic Turntable,electronics,Audio-Technica,gunmetal,plastic,unisex,,19500,High-fidelity automatic belt-drive vinyl record turntable with built-in switchable phono preamp.
+P387,JBL PartyBox 110 Portable Party Speaker,speaker,JBL,black,plastic,unisex,,44000,160W powerful JBL Original Pro Sound speaker with dynamic sync light show and splashproof build.
+P388,JBL Live Pro 2 True Wireless Earbuds,earbuds,JBL,silver,plastic,unisex,,14500,Adaptive noise cancelling earbuds with 6 beamforming mics for crystal clear calls and 40h playtime.
+P389,Sennheiser Momentum 4 Wireless Headphones,headphones,Sennheiser,white,synthetic,unisex,,36500,Audiophile-inspired sound acoustic system with 60 hours battery life and smart pause control.
+P390,Anker Soundcore Motion 300 Hi-Res Bluetooth Speaker,speaker,Anker,mirage black,metal,unisex,,9500,SmartCheck adaptive spatial audio 30W portable stereo speaker with wireless Hi-Res Audio certification.
+P391,Ugreen 100W 4-Port GaN Desktop Charger Hub,phone charger,Ugreen,space gray,plastic,unisex,,6800,Multi-device desktop fast charging hub powering 3 USB-C laptops and 1 USB-A smartphone simultaneously.
+P392,Nike Air Zoom Pegasus 40 Road Running Shoe,running shoes,Nike,white,mesh,men,"8,9,10,11",12500,Springy ride for any run with dual Zoom Air units and engineered single layer mesh upper.
+P393,Nike Invincible 3 Cushion Running Shoe,running shoes,Nike,black,flyknit,men,"8,9,10,11",17500,Maximum ZoomX foam cushioning engineered to help you stay on your feet and avoid fatigue.
+P394,Nike Metcon 9 Training Gym Shoes,sports shoes,Nike,smoke grey,synthetic,men,"8,9,10",13200,"Hyperlift plate in heel for stability during heavy squats, rope wraps, and functional fitness."
+P395,Adidas Ultraboost Light Running Shoes,running shoes,Adidas,core black,primeknit,men,"7,8,9,10,11",16800,Lightest Boost cushioning ever with Continental Natural Performance rubber outsole.
+P396,Adidas Adizero Boston 12 Marathon Shoes,running shoes,Adidas,lucid cyan,mesh,men,"8,9,10",15500,High-speed road racing shoes with ENERGYRODS 2.0 glass-fiber infused stiffness for race day.
+P397,New Balance 574 Core Classic Sneakers,sneakers,New Balance,grey,suede,men,"8,9,10,11",9800,Iconic hybrid road/trail casual retro sneakers with ENCAP midsole cushioning.
+P398,New Balance 990v6 Made in USA,sneakers,New Balance,grey,suede,men,"8,9,10",24000,Flagship lifestyle running sneaker with FuelCell foam and premium pigskin suede overlays.
+P399,Asics GEL-Kayano 30 Stability Running Shoes,running shoes,Asics,black,mesh,men,"8,9,10,11",15800,Advanced 4D GUIDANCE SYSTEM provides adaptive stability for marathon and long distance runners.
+P400,Asics GEL-Nimbus 26 Max Cushion Shoes,running shoes,Asics,blue,knit,men,"8,9,10",16200,Cloud-like soft landing shoes with PureGEL technology and lightweight FF BLAST PLUS ECO foam.
+P401,Under Armour HOVR Sonic 6 Running Shoes,running shoes,Under Armour,pitch gray,mesh,men,"8,9,10",11000,Zero-gravity feel running shoes with UA HOVR cushioning to maintain energy return.
+P402,Dr. Martens 1460 Smooth Leather Boots,boots,Dr. Martens,cherry red,leather,men,"8,9,10,11",18500,"Classic 8-eye unisex combat work boot with grooved edges, yellow welt stitching, and air-cushioned sole."
+P403,Woodland Nubuck Leather Trekking Shoes,boots,Woodland,camel,leather,men,"7,8,9,10",7200,Rugged heavy-duty outdoor trekking boots with deep tread rubber sole for off-road grips.
+P404,Clarks Desert Boot Suede Chukka,boots,Clarks,sand,suede,men,"7,8,9,10",12500,Iconic minimalist ankle boot designed with distinctive crepe sole and premium Charles F. Stead suede.
+P405,Clarks Oliver Cap Toe Leather Derby Shoes,formal shoes,Clarks,tan,leather,men,"8,9,10",9200,Polished leather formal derby dress shoes with breathable sheepskin lining for business meetings.
+P406,Bata Ambassador Full Grain Leather Brogues,formal shoes,Bata,black,leather,men,"7,8,9,10",4900,Executive wingtip brogue dress shoes with hand-finished leather and anti-slip sole.
+P407,Apex Venturini Handcrafted Leather Loafers,loafers,Apex,burgundy,leather,men,"7,8,9,10",5200,Hand-stitched premium leather horsebit loafers for smart semi-formal events.
+P408,Levi's 511 Slim Fit Stretch Jeans,jeans,Levi's,dark blue,denim,men,"30,32,34,36",4500,"Modern slim jeans with room to move, woven with stretch for all-day flexible comfort."
+P409,Levi's 512 Slim Tapered Fit Jeans,jeans,Levi's,black,denim,men,"30,32,34,36",4800,Tailored cut jeans that sit at waist and taper through the leg to the ankle.
+P410,Wrangler Texas Authentic Straight Leg Jeans,jeans,Wrangler,stonewash,denim,men,"32,34,36,38",3800,Original classic fit heavy-duty denim jeans with signature W-stitching on back pockets.
+P411,Calvin Klein Cotton Stretch Boxer Briefs 3-Pack,clothing,Calvin Klein,black,cotton,men,"S,M,L,XL",3400,Classic soft cotton jersey trunks with signature flexible repeating logo elastic waistband.
+P412,Tommy Hilfiger Classic Oxford Cotton Shirt,shirt,Tommy Hilfiger,sky blue,cotton,men,"M,L,XL",6200,Crisp Oxford weave button-down collar long sleeve casual and dress shirt with embroidered flag.
+P413,Polo Ralph Lauren Custom Slim Fit Polo,shirt,Polo Ralph Lauren,white,cotton,men,"M,L,XL",9500,Signature breathable cotton mesh polo shirt with ribbed armbands and iconic pony embroidery.
+P414,Zara Faux Leather Biker Motorcycle Jacket,jacket,Zara,black,synthetic,men,"M,L,XL",8500,Edgy asymmetrical zip moto jacket with notched lapels and metallic snap button detailing.
+P415,H&M Slim Fit Single-Breasted Blazer,jacket,H&M,navy,wool,men,"38,40,42",6900,"Smart tailored woven suit jacket with two-button fastening, chest pocket, and lined interior."
+P416,Uniqlo Ultra Light Down Water-Repellent Jacket,jacket,Uniqlo,olive,nylon,men,"M,L,XL",7500,Incredibly warm yet lightweight packable puffer jacket treated with durable water repellent.
+P417,Gap Vintage Soft Crewneck Sweatshirt,sweater,Gap,heather gray,cotton,men,"M,L,XL",3600,Cozy garment-washed fleece crewneck pullover sweatshirt with rib knit trims.
+P418,Aarong Short Semi-Fitting Panjabi,panjabi,Aarong,white,cotton,men,"38,40,42,44",2600,Modern semi-fitted cotton panjabi with minimal contrast stitching on placket and band collar.
+P419,Aarong Endi Silk Luxury Panjabi,panjabi,Aarong,golden,silk,men,"40,42,44",7500,Handspun lustrous Endi silk festive panjabi with fine threadwork for weddings.
+P420,Taaga Men Geometric Print Slim Shirt,shirt,Taaga,olive,cotton,men,"M,L,XL",1950,Contemporary Bangladeshi urban ethnic button-down shirt with geometric block print.
+P421,Lotto Breathable Mesh Sports Shorts,shorts,Lotto,black,polyester,men,"M,L,XL",1200,Quick-dry workout gym shorts with deep zipper pockets and elastic drawstring waistband.
+P422,Zara Floral Print Midi Wrap Dress,dress,Zara,multicolor,viscose,women,"XS,S,M,L",5200,Flowing feminine V-neck wrap dress with side tie fastening and romantic floral botanical print.
+P423,Zara High-Waisted Wide Leg Linen Trousers,trousers,Zara,white,linen,women,"XS,S,M,L",4200,Breezy summer wide-leg trousers crafted from 100% natural linen with front pleats.
+P424,Mango Double-Breasted Classic Trench Coat,coat,Mango,camel,cotton,women,"S,M,L",12500,"Water-resistant cotton-blend long trench coat with waist belt, shoulder epaulettes, and horn buttons."
+P425,H&M Mom High Ankle Light Denim Jeans,jeans,H&M,light blue,denim,women,"26,28,30,32",3400,Vintage inspired high-waist 5-pocket mom jeans in washed rigid cotton denim.
+P426,Vero Moda Satin Silky Button Down Blouse,shirt,Vero Moda,champagne,satin,women,"S,M,L",2800,Sophisticated glossy satin long sleeve shirt with pointed collar for dinner and office wear.
+P427,Forever 21 Ribbed Knit Bodycon Dress,dress,Forever 21,burgundy,cotton,women,"S,M,L",2200,Stretchy ribbed knit figure-hugging mini dress with flattering scoop neckline.
+P428,Uniqlo AIRism Seamless Wireless Bra,clothing,Uniqlo,beige,nylon,women,"S,M,L,XL",2400,Ultra-smooth wirefree bra with molded cups and quick-drying breathable AIRism fabric.
+P429,Aarong Jamdani Handloom Silk Saree Royal,saree,Aarong,black,silk,women,,22000,Masterpiece black and golden Dhakai Jamdani handloom silk saree for grand celebratory occasions.
+P430,Aarong Tangail Soft Cotton Handloom Saree,saree,Aarong,yellow,cotton,women,,4200,Traditional lightweight breathable Tangail cotton saree with woven temple border design.
+P431,Aarong Muslin Embroidered Luxury Saree,saree,Aarong,white,muslin,women,,28000,Ethereal translucent Dhakai muslin saree with delicate shadow floral hand embroidery.
+P432,Biba Printed Cotton Flared Kurta with Pants,kurti,Biba,teal,cotton,women,"S,M,L,XL",3900,Two-piece ethnic suit set featuring floral printed flared kurti and matching tapered ankle trousers.
+P433,Fabindia Chanderi Silk Zari Border Kurti,kurti,Fabindia,coral,silk,women,"S,M,L",4800,Lustrous handwoven Chanderi silk kurti highlighted with subtle golden zari borders and round neck.
+P434,Taaga Cotton Fusion Kurti for Daily Wear,kurti,Taaga,mustard,cotton,women,"S,M,L,XL",1750,Trendy urban cut short ethnic fusion tunic with wooden buttons and asymmetrical hem.
+P435,Taaga Printed Georgette Kaftan Dress,dress,Taaga,maroon,georgette,women,Free Size,2600,Relaxed fit breezy kaftan dress with drawstring waist tie and folk pattern print.
+P436,Manyavar Mohey Embroidered Wedding Lehenga,ethnic,Manyavar,ruby red,velvet,women,"M,L",38000,Grand velvet bridal lehenga choli set intricately embellished with zardozi and sequin embroidery.
+P437,ALDO Stessy Pointed Toe Stiletto Pumps,heels,ALDO,nude,patent,women,"5,6,7,8",8900,Iconic ultra-sleek high stiletto pointed toe dress pumps with Pillow Walk cushioned insole.
+P438,Steve Madden Irenee Low Block Heel Sandal,heels,Steve Madden,tan,leather,women,"5,6,7,8",9500,Minimalist ankle strap block heel sandals versatile enough for casual denim or formal dresses.
+P439,Charles & Keith Strappy Chunky Platform Sandals,sandals,Charles & Keith,black,synthetic,women,"5,6,7,8",6800,Bold statement platform flatform sandals with adjustable velcro straps and lugged sole.
+P440,Charles & Keith Metallic Push-Lock Crossbody Bag,handbag,Charles & Keith,cream,synthetic,women,,7500,Chic structured shoulder bag with front push-lock hardware and chain-link shoulder strap.
+P441,Nine West Flax Leather Dress Pumps,heels,Nine West,black,leather,women,"6,7,8",7800,Timeless pointed-toe pumps with comfortable mid-height heel for everyday corporate workplace.
+P442,Clarks Pure Tone Soft Leather Loafers,loafers,Clarks,blush,leather,women,"5,6,7,8",7400,Super supple leather slip-on shoes with collapsible heel counter and dual-density foam footbed.
+P443,Bata Comfit Slip-On Walking Wedges,sandals,Bata,bronze,leather,women,"5,6,7,8",2900,Ergonomic supportive wedge sandals with arch support for comfortable all-day walking.
+P444,Apex Moochie Strappy Flat Slides,sandals,Apex,gold,synthetic,women,"5,6,7,8",1850,Shimmering metallic dual-strap slide sandals for festive outings and casual chic styling.
+P445,Birkenstock Madrid Single Strap Slides,sandals,Birkenstock,white,birko-flor,women,"5,6,7,8",8500,Sleek single strap buckle slide with genuine cork anatomical footbed that molds to feet.
+P446,Nike Air Max 270 Women Sneakers,sneakers,Nike,barely rose,mesh,women,"5,6,7,8",13500,Lifestyle sneakers boasting Nike's biggest heel Air unit for super soft cushioning and bouncy feel.
+P447,Adidas Grand Court 2.0 Women Sneakers,sneakers,Adidas,cloud white,leather,women,"5,6,7,8",6500,Classic 70s tennis court silhouette with Cloudfoam Comfort sockliner and signature 3-stripes.
+P448,Puma Carina 2.0 Retro Platform Sneakers,sneakers,Puma,white,leather,women,"5,6,7,8",5400,Chunky California beach inspired platform low sneakers with SoftFoam+ step-in cushion.
+P449,Michael Kors Jet Set Large Saffiano Tote,handbag,Michael Kors,luggage brown,leather,women,,24000,Durable scratch-resistant Saffiano leather shoulder tote with laptop compartment and golden charm.
+P450,Coach Pebble Leather Camera Crossbody Bag,handbag,Coach,chalk,leather,women,,21500,Compact zip-top camera bag in polished pebble leather with exterior slip pocket.
+P451,Ray-Ban Erika Round Velvet Sunglasses,sunglasses,Ray-Ban,tortoise,plastic,women,,13500,Flattering retro oversized round frames with metal temples and 100% UV400 protective lenses.
+P452,Nespresso Vertuo Pop Coffee and Espresso Machine,home_appliances,Nespresso,pacific blue,plastic,unisex,,19500,Centrifusion technology brews rich aromatic barista crema espresso and coffee in 4 cup sizes.
+P453,KitchenAid Artisan 4.8L Stand Mixer,home_appliances,KitchenAid,empire red,metal,unisex,,58000,"Legendary heavy-duty planetary action stand mixer with stainless bowl, wire whip, and dough hook."
+P454,Instant Pot Duo 7-in-1 Electric Pressure Cooker 6L,pressure cooker,Instant Pot,silver,steel,unisex,,14500,"Multi-cooker replaces pressure cooker, slow cooker, rice cooker, steamer, sauté pan, and yogurt maker."
+P455,Vitamix Explorian E310 High-Speed Blender,blender,Vitamix,black,plastic,unisex,,48000,"Commercial grade 2.0 HP motor pulverizes whole fruits, nuts, and frozen ingredients into smooth purées."
+P456,Ninja Professional 1000W Countertop Blender,blender,Ninja,black,plastic,unisex,,12500,"Total crushing blades pulverize ice into snow in seconds for smoothies, frozen drinks, and sauces."
+P457,Le Creuset Signature Enameled Cast Iron Dutch Oven 5.3L,cookware,Le Creuset,cerise red,cast iron,unisex,,39000,"French handcrafted cast iron pot with vibrant enamel finish for slow simmering, roasting, and bread."
+P458,Lodge 10.25-inch Pre-Seasoned Cast Iron Skillet,frying pan,Lodge,black,cast iron,unisex,,3400,"Heirloom-quality pre-seasoned cast iron pan for searing steaks, baking cornbread, and stove cooking."
+P459,Prestige Deluxe Stainless Steel Pressure Cooker 3L,pressure cooker,Prestige,silver,steel,unisex,,3800,High grade heavy gauge stainless steel cooker with pressure indicator and gasket release safety.
+P460,Brita Marella 2.4L Water Filter Pitcher,water bottle,Brita,blue,plastic,unisex,,3200,"Reduces chlorine, limescale, and micro-particles to provide clean, great-tasting filtered drinking water."
+P461,Bodum Chambord 8-Cup French Press Coffee Maker,cookware,Bodum,chrome,glass,unisex,,4200,Classic French press with heat-resistant borosilicate glass carafe and 3-part stainless steel mesh filter.
+P462,Dyson Pure Cool TP07 Air Purifier and Tower Fan,air conditioner,Dyson,white,plastic,unisex,,64000,"HEPA H13 sealed filtration captures 99.95% of ultrafine particles, allergens, and airborne viruses."
+P463,Xiaomi Smart Air Purifier 4 Compact,home_appliances,Xiaomi,white,plastic,unisex,,11500,Quiet desktop high-efficiency particulate air purifier with real-time PM2.5 monitoring and app control.
+P464,Panasonic 1.5 Ton Inverter Split Air Conditioner,air conditioner,Panasonic,white,metal,unisex,,78000,Twin rotary inverter AC with nanoe-X air purification technology and rapid cooling mode.
+P465,Gree 1.5 Ton Fairy Non-Inverter Air Conditioner,air conditioner,Gree,white,metal,unisex,,52000,Durable tropical compressor air conditioner with Golden Fin evaporator and fast turbo cooling.
+P466,Samsung 324L Frost Free Double Door Refrigerator,refrigerator,Samsung,luxe black,steel,unisex,,68000,Digital Inverter refrigerator with Twin Cooling Plus technology keeping food fresh twice as long.
+P467,Walton 213L Direct Cool Refrigerator,refrigerator,Walton,wine red,metal,unisex,,34000,Energy-saving domestic refrigerator with wide voltage design and fast ice-making freezer.
+P468,Haier 8kg Fully Automatic Front Load Washing Machine,washing machine,Haier,silver,steel,unisex,,49000,Direct Motion motor washing machine with anti-bacterial treatment and steam allergy care cycle.
+P469,Whirlpool 7.5kg Top Load Washing Machine,washing machine,Whirlpool,gray,plastic,unisex,,27000,Hard water wash technology with Spiro Wash 360-degree circular motion for deep stain removal.
+P470,Eureka Forbes Robotic Vacuum Cleaner with Mop,vacuum cleaner,Eureka Forbes,black,plastic,unisex,,24000,"Smart robotic cleaner with gyro-navigation, scheduled cleaning, auto-recharge, and 2-in-1 mopping."
+P471,Philips Handheld Garment Steamer 1000 Series,iron,Philips,white,plastic,unisex,,4500,Compact de-wrinkling clothes steamer with 18g/min continuous steam and safe on all ironable fabrics.
+P472,Bajaj DX-7 1000W Heavyweight Dry Iron,iron,Bajaj,white,metal,unisex,,1650,Heavyweight iron with German non-stick coated soleplate and 360-degree swivel cord for crisp folds.
+P473,Egyptian Cotton 400TC Queen Bed Sheet Set,bedsheet,Trident,charcoal,cotton,unisex,,4800,Luxury breathable sateen weave 100% long-staple cotton bedsheet with two matching pillowcases.
+P474,Aarong Nakshi Kantha Hand-Stitched Quilt,traditional_bangladeshi,Aarong,multicolor,cotton,unisex,,6500,Centuries-old Bangladeshi traditional folk art quilt hand-embroidered with village narrative motifs.
+P475,Solimo Microfiber Reversible Comforter Blanket,bedsheet,AmazonBasics,navy,microfiber,unisex,,2900,All-season lightweight hypoallergenic down-alternative quilted duvet blanket for cozy sleep.
+P476,PureSpa Essential Oil Ultrasonic Aroma Diffuser,home_appliances,PureSpa,light wood,plastic,unisex,,2400,Whisper-quiet cool mist humidifier with 7 soothing ambient color-changing LED mood lights.
+P477,Bowflex SelectTech 552 Adjustable Dumbbells Pair,sports shoes,Bowflex,black,steel,unisex,,36000,"Adjusts from 2.5kg to 24kg with the turn of a dial, replacing 15 sets of standard weights."
+P478,Manduka PRO Yoga and Pilates Mat 6mm,sports shoes,Manduka,black,pvc,unisex,,11500,High-density cushioned non-slip yoga mat providing joint protection and lifetime durability.
+P479,Decathlon Domyos Heavy Resistance Band 25kg,sports shoes,Decathlon,orange,rubber,unisex,,1350,"Heavy-duty latex resistance loop for assisted pull-ups, squats, mobility, and strength training."
+P480,WOD Nation Speed Jump Rope for Double Unders,sports shoes,WOD Nation,red,steel,unisex,,1850,Ball-bearing high-speed wire skipping rope for cardiovascular conditioning and boxing workouts.
+P481,Cap Barbell Cast Iron 16kg Kettlebell,sports shoes,Cap Barbell,black,cast iron,unisex,,4200,"Solid cast iron kettlebell with wide textured handle for Russian swings, cleans, and snatches."
+P482,Quechua 2 Seconds Waterproof Camping Tent 3-Person,backpack,Decathlon,green,polyester,unisex,,13500,Instant pop-up freestanding outdoor camping tent with patented Fresh & Black blackout technology.
+P483,Coleman Poly-Lite 28L Ice Cooler Chilly Bin,water bottle,Coleman,blue,plastic,unisex,,4800,ThermOZONE insulated ice box keeping drinks and food ice-chilled for up to 3 days.
+P484,Wilson Pro Staff 97 v14 Tennis Racket,sports shoes,Wilson,brown,graphite,unisex,,26500,Precision-oriented classic tennis racket designed for advanced tournament players desiring pinpoint control.
+P485,Spalding NBA Street Outdoor Rubber Basketball,toy,Spalding,orange,rubber,unisex,Size 7,2200,Durable outdoor deep channel basketball designed to withstand rough asphalt streetball courts.
+P486,Adidas UEFA Champions League Match Ball Replica,sports shoes,Adidas,white,polyurethane,unisex,Size 5,3500,Seamless surface football with FIFA Quality certification for precise ball trajectory and soft touch.
+P487,Nivia Storm Rubber Moulded Football,sports shoes,Nivia,yellow,rubber,unisex,Size 5,950,All-weather durable rubber moulded football suitable for grassy and hard rocky playgrounds.
+P488,Speedo Fastskin Hyper Elite Racing Goggles,goggles,Speedo,gold,polycarbonate,unisex,,6500,Hydrodynamic racing swim goggles with IQfit 3D seal for leak-free competitive swimming.
+P489,Shimano 21-Speed Mountain Bicycle Helmet,sports shoes,Shimano,matte black,polycarbonate,unisex,,3800,Lightweight in-mold cycling helmet with 24 cooling air vents and adjustable dial fit system.
+P490,CamelBak Podium Chill Insulated Bike Bottle 620ml,water bottle,CamelBak,clear,plastic,unisex,,1950,Double-wall insulated squeeze sports bottle with self-sealing Jet Valve that eliminates spills.
+P491,Energizer LED Headlamp 400 Lumens IPX4,electronics,Energizer,black,plastic,unisex,,2400,Bright hands-free pivoting LED head torch with red night-vision mode for camping and running.
+P492,CeraVe Hydrating Facial Cleanser 473ml,face wash,CeraVe,green,liquid,unisex,,2100,Non-foaming lotion cleanser with 3 essential ceramides and hyaluronic acid for normal to dry skin.
+P493,CeraVe Foaming Cleanser for Oily Skin 473ml,face wash,CeraVe,blue,liquid,unisex,,2100,"Dispenses clear gel that foams with ceramides, niacinamide and hyaluronic acid to cleanse without stripping."
+P494,Paula's Choice Skin Perfecting 2% BHA Liquid Exfoliant,skincare,Paula's Choice,gray,liquid,unisex,,3900,"Leave-on gentle salicylic acid exfoliant unclogs enlarged pores, smooths wrinkles, and evens skin tone."
+P495,COSRX Advanced Snail 96 Mucin Power Essence 100ml,skincare,COSRX,clear,liquid,unisex,,1950,"Enriched with 96% snail secretion filtrate to deeply hydrate, soothe damaged skin, and boost elasticity."
+P496,Beauty of Joseon Relief Sun Rice + Probiotics SPF 50+,sunscreen,Beauty of Joseon,white,cream,unisex,,1650,Organic chemical daily sunscreen enriched with 30% rice extract and grain fermented probiotics.
+P497,Laneige Lip Sleeping Mask Berry 20g,skincare,Laneige,pink,balm,women,,1800,Nourishing leave-on overnight lip balm packed with antioxidants and vitamin C for soft smooth lips.
+P498,Dr. Jart+ Cicapair Tiger Grass Color Correcting Treatment,skincare,Dr. Jart+,green,cream,unisex,,3800,Neutralizes facial redness and protects sensitive skin with Centella Asiatica and SPF 30 mineral shield.
+P499,Tom Ford Black Orchid Eau de Parfum 50ml,perfume,Tom Ford,black,liquid,unisex,,18500,"Luxurious sensual fragrance with rich dark accords of black truffle, bergamot, and black orchid."
+P500,Creed Aventus Eau de Parfum 100ml,perfume,Creed,black,liquid,men,,38000,"Celebrated iconic woody fruity perfume with top notes of pineapple, birch, blackcurrant, and ambergris."
+P501,Giorgio Armani Acqua Di Gio Pour Homme 100ml,perfume,Giorgio Armani,clear,liquid,men,,14500,Pure aquatic Mediterranean fresh scent opening with splash of marine notes and calabrian bergamot.
+P502,Yves Saint Laurent Libre Eau de Parfum 90ml,perfume,YSL,gold,liquid,women,,17500,Floral lavender fragrance burning with sensual orange blossom from Morocco and bold diva lavender.
+P503,MAC Matte Lipstick in Ruby Woo,beauty,MAC,red,wax,women,,2400,The world-famous vivid blue-red iconic retro matte lipstick with intense color payoff and zero shine.
+P504,Maybelline Lash Sensational Sky High Mascara,beauty,Maybelline,pink,wax,women,,1200,Flex Tower brush bends to volumize and extend every single lash from root to tip without clumping.
+P505,Fenty Beauty Gloss Bomb Universal Lip Luminizer,beauty,Fenty Beauty,fenty glow,liquid,women,,2600,Explosive shine non-sticky lip gloss with conditioning shea butter and irresistible peach-vanilla scent.
+P506,Philips Norelco Multigroomer 7000 19-Piece Set,trimmer,Philips,silver,steel,men,,5800,"All-in-one stainless steel precision trimmer for beard, head, body, and nose hair with 5-hour runtime."
+P0507,Zara Slim Fit Poplin Shirt,shirt,Zara,white,cotton,men,"S,M,L,XL",3600,Classic spread collar poplin dress shirt with long sleeves and buttoned cuffs.
+P0508,Zara Textured Knit Polo Shirt,shirt,Zara,sand,cotton,men,"M,L,XL",3800,Open-weave breathable textured knit polo with Johnny collar.
+P0509,H&M Regular Fit Flannel Shirt,shirt,H&M,red,cotton,men,"S,M,L,XL",2800,Soft brushed cotton check flannel shirt with dual chest flap pockets.
+P0510,H&M Oversized Printed Graphic Tee,t-shirt,H&M,black,cotton,men,"XS,S,M,L,XL",1900,Heavyweight cotton jersey casual graphic t-shirt with dropped shoulders.
+P0511,H&M Cable-Knit Wool Blend Sweater,sweater,H&M,cream,wool,men,"M,L,XL",4200,Warm chunky cable-knit pullover sweater with ribbed crew neckline.
+P0512,Uniqlo Supima Cotton Crew Neck T-Shirt,t-shirt,Uniqlo,navy,cotton,men,"S,M,L,XL",1800,100% premium extra-long staple Supima cotton t-shirt with silky smooth texture.
+P0513,Uniqlo Dry-EX Breathable Crew Neck Tee,t-shirt,Uniqlo,olive,polyester,men,"M,L,XL",1600,Moisture-wicking athletic quick-drying t-shirt for running and gym workouts.
+P0514,Uniqlo Merino Wool V-Neck Sweater,sweater,Uniqlo,charcoal,wool,men,"M,L,XL",4800,Ultra-fine 19.5 micron 100% Merino wool knit sweater with sleek silhouette.
+P0515,Levi's Classic Western Denim Shirt,shirt,Levi's,stonewash,denim,men,"M,L,XL",5200,Iconic western denim shirt with pearl snap buttons and pointed front yoke.
+P0516,Levi's Sherpa Lined Corduroy Trucker Jacket,jacket,Levi's,brown,cotton,men,"M,L,XL",9500,Vintage wide-wale corduroy jacket lined with soft plush sherpa fleece.
+P0517,Tommy Hilfiger Essential Crew Neck T-Shirt,t-shirt,Tommy Hilfiger,white,cotton,men,"S,M,L,XL",2800,Pure organic cotton crewneck tee featuring embroidered micro flag on chest.
+P0518,Tommy Hilfiger Reversible Quilted Bomber Jacket,jacket,Tommy Hilfiger,navy,nylon,men,"M,L,XL",14500,Water-repellent insulated bomber jacket with signature stripe ribbing.
+P0519,Calvin Klein Monogram Logo Hoodie,hoodie,Calvin Klein,black,cotton,men,"S,M,L,XL",7200,French terry cotton fleece hoodie with drawstring hood and kangaroo pouch.
+P0520,Polo Ralph Lauren Cable Knit Cotton Sweater,sweater,Polo Ralph Lauren,hunter green,cotton,men,"M,L,XL",13500,Signature slim-fit textured cable-knit sweater with embroidered pony.
+P0521,Polo Ralph Lauren Custom Fit Linen Shirt,shirt,Polo Ralph Lauren,light blue,linen,men,"M,L,XL",11000,Airy pure linen button-down sport shirt for warm summer weather.
+P0522,Gap Arch Logo Fleece Pullover Hoodie,hoodie,Gap,heather gray,cotton,unisex,"XS,S,M,L,XL",4200,Classic comfortable fleece pullover hoodie with appliqué arch logo.
+P0523,The North Face McMurdo Down Parka Coat,coat,The North Face,black,nylon,men,"M,L,XL",28000,600-fill recycled waterfowl down heavy winter coat with faux-fur trimmed hood.
+P0524,Columbia Watertight II Rain Jacket,raincoat,Columbia,collegiate navy,nylon,men,"M,L,XL",8500,Omni-Tech waterproof breathable seam-sealed packable rain shell jacket.
+P0525,Sailor Formal Cotton Plain Shirt,shirt,Sailor,blue,cotton,men,"15,15.5,16,16.5",2200,Sharp office formal executive shirt with structured collar and single cuffs.
+P0526,Cats Eye Casual Printed Long Sleeve Shirt,shirt,Cats Eye,maroon,cotton,men,"M,L,XL",2400,Smart casual button-down shirt with geometric micro-print motifs.
+P0527,Yellow Premium Drop Shoulder T-Shirt,t-shirt,Yellow,sage green,cotton,men,"M,L,XL",1250,Heavyweight cotton loose fit drop shoulder street style t-shirt.
+P0528,Yellow Windbreaker Zip-Up Jacket,jacket,Yellow,black,polyester,men,"M,L,XL",3400,Lightweight windproof zip jacket with mesh lining and side pockets.
+P0529,Zara Embroidered Linen Blouse,shirt,Zara,ecru,linen,women,"XS,S,M,L",4200,Bohemian linen blouse with delicate tonal floral embroidery and balloon sleeves.
+P0530,Zara Faux Shearling Aviator Jacket,jacket,Zara,tan,synthetic,women,"S,M,L",11500,Double-faced aviator jacket with plush faux shearling lapels and buckle neck strap.
+P0531,Mango Tweed Structured Pocket Blazer,jacket,Mango,black,wool,women,"S,M,L",9800,Elegant French tweed tailored jacket with decorative embossed gold buttons.
+P0532,Mango Flowy Satin Button-Up Blouse,shirt,Mango,emerald green,satin,women,"XS,S,M,L",3600,Silky drape shirt with spread collar and concealed button front placket.
+P0533,H&M Rib-Knit Fitted Turtleneck Sweater,sweater,H&M,beige,viscose,women,"XS,S,M,L",2600,Soft fine-knit stretchy ribbed turtleneck sweater for stylish winter layering.
+P0534,H&M Cropped Denim Shacket,jacket,H&M,denim blue,cotton,women,"S,M,L",3800,Relaxed cropped overshirt jacket in rigid cotton denim with flap chest pockets.
+P0535,Vero Moda Longline Puffer Winter Coat,coat,Vero Moda,olive,polyester,women,"S,M,L",9200,Warm padded long puffer coat with detachable hood and fleece-lined pockets.
+P0536,Vero Moda Peplum Hem Cotton Top,shirt,Vero Moda,white,cotton,women,"S,M,L",2200,Flattering short sleeve peplum silhouette blouse with sweetheart neckline.
+P0537,Forever 21 Faux Fur Cropped Jacket,jacket,Forever 21,blush pink,synthetic,women,"S,M,L",4500,Glamorous ultra-soft plush faux fur cropped jacket with satin inner lining.
+P0538,Forever 21 Oversized Graphic Band Tee,t-shirt,Forever 21,charcoal,cotton,women,"S,M,L",1800,Vintage distressed wash rock band graphic oversized cotton t-shirt.
+P0539,Taaga Modern Cut Cotton Kurti Top,kurti,Taaga,teal,cotton,women,"S,M,L,XL",1850,"Urban ethnic tunic top with side slits, wooden buttons, and minimal print."
+P0540,Taaga Embroidered Cotton Kimono Shrug,jacket,Taaga,black,cotton,women,Free Size,2200,Open-front layer kimono shrug with floral thread embroidery on borders.
+P0541,Uniqlo Fluffy Yarn Fleece Full-Zip Jacket,jacket,Uniqlo,off white,fleece,women,"S,M,L",3900,Incredibly warm fluffy teddy fleece zip jacket with high stand collar.
+P0542,Uniqlo Rayon Long Sleeve Work Blouse,shirt,Uniqlo,lavender,rayon,women,"S,M,L",2900,Wrinkle-resistant smooth drape blouse designed for professional office chic.
+P0543,Under Armour Tech 2.0 Short Sleeve Tee,t-shirt,Under Armour,royal blue,polyester,men,"M,L,XL",2600,Quick-drying ultra-soft UA Tech fabric t-shirt with anti-odor technology.
+P0544,Nike Club Fleece Crew Sweatshirt,sweater,Nike,dark grey,cotton,men,"M,L,XL",4800,Standard fit brushed fleece sweatshirt with embroidered Futura logo on chest.
+P0545,Adidas Essentials 3-Stripes Track Top,jacket,Adidas,black,polyester,men,"M,L,XL",5600,"Heritage tricot track jacket with full zip, stand-up collar, and white stripes."
+P0546,Puma Power Colorblock Fleece Hoodie,hoodie,Puma,red,cotton,men,"M,L,XL",4200,Bold graphic colorblock cotton-blend pullover hoodie with kangaroo pocket.
+P0547,Bata Executive Formal Striped Tie & Cufflinks Set,clothing,Bata,maroon,silk,men,,1600,Woven jacquard silk necktie with matching rhodium-plated metallic cufflinks.
+P0548,Apex Men Classic Wool Blend Overcoat,coat,Apex,camel,wool,men,"38,40,42",12500,Notch lapel single-breasted wool overcoat providing winter warmth and elegance.
+P0549,Zara Faux Leather Trench Coat,coat,Zara,burgundy,synthetic,women,"S,M,L",13500,"Chic long faux leather trench coat with tie belt, storm flap, and side welt pockets."
+P0550,Mango V-Neck Cashmere Knit Jumper,sweater,Mango,camel,cashmere,women,"S,M,L",14500,100% pure featherlight soft cashmere knit sweater with refined ribbed trims.
+P0551,Aarong Short Khadi Kurta for Men,shirt,Aarong,brick red,cotton,men,"38,40,42,44",1750,Breathable handspun khadi cotton short kurta with band collar and pocket.
+P0552,Levi's 505 Regular Fit Straight Jeans,jeans,Levi's,medium stonewash,denim,men,"30,32,34,36",4600,Classic straight leg jeans with extra room in the thigh and zip fly closure.
+P0553,Levi's 527 Slim Bootcut Jeans,jeans,Levi's,dark indigo,denim,men,"32,34,36",4900,Modern slim bootcut jeans cut slim through the seat and thigh with wide leg opening.
+P0554,Wrangler Authentics Classic 5-Pocket Regular Jean,jeans,Wrangler,heavy stonewash,denim,men,"32,34,36,38",3600,Durable 100% cotton denim jeans built for rugged everyday utility.
+P0555,Lee Extreme Motion Straight Fit Tapered Jeans,jeans,Lee,black,denim,men,"30,32,34,36",4200,Innovative flexible waistband and power-stretch denim for maximum mobility.
+P0556,Zara Wide Leg Pleated Trousers,trousers,Zara,anthracite,viscose,men,"30,32,34,36",4800,Contemporary loose drape trousers with double front pleats and belt loops.
+P0557,Zara Slim Fit Ripped Biker Jeans,jeans,Zara,light grey,denim,men,"30,32,34",4500,Stretch denim jeans with distressed abrasions and ribbed moto paneling on knees.
+P0558,H&M Regular Fit Linen Blend Joggers,trousers,H&M,beige,linen,men,"S,M,L,XL",2900,Relaxed fit drawstring waist linen-blend trousers with elasticized ankle cuffs.
+P0559,H&M Cargo Trousers with Pocket Details,trousers,H&M,khaki green,cotton,men,"30,32,34,36",3600,Cotton twill utility cargo pants with bellow flap leg pockets and zip fly.
+P0560,Uniqlo Smart Ankle Trousers 2-Way Stretch,trousers,Uniqlo,navy,polyester,men,"S,M,L,XL",3800,Tapered ankle cut formal trousers with comfortable elastic waistband look.
+P0561,Uniqlo Slim Fit Chino Pants,trousers,Uniqlo,khaki,cotton,men,"30,32,34,36",3900,High-density combed cotton twill chinos with neat flattering slim silhouette.
+P0562,Dockers Signature Khaki Lux Cotton Pant,trousers,Dockers,british khaki,cotton,men,"32,34,36",4900,Stain defender stretch khaki dress trousers with permanent crease line.
+P0563,Sailor Formal Executive Dress Trousers,trousers,Sailor,black,viscose,men,"30,32,34,36",2400,Wrinkle-resistant sharp tailored formal dress trousers for business suits.
+P0564,Apex Venturini Cotton Stretch Chinos,trousers,Apex,navy blue,cotton,men,"30,32,34,36",2600,Smart casual cotton stretch chinos tailored for all-day office comfort.
+P0565,Yellow Basic Denim Jeans Slim,jeans,Yellow,dark blue,denim,men,"30,32,34,36",2400,Everyday dark wash slim denim jeans with coin pocket and leather patch.
+P0566,Yellow Casual Twill Shorts,shorts,Yellow,olive,cotton,men,"30,32,34",1600,Pure cotton twill casual chino shorts hitting just above the knee.
+P0567,Nike Dri-FIT Challenger 7-inch Running Shorts,shorts,Nike,black,polyester,men,"M,L,XL",2800,Lightweight sweat-wicking running shorts with brief liner and phone pocket.
+P0568,Adidas Tiro 23 League Training Pants,trousers,Adidas,black,polyester,men,"M,L,XL",4200,Tapered soccer training track pants with ankle zips and AEROREADY moisture control.
+P0569,Under Armour Woven Graphic Wordmark Shorts,shorts,Under Armour,graphite,polyester,men,"M,L,XL",2400,Ultra-lightweight durable breathable woven training shorts with encase elastic waist.
+P0570,Zara Mom Fit High Waist Vintage Jeans,jeans,Zara,medium blue,denim,women,"26,28,30,32",3900,Rigid cotton 90s vintage style high rise mom jeans with tapered ankle.
+P0571,Zara Flared Faux Leather Trousers,trousers,Zara,black,synthetic,women,"XS,S,M,L",4600,High-waisted bootcut flared pants crafted from sleek buttery faux leather.
+P0572,Mango Wide-Leg Culotte Pants,trousers,Mango,terracotta,linen,women,"S,M,L",4200,Cropped wide-leg culotte trousers with removable matching fabric tie belt.
+P0573,Mango Slim Push-Up Jeans,jeans,Mango,dark grey,denim,women,"26,28,30,32",4400,"Special seam construction denim jeans designed to lift, sculpt, and contour."
+P0574,H&M High Waist Seamless Leggings,leggings,H&M,black,polyester,women,"XS,S,M,L",2200,Soft microfiber seamless sculpting leggings with supportive ribbed high waistband.
+P0575,H&M Flared Jersey Trousers with Slits,trousers,H&M,chocolate brown,viscose,women,"S,M,L",2400,Fitted stretch jersey flared trousers featuring side ankle split hems.
+P0576,Vero Moda Paperbag Waist Cotton Shorts,shorts,Vero Moda,white,cotton,women,"S,M,L",2100,Breezy summer shorts with gathered ruffled paperbag waist and sash tie.
+P0577,Levi's 721 High Rise Skinny Jeans,jeans,Levi's,black,denim,women,"26,28,30,32",4800,Flattering pin-up high-rise skinny jeans engineered to hold and flatter your shape.
+P0578,Levi's Ribcage Straight Ankle Jeans,jeans,Levi's,tango light,denim,women,"26,28,30,32",5400,Levi's highest high rise jeans with 12-inch rise and straight vintage leg.
+P0579,Uniqlo Ultra Stretch High Rise Leggings Pants,leggings,Uniqlo,navy,cotton,women,"S,M,L,XL",2800,Amazing 360-degree all-direction stretch pants looking like real skinny denim.
+P0580,Lululemon Align High-Rise Pant 25-inch,leggings,Lululemon,black,nylon,women,"4,6,8,10",12500,Buttery-soft weightless Nulu fabric yoga tights for low-impact yoga and daily wear.
+P0581,Lululemon Wunder Train High-Rise Tight,leggings,Lululemon,true navy,everlux,women,"4,6,8,10",13200,Highly breathable fast-drying Everlux fabric workout tights that handle sweat.
+P0582,Nike One High-Waisted 7/8 Leggings,leggings,Nike,plum,polyester,women,"S,M,L",4200,Non-sheer fabric squat-tested athletic leggings with hidden waistband storage pockets.
+P0583,Forever 21 Cargo Jogger Pants,trousers,Forever 21,camo green,cotton,women,"S,M,L",2600,Relaxed fit streetwear cargo jogger pants with utility pockets and elastic hems.
+P0584,Taaga Cotton Palazzo Pants Wide,trousers,Taaga,off white,cotton,women,"S,M,L,XL",1600,Flared breathable ethnic palazzo pants with lace inserts on bottom borders.
+P0585,Taaga Straight Cut Cigarette Pants,trousers,Taaga,beige,cotton,women,"S,M,L,XL",1450,Tailored cigarette trousers designed to pair with short kurtis and ethnic tunics.
+P0586,Aarong White Cotton Pajama Trousers,trousers,Aarong,white,cotton,men,"38,40,42,44",950,Traditional straight-cut drawcord waist cotton pajama trousers for panjabi.
+P0587,Aarong Dhakai Jamdani Saree Golden Flower,saree,Aarong,royal blue,cotton,women,,18500,Exquisite geometric floral motif Dhakai Jamdani saree handwoven on traditional pit looms.
+P0588,Aarong Floral Hand Painted Silk Saree,saree,Aarong,magenta,silk,women,,16500,Pure Murshidabad silk saree hand-painted with vibrant indigenous floral artwork.
+P0589,Aarong Tangail Cotton Saree Striped,saree,Aarong,green,cotton,women,,3800,Authentic Tangail handloom cotton saree with woven traditional thread border.
+P0590,Aarong Baluchari Silk Festive Saree,saree,Aarong,maroon,silk,women,,24000,Elaborate narrative mythological scenes handwoven onto the pallu with fine silk threads.
+P0591,Aarong Traditional Red Border Katan Saree,saree,Aarong,cream,silk,women,,19500,Bridal and festive pure silk Katan saree highlighted with ornate golden zari borders.
+P0592,Aarong Muslin Floral Jamdani Luxury Saree,saree,Aarong,pastel pink,muslin,women,,32000,Featherweight sheer handspun muslin saree with delicate silver zari butidar Jamdani work.
+P0593,Aarong Embroidered Georgette Salwar Kameez,salwar,Aarong,teal,georgette,women,"36,38,40,42",7200,Three-piece suit set with intricate zardozi hand embroidery on kameez and matching dupatta.
+P0594,Aarong Silk Screen Printed Dupatta,ethnic,Aarong,multicolor,silk,women,,2400,Lustrous pure silk dupatta with traditional block print and tassel finish borders.
+P0595,Aarong Block Printed Cotton Three-Piece,salwar,Aarong,mustard,cotton,women,"36,38,40,42",4500,"Comfortable everyday cotton kameez, salwar trousers, and matching printed dupatta."
+P0596,Aarong Nakshi Embroidered Long Kurti,kurti,Aarong,indigo,cotton,women,"S,M,L,XL",2800,Traditional rural Nakshi Kantha running stitch needlework embroidered cotton long kurti.
+P0597,Aarong Pure Silk Embroidered Eid Panjabi,panjabi,Aarong,bottle green,silk,men,"38,40,42,44",6800,Royal pure raw silk men's festive panjabi with resham threadwork on neckline.
+P0598,Aarong Fine Cotton Tussar Panjabi,panjabi,Aarong,beige,cotton,men,"38,40,42,44",3600,Textured tussar cotton panjabi with contrast button placket and mandarin collar.
+P0599,Aarong Khadi Handloom Casual Panjabi,panjabi,Aarong,navy blue,cotton,men,"38,40,42,44",2400,Traditional handspun khadi cotton panjabi providing natural breathability in tropical heat.
+P0600,Aarong Check Pattern Cotton Lungi Pack of 2,lungi,Aarong,multicolor,cotton,men,,1800,Premium combed soft pure cotton checked lungis woven for traditional lounging.
+P0601,Aarong Traditional Cotton Gamcha Towel,gamcha,Aarong,red,cotton,unisex,,350,Traditional quick-drying handwoven check cotton gamcha bath and sweat towel.
+P0602,Taaga Fusion Embroidered Tunic Dress,dress,Taaga,olive,cotton,women,"S,M,L,XL",2900,Contemporary Bangladeshi A-line ethnic fusion tunic with folk geometric embroidery.
+P0603,Taaga Layered Asymmetrical Kameez,kurti,Taaga,rust,viscose,women,"S,M,L,XL",3200,Modern double-layer asymmetrical ethnic tunic with tasselled side ties.
+P0604,Taaga Men Handloom Short Kurta,shirt,Taaga,charcoal,cotton,men,"M,L,XL",2100,Minimalist urban handloom short kurta shirt with welt pocket and mandarin collar.
+P0605,Biba Anarkali Floor-Length Party Gown,dress,Biba,wine,georgette,women,"S,M,L,XL",8900,Floor-sweeping flared Anarkali party gown decorated with sequins and foil print work.
+P0606,Biba Straight Cotton Festive Kurta Set,salwar,Biba,sky blue,cotton,women,"S,M,L,XL",4800,Pastel hued straight-fit printed cotton kurta paired with matching cropped cigarette pants.
+P0607,Fabindia Indigo Dabu Block Print Saree,saree,Fabindia,indigo blue,cotton,women,,4600,Handcrafted mud-resist Dabu block printed Chanderi cotton saree with natural indigo dye.
+P0608,Fabindia Tussar Silk Mens Kurta,panjabi,Fabindia,natural raw,silk,men,"38,40,42,44",5800,Sophisticated handspun textured Tussar silk festive kurta with side pockets.
+P0609,Manyavar Royal Velvet Embroidered Sherwani,ethnic,Manyavar,ivory,silk,men,"38,40,42",28000,Groom wedding luxury silk sherwani embellished with antique zardozi and pearl embroidery.
+P0610,Manyavar Jacquard Nehru Waistcoat Jacket,jacket,Manyavar,maroon,silk,men,"38,40,42,44",4800,Structured sleeveless mandarin collar Nehru Modi waistcoat in woven jacquard brocade.
+P0611,Manyavar Kurta Churidar Silk Blend Set,panjabi,Manyavar,mustard yellow,silk,men,"38,40,42,44",5500,Haldi ceremony festive kurta set complete with matching white stretch churidar pants.
+P0612,Yellow Embroidered Festive Eid Panjabi,panjabi,Yellow,burgundy,cotton,men,"M,L,XL,XXL",3400,Premium combed cotton panjabi adorned with modern geometric threadwork on placket.
+P0613,Yellow Mens Casual Short Kurta,shirt,Yellow,powder blue,linen,men,"M,L,XL",2200,Short linen blend casual kurta with rounded hem for effortless summer elegance.
+P0614,Sailor Exclusive Semi-Long Panjabi,panjabi,Sailor,black,cotton,men,"38,40,42,44",3200,Modern sleek fit semi-long panjabi with metal crest snap buttons on high collar.
+P0615,Sailor Traditional Handloom Cotton Lungi,lungi,Sailor,grey,cotton,men,,850,Soft combed cotton pre-washed lungi with contrast border for men.
+P0616,Cats Eye Premium Jacquard Silk Panjabi,panjabi,Cats Eye,emerald green,silk,men,"38,40,42,44",4200,Festive jacquard weave silk-blend panjabi with metallic accent buttons.
+P0617,Apex Venturini Leather Nagra Mojari Shoes,formal shoes,Apex,black,leather,men,"7,8,9,10",3800,Traditional handcrafted ethnic Nagra slip-on shoes with pointed upturned toe.
+P0618,Bata Traditional Wedding Mojari Juta,formal shoes,Bata,gold,synthetic,men,"7,8,9,10",2400,Brocade embroidered ethnic wedding mojari shoes designed to complement sherwanis.
+P0619,Traditional Handwoven Cotton Prayer Mat Janamaz,prayer mat,Aarong,green,cotton,unisex,,1200,Soft padded woven Islamic prayer rug Janamaz with arched mihrab design.
+P0620,Natural Sandalwood 100-Bead Tasbih,tasbih,Aarong,brown,wood,unisex,,750,Aromatic genuine sandalwood Islamic prayer beads tasbih with tassel.
+P0621,Traditional Bengali Bridal Red Topor Mukut,topor,Aarong,white,sholapith,unisex,,1500,Handcrafted white and red sholapith wedding crown mukut for Bengali ceremonies.
+P0622,Aarong Katan Silk Dupatta Heavy Zari,ethnic,Aarong,royal red,silk,women,,4800,Grand Banarasi Katan silk dupatta densely woven with gold zari buti and borders.
+P0623,Aarong Cotton Block Print Kurti for Girls,kurti,Aarong,yellow,cotton,girls,"26,28,30,32",1600,Bright sunny floral block print cotton kurti with bell sleeves for young girls.
+P0624,Aarong Boys Festive Cotton Panjabi Pajama,panjabi,Aarong,maroon,cotton,boys,"24,26,28,30",2200,Festive two-piece panjabi pajama set with delicate thread embroidery for boys.
+P0625,Aarong Handwoven Tangail Cotton Scarf,ethnic,Aarong,teal,cotton,unisex,,850,Lightweight handloom cotton stole scarf with tassel fringe for casual outfits.
+P0626,Aarong Pure Khadi Shawl Winter Wrap,coat,Aarong,natural cream,wool,unisex,,3400,Warm handcrafted pure Khadi wool blend winter shawl wrap with tribal border.
+P0627,Nike Air Max 90 Classic Sneakers,sneakers,Nike,white,leather,unisex,"7,8,9,10,11",12800,"Iconic Waffle sole, stitched overlays and classic TPU accents on Air Max 90."
+P0628,Nike Dunk Low Retro Panda Sneakers,sneakers,Nike,black and white,leather,unisex,"7,8,9,10,11",11500,Universally coveted two-tone black and white leather court basketball sneakers.
+P0629,Nike Air Zoom Alphafly NEXT 3 Racing Shoes,running shoes,Nike,volt green,atomknit,men,"8,9,10,11",28500,Elite marathon road racing shoe with dual Air Zoom pods and full-length carbon flyplate.
+P0630,Nike Vaporfly 3 Road Racing Shoe,running shoes,Nike,bright crimson,flyknit,men,"8,9,10",26000,All-distance road racing shoes engineered for speed with ZoomX foam and carbon fiber plate.
+P0631,Nike Vomero 17 Plush Cushion Running Shoes,running shoes,Nike,black,mesh,men,"8,9,10,11",14500,Dual-density ZoomX and Cushlon 3.0 foam stack for an ultra-plush comfortable daily run.
+P0632,Nike InfinityRN 4 Road Running Shoe,running shoes,Nike,obsidian,flyknit,men,"8,9,10",14000,Supportive cushioning with ReactX foam designed to promote smooth heel-to-toe transitions.
+P0633,Nike Pegasus Trail 4 GORE-TEX Trail Shoes,running shoes,Nike,khaki,mesh,men,"8,9,10,11",15200,Waterproof GORE-TEX trail running shoes offering traction from road to rocky terrain.
+P0634,Nike Blazer Mid 77 Vintage High-Tops,sneakers,Nike,white,leather,unisex,"7,8,9,10,11",9500,Old-school basketball styling with exposed foam tongue and retro suede accents.
+P0635,Adidas Stan Smith Classic White Green,sneakers,Adidas,white,leather,unisex,"6,7,8,9,10",8800,Timeless minimalist tennis court sneaker with perforated 3-stripes and green heel tab.
+P0636,Adidas Superstar Shell Toe Sneakers,sneakers,Adidas,white,leather,unisex,"6,7,8,9,10,11",9200,Classic streetwear low-top sneakers featuring the iconic ribbed rubber shell toe.
+P0637,Adidas Gazelle Suede Low-Tops,sneakers,Adidas,collegiate navy,suede,unisex,"7,8,9,10",9800,Authentic reissue of the 1991 terrace culture low-profile soft suede sneaker.
+P0638,Adidas Handball Spezial Retro Sneakers,sneakers,Adidas,light blue,suede,unisex,"6,7,8,9,10",10500,Vintage indoor sports heritage sneaker with gum rubber sole and gold foil lettering.
+P0639,Adidas Solarboost 5 Distance Running Shoes,running shoes,Adidas,lucid lemon,mesh,men,"8,9,10",13800,Reliable high-mileage workhorse running shoe with Light BOOST cushioning and Linear Energy Push.
+P0640,Adidas Terrex Free Hiker 2 GORE-TEX,boots,Adidas,wonder beige,synthetic,men,"8,9,10,11",19500,Waterproof hiking boot combining lightweight trail agility with Continental rubber grip.
+P0641,Puma Suede Classic XXI Low Sneakers,sneakers,Puma,peacoat blue,suede,unisex,"7,8,9,10",6800,The iconic 1968 classic street sneaker in soft suede with signature Puma formstrip.
+P0642,Puma Deviate Nitro 2 Carbon Running Shoes,running shoes,Puma,fire orchid,mesh,men,"8,9,10",16500,NITRO Elite foam cushioning with PWRPLATE carbon composite plate for peak propulsion.
+P0643,Puma Velocity Nitro 3 Road Running Shoes,running shoes,Puma,black,mesh,men,"8,9,10,11",11500,Smooth responsive daily trainer featuring nitrogen-infused foam and durable PUMAGRIP.
+P0644,New Balance 327 Retro Heritage Sneakers,sneakers,New Balance,sea salt,suede,unisex,"6,7,8,9,10",10200,Asymmetrical oversized N branding with trail-inspired lugged wrap rubber outsole.
+P0645,New Balance 2002R Modern Lifestyle Sneaker,sneakers,New Balance,phantom,suede,unisex,"7,8,9,10,11",14500,Early 2000s running shoe aesthetic upgraded with N-ergy shock absorption and ABZORB pods.
+P0646,New Balance Fresh Foam X 1080v13 Shoes,running shoes,New Balance,starlight,mesh,men,"8,9,10,11",15800,Top-of-the-line max cushion daily running shoe delivering cloud-like Fresh Foam X softness.
+P0647,Asics GEL-Venture 9 All-Terrain Trail Shoes,running shoes,Asics,carrier grey,mesh,men,"7,8,9,10,11",7200,Budget-friendly rugged trail running shoes with rearfoot GEL cushioning and trail-specific lugs.
+P0648,Asics Novablast 4 Bounce Running Shoes,running shoes,Asics,illuminating yellow,knit,men,"8,9,10",13500,Trampoline-inspired energizing ride with bouncy FF BLAST PLUS ECO lightweight foam.
+P0649,Asics GEL-Cumulus 25 Road Running Shoes,running shoes,Asics,black,mesh,men,"8,9,10",12500,Comfortable everyday trainer equipped with PureGEL technology and full-ground contact sole.
+P0650,Hoka One One Clifton 9 Everyday Running Shoe,running shoes,Hoka,black,knit,men,"8,9,10,11",16800,Ultra-cushioned lightweight road running shoe with early stage Meta-Rocker geometry.
+P0651,Hoka Bondi 8 Ultra-Cushion Road Shoe,running shoes,Hoka,sharkskin,mesh,men,"8,9,10",18500,The most cushioned road shoe in the Hoka lineup with billowed extended heel crash pad.
+P0652,Hoka Speedgoat 5 Technical Trail Shoe,running shoes,Hoka,scuba blue,mesh,men,"8,9,10,11",17500,Trail workhorse equipped with Vibram Megagrip and Traction Lug for loose rugged soil.
+P0653,Brooks Ghost 15 Neutral Running Shoes,running shoes,Brooks,peacoat,mesh,men,"8,9,10,11",14200,Smooth balanced DNA LOFT v2 cushioning with engineered air mesh upper breathability.
+P0654,Saucony Endorphin Speed 3 Nylon Plate Shoes,running shoes,Saucony,prospect onyx,mesh,men,"8,9,10",16000,SPEEDROLL technology and winged nylon plate deliver effortless speed for tempo workouts.
+P0655,Salomon Speedcross 6 Grip Trail Running Shoes,running shoes,Salomon,black,ripstop,men,"8,9,10,11",15500,Legendary mud and trail grip shoe with deep chevron lugs and Quicklace cinch system.
+P0656,Vans Old Skool Skateboarding Shoes,sneakers,Vans,black and white,canvas,unisex,"6,7,8,9,10,11",6500,The classic side-stripe low-top skate shoe with durable canvas/suede upper and waffle sole.
+P0657,Vans Slip-On Classic Checkerboard,sneakers,Vans,black off white,canvas,unisex,"6,7,8,9,10",5900,Timeless slip-on canvas skate shoe with iconic checkerboard pattern and elastic side accents.
+P0658,Converse Chuck Taylor All Star Canvas High-Top,sneakers,Converse,black,canvas,unisex,"6,7,8,9,10,11",6200,The unmistakable original high-top basketball sneaker with star ankle patch and vulcanized rubber.
+P0659,Converse Chuck 70 Vintage Canvas Low,sneakers,Converse,parchment,canvas,unisex,"6,7,8,9,10",7800,"Premium craftsmanship with 12oz heavy organic canvas, archival star license plate, and OrthoLite."
+P0660,Dr. Martens 2976 Chelsea Boots Smooth,boots,Dr. Martens,black,leather,unisex,"7,8,9,10,11",17500,Sleek pull-on leather Chelsea boot with elastic gussets and Goodyear welt construction.
+P0661,Dr. Martens 1461 3-Eye Oxford Shoes,formal shoes,Dr. Martens,black,leather,unisex,"7,8,9,10",14500,Classic 3-eyelet smooth leather low dress shoe with visible yellow stitching.
+P0662,Timberland Premium Waterproof Chukka Boots,boots,Timberland,wheat nubuck,leather,men,"8,9,10,11",16500,Waterproof seam-sealed ankle boot made with environmentally-conscious Better Leather.
+P0663,Clarks Bushacre 3 Leather Chukka Boots,boots,Clarks,beeswax brown,leather,men,"7,8,9,10",9800,Classic two-eyelet leather desert chukka boot with removable OrthoLite cushion footbed.
+P0664,Clarks Whiddon Plain Leather Derby Dress Shoe,formal shoes,Clarks,dark tan,leather,men,"7,8,9,10",8200,Clean plain-toe derby lace-up shoe with discreet elastic gore panels for ease.
+P0665,Bata Comfit Lightweight Walking Moccasins,loafers,Bata,black,leather,men,"7,8,9,10",3400,Flexible lightweight slip-on moccasin loafers with arch support footbed.
+P0666,Bata Executive Formal Cap-Toe Brogues,formal shoes,Bata,burgundy,leather,men,"7,8,9,10",4600,Burnished leather executive lace-up dress shoes with laser-etched brogue perforations.
+P0667,Apex Venturini Classic Bit Loafer Shoes,loafers,Apex,cognac brown,leather,men,"7,8,9,10",4900,Italian inspired leather dress loafers featuring a polished antique metal horsebit strap.
+P0668,Apex Sprint High Cushion Running Shoes,sports shoes,Apex,navy blue,mesh,men,"7,8,9,10",2800,Affordable breathable athletic running shoes with lightweight shock-absorbing EVA midsole.
+P0669,Apex Maverick Waterproof Hiking Boots,boots,Apex,olive green,synthetic,men,"7,8,9,10",4200,Ankle-high trekking shoes with toe bumper protection and multi-directional rubber grip.
+P0670,Lotto Stadio Cleated Soccer Turf Football Boots,sports shoes,Lotto,white blue,synthetic,men,"7,8,9,10",3200,Durable outdoor artificial turf soccer shoes with multiple conical studs for traction.
+P0671,Birkenstock Boston Suede Leather Clogs,clogs,Birkenstock,taupe,suede,unisex,"6,7,8,9,10",14500,Cult-favorite year-round slip-on clog featuring an adjustable buckle strap and cork footbed.
+P0672,Crocs LiteRide 360 Clog Breathable,clogs,Crocs,black slate grey,matlite,unisex,"6,7,8,9,10",5200,Next-generation sink-in softness with LiteRide foam insoles and engineered pressure-mapped breathability.
+P0673,Crocs Classic Sandal 2-Strap Slide,sandals,Crocs,navy,croslite,unisex,"6,7,8,9,10",3200,Classic comfortable dual-strap slip-on slide sandals customizable with Jibbitz charms.
+P0674,Skechers Arch Fit Banlin Slip-On Walking,walking shoes,Skechers,charcoal,mesh,men,"7,8,9,10",6800,Podiatrist-certified arch support walking shoe with removable supportive insole.
+P0675,Skechers D'Lites Biggest Fan Chunky Sneaker,sneakers,Skechers,black white,leather,women,"5,6,7,8",6200,Retro 90s chunky dad sneaker with Air-Cooled Memory Foam cushioning and glittery accents.
+P0676,ALDO Cassedy Classic Pointed Stiletto Pumps,heels,ALDO,patent black,synthetic,women,"5,6,7,8",8500,Timeless dress pumps with ultra-feminine 4-inch stiletto heel and pointed silhouette.
+P0677,ALDO Grandstep Leather Chelsea Boots,boots,ALDO,cognac,leather,men,"7,8,9,10",11500,Polished full grain leather Chelsea boots with pull tab and flexible crepe sole.
+P0678,Steve Madden Possession Chunky Dad Sneakers,sneakers,Steve Madden,bone multi,synthetic,women,"5,6,7,8",9800,Bold monochromatic chunky platform trainers with exaggerated sculpted sole.
+P0679,Steve Madden Donddi Leather Flat Sandals,sandals,Steve Madden,cognac,leather,women,"5,6,7,8",6500,Casual everyday double-strap leather slides with burnished brass hardware buckles.
+P0680,Charles & Keith Strappy Kitten Heel Mules,heels,Charles & Keith,chalk,synthetic,women,"5,6,7,8",5800,Modern square toe slip-on mule heels with delicate multi-strap detailing.
+P0681,Charles & Keith Chunky Penny Loafers,loafers,Charles & Keith,burgundy,synthetic,women,"5,6,7,8",6800,Preppy platform penny loafers with raised aprons and deep tread lug soles.
+P0682,Nine West Tatiana Pointed Toe High Heels,heels,Nine West,red suede,suede,women,"5,6,7,8",7500,Showstopping pointed toe high stiletto dress pump for evening parties and events.
+P0683,Bata Flexible Soft Leather Ballet Flats,flats,Bata,black,leather,women,"5,6,7,8",2200,Cushioned inner-sole round toe slip-on ballet flats for everyday workplace comfort.
+P0684,Bata Comfit Wedge Heel Comfort Sandals,sandals,Bata,tan,leather,women,"5,6,7,8",2800,Anatomical supportive contoured wedge sandals with velcro ankle strap adjustment.
+P0685,Apex Moochie Embellished Flat Wedding Slides,sandals,Apex,rosegold,synthetic,women,"5,6,7,8",2400,Festive Indian-style flat Kolhapuri slide sandals adorned with metallic crystal beads.
+P0686,Apex Twinkler LED Light Sneakers for Kids,sneakers,Apex,navy red,mesh,boys,"28,30,32,34",1950,Fun sports shoes for children that flash bright multi-color LED lights with every step.
+P0687,Nike Flex Runner 2 Slip-On Kids Shoes,sports shoes,Nike,black white,mesh,boys,"1Y,2Y,3Y",4200,Lace-free stretchy slip-on shoes with durable foam sole for active kids on the playground.
+P0688,Adidas Runfalcon 3.0 Kids Running Shoes,running shoes,Adidas,core black,mesh,girls,"1Y,2Y,3Y",3800,Cushioned Cloudfoam midsole athletic sneaker with hook-and-loop strap closure.
+P0689,Reebok Club C 85 Vintage Court Shoes,sneakers,Reebok,chalk green,leather,unisex,"7,8,9,10,11",8200,80s tennis heritage low sneakers in soft garment leather with terry cloth collar lining.
+P0690,Reebok Nano X3 Cross-Training Gym Shoes,sports shoes,Reebok,black white,flexweave,men,"8,9,10",12500,Versatile workout shoes featuring the Lift and Run Chassis system for squats and sprints.
+P0691,Salomon XT-6 Advanced Sportstyle Sneakers,sneakers,Salomon,white lunar rock,synthetic,unisex,"7,8,9,10",18500,Trail running icon adopted by fashion streetwear with downhill chassis and Quicklace.
+P0692,Under Armour Curry 11 Basketball Shoes,sports shoes,Under Armour,dub nation royal,mesh,men,"8,9,10,11",17500,Signature Stephen Curry court shoes with dual-density UA Flow technology for grip.
+P0693,Havaianas Top Unisex Rubber Flip Flops,sandals,Havaianas,black,rubber,unisex,"39,40,41,42",1800,The original Brazilian beach flip-flops made with durable non-slip cushioned rubber soles.
+P0694,Woodland Leather Casual Boat Shoes,loafers,Woodland,dark brown,leather,men,"7,8,9,10",6800,Hand-stitched oil-pull up genuine leather boat shoes with 360-degree rawhide lacing.
+P0695,Clarks Wallabee Suede Moccasin Shoes,loafers,Clarks,maple suede,suede,men,"7,8,9,10",14500,World-renowned moccasin silhouette crafted with Scotchgard water-resistant suede and crepe sole.
+P0696,Timberland Cortina Valley Waterproof Ankle Boots,boots,Timberland,black,leather,women,"5,6,7,8",15500,Rugged sustainable waterproof leather women's work boots with lugged rubber outsole.
+P0697,Apple MacBook Pro 16-inch M3 Max,laptop,Apple,space black,aluminum,unisex,,395000,"The pinnacle of mobile performance: 16-core CPU, 40-core GPU, 36GB unified RAM, and 16.2-inch XDR screen."
+P0698,Apple iPad Mini 6th Gen 64GB,tablet,Apple,starlight,aluminum,unisex,,62000,Compact 8.3-inch Liquid Retina display tablet with A15 Bionic chip and USB-C.
+P0699,Apple iPad 10th Gen 10.9-inch 64GB,tablet,Apple,blue,aluminum,unisex,,48000,"Colorfully reimagined all-screen iPad with A14 Bionic, landscape stereo speakers, and USB-C."
+P0700,Apple Magic Keyboard with Touch ID and Numeric Keypad,keyboard,Apple,black,aluminum,unisex,,22500,"Wireless Bluetooth rechargeable keyboard with fast, easy, and secure Touch ID authentication."
+P0701,Apple Magic Trackpad Multi-Touch Surface,computer mouse,Apple,black,glass,unisex,,18500,Rechargeable glass surface trackpad bringing full range of Mac multi-touch gestures and Force Touch.
+P0702,Dell XPS 16 Core Ultra 9 OLED Laptop,laptop,Dell,platinum,aluminum,unisex,,285000,Futuristic 16.3-inch 4K+ OLED InfinityEdge display laptop with capacitive touch function row.
+P0703,Dell Latitude 5440 Business Laptop,laptop,Dell,grey,plastic,unisex,,98000,"Enterprise-grade 14-inch business laptop with Intel Core i5-1335U, TPM 2.0 security, and 16GB RAM."
+P0704,Dell OptiPlex 7010 Micro Desktop PC,desktop,Dell,black,steel,unisex,,72000,Ultra-compact form-factor commercial desktop PC with 13th Gen Intel Core i5 and dual DisplayPorts.
+P0705,Dell S2722QC 27-inch 4K USB-C Monitor,monitor,Dell,silver,plastic,unisex,,46000,"UHD 3840x2160 IPS monitor with 65W USB-C power delivery, integrated speakers, and AMD FreeSync."
+P0706,Dell Alienware AW3423DWF Curved OLED Monitor,monitor,Dell,dark metallic,plastic,unisex,,135000,34-inch QD-OLED 1800R curved ultrawide gaming monitor with 165Hz refresh rate and 0.1ms response.
+P0707,HP Envy x360 15 2-in-1 Touch Laptop,laptop,HP,nightfall black,aluminum,unisex,,115000,15.6-inch FHD touchscreen convertible laptop with Bang & Olufsen tuned audio and stylus support.
+P0708,HP Victus 15 Gaming Laptop Core i5,laptop,HP,mica silver,plastic,unisex,,84000,"Accessible high-value gaming laptop with 144Hz FHD screen, Core i5-12450H, and RTX 3050 6GB."
+P0709,HP LaserJet Pro MFP 3103fdw Wireless Printer,printer,HP,white,plastic,unisex,,38000,High-speed automatic two-sided monochrome laser multifunction printer with scanner and feeder.
+P0710,Lenovo ThinkPad E16 Gen 1 AMD Ryzen 5,laptop,Lenovo,black,aluminum,unisex,,82000,Durable business laptop featuring 16-inch WUXGA anti-glare screen and TrackPoint navigation.
+P0711,Lenovo Legion Slim 5 16-inch Gaming Laptop,laptop,Lenovo,storm grey,aluminum,unisex,,148000,Sleek portable gaming laptop with AMD Ryzen 7 7840HS and NVIDIA GeForce RTX 4060 graphics.
+P0712,Lenovo ThinkVision P27h-30 QHD Hub Monitor,monitor,Lenovo,raven black,plastic,unisex,,42000,27-inch 2560x1440 IPS borderless display monitor with USB-C docking hub and Ethernet passthrough.
+P0713,ASUS ROG Strix G16 Gaming Laptop,laptop,ASUS,eclipse gray,aluminum,unisex,,179000,165Hz ROG Nebula display laptop with Intel Core i7-13650HX and NVIDIA RTX 4060 GPU.
+P0714,ASUS Zenbook Duo Dual 14-inch OLED Laptop,laptop,ASUS,inkwell gray,magnesium,unisex,,245000,Dual 14-inch 3K 120Hz Lumina OLED touchscreens with detachable keyboard and built-in kickstand.
+P0715,ASUS ProArt Display PA278CV 27-inch Monitor,monitor,ASUS,black,plastic,unisex,,39000,Calman verified 100% sRGB color accurate professional creative monitor with USB-C daisy chaining.
+P0716,ASUS ROG Falchion RX Low Profile Wireless Keyboard,keyboard,ASUS,white,aluminum,unisex,,18500,65% compact low-profile optical mechanical gaming keyboard with interactive touch panel.
+P0717,Acer Nitro V 15 Gaming Laptop,laptop,Acer,obsidian black,plastic,unisex,,89000,"Entry gaming laptop equipped with 13th Gen Intel Core i5, RTX 4050, and 144Hz IPS display."
+P0718,MSI Stealth 16 Studio AI Laptop,laptop,MSI,star blue,magnesium,unisex,,235000,Ultra-slim 1.99kg studio laptop certified with Intel Core Ultra 9 and NVIDIA Studio drivers.
+P0719,Razer Viper V3 Pro Ultra-Lightweight Mouse,computer mouse,Razer,black,plastic,unisex,,17500,54g featherlight symmetrical esports mouse with True 8000Hz wireless polling rate.
+P0720,Razer Huntsman V3 Pro Analog Gaming Keyboard,keyboard,Razer,black,aluminum,unisex,,26000,Analog optical switches with adjustable actuation distance from 0.1 to 4.0mm and Rapid Trigger.
+P0721,Razer Kiyo Pro Ultra 4K HDR USB Webcam,webcam,Razer,black,plastic,unisex,,34000,The largest sensor in a webcam: Sony 1/1.2-inch STARVIS 2 sensor for DSLR-like video quality.
+P0722,Logitech Lift Vertical Ergonomic Wireless Mouse,computer mouse,Logitech,graphite,plastic,unisex,,7500,57-degree natural handshake angle reduces forearm strain for all-day desk productivity.
+P0723,Logitech MX Mechanical Wireless Keyboard,keyboard,Logitech,graphite,aluminum,unisex,,18500,Low-profile tactile quiet mechanical switches with smart backlighting and multi-OS pairing.
+P0724,Logitech Brio 4K Ultra HD Pro Webcam,webcam,Logitech,black,plastic,unisex,,19500,"4K video streaming webcam with HDR, RightLight 3 auto-exposure, and Windows Hello facial login."
+P0725,Logitech C920x HD Pro Webcam 1080p,webcam,Logitech,black,plastic,unisex,,8500,Full HD 1080p video calling with dual stereo microphones and automatic light correction.
+P0726,Corsair RM850x 850W Fully Modular Power Supply,electronics,Corsair,black,steel,unisex,,16500,80 PLUS Gold certified low-noise power supply with Japanese 105C capacitors and Zero RPM mode.
+P0727,Corsair 4000D Airflow Tempered Glass Mid-Tower PC Case,electronics,Corsair,black,steel,unisex,,10500,High-airflow front panel computer chassis with rapid route cable management system.
+P0728,Western Digital 1TB My Passport Portable External HDD,storage,Western Digital,black,plastic,unisex,,6200,Compact portable hard drive with 256-bit AES hardware encryption and automatic backup software.
+P0729,SanDisk Extreme Portable 1TB External SSD,storage,SanDisk,black orange,silicone,unisex,,14500,IP55 water and dust resistant fast NVMe solid state drive with up to 1050 MB/s transfer.
+P0730,Crucial P3 Plus 2TB PCIe Gen4 NVMe Internal SSD,storage,Crucial,black,silicon,unisex,,15500,Cost-effective high-capacity Gen4 M.2 SSD reaching speeds up to 5000 MB/s for fast loading.
+P0731,Kingston FURY Beast DDR4 16GB 3200MHz RAM,storage,Kingston,black,aluminum,unisex,,4800,Cost-efficient performance desktop memory with stylish low-profile heat spreader.
+P0732,Samsung Odyssey G7 32-inch 240Hz Curved Gaming Monitor,monitor,Samsung,black,plastic,unisex,,74000,1000R curved QLED QHD gaming monitor with 1ms response time and G-Sync compatible display.
+P0733,LG 24-inch Full HD IPS Borderless Monitor,monitor,LG,white,plastic,unisex,,16500,"1080p 75Hz monitor with AMD FreeSync, Reader Mode, and virtually borderless 3-sided bezel."
+P0734,ViewSonic VA2432-H 24-inch 100Hz IPS Monitor,monitor,ViewSonic,black,plastic,unisex,,13500,"Budget everyday monitor with smooth 100Hz refresh rate, SuperClear IPS, and eye-care technology."
+P0735,TP-Link Deco X50 Mesh WiFi 6 System 3-Pack,router,TP-Link,white,plastic,unisex,,24000,Whole-home mesh Wi-Fi system covering up to 6500 sq ft with AX3000 speeds and AI-driven roaming.
+P0736,Netgear Nighthawk AX12 12-Stream WiFi 6 Router,router,Netgear,black,plastic,unisex,,42000,Ultra-fast AX6000 Wi-Fi 6 router with 8 high-performance amplified antennas for heavy multi-devices.
+P0737,Anker 737 Power Bank 24000mAh PowerCore 24K,power bank,Anker,black,plastic,unisex,,13500,Ultra-powerful 140W fast-charging portable charger with smart digital interactive display.
+P0738,Anker 511 Nano 3 30W PIQ 3.0 USB-C Charger,phone charger,Anker,phantom black,plastic,unisex,,2200,"Pocket-sized 30W GaN charger small enough to fit in any pouch, powers iPhone, iPad, and MacBook Air."
+P0739,Ugreen Revodok Pro 9-in-1 4K USB-C Docking Station,electronics,Ugreen,space gray,aluminum,unisex,,7500,"Expands laptop ports with dual 4K HDMI, Gigabit Ethernet, 100W PD charging, and SD card reader."
+P0740,Baseus Blade 100W Ultra Thin Laptop Power Bank,power bank,Baseus,black,aluminum,unisex,,8900,Only 18mm ultra-thin power bank powerful enough to charge laptops and smartphones simultaneously.
+P0741,Spigen Rugged Armor Case for iPhone 15 Pro,phone case,Spigen,matte black,tpu,unisex,,2200,Resilient shock-absorption phone case with carbon fiber accents and Air Cushion technology.
+P0742,Samsung Galaxy S24+ 256GB,smartphone,Samsung,cobalt violet,glass,unisex,,125000,"Galaxy AI enabled phone with 6.7-inch QHD+ display, 4900mAh battery, and armor aluminum frame."
+P0743,Samsung Galaxy A35 5G 128GB,smartphone,Samsung,awesome iceblue,glass,unisex,,38000,Linear camera layout smartphone with Super AMOLED 120Hz display and IP67 dust/water resistance.
+P0744,Samsung Galaxy A15 5G 128GB,smartphone,Samsung,blue black,plastic,unisex,,22500,Affordable 5G phone with vibrant 6.5-inch 90Hz AMOLED screen and 50MP triple camera.
+P0745,Apple iPhone 15 Pro Max 256GB,smartphone,Apple,natural titanium,titanium,unisex,,175000,Aerospace-grade titanium smartphone with 5x optical zoom tetraprism telephoto camera and A17 Pro.
+P0746,Apple iPhone 14 Pro 128GB,smartphone,Apple,deep purple,stainless steel,unisex,,118000,"Pro camera system with 48MP main sensor, Dynamic Island, and Always-On Super Retina XDR display."
+P0747,Apple iPhone 13 Mini 128GB,smartphone,Apple,starlight,aluminum,unisex,,64000,Pocket-friendly 5.4-inch compact smartphone with A15 Bionic chip and durable Ceramic Shield.
+P0748,Google Pixel 8a 128GB,smartphone,Google,aloe green,plastic,unisex,,58000,"Delightful AI-first smartphone with Google Tensor G3, 120Hz Actua display, and 7 years of OS updates."
+P0749,Google Pixel Fold 256GB,smartphone,Google,obsidian,glass,unisex,,165000,"Google's book-style folding phone with seamless multitasking, thin hinge, and flagship cameras."
+P0750,OnePlus 12R 256GB,smartphone,OnePlus,cool blue,glass,unisex,,59000,"Performance powerhouse with Snapdragon 8 Gen 2, 4th Gen LTPO 120Hz display, and 5500mAh battery."
+P0751,OnePlus Nord 3 5G 256GB,smartphone,OnePlus,tempest gray,glass,unisex,,42000,Dimensity 9000 flagship-grade processor phone with Sony IMX890 50MP camera and 80W charging.
+P0752,Xiaomi 14 Ultra Photography Flagship,smartphone,Xiaomi,black,leather,unisex,,135000,Quad 50MP Leica cameras with 1-inch variable aperture sensor and Snapdragon 8 Gen 3.
+P0753,Xiaomi Redmi Note 13 4G 128GB,smartphone,Xiaomi,midnight black,plastic,unisex,,21000,Ultra-clear 108MP triple camera phone with 120Hz AMOLED display and in-screen fingerprint sensor.
+P0754,Xiaomi Poco F6 5G 256GB,smartphone,Xiaomi,titanium,plastic,unisex,,44000,Snapdragon 8s Gen 3 flagship-tier gaming smartphone with 90W turbo charging and LiquidCool.
+P0755,Realme 12+ 5G 256GB,smartphone,Realme,pioneer green,leather,unisex,,32500,Sony LYT-600 OIS camera phone with luxury watch design and 120Hz ultra smooth AMOLED.
+P0756,Realme C67 4G 128GB,smartphone,Realme,sunny oasis,plastic,unisex,,18500,108MP 3X in-sensor zoom smartphone with Snapdragon 685 chip and mini capsule 2.0.
+P0757,Vivo X100 Pro 5G Zeiss APO Telephoto,smartphone,Vivo,asteroid black,glass,unisex,,115000,"Co-engineered with Zeiss: 50MP 1-inch sensor, floating telephoto, and Dimensity 9300 chipset."
+P0758,Vivo V30e 5G 128GB,smartphone,Vivo,velvet red,glass,unisex,,34000,Ultra-slim 3D curved display smartphone with Sony IMX882 portrait camera and 5500mAh battery.
+P0759,Oppo Reno 11 Pro 5G,smartphone,Oppo,pearl white,glass,unisex,,56000,Natural aesthetic portrait expert smartphone with 32MP telephoto lens and 80W SUPERVOOC.
+P0760,Nothing Phone 2 256GB,smartphone,Nothing,dark grey,glass,unisex,,68000,"Iconic transparent rear with customizable Glyph Interface LED lights, Nothing OS 2.5, and OLED."
+P0761,Nothing Phone 2a 128GB,smartphone,Nothing,milk white,plastic,unisex,,36500,Distinctive design smartphone with custom MediaTek Dimensity 7200 Pro and flexible AMOLED.
+P0762,Motorola Edge 50 Pro 5G,smartphone,Motorola,luxe lavender,vegan leather,unisex,,49000,Pantone validated camera and display phone with 125W TurboPower charging and IP68 rating.
+P0763,Amazon Kindle Paperwhite 16GB E-Reader,tablet,Amazon,black,plastic,unisex,,18500,6.8-inch glare-free 300 ppi E-ink display with adjustable warm light and waterproof build.
+P0764,Apple Watch Series 8 GPS 41mm,smartwatch,Apple,silver,aluminum,women,,42000,"Temperature sensing, blood oxygen, ECG app, and comprehensive workout tracking metrics."
+P0765,Samsung Galaxy Watch 5 Pro 45mm,smartwatch,Samsung,black titanium,titanium,men,,38000,"Durable outdoor smartwatch with sapphire crystal glass, track-back GPS, and 590mAh battery."
+P0766,Garmin Venu 3 GPS Smartwatch,smartwatch,Garmin,whitestone,steel,unisex,,58000,"Bright AMOLED touchscreen health watch with speaker, microphone, nap detection, and HRV status."
+P0767,Garmin Instinct 2 Solar Rugged Watch,smartwatch,Garmin,graphite,fiber-polymer,men,,46000,Military standard 810 thermal/shock resistance watch with unlimited battery life via solar.
+P0768,Fitbit Inspire 3 Health Fitness Tracker,smartwatch,Fitbit,midnight zen,silicone,unisex,,12500,"Slim lightweight wristband tracking active zone minutes, sleep score, and stress management."
+P0769,Huawei Watch GT 4 46mm Smartwatch,smartwatch,Huawei,brown leather,steel,men,,24500,Octagonal luxury stainless steel smartwatch with up to 14 days battery and TruSeen 5.5+.
+P0770,Amazfit Balance AI Smartwatch,smartwatch,Amazfit,midnight,aluminum,unisex,,24000,"Body composition measurement watch with dual-band GPS, Zepp Coach AI, and Bluetooth calls."
+P0771,Spigen Liquid Air Case for Galaxy S24 Ultra,phone case,Spigen,matte black,tpu,unisex,,2100,Form-fitted slim lightweight phone case featuring geometric textured anti-slip grip pattern.
+P0772,Sony WH-1000XM4 Noise Canceling Headphones,headphones,Sony,black,synthetic,unisex,,27500,Previous-gen favorite industry-leading noise canceling headphones with Speak-to-Chat.
+P0773,Sony LinkBuds S Truly Wireless Earbuds,earbuds,Sony,earth blue,recycled plastic,unisex,,15500,Ultra-small lightweight 4.8g earbuds with seamless ambient sound switching and high-res LDAC.
+P0774,Bose QuietComfort Headphones,headphones,Bose,cypress green,synthetic,unisex,,31000,"Plush leatherette ear cushions with toggleable Quiet Mode, Aware Mode, and adjustable EQ."
+P0775,Bose SoundLink Revolve+ II 360 Speaker,speaker,Bose,triple black,aluminum,unisex,,34000,Deep jaw-dropping 360-degree sound distribution speaker with flexible fabric handle.
+P0776,Sennheiser HD 660S2 Open-Back Audiophile Headphones,headphones,Sennheiser,black,steel,unisex,,54000,Precision German engineered open acoustic headphones with revised 300-ohm transducer coil.
+P0777,Sennheiser CX True Wireless Earbuds,earbuds,Sennheiser,matte black,plastic,unisex,,9500,Bespoke TrueResponse acoustic transducer delivers crystal-clear sound with passive noise isolation.
+P0778,JBL Charge 5 Portable Waterproof Speaker,speaker,JBL,squad camo,fabric,unisex,,17500,Powerful dual passive bass radiators speaker that doubles as an emergency power bank.
+P0779,JBL Clip 4 Ultra-Portable Bluetooth Speaker,speaker,JBL,red,fabric,unisex,,5800,Compact round speaker with integrated carabiner hook to clip onto backpacks and bikes.
+P0780,JBL Bar 500 5.1-Channel Dolby Atmos Soundbar,speaker,JBL,black,plastic,unisex,,59000,590W surround home theatre soundbar with MultiBeam surround sound and 10-inch wireless subwoofer.
+P0781,Marshall Stanmore III Bluetooth Home Speaker,speaker,Marshall,cream,vinyl,unisex,,38000,Heavy-hitting legendary Marshall home audio speaker with wider soundstage and brass control knobs.
+P0782,Marshall Major IV Wireless On-Ear Headphones,headphones,Marshall,brown,vinyl,unisex,,13500,Classic square earcups headphones with 80+ hours of wireless playtime and multi-directional control.
+P0783,Audio-Technica ATH-M20x Professional Studio Headphones,headphones,Audio-Technica,black,plastic,unisex,,5800,Entry-level professional tracking and mixing monitoring headphones with 40mm tuned drivers.
+P0784,Beats Studio Pro Wireless Noise Cancelling,headphones,Beats,deep brown,synthetic,unisex,,32500,"Fully custom acoustic platform with Personalized Spatial Audio, USB-C lossless audio, and ANC."
+P0785,Beats Fit Pro True Wireless Earbuds,earbuds,Beats,sage gray,silicone,unisex,,21500,Secure-fit comfortable wingtips earbuds powered by Apple H1 headphone chip for workouts.
+P0786,Canon EOS R100 Mirrorless Camera with 18-45mm Lens,electronics,Canon,black,plastic,unisex,,56000,Beginner-friendly compact 24.1MP mirrorless camera with continuous shooting and 4K video.
+P0787,Nikon Z50 Mirrorless Camera with 16-50mm VR Lens,electronics,Nikon,black,magnesium,unisex,,88000,Ergonomic 20.9MP DX-format mirrorless camera with flip-down selfie LCD and Eye-Detection AF.
+P0788,Nikon Z6 II Full-Frame Camera Body,electronics,Nikon,black,magnesium,unisex,,195000,"Dual EXPEED 6 processors, dual card slots, 14 fps burst, and 4K UHD video capability."
+P0789,Fujifilm X-T30 II Mirrorless Digital Camera,electronics,Fujifilm,silver,magnesium,unisex,,98000,Retro analog dial-based camera with 26.1MP X-Trans CMOS 4 sensor and iconic film simulation modes.
+P0790,Fujifilm Instax Mini 12 Instant Film Camera,electronics,Fujifilm,pastel blue,plastic,unisex,,8900,Credit-card sized physical photo instant camera with automatic exposure and close-up selfie mode.
+P0791,DJI Osmo Action 4 Standard Combo Action Camera,electronics,DJI,black,plastic,unisex,,39000,"1/1.3-inch image sensor action camera with 4K/120fps recording, 155-degree ultra-wide angle, and deep freeze battery."
+P0792,DJI RS 3 Mini 3-Axis Camera Gimbal Stabilizer,electronics,DJI,black,aluminum,unisex,,32000,Ultra-compact 795g lightweight handheld gimbal stabilizer supporting popular mirrorless cameras.
+P0793,Rode VideoMic GO II Lightweight Shotgun Mic,electronics,Rode,black,aluminum,unisex,,11500,Ultra-compact dual USB/3.5mm directional shotgun on-camera microphone with integrated shockmount.
+P0794,Rode Wireless PRO Dual-Channel Wireless Mic System,electronics,Rode,black,plastic,unisex,,48000,"32-bit float on-board recording, timecode generator, and GainAssist dual channel wireless receiver."
+P0795,Godox SL60W 5600K Continuous Studio Video Light,electronics,Godox,black,metal,unisex,,14500,60W daylight-balanced studio LED light with Bowens mount for softboxes and video lighting.
+P0796,Neewer 18-inch Dimmable LED Ring Light with Stand,electronics,Neewer,black,plastic,unisex,,8500,"Bi-color dimmable circular ring light for beauty tutorials, TikTok vlogs, and portrait photography."
+P0797,Philips Daily Collection Hand Blender 550W,blender,Philips,white,plastic,unisex,,3800,Promix blending technology with triangular shape flow for fast consistent soups and smoothies.
+P0798,Philips Series 5000 LatteGo Fully Automatic Espresso,home_appliances,Philips,black,plastic,unisex,,74000,Silky-smooth milk froth at the touch of a button with LatteGo milk system and ceramic grinder.
+P0799,Dyson Supersonic Nural Intelligent Hair Dryer,home_appliances,Dyson,vinca blue,plastic,women,,54000,Scalp protect mode automatically adjusts heat temperature to enhance natural shine and prevent damage.
+P0800,Dyson Airwrap Multi-Styler Complete Long,home_appliances,Dyson,copper nickel,aluminum,women,,68000,"Styles hair using the Coanda airflow effect with zero extreme heat damage: curls, waves, and dries."
+P0801,Panasonic Automatic Rice Cooker 1.8L,rice cooker,Panasonic,white,aluminum,unisex,,4600,Anodized aluminum cooking pan with thermal fuse protector and automatic keep-warm function.
+P0802,Panasonic Heavy Duty 750W Mixer Grinder 3 Jars,blender,Panasonic,white yellow,plastic,unisex,,8500,"Samurai edge stainless steel blades grind tough lentils, spices, and wet batters effortlessly."
+P0803,Walton 43-inch 4K Android Smart LED TV,electronics,Walton,black,plastic,unisex,,36000,"Frameless 4K UHD smart television with Google Assistant, built-in Chromecast, and Dolby Audio."
+P0804,Walton Primo Multi-Function Electric Oven 28L,microwave oven,Walton,black,steel,unisex,,8200,Motorized rotisserie convection baking and grilling electric oven with 60-minute timer.
+P0805,Samsung 43-inch Crystal 4K UHD Smart TV,electronics,Samsung,black,plastic,unisex,,48000,Crystal Processor 4K delivers true-to-life color shades with PurColor and Q-Symphony sound.
+P0806,LG 55-inch C3 4K Smart OLED evo TV,electronics,LG,dark silver,metal,unisex,,175000,"Self-lit OLED pixels with alpha-9 AI Processor Gen6, 120Hz gaming, and infinite contrast ratio."
+P0807,Whirlpool 265L 3-Star Frost Free Refrigerator,refrigerator,Whirlpool,german steel,steel,unisex,,46000,IntelliSense inverter technology with 6th Sense DeepFreeze and Microblock anti-bacterial filter.
+P0808,Singer 2-Burner Auto Ignition Glass Gas Stove,cookware,Singer,black,glass,unisex,,5200,Toughened shatterproof tempered glass top with high-efficiency brass gas burners.
+P0809,Prestige Deluxe Alpha Stainless Steel Cookware Set 3pc,cookware,Prestige,silver,steel,unisex,,6800,"Alpha induction base kadai, frying pan, and saucepan with sturdy heat-resistant handles."
+P0810,Hawkins Contura Hard Anodized Pressure Cooker 3L,pressure cooker,Hawkins,black,aluminum,unisex,,3200,Hard anodized non-corrosive body with curved sides for easy stirring and inside-fitting safety lid.
+P0811,Cuisinart 2-Slice Metal Classic Toaster,home_appliances,Cuisinart,brushed stainless,steel,unisex,,4500,"Dual custom control dials with reheat, defrost, bagel settings, and 6 browning shade levels."
+P0812,Russell Hobbs Retro Style 1.7L Electric Kettle,electric kettle,Russell Hobbs,vintage cream,steel,unisex,,5800,Retro water temperature gauge with rapid boil zone marker and removable washable limescale filter.
+P0813,Tupperware Aquasafe 1L Water Bottles 4-Pack,water bottle,Tupperware,multicolor,plastic,unisex,,1600,Ergonomic flip-top leakproof reusable drinking water bottles made from non-toxic food grade plastic.
+P0814,Lock & Lock Borosilicate Glass Food Storage 3pc Set,cookware,Lock & Lock,clear,glass,unisex,,2400,Oven-safe airtight food containers with four-side locking hinge lids for meal prep and microwave.
+P0815,Thermos Stainless King Vacuum Insulated Food Flask 710ml,water bottle,Thermos,matte black,steel,unisex,,3400,Double wall vacuum insulation keeps hot curries hot for 14 hours or chilled foods cold for 24 hours.
+P0816,Stanley Quencher H2.0 FlowState Tumbler 40oz,water bottle,Stanley,rose quartz,steel,unisex,,6200,Viral ergonomic handle travel tumbler with 3-position rotating lid and reusable drinking straw.
+P0817,Aarong Brass Traditional Handcrafted Candle Stand,traditional_bangladeshi,Aarong,antique brass,brass,unisex,,2200,Ornate artisan-crafted solid brass candlestick holder with engraved traditional motifs.
+P0818,Aarong Hand-Woven Jute Floor Rug Mat,traditional_bangladeshi,Aarong,natural jute,jute,unisex,,3200,Eco-friendly natural golden fiber jute braided round area rug for living room décor.
+P0819,Aarong Ceramic Dinner Plate Set 6pc,cookware,Aarong,cobalt blue,ceramic,unisex,,3600,Handmade glazed stoneware ceramic dinner plates decorated with delicate floral pottery glazes.
+P0820,IKEA Poang Armchair with Cushion,home_appliances,IKEA,birch veneer beige,wood,unisex,,16500,Layer-glued bent birch wood frame armchair that provides relaxing springy resilience.
+P0821,IKEA Lack Side Table 55x55cm,home_appliances,IKEA,black-brown,wood,unisex,,2400,Minimalist lightweight square coffee side table easy to assemble and move around.
+P0822,Cetaphil Daily Facial Moisturizer SPF 15,moisturizer,Cetaphil,white,lotion,unisex,,1800,Lightweight silky hydrating lotion that absorbs quickly and protects against sun exposure.
+P0823,The Ordinary Hyaluronic Acid 2% + B5 30ml,skincare,The Ordinary,clear,liquid,unisex,,1350,Multi-depth hydration water-based serum formulated with pure vegan hyaluronic acid molecules.
+P0824,The Ordinary Glycolic Acid 7% Toning Solution,skincare,The Ordinary,pale amber,liquid,unisex,,1950,"Direct acid exfoliating toner that improves skin radiance, visible clarity, and texture."
+P0825,The Ordinary Caffeine Solution 5% + EGCG Eye Serum,skincare,The Ordinary,amber,liquid,unisex,,1250,Light-textured formula reduces the look of puffiness and dark circles around eye contours.
+P0826,COSRX Low pH Good Morning Gel Cleanser 150ml,face wash,COSRX,clear,gel,unisex,,1200,Mild everyday foaming gel cleanser formulated with tea tree oil and natural BHA to refine skin.
+P0827,COSRX BHA Blackhead Power Liquid 100ml,skincare,COSRX,clear,liquid,unisex,,2100,Exfoliating essence formulated with 4% Betaine Salicylate to clear trapped sebum and blackheads.
+P0828,La Roche-Posay Effaclar Purifying Foaming Gel 400ml,face wash,La Roche-Posay,blue,gel,unisex,,2600,Cleanses oily and acne-prone skin while maintaining skin pH with Zinc PCA and thermal water.
+P0829,La Roche-Posay Cicaplast Baume B5+ Soothing Cream,skincare,La Roche-Posay,white,balm,unisex,,1850,"Multi-purpose repairing balm for irritated, damaged, and chapped skin enriched with Madecassoside."
+P0830,Neutrogena Ultra Sheer Dry-Touch Sunscreen SPF 50+,sunscreen,Neutrogena,white,lotion,unisex,,1400,Lightweight non-greasy water-resistant sunscreen with Helioplex broad spectrum UVA/UVB protection.
+P0831,Neutrogena Oil-Free Acne Wash Pink Grapefruit,face wash,Neutrogena,pink,liquid,unisex,,1300,Daily facial cleanser with naturally derived grapefruit extract and MicroClear acne medicine.
+P0832,Bioderma Sensibio H2O Micellar Cleansing Water 500ml,face wash,Bioderma,pink,liquid,unisex,,2400,Dermatological micellar water that gently removes makeup and pollutants from sensitive skin.
+P0833,Dior Sauvage Elixir Parfum 60ml,perfume,Dior,midnight blue,liquid,men,,24500,"Concentrated intoxicating elixir blending spicy cinnamon, nutmeg, lavender, and rich woods."
+P0834,Chanel Coco Mademoiselle Eau de Parfum 100ml,perfume,Chanel,rose gold,liquid,women,,26000,Irresistibly oriental amber fragrance with sparks of fresh vibrant orange and clear patchouli.
+P0835,Versace Eros Eau de Toilette 100ml,perfume,Versace,turquoise blue,liquid,men,,12500,"Luminous fresh aura perfume with mint leaves, Italian lemon zest, tonka beans, and cedarwood."
+P0836,Bvlgari Man In Black Eau de Parfum 100ml,perfume,Bvlgari,matte black,liquid,men,,16500,"Bold charismatic oriental fragrance with sensual spicy rum, leather accords, and smoky resin."
+P0837,Jo Malone Wood Sage & Sea Salt Cologne 100ml,perfume,Jo Malone,clear,liquid,unisex,,18500,Escape the everyday along the windswept shore: sea salt spray and earthy mineral sage aroma.
+P0838,Bath & Body Works Japanese Cherry Blossom Mist,perfume,Bath & Body Works,red,liquid,women,,18500,"Graceful blend of Japanese cherry blossom, Asian pear, fresh mimosa petals, and blushing sandalwood."
+P0839,Victoria's Secret Bare Vanilla Fragrance Body Mist,perfume,Victoria's Secret,amber,liquid,women,,1850,Whipped vanilla and soft cashmere body mist for an intoxicating cozy all-day scent.
+P0840,MAC Studio Fix Fluid SPF 15 Foundation,beauty,MAC,beige,liquid,women,,3900,24-hour buildable medium-to-full matte coverage foundation with oil and shine control.
+P0841,Maybelline Fit Me Matte + Poreless Liquid Foundation,beauty,Maybelline,buff beige,liquid,women,,1150,Lightweight tone and texture fitting liquid foundation with micro-powders for normal to oily skin.
+P0842,Maybelline Instant Age Rewind Multi-Use Concealer,beauty,Maybelline,fair,liquid,women,,1100,Micro-corrector sponge applicator concealer erases dark circles and fine lines seamlessly.
+P0843,L'Oreal Paris Telescopic Original Mascara,beauty,L'Oreal,carbon black,wax,women,,1450,Precision flexible comb separates and enhances eyelashes up to 60% longer looking lashes.
+P0844,Nivea Men Deep Impact Face Wash 100g,face wash,Nivea,black,foam,men,,550,"Enriched with black carbon to deeply cleanse oil, dirt, and pollution from men's skin pores."
+P0845,Gillette Fusion5 ProGlide Power Mens Razor,shaver,Gillette,silver blue,steel,men,,1850,FlexBall technology razor with 5 anti-friction blades that responds to facial contours.
+P0846,Philips Series 3000 Showerproof Body Groomer,trimmer,Philips,black,plastic,men,,3900,Rounded tips and hypo-allergenic foil designed to comfortably shave all body zones without cuts.
+P0847,Oral-B iO Series 9 Electric Toothbrush with AI,electric toothbrush,Oral-B,black onyx,plastic,unisex,,24000,Revolutionary magnetic iO technology with 3D teeth tracking and interactive smart color display.
+P0848,Darlie Double Action Mint Toothpaste 200g Pack of 2,personal_care,Darlie,white green,paste,unisex,,480,Classic spearmint and peppermint refreshing natural dual mint toothpaste for fresh breath.
+P0849,Moroccanoil Treatment Original Hair Oil 100ml,skincare,Moroccanoil,amber,oil,unisex,,4800,"Argan oil infused conditioning, styling, and finishing hair serum that boosts brilliant shine."
+P0850,Olaplex No. 3 Hair Perfector Repairing Treatment,skincare,Olaplex,white,cream,unisex,,3600,Patented bond builder treatment reduces hair breakage and visibly strengthens damaged hair.
+P0851,The Body Shop Tea Tree Skin Clearing Facial Wash,face wash,The Body Shop,green,gel,unisex,,1650,Enriched with Community Fair Trade tea tree oil to purify blemished facial skin daily.
+P0852,Decathlon Domyos Hex Dumbbell 10kg Pair,sports shoes,Decathlon,black,cast iron,unisex,,5800,Hexagonal rubber-coated dumbbells that won't roll away on the floor during functional training.
+P0853,Decathlon Quechua Hiking Trekking Poles Pair,backpack,Decathlon,blue,aluminum,unisex,,2800,Adjustable twist-lock ergonomic foam grip walking poles for alpine mountain hiking.
+P0854,Lululemon The Mat 5mm Reversible Yoga Mat,sports shoes,Lululemon,chalky rose,polyurethane,unisex,,9800,Natural rubber base with antimicrobial additive and grippy polyurethane top layer for sweat.
+P0855,Nike Recovery Foam Roller 13-inch,sports shoes,Nike,black,foam,unisex,,3200,Textured grooved surface foam roller designed to massage tight muscles and promote circulation.
+P0856,Wilson US Open Extra Duty Tennis Balls 3-Can,sports shoes,Wilson,optic yellow,felt,unisex,,950,The official ball of the US Open grand slam tournament with durable heavy-duty woven felt.
+P0857,Yonex Nanoray Light 18i Badminton Racket,sports shoes,Yonex,black blue,graphite,unisex,,3600,Ultra-lightweight 77g isometric carbon graphite frame delivering lightning fast racquet speed.
+P0858,Yonex Mavis 350 Nylon Shuttlecocks Pack of 6,sports shoes,Yonex,yellow,nylon,unisex,,1350,Precision manufactured durable nylon shuttlecocks engineered to mimic feather flight recovery.
+P0859,Speedo Fastskin Endurance+ Jammer Swimsuit,clothing,Speedo,black,polyester,men,"30,32,34,36",4200,100% chlorine resistant quick-drying hydrodynamic racing and training jammer swim trunks.
+P0860,Speedo Biofuse 2.0 Polarized Swimming Goggles,goggles,Speedo,smoke blue,silicone,unisex,,4800,Flexible gel-like materials seal around eye contours with anti-fog polarized UV protection.
+P0861,Spalding NBA Replica Game Ball Indoor Outdoor,toy,Spalding,brick brown,composite leather,unisex,Size 7,4500,Premium composite leather basketball with full ball pebbling for elite grip and control.
+P0862,Molten V5M5000 Fivb Approved Volleyball,sports shoes,Molten,white red green,polyurethane,unisex,Size 5,6200,Official tournament volleyball featuring FLISTATEC flight stability technology for true flight.
+P0863,SS Master 500 English Willow Cricket Bat,sports shoes,SS,natural wood,willow,men,Short Handle,18500,Handcrafted Grade 1 English Willow cricket bat with huge contoured edges and feather pickup.
+P0864,Kookaburra Turf White Leather Cricket Ball,sports shoes,Kookaburra,white,leather,unisex,,4500,Four-piece alum tanned top-grade leather ball used in international One Day and T20 matches.
+P0865,SG Test Elbow and Arm Guard for Cricket,sports shoes,SG,white,polyurethane,men,,1200,High density impact absorption pre-shaped foam protection for batsman arms and elbows.
+P0866,LEGO Icons NASA Space Shuttle Discovery Set,building blocks,LEGO,white,plastic,unisex,,24000,"2354-piece detailed model kit with functional payload bay, landing gear, and Hubble telescope."
+P0867,LEGO Technic Porsche 911 RSR Race Car,building blocks,LEGO,white red,plastic,unisex,,18500,"Detailed racing car model with visible working differential, independent suspension, and engine."
+P0868,LEGO Classic Large Creative Brick Box 10698,building blocks,LEGO,multicolor,plastic,unisex,,6500,"790 colorful bricks, windows, doors, and tires in 33 different colors for endless kids' creativity."
+P0869,Hot Wheels 50-Car Multipack Gift Box,toy car,Hot Wheels,multicolor,metal,boys,,8500,Massive collection of 1:64 scale die-cast vehicles in individual decorative gift packaging.
+P0870,Hot Wheels City Ultimate Garage Playset,toy,Hot Wheels,multicolor,plastic,boys,,16500,"Giant multi-level garage playset with motorized elevator, parking for 100+ cars, and robo T-Rex."
+P0871,Barbie DreamCamper 3-in-1 Transforming Vehicle,toy,Barbie,pink,plastic,girls,,12500,"Camper RV transforms into a pickup truck, boat, and camping campsite with 60 accessories."
+P0872,Barbie Career Dolls Playset Teacher with Toddler,dolls,Barbie,multicolor,plastic,girls,,3200,"Classroom storytelling playset with chalkboard, desk, student doll, and learning accessories."
+P0873,Hasbro Catan Strategy Board Game,board game,Hasbro,multicolor,cardboard,unisex,,4800,The multi-award winning civilization building and trading strategy board game for 3-4 players.
+P0874,Hasbro Jenga Classic Wood Stacking Game,board game,Hasbro,natural wood,wood,unisex,,1750,The original block stacking game of suspense: pull out a block without crashing the tower.
+P0875,Hasbro Clue Murder Mystery Family Board Game,board game,Hasbro,multicolor,cardboard,unisex,,2600,"Classic detective whodunit game: solve who murdered Mr. Boddy, in which room, and with what weapon."
+P0876,Hasbro Twister Party Floor Game,board game,Hasbro,multicolor,plastic,unisex,,1950,The classic game that ties you up in knots: spin the wheel and move your hands and feet.
+P0877,Fisher-Price Kick & Play Piano Gym Baby Mat,toy,Fisher-Price,multicolor,fabric,unisex,,5200,Interactive musical developmental playmat for babies from newborn tummy time to sit and play.
+P0878,Fisher-Price Rock-a-Stack Ring Sorter,toy,Fisher-Price,multicolor,plastic,unisex,,950,Classic 5 colorful stacking rings on a bat-at rocker base to introduce size and relative order.
+P0879,Parker Sonnet Black Lacquer Gold Trim Fountain Pen,pen,Parker,black gold,steel,unisex,,14500,Timeless luxury fountain pen featuring 18k solid gold nib and glossy black lacquer finish.
+P0880,Parker IM Ballpoint Pen with Chrome Trim,pen,Parker,matte black,metal,unisex,,2400,Professional everyday writing ballpoint pen with smooth Quinkflow ink ball mechanism.
+P0881,Lamy Safari Fountain Pen Medium Nib,pen,Lamy,charcoal black,abs plastic,unisex,,3200,Ergonomic contoured grip section with black chromium-plated steel nib and flexible brass wire clip.
+P0882,Moleskine Classic Hard Cover Ruled Large Notebook,notebook,Moleskine,sapphire blue,paper,unisex,,2600,"Thread-bound classic notebook with 240 acid-free ivory pages, ribbon bookmark, and inner pocket."
+P0883,The Psychology of Money by Morgan Housel,book,Penguin,white,paper,unisex,,850,"Timeless lessons on wealth, greed, and happiness exploring how people think about money."
+P0884,Sapiens A Brief History of Humankind by Yuval Noah Harari,book,Penguin,white,paper,unisex,,1150,Groundbreaking narrative of our history from ancient hunter-gatherers to modern global society.
+P0885,Rich Dad Poor Dad by Robert T. Kiyosaki,book,Plata Publishing,purple,paper,unisex,,750,What the rich teach their kids about money that the poor and middle class do not.
+P0886,Deep Work by Cal Newport,book,Grand Central,yellow,paper,unisex,,950,Rules for focused success in a distracted world to master complicated information and produce fast results.

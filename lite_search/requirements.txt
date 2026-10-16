@@ -1,0 +1,8 @@
+numpy
+pandas
+scipy
+sentence-transformers   # real embeddings (CPU is fine); omit and set EMBEDDER=hashing for a no-download test
+fastapi
+uvicorn
+redis                   # optional: shared cache
+sqlalchemy              # optional: DATABASE_URL (+ your DB driver, e.g. psycopg2-binary / pymysql / pyodbc)

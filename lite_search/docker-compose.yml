@@ -1,0 +1,12 @@
+services:
+  redis:
+    image: redis:7-alpine
+    command: ["redis-server", "--maxmemory", "256mb", "--maxmemory-policy", "allkeys-lru", "--save", ""]
+  search:
+    build: .
+    env_file: .env
+    environment:
+      REDIS_URL: redis://redis:6379/0
+    ports: ["8000:8000"]
+    volumes: ["./.lite_search_index:/app/.lite_search_index"]
+    depends_on: [redis]

@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lite_search"
+version = "0.1.0"
+description = "Lightweight hybrid e-commerce search: rules + BM25 + embeddings, Redis cache, optional LLM fallback"
+requires-python = ">=3.9"
+dependencies = ["numpy", "pandas", "scipy"]
+
+[project.optional-dependencies]
+embed  = ["sentence-transformers"]          # real embeddings (CPU is fine)
+redis  = ["redis>=5"]                       # shared cache
+api    = ["fastapi", "uvicorn"]             # HTTP server
+sql    = ["sqlalchemy"]                     # load catalog from the company DB
+llm    = ["anthropic"]                      # optional LLM fallback parser
+rerank = ["sentence-transformers"]          # optional cross-encoder
+dev    = ["pytest", "httpx"]
+
+[tool.setuptools.packages.find]
+include = ["lite_search*"]
