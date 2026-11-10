@@ -1,0 +1,258 @@
+{
+  "domain_id": "ecommerce_general_v1",
+  "name": "E-Commerce Multilingual Retail Pack",
+  "version": "1.0.0",
+  "schema_map": {
+    "product_id": "id",
+    "sku": "sku",
+    "title": "title",
+    "description": "description",
+    "category_path": "category_path",
+    "category_leaf": "category",
+    "brand": "brand",
+    "color": "color",
+    "material": "material",
+    "gender": "gender",
+    "audience": "audience",
+    "sizes": "sizes",
+    "price": "price",
+    "currency": "currency",
+    "stock_qty": "stock_qty",
+    "rating": "rating",
+    "review_count": "review_count",
+    "attributes": "attributes",
+    "tags": "tags",
+    "is_active": "is_active",
+    "updated_at": "updated_at"
+  },
+  "taxonomy_map": {
+    "apparel": ["t-shirt", "shirt", "panjabi", "hoodie", "jacket", "jeans", "trousers", "saree", "kurti", "salwar kameez"],
+    "footwear": ["running shoes", "sneakers", "leather shoes", "sandals", "slippers", "boots"],
+    "electronics": ["smartphone", "laptop", "wireless headphones", "smartwatch", "bluetooth speaker", "tablet", "power bank", "webcam"],
+    "accessories": ["leather wallet", "leather belt", "sunglasses", "backpack", "travel bag", "wristwatch"],
+    "home_living": ["stainless steel water bottle", "ceramic coffee mug", "desk lamp", "air purifier", "scented candle"],
+    "toys_kids": ["building blocks", "educational toy", "remote control car", "soft teddy bear", "puzzle board"],
+    "stationery": ["notebook", "pen set", "scientific calculator", "study desk organizer", "drawing sketchbook"],
+    "personal_care": ["electric toothbrush", "beard trimmer", "perfume", "skincare cream", "hair dryer"]
+  },
+  "lexicon": {
+    "aliases": {
+      "juta": "shoes",
+      "juto": "shoes",
+      "shoe": "shoes",
+      "sneaker": "sneakers",
+      "panjabi": "panjabi",
+      "punjabi": "panjabi",
+      "sari": "saree",
+      "shari": "saree",
+      "ghori": "watch",
+      "ghori": "watch",
+      "choshma": "sunglasses",
+      "chashma": "sunglasses",
+      "khata": "notebook",
+      "boi": "book",
+      "kolom": "pen",
+      "t-shirt": "t-shirt",
+      "tshirt": "t-shirt",
+      "ti-shirt": "t-shirt",
+      "t shart": "t-shirt",
+      "shart": "shirt",
+      "bagpack": "backpack",
+      "mug": "coffee mug",
+      "botol": "water bottle",
+      "headphone": "wireless headphones",
+      "earphone": "wireless headphones",
+      "airpod": "wireless headphones",
+      "earbuds": "wireless headphones",
+      "soundbox": "bluetooth speaker",
+      "spikar": "bluetooth speaker",
+      "mobile": "smartphone",
+      "fon": "smartphone",
+      "phone": "smartphone",
+      "tab": "tablet",
+      "laptop": "laptop",
+      "khelna": "educational toy",
+      "toy": "educational toy",
+      "watch": "watch",
+      "smart watch": "smartwatch"
+    },
+    "brand_aliases": {
+      "sam sung": "Samsung",
+      "samsang": "Samsung",
+      "aple": "Apple",
+      "apel": "Apple",
+      "iphone": "Apple",
+      "xiomi": "Xiaomi",
+      "redmi": "Xiaomi",
+      "nik": "Nike",
+      "naik": "Nike",
+      "adydas": "Adidas",
+      "addidas": "Adidas",
+      "adida": "Adidas",
+      "kashio": "Casio",
+      "sony": "Sony",
+      "hp": "HP",
+      "dell": "Dell",
+      "lenovo": "Lenovo",
+      "aarong": "Aarong",
+      "batabd": "Bata",
+      "apex": "Apex",
+      "lotto": "Lotto"
+    },
+    "bangla_dictionary": {
+      "জুতা": "shoes",
+      "জুতো": "shoes",
+      "পাঞ্জাবি": "panjabi",
+      "পাঞ্জাবী": "panjabi",
+      "শার্ট": "shirt",
+      "টি-শার্ট": "t-shirt",
+      "টি শার্ট": "t-shirt",
+      "ঘড়ি": "watch",
+      "ঘড়ি": "watch",
+      "চশমা": "sunglasses",
+      "বই": "notebook",
+      "খাতা": "notebook",
+      "কলম": "pen",
+      "ব্যাগ": "backpack",
+      "খেলনা": "educational toy",
+      "পুতুল": "soft teddy bear",
+      "পানির বোতল": "stainless steel water bottle",
+      "মগ": "ceramic coffee mug",
+      "ফোন": "smartphone",
+      "মোবাইল": "smartphone",
+      "হেডফোন": "wireless headphones",
+      "ল্যাপটপ": "laptop",
+      "বেল্ট": "leather belt",
+      "মানিব্যাগ": "leather wallet",
+      "শাড়ি": "saree",
+      "বাচ্চাদের": "kids",
+      "ছোটদের": "kids",
+      "বাবার": "father",
+      "মায়ের": "mother",
+      "পুরুষদের": "men",
+      "মহিলাদের": "women",
+      "উপহার": "gift",
+      "গিফট": "gift"
+    }
+  },
+  "persona_config": {
+    "father": {
+      "aliases": ["baba", "babar", "father", "dad", "abba", "abbur", "bap", "বাবার", "বাবা", "আব্বা", "আব্বুর"],
+      "target_audience": "adult",
+      "target_gender": "men",
+      "affinities": ["leather wallet", "leather belt", "panjabi", "wristwatch", "ceramic coffee mug", "electric toothbrush", "beard trimmer", "stainless steel water bottle"]
+    },
+    "mother": {
+      "aliases": ["ma", "mayer", "mother", "mom", "ammu", "ammur", "মায়ের", "মা", "আম্মু", "আম্মুর"],
+      "target_audience": "adult",
+      "target_gender": "women",
+      "affinities": ["saree", "kurti", "salwar kameez", "scented candle", "ceramic coffee mug", "air purifier", "perfume", "stainless steel water bottle"]
+    },
+    "kid": {
+      "aliases": ["kid", "kids", "child", "children", "baccha", "bacchader", "choto", "chotoder", "shishu", "বাচ্চা", "বাচ্চাদের", "ছোটদের", "শিশু", "ছেলেদের খেলনা"],
+      "target_audience": "kids",
+      "target_gender": "unisex",
+      "affinities": ["building blocks", "educational toy", "remote control car", "soft teddy bear", "puzzle board", "drawing sketchbook"]
+    },
+    "toddler": {
+      "aliases": ["toddler", "toddlers", "infant", "baby", "khoka", "khuki", "বাচ্চা"],
+      "target_audience": "toddler",
+      "target_gender": "unisex",
+      "affinities": ["building blocks", "soft teddy bear", "puzzle board", "educational toy"]
+    },
+    "student": {
+      "aliases": ["student", "chatro", "studentder", "porashona", "study", "পড়াশোনা", "ছাত্র", "ছাত্রদের"],
+      "target_audience": "youth",
+      "target_gender": "unisex",
+      "affinities": ["backpack", "notebook", "pen set", "scientific calculator", "desk lamp", "study desk organizer", "laptop", "tablet"]
+    },
+    "husband": {
+      "aliases": ["husband", "shami", "bor", "jamai", "বরের", "স্বামীর"],
+      "target_audience": "adult",
+      "target_gender": "men",
+      "affinities": ["leather wallet", "wristwatch", "beard trimmer", "perfume", "panjabi", "running shoes"]
+    },
+    "wife": {
+      "aliases": ["wife", "bou", "stree", "bouer", "স্ত্রীর", "বউয়ের"],
+      "target_audience": "adult",
+      "target_gender": "women",
+      "affinities": ["saree", "perfume", "smartwatch", "hair dryer", "sunglasses", "ceramic coffee mug"]
+    },
+    "men": {
+      "aliases": ["men", "man", "male", "chele", "cheleder", "purush", "পুরুষ", "পুরুষদের", "ছেলেদের"],
+      "target_audience": "adult",
+      "target_gender": "men",
+      "affinities": ["shirt", "t-shirt", "panjabi", "jeans", "leather shoes", "running shoes", "leather wallet", "beard trimmer"]
+    },
+    "women": {
+      "aliases": ["women", "woman", "female", "meye", "meyeder", "mobila", "মহিলা", "মহিলাদের", "মেয়েদের"],
+      "target_audience": "adult",
+      "target_gender": "women",
+      "affinities": ["saree", "kurti", "salwar kameez", "perfume", "hair dryer", "running shoes", "sunglasses"]
+    }
+  },
+  "intent_config": {
+    "gift": {
+      "triggers": ["gift", "present", "upohar", "উপহার", "গিফট", "gift item"],
+      "boost_affinities": ["leather wallet", "wristwatch", "perfume", "ceramic coffee mug", "panjabi", "saree", "building blocks", "scented candle"]
+    },
+    "online_class": {
+      "triggers": ["online class", "online classes", "zoom class", "study online", "online class er jonno", "অনলাইন ক্লাস"],
+      "boost_affinities": ["webcam", "wireless headphones", "tablet", "laptop", "desk lamp", "notebook"]
+    },
+    "travel": {
+      "triggers": ["travel", "traveling", "tour", "trip", "ghumano", "shofor", "ভ্রমণ", "ট্যুর"],
+      "boost_affinities": ["travel bag", "backpack", "power bank", "stainless steel water bottle", "sunglasses", "wireless headphones"]
+    },
+    "gym_fitness": {
+      "triggers": ["gym", "workout", "exercise", "running", "fitness", "দৌড়", "ব্যায়াম"],
+      "boost_affinities": ["running shoes", "smartwatch", "stainless steel water bottle", "wireless headphones", "t-shirt"]
+    },
+    "office": {
+      "triggers": ["office", "work", "meeting", "formal", "corporate", "অফিস", "ফরমাল"],
+      "boost_affinities": ["leather shoes", "shirt", "leather wallet", "laptop", "leather belt", "study desk organizer"]
+    },
+    "hot_coffee_drink": {
+      "triggers": ["coffee hot", "keep coffee hot", "hot coffee", "tea hot", "keep drink cold"],
+      "boost_affinities": ["stainless steel water bottle", "ceramic coffee mug"]
+    }
+  },
+  "locale_config": {
+    "default_currency": "BDT",
+    "currency_symbols": ["৳", "tk", "taka", "bdt", "টাকা", "টাকায়"],
+    "bangla_digits": {
+      "০": "0", "১": "1", "২": "2", "৩": "3", "৪": "4",
+      "৫": "5", "৬": "6", "৭": "7", "৮": "8", "৯": "9"
+    },
+    "price_keywords": {
+      "under": ["under", "below", "less than", "er niche", "niche", "er kom", "kom", "মধ্যে", "কম", "নিচে", "পর্যন্ত"],
+      "above": ["above", "over", "more than", "er beshi", "beshi", "er upore", "upore", "বেশি", "উপরে"],
+      "around": ["around", "approx", "kachakachi", "কাছাকাছি"]
+    }
+  },
+  "retrieval_config": {
+    "bm25_weight": 0.35,
+    "dense_weight": 0.65,
+    "rrf_k": 60,
+    "candidate_pool_size": 30,
+    "rerank_top_k": 20,
+    "final_top_k": 10,
+    "attribute_weights": {
+      "brand": 14.0,
+      "color": 7.0,
+      "material": 6.0,
+      "gender": 8.0,
+      "category": 10.0,
+      "persona_affinity": 9.0,
+      "intent_affinity": 8.0
+    }
+  },
+  "threshold_config": {
+    "min_cosine_relevance": 0.22,
+    "min_cross_encoder_score": -4.0,
+    "allow_relaxed_fallback": true,
+    "hard_price_filter": true,
+    "hard_audience_filter": true,
+    "hard_stock_filter": false
+  }
+}

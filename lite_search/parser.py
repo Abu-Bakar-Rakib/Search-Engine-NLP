@@ -123,6 +123,37 @@ def has_signal(p) -> bool:
     return any(p.get(k) is not None for k in SIGNAL_KEYS)
 
 
+# Generic words / shop noise that must never be hijacked as a brand or exact leaf category
+_NOISY_BRANDS = {
+    "no brand", "non-brand", "non brand", "generic", "unknown", "other", "none", "na", "n/a",
+    "smart", "power", "watch", "laptop", "mobile", "phone", "smartphone", "tablet", "cooler", "heater",
+    "conditioner", "adapter", "cable", "earphone", "earphones", "speaker", "speakers", "blender",
+    "kettle", "cooker", "iron", "monitor", "printer", "router", "keyboard", "camera", "battery",
+    "light", "lamp", "glass", "bottle", "cup", "mug", "bag", "shoe", "shoes", "sandal", "sandals",
+    "sneaker", "sneakers", "pant", "pants", "jeans", "kurti", "hoodie", "jacket", "dress", "set",
+    "combo", "pack", "collection", "original", "official", "imported", "new", "best", "good",
+    "quality", "premium", "pure", "fresh", "natural", "soft", "face", "skin", "hair", "body",
+    "eye", "lip", "men", "women", "kids", "baby", "boy", "girl", "unisex", "black", "white",
+    "red", "blue", "green", "yellow", "pink", "gold", "silver", "brown", "grey", "fashion",
+    "style", "classic", "super", "pro", "max", "ultra", "mini", "plus", "air", "home", "life",
+    "care", "beauty", "health", "shop", "store", "gadgets", "gadget", "electronics", "accessories",
+    "fan", "charger", "cover", "case", "mouse", "headphone", "earbuds", "shirt", "t-shirt",
+    "saree", "panjabi", "rice", "cream", "wash", "serum", "oil", "gel", "soap", "shampoo",
+    "lipstick", "sunscreen", "trimmer", "toner", "cleanser", "lotion", "powder", "mask",
+    "pencil", "notebook", "book", "pen", "toy", "gift",
+}
+
+_NOISY_CATS = {
+    "featured", "other", "others", "gadget", "gadgets", "skin", "face", "hair", "body",
+    "men", "women", "kids", "baby", "electronics", "electronics store", "electronics & tech",
+    "fashion", "fashion 5", "men's fashion", "women's fashion", "men’s fashion & style",
+    "phones & tablets", "phones & gadgets", "audio & gadgets", "computers & it", "appliances",
+    "beauty & personal care", "grocery", "grocery & food", "health & wellness", "health & fitness",
+    "hardware & tools", "books & stationery", "home, kitchen & furniture", "jewellery & accessories",
+    "sports, auto & outdoor", "baby, kids & toys", "accessories", "makeup",
+}
+
+
 # ---------------- rule parser + normaliser, built from the catalog ----------------
 class RuleParser:
     def __init__(self, catalog, aliases=None, groups=None):
@@ -130,15 +161,23 @@ class RuleParser:
         self.aliases = {**L.ALIASES, **(aliases or {})}
         self.groups = groups or L.GROUPS
         by_len = lambda x: -len(x)
-        self.brands = sorted(catalog.vocab_values("brand"), key=by_len)
+        raw_brands = catalog.vocab_values("brand")
+        self.brands = sorted([b for b in raw_brands if b.lower() not in _NOISY_BRANDS and len(b.strip()) >= 2], key=by_len)
+        brand_alnum = {alnum(b) for b in self.brands}
+        raw_cats = catalog.vocab_values("category")
+        self.cats = sorted(
+            [c for c in raw_cats if c.lower() not in _NOISY_CATS and alnum(c) not in brand_alnum],
+            key=lambda c: -len(cat_norm(c)),
+        )
         self.colors = sorted(catalog.vocab_values("color"), key=by_len)
         self.mats = sorted(catalog.vocab_values("material"), key=by_len)
-        self.cats = sorted(catalog.vocab_values("category"), key=lambda c: -len(cat_norm(c)))
         self.known = set(catalog.doc_freq) | STOP | {"size", "between", "upto", "within", "maximum", "max", "minimum",
                                                     "min", "least", "more", "less", "than", "cheaper", "tk", "taka", "bdt"}
-        present = set(catalog.df["category"])
-        self.group_masks = {g: catalog.category_mask(cats) for g, (_, cats) in self.groups.items()
-                            if present & set(cats)}
+        self.group_masks = {}
+        for g, (_, cats) in self.groups.items():
+            m = catalog.category_mask(cats)
+            if m.any():
+                self.group_masks[g] = m
 
     # ---- normalisation: Banglish -> English ----
     def alias_pass(self, query: str) -> str:
@@ -156,17 +195,40 @@ class RuleParser:
 
     # ---- rule-based intent ----
     def parse(self, query: str) -> Dict:
-        q = query.lower()
+        # Strip negated clauses before extracting positive brand/color/category signals
+        q_pos = re.sub(
+            r"\b(?:not|except|without|no)\s+[a-z0-9\u0980-\u09FF\s\-]+?(?=\s+(?:under|below|above|between|for|size|with|and|,|\.|$)|$)",
+            " ",
+            query.lower(),
+        )
+        q_pos = re.sub(r"[a-z0-9\u0980-\u09FF]+\s+(?:ছাড়|ছাড়া|ব্যতীত|বিনা)", " ", q_pos)
+        q = re.sub(r"\s+", " ", q_pos).strip()
         qtoks = {alnum(w) for w in q.split()}
         p = {k: None for k in SCHEMA_KEYS}
-        qn = " " + cat_norm(query) + " "
+        qn = " " + cat_norm(q) + " "
         p["category"] = next((c for c in self.cats if " " + cat_norm(c) + " " in qn), None)
+        if re.search(r"\biphones?\b", q) and not any(w in q for w in ("case", "cover", "protector", "charger", "cable", "holder")):
+            p["category"] = "smartphone"
+            p["brand"] = "Apple"
+        elif not p["category"] and re.search(r"\b(?:running\s+(?:.*?\s+)?shoes?|shoes?\s+(?:.*?\s+)?(?:running|jogging)|trainers?\s+(?:for\s+)?jogging)\b", q):
+            p["category"] = "running shoes"
         p["gender"] = next((g for g in ("women", "men", "girls", "boys", "unisex")
                             if any(word_in(c, q) for c in L.GENDER_CUES[g])), None)
         p["size"] = find_size(q)
+        if p["gender"] in ("boys", "girls") and p["size"] in ("S", "M", "L", "XL", "XXL", "38", "40", "42", "44"):
+            p["gender"] = "men" if p["gender"] == "boys" else "women"
+
+        # Disambiguate generic apparel words (e.g. 'dress' meaning clothing for men)
+        if p["category"] == "dress" and (p["gender"] in ("men", "boys") or any(word_in(w, q) for w in ("chele", "cheler", "cheleder", "purush", "purusher", "men", "mens", "boy", "boys"))):
+            p["category"] = None
+            if not p["gender"]:
+                p["gender"] = "men"
         p["color"] = next((c for c in self.colors if word_in(c, q)), None)
         p["material"] = next((m for m in self.mats if word_in(m, q)), None)
-        p["brand"] = next((b for b in self.brands if word_in(b, q) or (" " not in b and alnum(b) in qtoks)), None)
+        # Skip single-token brand matching if the token is part of a multi-word product term (e.g. 'power bank', 'smart watch')
+        q_masked = re.sub(r"\b(?:power\s+bank|smart\s+watch|hand\s+watch|face\s+wash)\b", " ", q)
+        q_masked_toks = {alnum(w) for w in q_masked.split()}
+        p["brand"] = next((b for b in self.brands if word_in(b, q_masked) or (" " not in b and alnum(b) in q_masked_toks)), None)
         if p["brand"] and p["color"] and alnum(p["brand"]) == alnum(p["color"]):
             p["brand"] = None
         p["min_price"], p["max_price"] = extract_price(query)
@@ -174,8 +236,26 @@ class RuleParser:
 
     # ---- product groups ("shoes" -> all footwear categories) ----
     def detect_groups(self, q: str):
-        t = set(re.findall(r"[a-z0-9]+", q.lower()))
-        names = [g for g in self.group_masks if t & self.groups[g][0]]
+        ql = q.lower()
+        t = set(re.findall(r"[a-z0-9\u0980-\u09FF]+", ql))
+        names = []
+        for g in self.group_masks:
+            triggers = self.groups[g][0]
+            single_hit = bool(t & triggers)
+            phrase_hit = any(
+                (" " in ph or "-" in ph) and re.search(rf"(?<![\w\u0980-\u09FF]){re.escape(ph)}(?![\w\u0980-\u09FF])", ql)
+                for ph in triggers
+            )
+            if single_hit or phrase_hit:
+                names.append(g)
+        # Accessory disambiguation: 'mobile er charger' / 'phone cover' should not drag in laptops/phones under 'electronics'
+        if "phone_accessories" in names and "electronics" in names:
+            if not any(w in t for w in ("laptop", "laptops", "computer", "tablet", "monitor", "keyboard", "mouse", "printer", "router", "webcam")):
+                names.remove("electronics")
+        # 'air conditioner' contains the token 'conditioner' — don't confuse it with hair conditioner
+        if "haircare" in names and "air conditioner" in ql:
+            if not any(w in t for w in ("hair", "shampoo", "scalp", "dandruff")):
+                names.remove("haircare")
         if not names:
             return None, []
         mask = np.zeros(self.cat.n, dtype=bool)

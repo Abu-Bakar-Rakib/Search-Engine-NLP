@@ -159,6 +159,96 @@ INDEX_HTML = """<!DOCTYPE html>
     .search-btn:hover { opacity: 0.95; transform: translateY(-1px); }
     .search-btn:active { transform: translateY(0); }
 
+    /* Voice Search Button */
+    .voice-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-muted);
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 0.6rem;
+      transition: all 0.2s ease;
+      position: relative;
+      flex-shrink: 0;
+    }
+    .voice-btn:hover {
+      color: #fff;
+      border-color: var(--accent);
+      background: rgba(99, 102, 241, 0.15);
+      transform: translateY(-1px);
+    }
+    .voice-btn.recording {
+      color: #fff;
+      border-color: #f43f5e;
+      background: #f43f5e;
+      animation: pulse-ring 1.4s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+    }
+    @keyframes pulse-ring {
+      0% { box-shadow: 0 0 0 0 rgba(244, 63, 94, 0.7); }
+      70% { box-shadow: 0 0 0 10px rgba(244, 63, 94, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(244, 63, 94, 0); }
+    }
+
+    /* Voice Status Overlay */
+    .voice-status-bar {
+      display: none;
+      position: absolute;
+      top: calc(100% + 6px);
+      left: 0;
+      right: 0;
+      background: rgba(18, 24, 38, 0.96);
+      border: 1px solid rgba(244, 63, 94, 0.4);
+      border-radius: 12px;
+      padding: 0.85rem 1.25rem;
+      font-size: 0.92rem;
+      color: #f1f5f9;
+      backdrop-filter: blur(20px);
+      z-index: 55;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 12px 36px rgba(0,0,0,0.6);
+    }
+    .voice-wave {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+    }
+    .voice-bar {
+      width: 3px;
+      height: 12px;
+      background: #f43f5e;
+      border-radius: 2px;
+      animation: voice-wave-anim 1s ease-in-out infinite;
+    }
+    .voice-bar:nth-child(2) { animation-delay: 0.15s; height: 18px; }
+    .voice-bar:nth-child(3) { animation-delay: 0.3s; height: 14px; }
+    .voice-bar:nth-child(4) { animation-delay: 0.45s; height: 22px; }
+    .voice-bar:nth-child(5) { animation-delay: 0.6s; height: 10px; }
+    @keyframes voice-wave-anim {
+      0%, 100% { transform: scaleY(0.4); }
+      50% { transform: scaleY(1); }
+    }
+    .voice-cancel-btn {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--text-dim);
+      padding: 0.3rem 0.7rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.8rem;
+      font-family: inherit;
+      transition: all 0.15s;
+    }
+    .voice-cancel-btn:hover {
+      background: rgba(255, 255, 255, 0.15);
+      color: #fff;
+    }
+
     /* Autocomplete dropdown */
     .suggest-dropdown {
       position: absolute;
@@ -434,20 +524,46 @@ INDEX_HTML = """<!DOCTYPE html>
       <div class="search-bar-wrap">
         <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
         <input type="text" id="searchInput" class="search-input" placeholder="Search anything, e.g. 'black nike running shoe under 5000' or 'panjabi 2000 er niche'..." autofocus autocomplete="off">
+        <button type="button" id="voiceBtn" class="voice-btn" title="Voice Search (Speak in Bangla or English)">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+            <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+            <line x1="12" y1="19" x2="12" y2="23"/>
+            <line x1="8" y1="23" x2="16" y2="23"/>
+          </svg>
+        </button>
         <button id="searchBtn" class="search-btn">Search</button>
+      </div>
+      <div id="voiceStatusBar" class="voice-status-bar">
+        <div style="display: flex; align-items: center; gap: 0.75rem; flex: 1;">
+          <div class="voice-wave">
+            <div class="voice-bar"></div>
+            <div class="voice-bar"></div>
+            <div class="voice-bar"></div>
+            <div class="voice-bar"></div>
+            <div class="voice-bar"></div>
+          </div>
+          <span id="voiceStatusText">Listening... Speak now</span>
+        </div>
+        <button type="button" onclick="cancelVoiceSearch()" class="voice-cancel-btn">Cancel</button>
       </div>
       <div id="suggestBox" class="suggest-dropdown"></div>
     </div>
 
     <div class="chips-label">Try these sample queries</div>
     <div class="chips-group">
+      <button class="chip" onclick="runSearch('পানি গরম করার ইলেকট্রিক কেটলি')">পানি গরম করার ইলেকট্রিক কেটলি (Electric Kettle)</button>
+      <button class="chip" onclick="runSearch('বিয়ের অনুষ্ঠানের জন্য শাড়ি')">বিয়ের অনুষ্ঠানের জন্য শাড়ি (Bangla)</button>
+      <button class="chip" onclick="runSearch('মায়ের জন্য শাড়ি ২০০০ টাকার নিচে')">মায়ের জন্য শাড়ি ২০০০ টাকার নিচে (Bangla)</button>
+      <button class="chip" onclick="runSearch('রান্নার কড়াই')">রান্নার কড়াই (Bangla)</button>
+      <button class="chip" onclick="runSearch('pant')">pant</button>
+      <button class="chip" onclick="runSearch('churi')">churi (knife)</button>
       <button class="chip" onclick="runSearch('black nike running shoe under 5000')">black nike running shoe under 5000</button>
       <button class="chip" onclick="runSearch('panjabi 2000 er niche')">panjabi 2000 er niche (Banglish)</button>
       <button class="chip" onclick="runSearch('cotton shirt size L for men')">cotton shirt size L for men</button>
       <button class="chip" onclick="runSearch('gift for a toddler who loves building things')">gift for toddler (semantic intent)</button>
       <button class="chip" onclick="runSearch('wireless headphones')">wireless headphones</button>
       <button class="chip" onclick="runSearch('leather wallet for men')">leather wallet for men</button>
-      <button class="chip" onclick="runSearch('red t-shirt')">red t-shirt</button>
     </div>
 
     <div id="metaBox" class="meta-box">
@@ -455,6 +571,7 @@ INDEX_HTML = """<!DOCTYPE html>
         <div style="display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap;">
           <span id="sourceBadge" class="badge-pill"></span>
           <span id="cacheBadge" class="badge-pill cached-pill"></span>
+          <span id="countBadge" class="badge-pill" style="background:rgba(255,255,255,0.08); border-color:rgba(255,255,255,0.15); color:#fff;"></span>
         </div>
         <span id="latencyBadge" class="latency-pill"></span>
       </div>
@@ -532,7 +649,8 @@ INDEX_HTML = """<!DOCTYPE html>
       input.value = query;
       btn.innerHTML = '<span class="spinner"></span>';
       
-      fetch(`/search?q=${encodeURIComponent(query)}&k=12`)
+      // Request up to 100 relevant products; backend dynamically filters to only what actually matches
+      fetch(`/search?q=${encodeURIComponent(query)}&k=100`)
         .then(res => res.json())
         .then(data => {
           btn.innerHTML = 'Search';
@@ -565,6 +683,8 @@ INDEX_HTML = """<!DOCTYPE html>
       // Cache badge & latency
       document.getElementById('cacheBadge').innerText = data.cached ? '⚡ Cached Hit' : 'Origin Computation';
       document.getElementById('latencyBadge').innerText = `${data.took_ms} ms`;
+      const numResults = (data.results && data.results.length) || 0;
+      document.getElementById('countBadge').innerText = `📦 ${numResults} Products Found`;
 
       // Intent breakdown
       const intentBox = document.getElementById('intentTags');
@@ -663,6 +783,184 @@ INDEX_HTML = """<!DOCTYPE html>
             </div>
           `).join('');
         });
+    }
+
+    // Voice Search Implementation (Web Speech API)
+    const voiceBtn = document.getElementById('voiceBtn');
+    const voiceStatusBar = document.getElementById('voiceStatusBar');
+    const voiceStatusText = document.getElementById('voiceStatusText');
+
+    let recognition = null;
+    let isListening = false;
+    let silenceTimer = null;
+    let maxRecordingTimer = null;
+    let shouldSearchOnEnd = true;
+    let latestTranscript = '';
+
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    if (!SpeechRecognition) {
+      if (voiceBtn) {
+        voiceBtn.title = 'Voice search is not supported in this browser. Please use Chrome, Edge, or Safari.';
+        voiceBtn.style.opacity = '0.5';
+      }
+    } else {
+      recognition = new SpeechRecognition();
+      // Continuous mode allows capturing entire phrase with natural short pauses
+      recognition.continuous = true;
+      recognition.interimResults = true;
+      recognition.maxAlternatives = 1;
+      // bn-BD natively transcribes both Bangla speech and English product terms
+      recognition.lang = 'bn-BD';
+
+      recognition.onstart = () => {
+        isListening = true;
+        shouldSearchOnEnd = true;
+        latestTranscript = '';
+        voiceBtn.classList.add('recording');
+        voiceStatusBar.style.display = 'flex';
+        voiceStatusText.innerText = 'Listening... Speak now';
+        suggestBox.style.display = 'none';
+
+        // Safety maximum recording window: 10 seconds
+        clearTimeout(maxRecordingTimer);
+        maxRecordingTimer = setTimeout(() => {
+          stopVoiceSearch(true);
+        }, 10000);
+      };
+
+      // Native Voice Activity Detector: triggers quickly when speech stops
+      recognition.onspeechend = () => {
+        clearTimeout(silenceTimer);
+        silenceTimer = setTimeout(() => {
+          stopVoiceSearch(true);
+        }, 400);
+      };
+
+      recognition.onresult = (event) => {
+        let finalPart = '';
+        let interimPart = '';
+        let hasFinal = false;
+
+        for (let i = 0; i < event.results.length; ++i) {
+          const res = event.results[i];
+          const text = res[0].transcript;
+          if (res.isFinal) {
+            finalPart += text + ' ';
+            hasFinal = true;
+          } else {
+            interimPart += text;
+          }
+        }
+
+        const combined = (finalPart + interimPart).trim();
+        // Clean trailing punctuation inserted by speech engine (e.g. "shoe.", "saree?")
+        const cleaned = combined.replace(/[.,?!]+$/, '').trim();
+
+        if (cleaned) {
+          latestTranscript = cleaned;
+          input.value = cleaned;
+          voiceStatusText.innerText = cleaned;
+
+          // Snappy silence timer: 550ms if engine finalized phrase, or 900ms for interim
+          clearTimeout(silenceTimer);
+          silenceTimer = setTimeout(() => {
+            stopVoiceSearch(true);
+          }, hasFinal ? 550 : 900);
+        }
+      };
+
+      recognition.onerror = (event) => {
+        clearTimeout(silenceTimer);
+        clearTimeout(maxRecordingTimer);
+        if (event.error === 'no-speech') {
+          voiceStatusText.innerText = 'No speech detected. Click mic to try again.';
+        } else if (event.error === 'not-allowed') {
+          voiceStatusText.innerText = 'Microphone permission blocked. Please allow mic access.';
+        } else {
+          voiceStatusText.innerText = `Voice notice: ${event.error}`;
+        }
+        setTimeout(() => stopVoiceSearch(false), 1600);
+      };
+
+      recognition.onend = () => {
+        clearTimeout(silenceTimer);
+        clearTimeout(maxRecordingTimer);
+        isListening = false;
+        voiceBtn.classList.remove('recording');
+        voiceStatusBar.style.display = 'none';
+
+        if (shouldSearchOnEnd) {
+          const query = (latestTranscript || input.value).trim().replace(/[.,?!]+$/, '');
+          if (query && query.length >= 2) {
+            runSearch(query);
+          }
+        }
+      };
+
+      voiceBtn.addEventListener('click', () => {
+        if (isListening) {
+          // If clicked while listening, finish and search immediately
+          stopVoiceSearch(true);
+        } else {
+          startVoiceSearch();
+        }
+      });
+    }
+
+    function startVoiceSearch() {
+      if (!recognition) {
+        alert('Voice search is not supported in this browser. Please use Google Chrome, Microsoft Edge, or Safari.');
+        return;
+      }
+      try {
+        clearTimeout(silenceTimer);
+        clearTimeout(maxRecordingTimer);
+        input.value = '';
+        latestTranscript = '';
+        recognition.start();
+      } catch (err) {
+        console.warn('Voice start warning:', err);
+      }
+    }
+
+    function stopVoiceSearch(andSearch = true) {
+      clearTimeout(silenceTimer);
+      clearTimeout(maxRecordingTimer);
+      shouldSearchOnEnd = andSearch;
+      if (recognition && isListening) {
+        try {
+          recognition.stop();
+        } catch (e) {}
+      }
+      isListening = false;
+      if (voiceBtn) voiceBtn.classList.remove('recording');
+      if (voiceStatusBar) voiceStatusBar.style.display = 'none';
+      if (andSearch) {
+        const query = (latestTranscript || input.value).trim().replace(/[.,?!]+$/, '');
+        if (query && query.length >= 2) {
+          runSearch(query);
+        }
+      }
+    }
+
+    function cancelVoiceSearch() {
+      latestTranscript = '';
+      stopVoiceSearch(false);
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && isListening) {
+        cancelVoiceSearch();
+      }
+    });
+
+    // Auto-search if ?q= parameter is present in URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const qParam = urlParams.get('q');
+    if (qParam) {
+      input.value = qParam;
+      runSearch(qParam);
     }
   </script>
 </body>

@@ -1,42 +1,88 @@
-# lite_search
+# lite_search ⚡
 
 <div align="center">
 
 ![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.110%2B-009688.svg?logo=fastapi&logoColor=white)
+![SentenceTransformers](https://img.shields.io/badge/SentenceTransformers-Multilingual-yellow.svg)
 ![PyTorch](https://img.shields.io/badge/PyTorch-CPU%20Friendly-EE4C2C.svg?logo=pytorch&logoColor=white)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 
-**Lightweight, CPU-first hybrid product search for e-commerce backends.**  
-Runs efficiently on commodity hardware without requiring expensive GPUs or massive LLMs.
+**High-Performance Multilingual Hybrid Search Engine for E-Commerce Backends**  
+*Dual Sparse BM25 + Dense Semantic Vectors + Reciprocal Rank Fusion (RRF) + Neural Cross-Encoder Reranking*  
+*Full Native Support for Bangla (বাংলা), Banglish Phonetics, and English*
 </div>
 
 ---
 
 ## ⚡ Highlights
 
-* **Pure CPU Execution**: Optimized for standard cloud instances or PCs (~300 MB process RSS, no GPU needed).
-* **3-Tier Hybrid Pipeline**:
-  1. **Rules (Microseconds)**: Deterministic parsing for price bounds, brands, colors, categories, materials, and sizes.
-  2. **BM25 + Dense Embeddings**: Dual lexical + semantic ranking over product vectors.
-  3. **Optional LLM Fallback**: Engages only when queries have no rule match (cached with circuit-breaker protection).
-* **Banglish & Bangla Support**: Built-in dictionary and normalizer handling phonetic spelling (e.g., *juta*, *panjabi*, *jama*).
-* **Multi-Level Caching**: Works seamlessly with **Redis** or auto-degrades to an internal **in-memory LRU cache**.
-* **Ready-to-Use HTTP API**: Built with FastAPI, including interactive Swagger docs (`/docs`) and a built-in test Web UI (`/`).
-* **Pluggable Data Sources**: Connect to CSV files or relational databases (PostgreSQL, MySQL, SQLite, etc.) via SQLAlchemy.
+* **True Multilingual Understanding**:
+  * Native Bengali Unicode script (`\u0980-\u09FF`) support alongside Banglish phonetic romanization and English.
+  * Bengali numerals (`০`-`৯`), multi-word expressions, clothing synonyms, and localized price phrases (`৩০০০ টাকার নিচে`, `২০০০ টাকার মধ্যে`, `১০০০ টাকার কম`).
+* **Persona & Occasion Intent Recognition**:
+  * Automatically identifies recipients (`বাবা`/`father`, `মা`/`mother`, `বাচ্চা`/`kids`, `ছাত্র`/`student`) and occasions (`উপহার`/`gift`, `online class`, `gym`, `office`).
+  * Injects catalog affinity boosts so queries like *"baba ke gift debo"* automatically surface panjabis, leather wallets, and wristwatches without explicit keyword matches.
+* **Reciprocal Rank Fusion (RRF)**:
+  * Merges rankings from **BM25 lexical search**, **multilingual dense vector similarity**, and **structured intent compatibility** into a unified, balanced score.
+* **Neural Cross-Encoder Reranking**:
+  * Uses `cross-encoder/ms-marco-MiniLM-L-6-v2` with **Query-Document Pair Caching** for deep semantic relevance and low latency.
+* **Zero Dead-Ends (Waterfall Relaxation)**:
+  * Strict constraints (budget, size, gender) are applied first; if too few products match, filters relax gracefully (`size` $\rightarrow$ `gender` $\rightarrow$ `price`) with clear explanation notes.
+* **Enterprise Connectors & Profiler**:
+  * Ingest data from **CSV files**, **SQLite**, or **PostgreSQL / MySQL / Oracle** via SQLAlchemy. Built-in schema validator and dataset profiler.
+* **Multi-Level Caching**:
+  * Zero-config in-memory LRU cache with automatic Redis fallback for multi-worker production deployments.
+* **Ready-to-Use HTTP REST API & Web UI**:
+  * Built with FastAPI, including interactive Swagger docs (`/docs`), web UI (`/` and `/ui`), live benchmarking (`/benchmark`), and intent extraction (`/intent/parse`).
 
 ---
 
-## 🔍 How a Query is Answered
+## 🔍 Search Architecture & Methodology
 
 ```text
-Query ─► Result Cache ─► Normalise (Banglish dictionary / phonetic rules)
-       ─► 1. RULES       Price, size, gender, category, brand, colour, material (microseconds)
-       ─► 2. LLM         Fallback only if rules find nothing & API key configured (cached, 4s timeout)
-       ─► 3. EMBEDDINGS  BM25 + SentenceTransformer vectors (ranks catalog matches)
-       ─► Tiers Ranking  Product Group > Attribute Matches > Soft Price > Audience
-       ─► Cache Store ─► Response JSON
+User Query: English, Bangla (বাংলা), or Banglish
+   │
+   ├─► 0. Cache Check (Redis / In-Process LRU) ──► Instant Return (<1ms) on hit
+   │
+   ├─► 1. NLP & Intent Engine (lite_search.nlp)
+   │      ├─ Convert Bengali digits (৩০০০ -> 3000) & handle multipliers (3k -> 3000)
+   │      ├─ Multi-word & dictionary normalizer (পানির বোতল -> water bottle)
+   │      ├─ Canonical attribute resolution (কালো -> black, সুতি -> cotton)
+   │      ├─ Persona detection (বাবা/baba -> father, gender: men)
+   │      ├─ Intent detection (উপহার -> gift) & category affinities
+   │      └─ Constraint extraction (max_price, min_price, size, audience)
+   │
+   ├─► 2. Dual Retrieval (Sparse + Dense + Intent Alignment)
+   │      ├─ BM25 Lexical Score: Inverted token index across Latin + Bengali Unicode
+   │      ├─ Dense Vector Cosine Sim: Multilingual MiniLM 384-d semantic embeddings
+   │      └─ Intent Compatibility Score: Affinity scoring against catalog categories
+   │
+   ├─► 3. Reciprocal Rank Fusion (RRF)
+   │      Score = w_dense/(60 + r_dense) + w_bm25/(60 + r_bm25) + w_intent/(60 + r_intent)
+   │
+   ├─► 4. Hard Constraints & Waterfall Relaxation
+   │      Apply hard masks (price, size, gender) -> Relax (size -> gender -> price) if < min_results
+   │
+   ├─► 5. Soft Attribute & Tier Boosts
+   │      Calibrated boosts for Brand (+14), Category (+10), Color (+7), Material (+6), Price Proximity
+   │
+   ├─► 6. Neural Cross-Encoder Reranking
+   │      ms-marco-MiniLM-L-6-v2 evaluates top 20-30 candidate pool with Pair Caching
+   │
+   └─► 7. Response Formatting & Cache Store
+          Enriched with scores, BM25, cosine, matched flags, and decision explanations
 ```
+
+---
+
+## 🧠 AI Models Used
+
+| Model Role | Model Identifier | Architecture | Size | Details |
+| :--- | :--- | :--- | :--- | :--- |
+| **Dense Embedder** | `sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2` | 12-layer Bi-Encoder | ~470 MB | 384-dimensional vectors; native Bangla, English, and 50+ languages. |
+| **Neural Reranker** | `cross-encoder/ms-marco-MiniLM-L-6-v2` | 6-layer Cross-Encoder | ~80 MB | Joint self-attention over query-product pairs with caching. |
+| **Fast Fallback Embedder** | `hashing-256` | CRC32 Bag-of-Words | 0 MB | Zero-download instant mode for tests and low-memory environments. |
 
 ---
 
@@ -62,40 +108,51 @@ Copy `.env.example` to `.env`:
 cp .env.example .env    # On Windows: copy .env.example .env
 ```
 
-*(By default, `.env` points to `data/demo_products.csv` and uses in-memory caching.)*
-
-### 3. Verify Catalog & Data Mapping
-
-Run the diagnostic tool to inspect your catalog fill rates and warnings:
-
-```bash
-python -m lite_search --check
+Key environment configurations in `.env`:
+```env
+CATALOG_CSV=data/demo_products.csv
+EMBEDDER=sentence-transformers
+EMB_MODEL=sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+USE_RERANK=true
+CE_MODEL=cross-encoder/ms-marco-MiniLM-L-6-v2
 ```
 
-### 4. Run Search Queries in Terminal
+### 3. Run Pre-Built Tests & Demos
 
-* **Single Query**:
+* **Multilingual Regression Tests** (Bangla, Banglish, and English):
   ```bash
-  python -m lite_search "red nike shoes under 5000"
+  python tests/test_multilingual.py
   ```
-* **Interactive Terminal Prompt (REPL)**:
+* **Bangla & Banglish Eligibility Suite**:
+  ```bash
+  python tests/test_bangla_eligibility.py
+  ```
+* **Typo & Incorrect Word Intent Recovery Suite**:
+  ```bash
+  python tests/test_typo_correction.py
+  ```
+* **REST API Client Test**:
+  ```bash
+  python tests/test_api_client.py
+  ```
+* **Full Benchmark Suite (120+ ground-truth labeled queries & latency benchmarks)**:
+  ```bash
+  python benchmarks/run_benchmark.py
+  ```
+* **Interactive Live Demo (9 real-world scenarios)**:
+  ```bash
+  python benchmarks/run_live_demo.py
+  ```
+* **Interactive Terminal Search (REPL)**:
   ```bash
   python -m lite_search --repl
-  ```
-* **Fast Mode (Instant execution without deep model download)**:
-  ```bash
-  # Linux/macOS:
-  EMBEDDER=hashing python -m lite_search "red nike shoes"
-
-  # Windows PowerShell:
-  $env:EMBEDDER="hashing"; python -m lite_search "red nike shoes"
   ```
 
 ---
 
-## 🌐 HTTP API Server
+## 🌐 Running the HTTP API Server
 
-Start the API server:
+Start the production server:
 
 ```bash
 python -m lite_search --serve --host 0.0.0.0 --port 8000
@@ -103,163 +160,189 @@ python -m lite_search --serve --host 0.0.0.0 --port 8000
 uvicorn lite_search.server:app --host 0.0.0.0 --port 8000
 ```
 
-- **Interactive API Documentation (Swagger)**: `http://localhost:8000/docs`
-- **Interactive Web Search UI**: `http://localhost:8000/`
-
-### Docker Support
-
-Run with Redis and Search API containerized:
-
-```bash
-docker compose up -d
-```
+* **Interactive Web Search UI**: [`http://localhost:8000/`](http://localhost:8000/) or [`http://localhost:8000/ui`](http://localhost:8000/ui)
+* **Interactive Swagger API Docs**: [`http://localhost:8000/docs`](http://localhost:8000/docs)
+* **Alternative API Docs (ReDoc)**: [`http://localhost:8000/redoc`](http://localhost:8000/redoc)
 
 ---
 
 ## 📡 API Reference
 
 ### 1. Search Products
-`GET /search?q={query}&k={limit}` or `POST /search`
+`GET /search?q={query}&limit={k}` or `POST /search`
 
 ```bash
-curl "http://localhost:8000/search?q=nike%20shoes%20under%205000&k=3"
+curl "http://localhost:8000/search?q=বাবার%20জন্য%20উপহার%20৩০০০%20টাকার%20নিচে&limit=3"
 ```
 
 **Response**:
 ```json
 {
-  "query": "nike shoes under 5000",
-  "normalized": "nike shoes under 5000",
+  "query": "বাবার জন্য উপহার ৩০০০ টাকার নিচে",
+  "normalized": "father gift",
   "intent": {
-    "brand": "nike",
-    "max_price": 5000
+    "gender": "men",
+    "max_price": 3000,
+    "recipient": "father",
+    "intents": ["gift"],
+    "affinities": ["leather wallet", "leather belt", "panjabi", "wristwatch", "ceramic coffee mug"]
   },
   "source": "rules",
   "notes": [
-    "product group: footwear"
+    "Bangla/Banglish query detected → translated: 'father gift'",
+    "persona: father",
+    "intent: gift"
   ],
   "results": [
     {
-      "id": "P064",
-      "title": "Nike Air Zoom Winflo Running Shoe",
-      "category": "running shoes",
-      "brand": "Nike",
-      "color": "black",
-      "material": "mesh",
+      "id": "P0599",
+      "product_id": "P0599",
+      "title": "Aarong Khadi Handloom Casual Panjabi",
+      "category": "panjabi",
+      "brand": "Aarong",
+      "color": "navy blue",
+      "material": "cotton",
       "gender": "men",
-      "sizes": "7,8,9,10",
-      "price": 4600.0,
+      "sizes": "38,40,42,44",
+      "price": 2400.0,
+      "currency": "BDT",
       "rank": 1,
-      "score": 72.58,
-      "cosine": 0.369,
-      "bm25": 6.964,
+      "score": 7.754,
+      "cosine": 0.0,
+      "bm25": 0.0,
       "match": "intent",
-      "matched": "brand+price"
+      "matched": "gender+price",
+      "decision_explanation": "Rank 1 via RRF hybrid fusion (intent)"
     }
   ],
-  "took_ms": 45.89,
-  "cached": false
+  "latency_ms": 94.2,
+  "is_cache_hit": false
 }
 ```
 
-### 2. Autocomplete Suggestions
-`GET /suggest?q={prefix}&k={limit}`
+### 2. Parse Query Intent
+`POST /intent/parse`
+
+Extracts structured intent, demographics, budget, affinities, and detected language without executing a full product search:
 
 ```bash
-curl "http://localhost:8000/suggest?q=nik&k=5"
+curl -X POST "http://localhost:8000/intent/parse" \
+     -H "Content-Type: application/json" \
+     -d '{"query": "কালো জুতো সাইজ 42"}'
 ```
 
 **Response**:
 ```json
 {
-  "prefix": "nik",
-  "suggestions": [
-    "nike",
-    "nikon",
-    "nike club hoodie",
-    "nike baseball cap",
-    "nike gym duffel bag"
-  ]
+  "query": "কালো জুতো সাইজ 42",
+  "language": "bn",
+  "normalized": "black shoes সাইজ 42",
+  "retrieval_query": "black shoes",
+  "color": "black",
+  "size": "42",
+  "demographics": {
+    "recipient": null,
+    "target_audience": null,
+    "target_gender": null
+  },
+  "budget_constraints": {
+    "min_price": null,
+    "max_price": null,
+    "currency": "BDT"
+  },
+  "confidence": 0.95
 }
 ```
 
-### 3. Similar Products ("More Like This")
-`GET /similar/{product_id}?k={limit}`
+### 3. Catalog Distribution & Statistics
+`GET /catalog/stats`
 
 ```bash
-curl "http://localhost:8000/similar/P001?k=3"
+curl "http://localhost:8000/catalog/stats"
 ```
 
 **Response**:
 ```json
 {
-  "id": "P001",
-  "results": [
-    {
-      "id": "P064",
-      "title": "Nike Air Zoom Winflo Running Shoe",
-      "category": "running shoes",
-      "brand": "Nike",
-      "price": 4600.0,
-      "rank": 1,
-      "similarity": 0.833
-    }
-  ]
-}
-```
-
-### 4. Health & Engine Status
-`GET /health`
-
-```bash
-curl "http://localhost:8000/health"
-```
-
-**Response**:
-```json
-{
-  "status": "ok",
-  "products": 886,
+  "domain_name": "E-Commerce Multilingual Retail",
+  "total_products": 886,
   "catalog_version": "78d7c0c4e7",
-  "embedder": "hashing-256",
-  "llm": "disabled",
-  "cache": {
-    "backend": "memory",
-    "items": 32,
-    "hit_rate": 0.25
+  "unique_categories": 150,
+  "categories": ["t-shirt", "shirt", "panjabi", "running shoes", "saree", "laptop", "watch"],
+  "price_summary": {
+    "min_price": 350.0,
+    "max_price": 395000.0,
+    "currency": "BDT"
   }
 }
 ```
 
-### 5. Hot Reload Catalog
-`POST /reload`
+### 4. Live Benchmark
+`GET /benchmark`
 
-Re-indexes the database or CSV without server downtime. Unchanged products reuse existing vectors.
+Measures cold vs. cached query latencies and pipeline speedup factors:
+
+```bash
+curl "http://localhost:8000/benchmark"
+```
+
+### 5. Invalidate Query Cache
+`POST /cache/invalidate`
+
+Purges the query cache when catalog items change.
+
+### 6. Autocomplete Suggestions
+`GET /suggest?q={prefix}&k={limit}`
+
+Fast prefix-based suggestions from catalog categories, brands, and titles.
+
+### 7. Similar Products ("More Like This")
+`GET /similar/{product_id}?k={limit}`
+
+Nearest neighbors in embedding space.
 
 ---
 
 ## 🐍 Python SDK Usage
 
 ```python
-from lite_search import build_engine
-from lite_search.config import Settings
+from lite_search import build_engine, Settings, QueryParser, DomainPack
 
-# Initialize engine from .env configuration
+# 1. Initialize search engine
 cfg = Settings.from_env()
 engine = build_engine(cfg)
 
-# 1. Search
-response = engine.search("black panjabi under 2000", k=5)
-for item in response["results"]:
-    print(f"{item['rank']}. {item['title']} - {item['price']} BDT")
+# 2. Search in Bangla, Banglish, or English
+res = engine.search("মায়ের জন্য শাড়ি ২০০০ টাকার মধ্যে", k=5)
+for item in res["results"]:
+    print(f"#{item['rank']}: {item['title']} - BDT {item['price']} ({item['category']})")
 
-# 2. Autocomplete
-suggestions = engine.suggest("panj", k=5)
-print(suggestions["suggestions"])
+# 3. Direct NLP intent parsing
+parser = QueryParser(DomainPack.default())
+intent = parser.parse("laptop for student under 50000")
+print("Recipient:", intent.recipient)        # student
+print("Budget Cap:", intent.max_price)       # 50000.0
+print("Affinities:", intent.affinities)      # ['backpack', 'notebook', 'pen set', ...]
+```
 
-# 3. Similar products
-similar = engine.similar("P001", k=3)
-print(similar["results"])
+---
+
+## 🔌 Connecting External Databases
+
+Use the built-in connectors to ingest data from relational databases or data lakes:
+
+```python
+from lite_search.connectors import SQLAlchemyConnector, SQLiteConnector, CSVConnector
+from lite_search.schema import SchemaProfiler
+
+# Option A: Connect to PostgreSQL or MySQL via SQLAlchemy
+schema_map = {"product_name": "title", "cost": "price", "prod_id": "id"}
+conn = SQLAlchemyConnector("postgresql://user:pass@localhost:5432/ecommerce", "products", schema_map)
+products = conn.load_products()
+
+# Option B: Profile dataset for missing values, outliers, and duplicates
+profile = conn.profile_schema()
+print(profile)
 ```
 
 ---
@@ -269,56 +352,83 @@ print(similar["results"])
 | Environment Variable | Default | Description |
 |---|---|---|
 | `CATALOG_CSV` | `data/demo_products.csv` | Path to CSV catalog. |
-| `DATABASE_URL` | *None* | SQLAlchemy DB connection string (PostgreSQL, MySQL, etc.). |
-| `SQL_QUERY` | *None* | SQL query selecting catalog items. |
-| `COLUMN_MAP` | *None* | Map DB column names to standard fields (`col:title,id_col:id`). |
+| `DATABASE_URL` | *None* | SQLAlchemy DB connection string (PostgreSQL, MySQL, SQLite). |
+| `SQL_QUERY` | `SELECT * FROM products` | SQL query selecting catalog items. |
+| `COLUMN_MAP` | *None* | JSON/dict mapping DB columns to standard fields. |
 | `REDIS_URL` | *None* | Redis connection URL (`redis://localhost:6379/0`). If unset, uses memory LRU. |
-| `CACHE_PREFIX` | `ls` | Prefix for Redis keys. |
+| `CACHE_PREFIX` | `ls` | Prefix for Redis cache keys. |
 | `TTL_RESULT` | `600` | Search result cache TTL in seconds. |
-| `EMBEDDER` | `sentence-transformers` | `sentence-transformers` or `hashing` (zero-download mode). |
-| `EMB_MODEL` | `paraphrase-multilingual-MiniLM-L12-v2` | Multilingual model for English & Bangla. |
-| `INDEX_DIR` | `.lite_search_index` | Directory for persisted vector cache. |
-| `LLM_PROVIDER` | `none` | Optional LLM tier (`none` or `anthropic`). |
-| `ANTHROPIC_API_KEY` | *None* | Anthropic API key for edge cases. |
-| `SEARCH_API_KEY` | *None* | Optional shared secret header (`X-API-Key`) for API security. |
-| `RELOAD_MINUTES` | `0` | Auto reload interval in minutes (0 = disabled). |
+| `EMBEDDER` | `sentence-transformers` | `sentence-transformers` or `hashing` (fast zero-download mode). |
+| `EMB_MODEL` | `sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2` | Dense multilingual model for English & Bangla. |
+| `USE_RERANK` | `true` | Enables neural cross-encoder reranking. |
+| `CE_MODEL` | `cross-encoder/ms-marco-MiniLM-L-6-v2` | Neural cross-encoder reranking model. |
+| `INDEX_DIR` | `.lite_search_index` | Directory for persisted embeddings. |
+| `SEARCH_API_KEY` | *None* | Optional API key header (`X-API-Key`) for authenticated calls. |
 
 ---
 
 ## 📁 Repository Structure
 
 ```text
+├── config/
+│   ├── domain_pack_ecommerce.json # E-Commerce retail pack (taxonomy, Bangla dictionary, personas)
+│   └── domain_pack_second.json    # Portability domain pack
 ├── data/
-│   ├── demo_products.csv       # Sample catalog with 880+ e-commerce items
-│   └── common_queries.txt      # Cache pre-warming queries
-├── lite_search/
-│   ├── __init__.py             # Exports build_engine
-│   ├── __main__.py             # CLI entrypoint (--check, --repl, --serve)
-│   ├── cache.py                # Redis & in-memory LRU cache abstraction
-│   ├── catalog.py              # Catalog loading, BM25, and index management
-│   ├── config.py               # Pydantic configuration loaded from .env
-│   ├── diagnose.py             # Schema and column fill-rate check
-│   ├── embedder.py             # SentenceTransformer & Hashing embedders
-│   ├── engine.py               # Core 3-tier hybrid pipeline
-│   ├── lexicon.py              # Banglish dictionary & product category mappings
-│   ├── llm.py                  # Optional LLM fallback logic
-│   ├── parser.py               # Deterministic rule parser
-│   ├── server.py               # FastAPI application
-│   ├── text.py                 # Normalization and token utilities
-│   └── web_ui.py               # Self-contained HTML/CSS/JS frontend
+│   ├── all_products.csv           # 1,536 items (unified active catalog combining all datasets)
+│   ├── demo_products.csv          # 886 retail items
+│   ├── synthetic_catalog_1.csv    # 500-item evaluator benchmark catalog
+│   ├── synthetic_catalog_1.sqlite # Read-only benchmark SQLite catalog
+│   ├── synthetic_catalog_2.csv    # 150-item industrial tools catalog
+│   ├── synthetic_catalog_2.sqlite # Read-only industrial SQLite catalog
+│   └── common_queries.txt         # Cache pre-warming queries
+├── docs/
+│   ├── COMPANY_ONBOARDING.md      # 16-step enterprise integration & read-only DB connector guide
+│   ├── LOCAL_SETUP.md             # Local environment and dependency setup
+│   └── TECHNICAL_READINESS_REPORT.md # Performance, ablation findings & production SLA report
+├── notebooks/
+│   ├── hybrid_updated_3.ipynb     # Development & experimental retrieval research notebook
+│   └── intent_aware_hybrid_search.ipynb # Interactive exploration and visualization
+├── benchmarks/
+│   ├── run_benchmark.py           # 120+ query evaluation runner with latency benchmarking
+│   └── run_live_demo.py           # Terminal demo covering 9 diverse query types
 ├── tests/
-│   └── test_engine.py          # Engine unit tests
-├── .env.example                # Example configuration
-├── .gitignore                  # Git exclusions for secrets and index files
-├── Dockerfile                  # Container definition
-├── docker-compose.yml          # Compose file for API + Redis
-├── pyproject.toml              # Build & package metadata
-├── requirements.txt            # Python dependencies
-└── README.md                   # Project documentation
+│   ├── test_multilingual.py       # Live test suite across Bangla, Banglish & English queries
+│   ├── test_bangla_eligibility.py # Capability verification for Bengali Unicode & numerals
+│   ├── test_typo_correction.py    # Typo tolerance & incorrect word intent recovery suite
+│   ├── test_api_client.py         # HTTP REST API integration test suite
+│   └── test_engine.py             # Unit tests for core hybrid search engine
+├── lite_search/
+│   ├── __init__.py                # Package exports (SearchEngine, DomainPack, Connectors, etc.)
+│   ├── __main__.py                # CLI runner (--check, --repl, --serve)
+│   ├── benchmark.py               # Latency and throughput benchmarking
+│   ├── cache.py                   # Multi-level Redis & in-process thread-safe LRU cache
+│   ├── catalog.py                 # Fast vectorized BM25 token index and embeddings
+│   ├── catalog_generator.py       # Synthetic multilingual catalog generator
+│   ├── config.py                  # Pydantic Settings loaded from .env
+│   ├── connectors.py              # SQLite, CSV, and SQLAlchemy database connectors
+│   ├── diagnose.py                # Catalog diagnostic fill-rate inspector
+│   ├── domain_pack.json           # Embedded default domain configuration
+│   ├── embedder.py                # SentenceTransformer & Hashing embedders
+│   ├── engine.py                  # 7-stage search orchestrator with RRF fusion
+│   ├── evaluator.py               # 120+ labeled ground-truth evaluation queries & metrics
+│   ├── lexicon.py                 # Keyword mappings and groups
+│   ├── llm.py                     # Optional LLM fallback logic
+│   ├── nlp.py                     # Multilingual parser, Bangla digits, persona & intent
+│   ├── parser.py                  # Deterministic rule parser
+│   ├── reranker.py                # Neural CrossEncoder with pair caching
+│   ├── schema.py                  # CanonicalProduct dataclass, SchemaValidator, SchemaProfiler
+│   ├── server.py                  # FastAPI REST application
+│   ├── text.py                    # Unicode Bengali regex, tokenization, and stopwords
+│   └── web_ui.py                  # Embedded interactive HTML/CSS/JS frontend
+├── Dockerfile                     # Docker container definition
+├── docker-compose.yml             # Containerized Search API + Redis
+├── pyproject.toml                 # Package metadata
+├── requirements.txt               # Dependencies
+└── README.md                      # Project documentation
 ```
 
 ---
 
 ## 📄 License
 
-MIT License. Feel free to use in your own projects!
+MIT License. Free to use in commercial and open-source projects!

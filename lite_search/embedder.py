@@ -30,7 +30,7 @@ class HashingEmbedder:
     def encode(self, texts: List[str], batch_size: int = 0, show_progress: bool = False) -> np.ndarray:
         out = np.zeros((len(texts), self.dim), dtype="float32")
         for i, t in enumerate(texts):
-            for w in re.findall(r"[a-z0-9]+", t.lower()):
+            for w in re.findall(r"[a-z0-9\u0980-\u09FF]+", t.lower()):
                 out[i, zlib.crc32(w.encode()) % self.dim] += 1.0
         n = np.linalg.norm(out, axis=1, keepdims=True)
         return out / np.maximum(n, 1e-9)

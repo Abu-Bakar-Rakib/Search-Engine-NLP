@@ -1,19 +1,22 @@
 """Product catalog: loading (CSV / SQL), normalisation, sparse BM25, persisted embeddings, fast filter arrays."""
 import hashlib
+import json
 import logging
 import os
 from collections import Counter
 from typing import Optional
 
+import re
 import numpy as np
 import pandas as pd
 import scipy.sparse as sp
 
-from .text import alnum, cat_norm, is_missing, toks
+from .text import alnum, cat_norm, is_missing, nfc, toks
 
 log = logging.getLogger("lite_search.catalog")
 
-STD_COLS = ["id", "title", "category", "brand", "color", "material", "gender", "sizes", "price", "description"]
+STD_COLS = ["id", "title", "category", "brand", "color", "material", "gender", "sizes", "price", "description",
+            "macro_category", "image_url", "source_url"]
 GENDER_FIX = {"male": "men", "man": "men", "mens": "men", "men's": "men", "female": "women", "woman": "women",
               "womens": "women", "women's": "women", "ladies": "women", "boy": "boys", "girl": "girls",
               "kids": "unisex", "": "unisex"}
@@ -34,7 +37,18 @@ def load_dataframe(settings) -> pd.DataFrame:
                 if os.path.exists(candidate):
                     csv_path = candidate
                     break
-        df = pd.read_csv(csv_path, nrows=settings.max_rows)
+        if csv_path.endswith(".jsonl") or csv_path.endswith(".json"):
+            records = []
+            with open(csv_path, "r", encoding="utf-8") as f:
+                for line in f:
+                    line = line.strip()
+                    if line:
+                        records.append(json.loads(line))
+                        if settings.max_rows and len(records) >= settings.max_rows:
+                            break
+            df = pd.DataFrame(records)
+        else:
+            df = pd.read_csv(csv_path, nrows=settings.max_rows)
     else:
         raise ValueError("Set CATALOG_CSV or DATABASE_URL (see README).")
     raw_cols = list(df.columns)
@@ -50,7 +64,8 @@ def standardise(df: pd.DataFrame, column_map=None) -> pd.DataFrame:
     df = df.reset_index(drop=True)
     out["id"] = df["id"].astype(str) if "id" in df else [f"P{i + 1:06d}" for i in range(n)]
     for c, default in (("title", ""), ("category", ""), ("brand", ""), ("color", ""), ("material", ""),
-                       ("gender", "unisex"), ("sizes", ""), ("description", "")):
+                       ("gender", "unisex"), ("sizes", ""), ("description", ""),
+                       ("macro_category", ""), ("image_url", ""), ("source_url", "")):
         s = df[c] if c in df else pd.Series([default] * n)
         out[c] = s.fillna(default).astype(str).str.strip()
         out.loc[out[c].map(is_missing), c] = default
@@ -61,8 +76,23 @@ def standardise(df: pd.DataFrame, column_map=None) -> pd.DataFrame:
 
 
 def row_text(r) -> str:
-    return (f"{r.title}. Category: {r.category}. Brand: {r.brand}. Color: {r.color}. Material: {r.material}. "
-            f"For {r.gender}. {r.description}")
+    parts = [r.title]
+    macro = getattr(r, "macro_category", "")
+    if macro and macro != r.category:
+        parts.append(f"Category: {macro}")
+    if r.category:
+        parts.append(f"Category: {r.category}")
+    if r.brand and r.brand.lower() != "no brand":
+        parts.append(f"Brand: {r.brand}")
+    if getattr(r, "color", ""):
+        parts.append(f"Color: {r.color}")
+    if getattr(r, "material", ""):
+        parts.append(f"Material: {r.material}")
+    if getattr(r, "gender", "") and r.gender not in ("", "unisex"):
+        parts.append(f"For {r.gender}")
+    if r.description:
+        parts.append(str(r.description)[:1000])
+    return ". ".join(parts)
 
 
 # ---------------------------------------------------------------- catalog
@@ -142,17 +172,61 @@ class Catalog:
         d = self.df
         self.price = d["price"].to_numpy("float64")
         self.gender = d["gender"].to_numpy()
+        self.has_real_gender = bool((self.gender != "unisex").any())
         self.brand_n = np.array([alnum(x) for x in d["brand"]])
         self.color_n = np.array([alnum(x) for x in d["color"]])
         self.cat_n = np.array([cat_norm(x) for x in d["category"]])
         self.cat_uni, self.cat_code = np.unique(self.cat_n, return_inverse=True)
+        self.macro_lower = [nfc(m).lower() for m in d["macro_category"]] if "macro_category" in d else [""] * self.n
+        self.macro_n = np.array([cat_norm(x) for x in self.macro_lower])
         mat_n = np.array([alnum(x) for x in d["material"]])
         self.mat_uni, self.mat_code = np.unique(mat_n, return_inverse=True)
         self.sizes = [{x.strip().upper() for x in str(s).split(",") if x.strip()} for s in d["sizes"]]
+        self.id_to_index = {str(pid): i for i, pid in enumerate(d["id"])}
+        self.cat_lower = [nfc(c).lower() for c in d["category"]]
+        self.title_lower = [nfc(t).lower() for t in d["title"]]
+        self.desc_lower = [nfc(desc).lower() for desc in d["description"]]
+        self.brand_lower = [nfc(b).lower() for b in d["brand"]]
+
+        # Precomputed masks for high-frequency keyword checks
+        _ear_re = re.compile(r"earbud|earphone|airpod|spacebuds|buds|tws|ইয়ারবাড|ইয়ারফোন|ইয়ারবাড|ইয়ারফোন", re.I)
+        self.is_earbud = np.array([
+            "earbud" in cat or "earphone" in cat or bool(_ear_re.search(t)) or bool(_ear_re.search(desc))
+            for cat, t, desc in zip(self.cat_lower, self.title_lower, self.desc_lower)
+        ], dtype=bool)
+
+        _acc_re = re.compile(
+            r"\b(?:sim\s*pin|gimbal|stabilizer|ring\s*light|teleprompter|phone\s*case|mobile\s*case|"
+            r"back\s*case|back\s*cover|phone\s*cover|mobile\s*cover|screen\s*protector|tempered\s*glass|"
+            r"phone\s*holder|mobile\s*holder|phone\s*stand|charging\s*stand|s\s*pen|adapter|charger|cable)\b|"
+            r"(?:\bcase\b.*\bfor\b|\bcover\b.*\bfor\b|\bfor\s+iphone\b|\bfor\s+samsung\b|\bfor\s+realme\b|\bfor\s+motorola\b)",
+            re.I
+        )
+        self.is_phone_accessory = np.array([
+            bool(_acc_re.search(t)) or any(k in cat for k in ("case", "cover", "charger", "adapter", "cable", "studio equipment", "protector"))
+            for cat, t in zip(self.cat_lower, self.title_lower)
+        ], dtype=bool)
+
+        _anc_re = re.compile(r"noise\s*cancel|anc|active\s*noise", re.I)
+        self.is_anc = np.array([
+            bool(_anc_re.search(t)) or bool(_anc_re.search(desc))
+            for t, desc in zip(self.title_lower, self.desc_lower)
+        ], dtype=bool)
+
+        self.is_bike = np.array([
+            "bike" in t or "bicycle" in t for t in self.title_lower
+        ], dtype=bool)
+
+        self.is_mom_fit = np.array([
+            "mom fit" in t or "mom high" in t for t in self.title_lower
+        ], dtype=bool)
+
         from .lexicon import KID_TITLE
+        _toy_cats = {"toy", "building blocks", "action figure", "doll", "board game", "puzzle", "educational toy"}
         self.kid_item = np.array([
-            (c == "toy") or (g in ("boys", "girls")) or bool(KID_TITLE & set(t.lower().split()))
+            (c in _toy_cats) or (g in ("boys", "girls")) or bool(KID_TITLE & set(t.lower().split()))
             for c, g, t in zip(d["category"], d["gender"], d["title"])])
+
 
     def size_mask(self, size: str) -> np.ndarray:
         size = str(size).upper()
@@ -161,7 +235,15 @@ class Catalog:
         return self._size_cache[size]
 
     def category_mask(self, categories) -> np.ndarray:
-        return np.isin(self.df["category"].to_numpy(), list(categories))
+        cats_norm = [cat_norm(c) for c in categories if c]
+        if not cats_norm:
+            return np.zeros(self.n, dtype=bool)
+        cat_set = set(cats_norm)
+        uni_hit = np.array([
+            (u in cat_set) or any(re.search(rf"(?<![a-z0-9]){re.escape(cn)}(?![a-z0-9])", u) for cn in cats_norm if len(cn) >= 3)
+            for u in self.cat_uni
+        ], dtype=bool)
+        return uni_hit[self.cat_code]
 
     def vocab_values(self, col: str, min_len=2, limit=5000):
         c = Counter(v.lower() for v in self.df[col] if len(v) >= min_len and not is_missing(v))

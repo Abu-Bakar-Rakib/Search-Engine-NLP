@@ -42,7 +42,7 @@ class Settings:
     emb_model: str = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
     embedder: str = "sentence-transformers"     # "sentence-transformers" | "hashing" (no download, tests)
     index_dir: str = ".lite_search_index"       # product embeddings are persisted here
-    use_rerank: bool = False                    # cross-encoder: more accurate, ~+40 ms and +90 MB RAM
+    use_rerank: bool = True                     # cross-encoder: more accurate, ~+40 ms and +90 MB RAM
     ce_model: str = "cross-encoder/ms-marco-MiniLM-L-6-v2"
 
     # ---- cache ----
@@ -75,6 +75,8 @@ class Settings:
     # ---- server ----
     cors_origins: Optional[str] = None          # "*" or "https://shop.example.com,https://admin.example.com"
     reload_minutes: Optional[int] = None        # re-read the product DB every N minutes (None = only POST /reload)
+    port: int = 8080
+    host: str = "0.0.0.0"
 
     @classmethod
     def from_env(cls) -> "Settings":

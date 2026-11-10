@@ -123,7 +123,13 @@ class Cache:
     def set_vec(self, ns: str, key: str, vec: np.ndarray, ttl: Optional[int] = None):
         self.backend.set(self._k(ns, key), np.asarray(vec, dtype="float32").tobytes(), ttl)
 
+    def clear(self):
+        if hasattr(self.backend, "flush"):
+            self.backend.flush()
+        self.stats = {"hit": 0, "miss": 0}
+
     def info(self) -> dict:
         tot = self.stats["hit"] + self.stats["miss"]
         return {"backend": self.backend_name, "items": self.backend.size(), **self.stats,
                 "hit_rate": round(self.stats["hit"] / tot, 3) if tot else 0.0}
+

@@ -1,0 +1,138 @@
+{
+  "domain_id": "industrial_tools_v1",
+  "name": "Industrial Hardware & Scientific Equipment Domain Pack",
+  "version": "1.0.0",
+  "schema_map": {
+    "product_id": "item_code",
+    "sku": "model_no",
+    "title": "item_name",
+    "description": "specification_summary",
+    "category_path": "division_path",
+    "category_leaf": "sub_category",
+    "brand": "manufacturer",
+    "color": "finish_color",
+    "material": "build_material",
+    "gender": "operator_type",
+    "audience": "target_sector",
+    "sizes": "gauge_size",
+    "price": "unit_cost",
+    "currency": "currency",
+    "stock_qty": "inventory_count",
+    "rating": "audit_score",
+    "review_count": "cert_count",
+    "attributes": "tech_specs",
+    "tags": "keywords",
+    "is_active": "is_available",
+    "updated_at": "last_inspected"
+  },
+  "taxonomy_map": {
+    "power_tools": ["rotary hammer drill", "angle grinder", "circular saw", "reciprocating saw"],
+    "measurement_testing": ["digital multimeter", "laser distance meter", "infrared thermometer", "oscilloscope"],
+    "laboratory_gear": ["digital precision balance", "magnetic stirrer", "microscope trinocular", "centrifuge machine"],
+    "safety_protective": ["respiratory face mask", "welding helmet auto-darkening", "cut-resistant gloves", "safety harness fall protection"],
+    "hand_tools": ["torque wrench", "hydraulic crimping tool", "pipe cutter ratchet", "socket set chrome vanadium"]
+  },
+  "lexicon": {
+    "aliases": {
+      "drill": "rotary hammer drill",
+      "meter": "digital multimeter",
+      "scale": "digital precision balance",
+      "weight scale": "digital precision balance",
+      "saw": "circular saw",
+      "grinder": "angle grinder",
+      "mask": "respiratory face mask",
+      "helmet": "welding helmet auto-darkening",
+      "gloves": "cut-resistant gloves",
+      "wrench": "torque wrench"
+    },
+    "brand_aliases": {
+      "bosch": "Bosch Professional",
+      "makita": "Makita",
+      "dewalt": "DeWalt",
+      "fluke": "Fluke",
+      "3m": "3M Safety",
+      "hioki": "Hioki",
+      "stanley": "Stanley FatMax"
+    },
+    "bangla_dictionary": {
+      "ড্রিল": "rotary hammer drill",
+      "মিটার": "digital multimeter",
+      "স্কেল": "digital precision balance",
+      "গ্রাইন্ডার": "angle grinder",
+      "মাস্ক": "respiratory face mask",
+      "গ্লাভস": "cut-resistant gloves"
+    }
+  },
+  "persona_config": {
+    "electrician": {
+      "aliases": ["electrician", "electrical technician", "wiring work"],
+      "target_audience": "trade_professional",
+      "target_gender": "unisex",
+      "affinities": ["digital multimeter", "infrared thermometer", "hydraulic crimping tool", "torque wrench"]
+    },
+    "lab_researcher": {
+      "aliases": ["lab", "researcher", "scientist", "chemistry lab", "biology lab"],
+      "target_audience": "scientist",
+      "target_gender": "unisex",
+      "affinities": ["digital precision balance", "magnetic stirrer", "microscope trinocular", "centrifuge machine"]
+    },
+    "construction_worker": {
+      "aliases": ["construction", "site worker", "civil engineer", "welder"],
+      "target_audience": "industrial",
+      "target_gender": "unisex",
+      "affinities": ["rotary hammer drill", "welding helmet auto-darkening", "safety harness fall protection", "angle grinder"]
+    }
+  },
+  "intent_config": {
+    "heavy_duty": {
+      "triggers": ["heavy duty", "industrial grade", "rugged", "high power"],
+      "boost_affinities": ["rotary hammer drill", "angle grinder", "hydraulic crimping tool"]
+    },
+    "high_precision": {
+      "triggers": ["precision", "accurate measurement", "calibration", "lab grade"],
+      "boost_affinities": ["digital precision balance", "oscilloscope", "laser distance meter", "digital multimeter"]
+    },
+    "safety_compliance": {
+      "triggers": ["safety", "protective gear", "ppe", "protection"],
+      "boost_affinities": ["respiratory face mask", "welding helmet auto-darkening", "cut-resistant gloves", "safety harness fall protection"]
+    }
+  },
+  "locale_config": {
+    "default_currency": "USD",
+    "currency_symbols": ["$", "usd", "dollars"],
+    "bangla_digits": {
+      "০": "0", "১": "1", "২": "2", "৩": "3", "৪": "4",
+      "৫": "5", "৬": "6", "৭": "7", "৮": "8", "৯": "9"
+    },
+    "price_keywords": {
+      "under": ["under", "below", "less than", "er niche", "niche"],
+      "above": ["above", "over", "more than", "er beshi"],
+      "around": ["around", "approx"]
+    }
+  },
+  "retrieval_config": {
+    "bm25_weight": 0.4,
+    "dense_weight": 0.6,
+    "rrf_k": 60,
+    "candidate_pool_size": 25,
+    "rerank_top_k": 15,
+    "final_top_k": 5,
+    "attribute_weights": {
+      "brand": 15.0,
+      "color": 3.0,
+      "material": 8.0,
+      "gender": 2.0,
+      "category": 12.0,
+      "persona_affinity": 9.0,
+      "intent_affinity": 8.0
+    }
+  },
+  "threshold_config": {
+    "min_cosine_relevance": 0.2,
+    "min_cross_encoder_score": -4.0,
+    "allow_relaxed_fallback": true,
+    "hard_price_filter": true,
+    "hard_audience_filter": false,
+    "hard_stock_filter": false
+  }
+}

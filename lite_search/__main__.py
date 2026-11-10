@@ -2,6 +2,13 @@
 import argparse
 import json
 import logging
+import sys
+
+if hasattr(sys.stdout, "reconfigure"):
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
 
 from .config import Settings
 from .engine import build_engine
@@ -14,8 +21,10 @@ def main():
     ap.add_argument("--repl", action="store_true", help="interactive prompt")
     ap.add_argument("--check", action="store_true", help="test the DB/CSV connection and column mapping, then exit")
     ap.add_argument("--serve", action="store_true", help="start the HTTP API")
-    ap.add_argument("--host", default="0.0.0.0")
-    ap.add_argument("--port", type=int, default=8000)
+    import os
+    default_port = int(os.environ.get("PORT", 8080))
+    ap.add_argument("--host", default=os.environ.get("HOST", "0.0.0.0"))
+    ap.add_argument("--port", type=int, default=default_port)
     a = ap.parse_args()
     logging.basicConfig(level=logging.INFO)
     if a.serve:
