@@ -44,6 +44,11 @@ _MATERIAL_BOOST = 6.0
 _CATEGORY_BOOST = 10.0
 
 
+_FILLER = ("jonno er kichu something stuff thing things item items best good valo bhalo nice "
+            "cheap price affordable budget low cost kom dame new use need want looking get buy kinno kinte "
+            "জন্য কিছু ভালো দাম কম").split()
+
+
 def _qkey(q: str) -> str:
     return " ".join(q.lower().split())
 
@@ -67,6 +72,17 @@ class SearchEngine:
         self._nlp.set_catalog(catalog)
         # Intent compatibility score cache
         self._intent_score_cache: Dict[Tuple, np.ndarray] = {}
+        # Words that only describe WHO or WHY (persona, gender, intent, filler). Every other query word is a
+        # product term: persona/intent affinities may only re-rank products that match a product term.
+        dp = self._nlp.dp
+        mods = set(STOP) | set(_FILLER)
+        for cfg in dp.persona_config.values():
+            mods.update(a.lower() for a in cfg.get("aliases", []))
+        for cfg in dp.intent_config.values():
+            mods.update(t.lower() for t in cfg.get("triggers", []))
+        for cues in L.GENDER_CUES.values():
+            mods.update(cues)
+        self._modifiers = {w for m in mods for w in toks(m)}
 
     # ------------------------------------------------------------ tier 0: normalise
     def _normalize(self, query: str):
@@ -279,7 +295,7 @@ class SearchEngine:
             self._intent_score_cache[cache_key] = scores.copy()
         return scores
 
-    def _soft_boost_nlp(self, intent: StructuredIntent) -> np.ndarray:
+    def _soft_boost_nlp(self, intent: StructuredIntent, aff_gate=1.0) -> np.ndarray:
         """Apply soft boosts from NLP structured intent (brand, color, material, affinity)."""
         c = self.cat
         boost = np.zeros(c.n, dtype=np.float64)
@@ -292,7 +308,7 @@ class SearchEngine:
             boost += _MATERIAL_BOOST * np.array([
                 (pm in m) or (m in pm) if m else False for m in c.mat_uni
             ])[c.mat_code]
-        boost += self._intent_compat_scores(intent)
+        boost += self._intent_compat_scores(intent) * aff_gate
         return boost
 
     # ------------------------------------------------------------ public API
@@ -611,7 +627,13 @@ class SearchEngine:
         bm = c.bm25(q_bm25)
 
         # ── Step 4: Intent compatibility scores (persona/affinity) ──
-        intent_scores = self._intent_compat_scores(nlp_intent).astype(np.float64)
+        # Product-term gate: "baby diaper" -> 'diaper' is the product, 'baby' only a modifier,
+        # so persona/intent affinities (toys) may re-rank diapers but never outrank them.
+        prod_toks = [w for w in set(toks(q_bm25)) if w not in self._modifiers and not w.isdigit()]
+        aff_gate = (c.bm25(" ".join(prod_toks)) > 0) if prod_toks else None
+        if aff_gate is None or not aff_gate.any():
+            aff_gate = np.ones(c.n, dtype=bool)
+        intent_scores = self._intent_compat_scores(nlp_intent).astype(np.float64) * aff_gate
         # Normalize intent scores to [0,1] range for RRF
         intent_norm = intent_scores / (intent_scores.max() + 1e-9)
 
@@ -635,7 +657,7 @@ class SearchEngine:
 
         # ── Step 7: Soft boosts (attribute matching + NLP affinities) ──
         bonus, flags = self._attr_bonus(parsed)
-        nlp_boost = self._soft_boost_nlp(nlp_intent)
+        nlp_boost = self._soft_boost_nlp(nlp_intent, aff_gate)
         p_bonus, p_in = self._price_tier(parsed)
         aud = self._audience(q_norm, parsed, nlp_intent)
         grp_bonus = s.group_tier * grp_mask if grp_mask is not None else np.zeros(c.n)
@@ -1002,7 +1024,7 @@ class SearchEngine:
                         continue
 
                 # General relevance check with calibrated cutoff for out-of-domain queries
-                has_affinity = bool(nlp_intent.affinities and any(
+                has_affinity = bool(nlp_intent.affinities and aff_gate[idx] and any(
                     c.cat_n[idx] == cat_norm(aff) or cat_norm(aff) in c.cat_n[idx]
                     for aff in nlp_intent.affinities
                 ))

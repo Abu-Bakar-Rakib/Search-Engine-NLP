@@ -35,7 +35,9 @@ Live by language: en 0.62, banglish 0.70, bn 0.58.
 
 Wider reference (185 live queries, `--sets live,live_extra`, step1): nDCG@10 **0.569**, Zero 0%, p50 446 ms.
 By type: plain 0.69, price 0.71, brand 0.68, gap 0.41, vague 0.45, **typo 0.36**. By language: en 0.70, banglish 0.49, **bn 0.39**.
-This is the number Step 2 onward must beat. `holdout.jsonl` (30) is checked only at the end of each step.
+Step 2a (generic product-term gate + title field weight 3x, no product-type list): **0.592** (+0.023). en 0.73, banglish 0.51, bn 0.39; typo 0.41. Curated 0.941.
+Fixed: baby diaper 0→1.0, perfum for men 0→0.73, churi 0.10→0.59. Worse: smart wach 0.37→0.18 (typo, Step 3).
+This is the number later steps must beat. `holdout.jsonl` (30) is checked only at the end of each step.
 
 The engine scores well on the clean catalog it was tuned on, and poorly on the real catalog. Most of the gap comes from the design, not from the models.
 

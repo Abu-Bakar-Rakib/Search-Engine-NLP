@@ -141,7 +141,8 @@ class Catalog:
 
     # ---- sparse BM25 (scales to 100k+ products) ----
     def _build_bm25(self, k1=1.5, b=0.75):
-        docs = [toks(t) for t in self.texts]
+        # field weight: title words count 3x vs category/brand/description (like Typesense query_by_weights)
+        docs = [toks(t) + toks(title) * 2 for t, title in zip(self.texts, self.df["title"].astype(str))]
         df = Counter(w for d in docs for w in set(d))
         self.doc_freq = df
         self.vocab = {w: i for i, w in enumerate(sorted(df))}
