@@ -86,7 +86,8 @@ TRANS_SHOTS = [
 
 KID_WORDS = {"kid", "kids", "child", "children", "infant", "infants", "toddler", "toddlers",
              "boy", "boys", "girl", "girls", "toy", "toys"}          # no "baby": "baby pink" is a colour
-KID_TITLE = {"kid", "kids", "child", "children", "infant", "infants", "toddler", "toddlers"}
+KID_TITLE = {"kid", "kids", "child", "children", "infant", "infants", "toddler", "toddlers",
+             "baby", "babies", "newborn", "boys", "girls"}
 
 GROUPS = {
     "footwear":  ({"shoe", "shoes", "footwear", "sneaker", "sneakers", "sandal", "sandals", "boot", "boots",
