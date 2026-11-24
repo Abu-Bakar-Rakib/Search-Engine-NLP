@@ -1,0 +1,5037 @@
+{
+ "dataset": "live",
+ "tag": "baseline",
+ "products": 100420,
+ "overall": {
+  "queries": 65,
+  "P@10": 0.608,
+  "Hit@1": 0.677,
+  "nDCG@10": 0.624,
+  "Zero%": 6.2,
+  "lat_p50_ms": 441.9,
+  "lat_p95_ms": 658.6
+ },
+ "by_lang": {
+  "banglish": {
+   "queries": 10,
+   "P@10": 0.69,
+   "Hit@1": 0.7,
+   "nDCG@10": 0.696,
+   "Zero%": 0.0,
+   "lat_p50_ms": 436.9,
+   "lat_p95_ms": 590.2
+  },
+  "bn": {
+   "queries": 10,
+   "P@10": 0.57,
+   "Hit@1": 0.6,
+   "nDCG@10": 0.577,
+   "Zero%": 0.0,
+   "lat_p50_ms": 481.4,
+   "lat_p95_ms": 635.6
+  },
+  "en": {
+   "queries": 45,
+   "P@10": 0.598,
+   "Hit@1": 0.689,
+   "nDCG@10": 0.619,
+   "Zero%": 8.9,
+   "lat_p50_ms": 439.0,
+   "lat_p95_ms": 689.5
+  }
+ },
+ "by_type": {
+  "brand": {
+   "queries": 5,
+   "P@10": 0.98,
+   "Hit@1": 1.0,
+   "nDCG@10": 0.986,
+   "Zero%": 0.0,
+   "lat_p50_ms": 500.2,
+   "lat_p95_ms": 545.7
+  },
+  "gap": {
+   "queries": 16,
+   "P@10": 0.094,
+   "Hit@1": 0.125,
+   "nDCG@10": 0.101,
+   "Zero%": 18.8,
+   "lat_p50_ms": 472.5,
+   "lat_p95_ms": 658.6
+  },
+  "plain": {
+   "queries": 29,
+   "P@10": 0.821,
+   "Hit@1": 0.897,
+   "nDCG@10": 0.837,
+   "Zero%": 0.0,
+   "lat_p50_ms": 436.7,
+   "lat_p95_ms": 517.6
+  },
+  "price": {
+   "queries": 6,
+   "P@10": 0.633,
+   "Hit@1": 0.833,
+   "nDCG@10": 0.682,
+   "Zero%": 0.0,
+   "lat_p50_ms": 624.0,
+   "lat_p95_ms": 720.8
+  },
+  "typo": {
+   "queries": 5,
+   "P@10": 0.52,
+   "Hit@1": 0.6,
+   "nDCG@10": 0.545,
+   "Zero%": 20.0,
+   "lat_p50_ms": 419.0,
+   "lat_p95_ms": 429.0
+  },
+  "vague": {
+   "queries": 4,
+   "P@10": 0.725,
+   "Hit@1": 0.75,
+   "nDCG@10": 0.734,
+   "Zero%": 0.0,
+   "lat_p50_ms": 538.7,
+   "lat_p95_ms": 928.4
+  }
+ },
+ "skipped_no_relevant_in_catalog": [
+  "iphone 13 pro max 128gb"
+ ],
+ "queries": [
+  {
+   "q": "rice cooker",
+   "lang": "en",
+   "type": "plain",
+   "n_rel_catalog": 205,
+   "n_results": 10,
+   "ms": 398.9,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "rice cooker"
+   },
+   "notes": [
+    "product group: rice cooker"
+   ],
+   "top": [
+    {
+     "t": "Westinghouse WKRC10D28 2.8L Rice Cooker",
+     "c": "rice cooker",
+     "p": 4970.0,
+     "rel": 1
+    },
+    {
+     "t": "Westinghouse WKRC5D18 1.8L Rice Cooker",
+     "c": "rice cooker",
+     "p": 4231.0,
+     "rel": 1
+    },
+    {
+     "t": "Westinghouse WKRC5D15 1.5L Rice Cooker",
+     "c": "rice cooker",
+     "p": 3232.0,
+     "rel": 1
+    },
+    {
+     "t": "Panasonic SRGA321 3.2L Automatic Rice Cooker",
+     "c": "rice cooker",
+     "p": 10988.0,
+     "rel": 1
+    },
+    {
+     "t": "Panasonic SR-GA721 7.2L Rice Cooker",
+     "c": "rice cooker",
+     "p": 20580.0,
+     "rel": 1
+    },
+    {
+     "t": "Panasonic 1.8L SR-DA182 Rice Cooker",
+     "c": "rice cooker",
+     "p": 9880.0,
+     "rel": 1
+    },
+    {
+     "t": "Panasonic SRWN36 3.6L Automatic Rice Cooker",
+     "c": "rice cooker",
+     "p": 11510.0,
+     "rel": 1
+    },
+    {
+     "t": "Panasonic 1.8L Rice Cooker (SR-W18G)",
+     "c": "rice cooker",
+     "p": 4888.0,
+     "rel": 1
+    },
+    {
+     "t": "Miyako 3L Rice Cooker (MRC-300-JPN)",
+     "c": "rice cooker",
+     "p": 4193.0,
+     "rel": 1
+    },
+    {
+     "t": "SHARP Rice Cooker with Food Steamer (KS-H188G)",
+     "c": "rice cooker",
+     "p": 6187.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "power bank",
+   "lang": "en",
+   "type": "plain",
+   "n_rel_catalog": 1097,
+   "n_results": 10,
+   "ms": 429.2,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "power bank",
+    "intents": [
+     "travel"
+    ],
+    "affinities": [
+     "power bank"
+    ]
+   },
+   "notes": [
+    "intent: travel",
+    "product group: power bank"
+   ],
+   "top": [
+    {
+     "t": "XO‑PB312 10000mAh Power Bank",
+     "c": "power bank",
+     "p": 1025.0,
+     "rel": 1
+    },
+    {
+     "t": "Foneng 20000mAh Power Bank (PX132)",
+     "c": "power bank",
+     "p": 5201.0,
+     "rel": 1
+    },
+    {
+     "t": "XO‑PB313 20000mAh Power Bank",
+     "c": "power bank",
+     "p": 1623.0,
+     "rel": 1
+    },
+    {
+     "t": "BWOO 20000mAh Power Bank (BO-P71)",
+     "c": "power bank",
+     "p": 2053.0,
+     "rel": 1
+    },
+    {
+     "t": "JIAYOU Thunder 8 Portable Power Bank",
+     "c": "power bank",
+     "p": 1737.0,
+     "rel": 1
+    },
+    {
+     "t": "Foneng 20000mAh 45W Power Bank (PX138)",
+     "c": "power bank",
+     "p": 3684.0,
+     "rel": 1
+    },
+    {
+     "t": "Foneng 30000mAh Fast Charging Power Bank (PX128)",
+     "c": "power bank",
+     "p": 5301.0,
+     "rel": 1
+    },
+    {
+     "t": "Foneng 5000mAh Wireless Power Bank (PX155)",
+     "c": "power bank",
+     "p": 2194.0,
+     "rel": 1
+    },
+    {
+     "t": "UGREEN Magnetic 20000mAh 30W Power Bank (PB566)",
+     "c": "power bank",
+     "p": 4884.0,
+     "rel": 1
+    },
+    {
+     "t": "Reeoo 10000mAh Power Bank (RP 30)",
+     "c": "power bank",
+     "p": 883.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "electric kettle",
+   "lang": "en",
+   "type": "plain",
+   "n_rel_catalog": 480,
+   "n_results": 10,
+   "ms": 486.6,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "electric kettle",
+    "brand": "electric",
+    "intents": [
+     "water_heating_kettle"
+    ],
+    "affinities": [
+     "electric kettle",
+     "kettle"
+    ]
+   },
+   "notes": [
+    "spelling corrected: 'kettle' -> 'electric kettle'",
+    "intent: water_heating_kettle",
+    "product group: electric kettle"
+   ],
+   "top": [
+    {
+     "t": "Ocean 1.7L Electric Automatic Electric Kettle (OEK1792)",
+     "c": "electric kettle",
+     "p": 1792.0,
+     "rel": 1
+    },
+    {
+     "t": "Ocean OEK1519 Electric Kettle",
+     "c": "electric kettle",
+     "p": 1987.0,
+     "rel": 1
+    },
+    {
+     "t": "Prestige 2L 1500W Electric Kettle",
+     "c": "electric kettle",
+     "p": 695.0,
+     "rel": 1
+    },
+    {
+     "t": "Panasonic NC-K301 Electric Kettle",
+     "c": "electric kettle",
+     "p": 5075.0,
+     "rel": 1
+    },
+    {
+     "t": "Panasonic NC-K101 Electric Kettle",
+     "c": "electric kettle",
+     "p": 3900.0,
+     "rel": 1
+    },
+    {
+     "t": "Ocean 1L Electric Kettle (OEK1001)",
+     "c": "electric kettle",
+     "p": 1692.0,
+     "rel": 1
+    },
+    {
+     "t": "Kiam 1.8L 1500W Electric Kettle (M46)",
+     "c": "electric kettle",
+     "p": 1000.0,
+     "rel": 1
+    },
+    {
+     "t": "Miyako 1.8L Electric Kettle (MK-1918)",
+     "c": "electric kettle",
+     "p": 1392.0,
+     "rel": 1
+    },
+    {
+     "t": "RedSwiss 1.8L Electric Kettle (RSEK- 1804)",
+     "c": "electric kettle",
+     "p": 2092.0,
+     "rel": 1
+    },
+    {
+     "t": "Miyako 2L 1500W Stainless Steel Electric Kettle",
+     "c": "electric kettle",
+     "p": 1260.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "washing machine",
+   "lang": "en",
+   "type": "plain",
+   "n_rel_catalog": 173,
+   "n_results": 10,
+   "ms": 480.7,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "washing machine",
+    "brand": "washing"
+   },
+   "notes": [
+    "product group: washing machine"
+   ],
+   "top": [
+    {
+     "t": "Washing Machine Filter (China)",
+     "c": "water purifiers & filters",
+     "p": 930.0,
+     "rel": 1
+    },
+    {
+     "t": "LG 9KG Washing Machine (FB1209S6M)",
+     "c": "washing machine",
+     "p": 88005.0,
+     "rel": 1
+    },
+    {
+     "t": "Beko 9Kg Front Loading Washing Machine (BOWM-WCV9736XB0M)",
+     "c": "washing machine",
+     "p": 57992.0,
+     "rel": 1
+    },
+    {
+     "t": "BOSCH 10Kg Front Load Automatic Washing Machine (WGA254ZSIN)",
+     "c": "washing machine",
+     "p": 85892.0,
+     "rel": 1
+    },
+    {
+     "t": "BOSCH 8kg Series 4 Washing Machine",
+     "c": "washing machine",
+     "p": 134710.0,
+     "rel": 1
+    },
+    {
+     "t": "Sharp 8kg Top Load Washing Machine (ES818X)",
+     "c": "washing machine",
+     "p": 37970.0,
+     "rel": 1
+    },
+    {
+     "t": "Samsung 8Kg Front Load Washing Machine (WW80AGAS21AXLP)",
+     "c": "washing machine",
+     "p": 64695.0,
+     "rel": 1
+    },
+    {
+     "t": "Samsung 10KG Top Load Washing Machine (WA10CG4545BDSP)",
+     "c": "washing machine",
+     "p": 54993.0,
+     "rel": 1
+    },
+    {
+     "t": "Samsung 13KG Top Load Washing Machine (WA13CG5745BVFQ)",
+     "c": "washing machine",
+     "p": 57993.0,
+     "rel": 1
+    },
+    {
+     "t": "Haier 8Kg Front Load Washing Machine (HW80-BP12929S6)",
+     "c": "washing machine",
+     "p": 52992.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "wireless mouse",
+   "lang": "en",
+   "type": "plain",
+   "n_rel_catalog": 972,
+   "n_results": 10,
+   "ms": 409.3,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "wireless mouse"
+   },
+   "notes": [
+    "product group: wireless mouse"
+   ],
+   "top": [
+    {
+     "t": "Colorful wireless car Shape optical mouse",
+     "c": "wireless mouse",
+     "p": 477.0,
+     "rel": 1
+    },
+    {
+     "t": "Air Mouse With Keyboard C120 Wireless Gyroscopic Fly Air Mouse C120 Air Mouse Re",
+     "c": "computers & it",
+     "p": 903.0,
+     "rel": 1
+    },
+    {
+     "t": "Logitech M185 Wireless Mouse",
+     "c": "mouse & keyboard",
+     "p": 1271.0,
+     "rel": 1
+    },
+    {
+     "t": "A4Tech G3-200N Wireless Mouse",
+     "c": "mouse & keyboard",
+     "p": 833.0,
+     "rel": 1
+    },
+    {
+     "t": "Logitech M650 Signature Wireless Mouse",
+     "c": "mouse & keyboard",
+     "p": 3201.0,
+     "rel": 1
+    },
+    {
+     "t": "Arif Best Quality 2.4G Wireless Mouse - Mouse",
+     "c": "computers & it",
+     "p": 670.0,
+     "rel": 1
+    },
+    {
+     "t": "Aptech Wireless mouse W61",
+     "c": "general",
+     "p": 670.0,
+     "rel": 1
+    },
+    {
+     "t": "Logitech M350s Pebble Mouse 2 Slim Bluetooth Wireless Mouse",
+     "c": "mouse & keyboard",
+     "p": 2417.0,
+     "rel": 1
+    },
+    {
+     "t": "Xiaomi Wireless Mouse Lite 2",
+     "c": "mouse & keyboard",
+     "p": 1152.0,
+     "rel": 1
+    },
+    {
+     "t": "Aptech Wireless mouse W61 Pro",
+     "c": "general",
+     "p": 810.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "mechanical keyboard",
+   "lang": "en",
+   "type": "plain",
+   "n_rel_catalog": 1125,
+   "n_results": 10,
+   "ms": 418.7,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "keyboard"
+   },
+   "notes": [
+    "product group: keyboard"
+   ],
+   "top": [
+    {
+     "t": "XJOGOS KM07G MECHANICAL USB-BANGLA BLACK KEYBOARD",
+     "c": "keyboards",
+     "p": 3205.0,
+     "rel": 1
+    },
+    {
+     "t": "XTREME KM71G MECHANICAL USB GAMING KEYBOARD",
+     "c": "keyboards",
+     "p": 3495.0,
+     "rel": 1
+    },
+    {
+     "t": "A4Tech Bloody LK70 Optical Mechanical Gaming Keyboard",
+     "c": "mouse & keyboard",
+     "p": 4515.0,
+     "rel": 1
+    },
+    {
+     "t": "Ajazz AK820 75% Gasket-mounted Wired Mechanical Keyboard",
+     "c": "mouse & keyboard",
+     "p": 2585.0,
+     "rel": 1
+    },
+    {
+     "t": "AULA F2058 Mechanical Wired Gaming Keyboard (Blue Switch)",
+     "c": "mouse & keyboard",
+     "p": 3159.0,
+     "rel": 1
+    },
+    {
+     "t": "Jedel KL69 OEM RGB Mechanical Gaming Keyboard (White Black)",
+     "c": "mouse & keyboard",
+     "p": 1645.0,
+     "rel": 1
+    },
+    {
+     "t": "Corsair K70 RGB Pro Mechanical Gaming Keyboard (CH-9109414-NA)",
+     "c": "mouse & keyboard",
+     "p": 18988.0,
+     "rel": 1
+    },
+    {
+     "t": "Corsair K60 RGB Pro Mechanical Gaming Keyboard (CH-910D719-NA)",
+     "c": "mouse & keyboard",
+     "p": 8275.0,
+     "rel": 1
+    },
+    {
+     "t": "Ajazz AK820 Pro 75% Tri-mode Mechanical Keyboard (Gift Switch)",
+     "c": "mouse & keyboard",
+     "p": 5280.0,
+     "rel": 1
+    },
+    {
+     "t": "Corsair K70 Core TKL RGB Mechanical Gaming Keyboard (CH-911911E-NA)",
+     "c": "mouse & keyboard",
+     "p": 10020.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "hair oil",
+   "lang": "en",
+   "type": "plain",
+   "n_rel_catalog": 190,
+   "n_results": 10,
+   "ms": 416.9,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {},
+   "notes": [
+    "product group: haircare"
+   ],
+   "top": [
+    {
+     "t": "Mamaearth Argan Hair Oil with Argan Oil and Avocado Oil for Frizz-Free and Stron",
+     "c": "hair",
+     "p": 1148.0,
+     "rel": 1
+    },
+    {
+     "t": "Parachute Hair Oil Anti Hairfall Oil Extra Care 300ml (Root Applier) (FREE 75ml ",
+     "c": "hair",
+     "p": 390.0,
+     "rel": 1
+    },
+    {
+     "t": "Ogx Extra Strength Renewing+Argan Oil of Morocco Penetrating Hair Oil (100ml)",
+     "c": "beauty & personal care (hair oil)",
+     "p": 1470.0,
+     "rel": 1
+    },
+    {
+     "t": "skin'O Onion Hair Oil With Onion Blackseed Hair Regrowth Oil",
+     "c": "hair",
+     "p": 256.0,
+     "rel": 1
+    },
+    {
+     "t": "Raip R3 Argan Hair Oil #Original (100ml)",
+     "c": "beauty & personal care (hair oil)",
+     "p": 996.0,
+     "rel": 1
+    },
+    {
+     "t": "Amlaki Hair Oil",
+     "c": "hair",
+     "p": 865.0,
+     "rel": 1
+    },
+    {
+     "t": "Mamaearth Almond Hair Oil with Cold Pressed Almond Oil & Vitamin E for Healthy H",
+     "c": "hair",
+     "p": 723.0,
+     "rel": 1
+    },
+    {
+     "t": "Mamaearth Tea Tree Hair Oil with Tea Tree and Ginger Oil for Dandruff Free Hair",
+     "c": "hair",
+     "p": 1087.0,
+     "rel": 1
+    },
+    {
+     "t": "Emami 7 Oils in One Black Seed Hair Oil",
+     "c": "hair",
+     "p": 295.0,
+     "rel": 1
+    },
+    {
+     "t": "Eva Hair oil",
+     "c": "hair",
+     "p": 232.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "toothpaste",
+   "lang": "en",
+   "type": "plain",
+   "n_rel_catalog": 85,
+   "n_results": 10,
+   "ms": 406.5,
+   "p10": 0.4,
+   "hit1": 1,
+   "ndcg": 0.564,
+   "intent": {},
+   "notes": [
+    "product group: personal_care"
+   ],
+   "top": [
+    {
+     "t": "Toothpaste Tube Squeezer, Tube Squeezer -Multicolor",
+     "c": "toothpaste dispenser",
+     "p": 24.0,
+     "rel": 1
+    },
+    {
+     "t": "Automatic Toothpaste Dispenser with Toothbrush Holder - Multicolor Multicolor",
+     "c": "toothpaste dispenser",
+     "p": 279.0,
+     "rel": 1
+    },
+    {
+     "t": "Automatic Toothpaste Dispenser and Brush Holder Set Multicolor",
+     "c": "toothpaste dispenser",
+     "p": 312.0,
+     "rel": 1
+    },
+    {
+     "t": "Suzec Automatic Toothpaste Dispenser and 5 Toothbrush Holder for Home Bathroom, ",
+     "c": "toothpaste dispenser",
+     "p": 289.0,
+     "rel": 1
+    },
+    {
+     "t": "Hoco HP64 Acoustic Wave Electric Toothbrush",
+     "c": "electronics & tech (electric toothbrush)",
+     "p": 2260.0,
+     "rel": 0
+    },
+    {
+     "t": "Porodo 4-In-1 Facial Cleansing Brush (PDLFST208WH)",
+     "c": "shaver & trimmer",
+     "p": 2095.0,
+     "rel": 0
+    },
+    {
+     "t": "Philips BRE228/00 2000 Series Corded Epilator",
+     "c": "electronics & tech (philips trimmer)",
+     "p": 3752.0,
+     "rel": 0
+    },
+    {
+     "t": "Sepnil Instant Hand Sanitizer Pump-200 ml",
+     "c": "hand sanitizer",
+     "p": 241.0,
+     "rel": 0
+    },
+    {
+     "t": "Philips All-in-One 3000 Series Trimmer (MG3951/30)",
+     "c": "shaver & trimmer",
+     "p": 6720.0,
+     "rel": 0
+    },
+    {
+     "t": "Philips NT3650/16 Nose, Ear & Eyebrow Trimmer",
+     "c": "shaver & trimmer",
+     "p": 2433.0,
+     "rel": 0
+    }
+   ]
+  },
+  {
+   "q": "football",
+   "lang": "en",
+   "type": "plain",
+   "n_rel_catalog": 36,
+   "n_results": 10,
+   "ms": 394.2,
+   "p10": 0.3,
+   "hit1": 1,
+   "ndcg": 0.437,
+   "intent": {
+    "category": "footballs"
+   },
+   "notes": [
+    "product group: footballs"
+   ],
+   "top": [
+    {
+     "t": "Football cake topper boy birthday football party cake decoration",
+     "c": "grocery & daily needs",
+     "p": 77.0,
+     "rel": 1
+    },
+    {
+     "t": "Alloy Football Ball Pendant Necklace For Men",
+     "c": "fashion 5",
+     "p": 179.0,
+     "rel": 1
+    },
+    {
+     "t": "Sprint Men’s Football Boot",
+     "c": "apex boot",
+     "p": 2961.0,
+     "rel": 0
+    },
+    {
+     "t": "RED FOOTBALLS 0Q11R05",
+     "c": "footballs",
+     "p": 812.0,
+     "rel": 0
+    },
+    {
+     "t": "Sprint Men’s Football Boot",
+     "c": "sports shoes for men",
+     "p": 3074.0,
+     "rel": 0
+    },
+    {
+     "t": "Alloy Football Ball Pendant Necklace For Men - Gold",
+     "c": "fashion 5",
+     "p": 185.0,
+     "rel": 1
+    },
+    {
+     "t": "Crystals Football MESSI Jersey Pendant Necklace Chain for Men",
+     "c": "fashion 5",
+     "p": 403.0,
+     "rel": 0
+    },
+    {
+     "t": "Brazil Fan Edition Football Jersey – Lightweight Sports Wear - Blue",
+     "c": "fashion 5",
+     "p": 978.0,
+     "rel": 0
+    },
+    {
+     "t": "New Crystals Football MESSI Jersey Pendant Necklace Chain for Men",
+     "c": "fashion 5",
+     "p": 413.0,
+     "rel": 0
+    },
+    {
+     "t": "New Silver Golden Crystals Football MESSI Jersey Pendant Necklace Chain for Men",
+     "c": "fashion 5",
+     "p": 395.0,
+     "rel": 0
+    }
+   ]
+  },
+  {
+   "q": "cricket bat",
+   "lang": "en",
+   "type": "plain",
+   "n_rel_catalog": 32,
+   "n_results": 10,
+   "ms": 400.6,
+   "p10": 0.8,
+   "hit1": 1,
+   "ndcg": 0.812,
+   "intent": {
+    "category": "cricket bat"
+   },
+   "notes": [
+    "product group: cricket bat"
+   ],
+   "top": [
+    {
+     "t": "Custom Tape Tennis Cricket Bat Solid Wood Direct Handle - Cricket Bat - Cricket ",
+     "c": "sports, automotive & outdoors",
+     "p": 319.0,
+     "rel": 1
+    },
+    {
+     "t": "Join less Cricket bat L - Long 33\" - Cricket Bat - Cricket Bat",
+     "c": "sports, automotive & outdoors",
+     "p": 302.0,
+     "rel": 1
+    },
+    {
+     "t": "SIGNATURE AND AUTOGRAPH BAT OF INDIAN CRICKET TEAM KASHMIR WILLOW CRICKET BAT- R",
+     "c": "sports, automotive & outdoors",
+     "p": 7614.0,
+     "rel": 0
+    },
+    {
+     "t": "Signature And Autobiography Cricket Bat Authentic Signatures of Indian Cricket T",
+     "c": "sports, automotive & outdoors",
+     "p": 7589.0,
+     "rel": 1
+    },
+    {
+     "t": "Join less Cricket bat L - Long 33\" - Cricket Bat - Cricket Bat A custom tape ten",
+     "c": "sports, automotive & outdoors",
+     "p": 284.07,
+     "rel": 1
+    },
+    {
+     "t": "Ceat Hitman (Rohit Sharma Edition) Cricket Bat With Bat Cover - Cricket Bat",
+     "c": "sports, automotive & outdoors",
+     "p": 6530.0,
+     "rel": 0
+    },
+    {
+     "t": "Signature And Autobiography Cricket Bat Authentic Signatures of Indian Team Top ",
+     "c": "sports, automotive & outdoors",
+     "p": 7614.0,
+     "rel": 1
+    },
+    {
+     "t": "Join less Cricket bat M - Long 27",
+     "c": "sports, automotive & outdoors",
+     "p": 250.0,
+     "rel": 1
+    },
+    {
+     "t": "TON Cricket Bat – Premium Kashmir Willow Cricket Bat for Tennis Ball & Soft Ball",
+     "c": "sports, automotive & outdoors",
+     "p": 1945.0,
+     "rel": 1
+    },
+    {
+     "t": "Cricket Bat - Wooden",
+     "c": "sports, automotive & outdoors",
+     "p": 1097.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "chocolate",
+   "lang": "en",
+   "type": "plain",
+   "n_rel_catalog": 292,
+   "n_results": 10,
+   "ms": 403.8,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "chocolate"
+   },
+   "notes": [
+    "product group: chocolate"
+   ],
+   "top": [
+    {
+     "t": "M&M Chocolate 45gm",
+     "c": "chocolate",
+     "p": 170.0,
+     "rel": 1
+    },
+    {
+     "t": "Bigg Chocolate Box 3 layer Perfect Chocolate Explosion  box Without Chocolate",
+     "c": "grocery & daily needs",
+     "p": 394.0,
+     "rel": 1
+    },
+    {
+     "t": "Wellchoco Heart Chocolate 62gm",
+     "c": "chocolate & candy best",
+     "p": 263.0,
+     "rel": 1
+    },
+    {
+     "t": "Wellchoco Heart Chocolate 150gm",
+     "c": "chocolate & candy best",
+     "p": 838.0,
+     "rel": 1
+    },
+    {
+     "t": "PRAN Crunchy Wafer (Chocolate) 150gm",
+     "c": "chocolate & candy best",
+     "p": 95.0,
+     "rel": 1
+    },
+    {
+     "t": "Amul Dark Chocolate 150gm (B2G1)",
+     "c": "chocolate & candy best",
+     "p": 650.0,
+     "rel": 1
+    },
+    {
+     "t": "Wellchoco Heart Chocolate Gold 100gm",
+     "c": "chocolate & candy best",
+     "p": 565.0,
+     "rel": 1
+    },
+    {
+     "t": "Wellchoco Double Decker Chocolate 100gm",
+     "c": "chocolate & candy best",
+     "p": 545.0,
+     "rel": 1
+    },
+    {
+     "t": "Treat Chocolate Sweet Heart 140gm",
+     "c": "chocolate & candy best",
+     "p": 195.0,
+     "rel": 1
+    },
+    {
+     "t": "Stylish rubber sole lace-up shoes for Men -Chocolate-Chocolate",
+     "c": "fashion 5",
+     "p": 578.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "sunscreen",
+   "lang": "en",
+   "type": "plain",
+   "n_rel_catalog": 614,
+   "n_results": 10,
+   "ms": 438.5,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "sunscreen"
+   },
+   "notes": [
+    "product group: sunscreen"
+   ],
+   "top": [
+    {
+     "t": "Purito Seoul Daily Soft Touch Sunscreen (1ml)",
+     "c": "beauty & personal care (face sunscreen)",
+     "p": 15.0,
+     "rel": 1
+    },
+    {
+     "t": "Deconstruct Lightweight Gel Water Resistant Sunscreen for SPF (50gm)",
+     "c": "beauty & personal care (face sunscreen)",
+     "p": 919.0,
+     "rel": 1
+    },
+    {
+     "t": "Nivea UV Super Water Gel Sunscreen SPF50 PA+++ (140gm)",
+     "c": "beauty & personal care (face sunscreen)",
+     "p": 1734.0,
+     "rel": 1
+    },
+    {
+     "t": "Aveeno Protect + Hydrate Body Sunscreen Lotion Spf 50 (88ml)",
+     "c": "beauty & personal care (body sunscreen)",
+     "p": 2498.0,
+     "rel": 1
+    },
+    {
+     "t": "Nivea UV Water Gel SPF50 PA+++ Pump Refill Sunscreen (125gm)",
+     "c": "beauty & personal care (face sunscreen)",
+     "p": 1197.0,
+     "rel": 1
+    },
+    {
+     "t": "Aveeno Baby Sensitive Skin Mineral Sunscreen SPF 50 (88ml)",
+     "c": "beauty & personal care (baby sunscreen)",
+     "p": 2310.0,
+     "rel": 1
+    },
+    {
+     "t": "Innsaei Hyaluronic Sunscreen",
+     "c": "skin",
+     "p": 621.0,
+     "rel": 1
+    },
+    {
+     "t": "Aveeno Protect + Hydrate Body Sunscreen Lotion Spf 50 (88ml)৳ 2500",
+     "c": "beauty & personal care (body sunscreen)",
+     "p": 2515.0,
+     "rel": 1
+    },
+    {
+     "t": "Beauty of Joseon Sunscreen Relief Sun (Rice +Niacinamide) Spf 50+ PA++++ (50ml)",
+     "c": "beauty & personal care (face sunscreen)",
+     "p": 1414.0,
+     "rel": 1
+    },
+    {
+     "t": "Lafz Aqua Sunscreen 100ml",
+     "c": "grocery",
+     "p": 770.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "wifi router",
+   "lang": "en",
+   "type": "plain",
+   "n_rel_catalog": 475,
+   "n_results": 10,
+   "ms": 437.7,
+   "p10": 0.9,
+   "hit1": 1,
+   "ndcg": 0.931,
+   "intent": {
+    "category": "wifi routers"
+   },
+   "notes": [
+    "product group: wifi routers"
+   ],
+   "top": [
+    {
+     "t": "Tenda F6 Wireless N300 WiFi Router",
+     "c": "wifi routers",
+     "p": 1505.0,
+     "rel": 1
+    },
+    {
+     "t": "Wifi Router Storage Box Wall Rack Wifi Router Box Hiding Box Wifi Rack",
+     "c": "furniture & decor",
+     "p": 221.0,
+     "rel": 1
+    },
+    {
+     "t": "OLAX AX9 Pro Wireless 4g Wifi Router 300 Mbps 4G LTE Router Wifi",
+     "c": "computers & it",
+     "p": 6100.0,
+     "rel": 1
+    },
+    {
+     "t": "MF687 4G LTE Router Wireless Wifi Router - White",
+     "c": "computers & it",
+     "p": 2147.0,
+     "rel": 1
+    },
+    {
+     "t": "Tenda F3 300mbps Wireless Router .",
+     "c": "wifi routers",
+     "p": 1305.0,
+     "rel": 1
+    },
+    {
+     "t": "MF687 4G LTE Router Wireless Wifi Router-White",
+     "c": "network components",
+     "p": 2214.0,
+     "rel": 1
+    },
+    {
+     "t": "Olax MC60 300Mbps WIFI Speed 4G home wireless wifi Router 4G CPE Router - Black",
+     "c": "computers & it",
+     "p": 9269.0,
+     "rel": 1
+    },
+    {
+     "t": "TP-Link Archer C6 V4 – Supports 802.11 AC Standard – Simultaneous 2.4GHz 400 Mbp",
+     "c": "wifi routers",
+     "p": 3098.0,
+     "rel": 0
+    },
+    {
+     "t": "Netgear R6260 1600Mbps Dual Band Smart WiFi Router",
+     "c": "router & networking",
+     "p": 7085.0,
+     "rel": 1
+    },
+    {
+     "t": "Mercusys MW325R 300Mbps Enhanced Wireless N Router.",
+     "c": "wifi routers",
+     "p": 1247.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "microwave oven",
+   "lang": "en",
+   "type": "plain",
+   "n_rel_catalog": 126,
+   "n_results": 10,
+   "ms": 436.7,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "oven"
+   },
+   "notes": [
+    "product group: oven"
+   ],
+   "top": [
+    {
+     "t": "Miyako 26L Microwave Oven (MD-EG9P022KF)",
+     "c": "oven",
+     "p": 16505.0,
+     "rel": 1
+    },
+    {
+     "t": "Panasonic 25L Microwave Oven (NN-SM33NW)",
+     "c": "oven",
+     "p": 20502.0,
+     "rel": 1
+    },
+    {
+     "t": "Panasonic 23L Microwave Oven (NN-DF383B)",
+     "c": "oven",
+     "p": 28470.0,
+     "rel": 1
+    },
+    {
+     "t": "Panasonic NN-GT342 23L Microwave Oven",
+     "c": "oven",
+     "p": 16970.0,
+     "rel": 1
+    },
+    {
+     "t": "Miyako 20L Microwave Oven (80D-20T8)",
+     "c": "oven",
+     "p": 12180.0,
+     "rel": 1
+    },
+    {
+     "t": "Panasonic NN-CT654MFEG 27L Convection Microwave Oven",
+     "c": "oven",
+     "p": 27492.0,
+     "rel": 1
+    },
+    {
+     "t": "Miyako 23L Microwave Oven (AG823 ATY)",
+     "c": "oven",
+     "p": 14292.0,
+     "rel": 1
+    },
+    {
+     "t": "Miyako 23L Microwave Oven (MD-23D4)",
+     "c": "oven",
+     "p": 14509.0,
+     "rel": 1
+    },
+    {
+     "t": "Vision VSM 30L Convection Microwave Oven",
+     "c": "oven",
+     "p": 15470.0,
+     "rel": 1
+    },
+    {
+     "t": "Haier 30L Convection Microwave Oven (HMW-E3001CBBD)",
+     "c": "oven",
+     "p": 21902.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "air conditioner",
+   "lang": "en",
+   "type": "plain",
+   "n_rel_catalog": 324,
+   "n_results": 10,
+   "ms": 689.5,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "air conditioner"
+   },
+   "notes": [
+    "product group: air conditioner"
+   ],
+   "top": [
+    {
+     "t": "Midea 3 Ton Cassette Type Inverter Air Conditioner (MCI36CR)",
+     "c": "air conditioner",
+     "p": 165975.0,
+     "rel": 1
+    },
+    {
+     "t": "Gree 1.5 Ton Inverter Air Conditioner (GSH-18XCLV32)",
+     "c": "air conditioner",
+     "p": 84995.0,
+     "rel": 1
+    },
+    {
+     "t": "Haier 1 Ton ZenGlow Inverter Air Conditioner [ZenGlow-13INVPX6P]",
+     "c": "air conditioner",
+     "p": 44980.0,
+     "rel": 1
+    },
+    {
+     "t": "Gree 5 Ton Inverter Ceiling Type Air Conditioner (GS-60XDWV32)",
+     "c": "air conditioner",
+     "p": 249970.0,
+     "rel": 1
+    },
+    {
+     "t": "Gree 4 Ton Inverter Ceiling Type Air Conditioner (GS-48XFCAV32)",
+     "c": "air conditioner",
+     "p": 223988.0,
+     "rel": 1
+    },
+    {
+     "t": "Midea 4 Ton Cassette Type Non-Inverter Air Conditioner (MCA48CR)",
+     "c": "air conditioner",
+     "p": 173802.0,
+     "rel": 1
+    },
+    {
+     "t": "Midea 3 Ton Cassette Type Non-Inverter Air Conditioner (MCA36CR)",
+     "c": "air conditioner",
+     "p": 148490.0,
+     "rel": 1
+    },
+    {
+     "t": "Midea 1.5 Ton Flash Cool Inverter Air Conditioner (MSE-18CRN)",
+     "c": "air conditioner",
+     "p": 47670.0,
+     "rel": 1
+    },
+    {
+     "t": "Haier 4 Ton Inverter Ceiling Type Air Conditioner [HSU-48CeilingType:(INV)]",
+     "c": "air conditioner",
+     "p": 177970.0,
+     "rel": 1
+    },
+    {
+     "t": "Haier 3 Ton Inverter Ceiling Type Air Conditioner [HSU-36CeilingType:(INV)]",
+     "c": "air conditioner",
+     "p": 137995.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "baby diaper",
+   "lang": "en",
+   "type": "plain",
+   "n_rel_catalog": 240,
+   "n_results": 10,
+   "ms": 439.0,
+   "p10": 0.0,
+   "hit1": 0,
+   "ndcg": 0.0,
+   "intent": {
+    "gender": "unisex",
+    "recipient": "toddler",
+    "affinities": [
+     "building blocks",
+     "soft teddy bear",
+     "puzzle board",
+     "educational toy"
+    ]
+   },
+   "notes": [
+    "persona: toddler"
+   ],
+   "top": [
+    {
+     "t": "3 Feet Extra Large Soft Teddy Bear For Birthday Gift Vallentine day Anniversary ",
+     "c": "teddy bear",
+     "p": 966.0,
+     "rel": 0
+    },
+    {
+     "t": "5 Feet Extra Large Soft Teddy Bear For Birthday Gift Vallentine day Anniversary ",
+     "c": "teddy bear",
+     "p": 1753.0,
+     "rel": 0
+    },
+    {
+     "t": "2 Feet Extra Large Soft Teddy Bear For Birthday Gift Vallentine day Anniversary ",
+     "c": "teddy bear",
+     "p": 606.0,
+     "rel": 0
+    },
+    {
+     "t": "3 Feet Extra Large Soft Teddy Bear For Birthday Gift Vallentine day Anniversary ",
+     "c": "teddy bear",
+     "p": 890.0,
+     "rel": 0
+    },
+    {
+     "t": "TEDDY BEAR - Pink",
+     "c": "teddy bear",
+     "p": 1362.0,
+     "rel": 0
+    },
+    {
+     "t": "Inflatable Teddy Bear Chair - Yellow",
+     "c": "teddy bear",
+     "p": 693.0,
+     "rel": 0
+    },
+    {
+     "t": "Panda Teddy Bear - Black",
+     "c": "teddy bear",
+     "p": 1878.0,
+     "rel": 0
+    },
+    {
+     "t": "Teddy Bear 2.5 Feet",
+     "c": "teddy bear",
+     "p": 868.0,
+     "rel": 0
+    },
+    {
+     "t": "Kiss Beauty Cute Bear Teddy Matte Lipgloss",
+     "c": "teddy bear",
+     "p": 230.0,
+     "rel": 0
+    },
+    {
+     "t": "I Love You Teddy Bear - Multicolor",
+     "c": "teddy bear",
+     "p": 1863.0,
+     "rel": 0
+    }
+   ]
+  },
+  {
+   "q": "wireless headphones",
+   "lang": "en",
+   "type": "plain",
+   "n_rel_catalog": 3329,
+   "n_results": 10,
+   "ms": 506.9,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "headphones"
+   },
+   "notes": [
+    "spelling corrected: 'headphones' -> 'wireless headphones'",
+    "product group: headphones"
+   ],
+   "top": [
+    {
+     "t": "Oneplus Buds Z2 TWS Headphones",
+     "c": "bluetooth headphones",
+     "p": 5582.0,
+     "rel": 1
+    },
+    {
+     "t": "Google Pixel Buds A-Series True Wireless In-Ear Headphones",
+     "c": "bluetooth headphones",
+     "p": 9990.0,
+     "rel": 1
+    },
+    {
+     "t": "Honor Choice VZ Sport Mate Headphones Pro",
+     "c": "bluetooth headphone",
+     "p": 5302.0,
+     "rel": 1
+    },
+    {
+     "t": "MI In Ear Headphones Basic - Black - PN10398",
+     "c": "sound and audio system",
+     "p": 592.0,
+     "rel": 1
+    },
+    {
+     "t": "Nothing Ear (a) Wireless Earbuds",
+     "c": "bluetooth headphones",
+     "p": 9995.0,
+     "rel": 1
+    },
+    {
+     "t": "Nothing Ear Wireless Earbuds",
+     "c": "bluetooth headphones",
+     "p": 21880.0,
+     "rel": 1
+    },
+    {
+     "t": "Realme Techlife Studio H1 Wireless Headphone",
+     "c": "bluetooth headphone",
+     "p": 6705.0,
+     "rel": 1
+    },
+    {
+     "t": "Google Pixel Buds Pro 2 Wireless Earbuds",
+     "c": "bluetooth headphones",
+     "p": 23985.0,
+     "rel": 1
+    },
+    {
+     "t": "Realme Buds Wireless 3 Neo Neckband",
+     "c": "bluetooth headphones",
+     "p": 2110.0,
+     "rel": 1
+    },
+    {
+     "t": "Oppo Enco M32 True Wireless Neckband",
+     "c": "bluetooth headphones",
+     "p": 2570.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "black nike shoes",
+   "lang": "en",
+   "type": "gap",
+   "n_rel_catalog": 1251,
+   "n_results": 8,
+   "ms": 555.7,
+   "p10": 0.0,
+   "hit1": 0,
+   "ndcg": 0.0,
+   "intent": {
+    "category": "nike",
+    "brand": "Nike",
+    "color": "black",
+    "affinities": [
+     "running shoes",
+     "sneakers",
+     "formal shoes",
+     "sandals"
+    ]
+   },
+   "notes": [
+    "No black nike in catalog - showing other popular nike options",
+    "product group: nike"
+   ],
+   "top": [
+    {
+     "t": "Nike Air Max Torch 4 – Black",
+     "c": "nike",
+     "p": 12887.0,
+     "rel": 0
+    },
+    {
+     "t": "Nike Downshifter 12 – White",
+     "c": "nike",
+     "p": 9180.0,
+     "rel": 0
+    },
+    {
+     "t": "Nike “Just Do It” Black Backpack – Stylish & Durable Everyday Bag",
+     "c": "dresses & ethnic wear",
+     "p": 341.0,
+     "rel": 0
+    },
+    {
+     "t": "Nike Boys' Casual Slippers",
+     "c": "baby clothing, socks & t-shirts",
+     "p": 455.0,
+     "rel": 0
+    },
+    {
+     "t": "TR Nike | Lightweight eyewear eyeglass Frame For men < tr-124 square Frame",
+     "c": "fashion 5",
+     "p": 268.0,
+     "rel": 0
+    },
+    {
+     "t": "Nike T-90 Badminton Racket 75g Carbon Fiber 26-32 Lbs Lightweight Premium Bat Mo",
+     "c": "badminton racket",
+     "p": 1485.0,
+     "rel": 0
+    },
+    {
+     "t": "Apple Watch Nike Series 7 GPS Smartwatch – 41mm",
+     "c": "apple watch",
+     "p": 45497.0,
+     "rel": 0
+    },
+    {
+     "t": "Apple Watch Nike Series 7 GPS Smartwatch – 45mm",
+     "c": "apple watch",
+     "p": 49490.0,
+     "rel": 0
+    }
+   ]
+  },
+  {
+   "q": "churi",
+   "lang": "banglish",
+   "type": "gap",
+   "n_rel_catalog": 157,
+   "n_results": 10,
+   "ms": 472.5,
+   "p10": 0.1,
+   "hit1": 0,
+   "ndcg": 0.095,
+   "intent": {
+    "category": "kitchen",
+    "intents": [
+     "cooking_kitchen"
+    ],
+    "affinities": [
+     "cookware",
+     "frying pan",
+     "pressure cooker",
+     "kitchen knife",
+     "blender"
+    ]
+   },
+   "notes": [
+    "spelling corrected: 'churi' -> 'kitchen knife'",
+    "intent: cooking_kitchen",
+    "product group: kitchen"
+   ],
+   "top": [
+    {
+     "t": "Electric Frying Pan",
+     "c": "kitchen",
+     "p": 135.35,
+     "rel": 0
+    },
+    {
+     "t": "ORPAT Heavy Duty Kitchen Helper 2000W Electric Mixer Grinder & Blender",
+     "c": "grinder & blender",
+     "p": 6795.0,
+     "rel": 0
+    },
+    {
+     "t": "Home Kitchen Knife Sharpener Adjustable Tool | MNK SHOP - Red",
+     "c": "home, kitchen & furniture",
+     "p": 323.0,
+     "rel": 0
+    },
+    {
+     "t": "Kitchen Knife and Meat Cutting Knife Combo",
+     "c": "home & kitchen living",
+     "p": 219.0,
+     "rel": 1
+    },
+    {
+     "t": "Home Kitchen Knife Sharpener 3 Stage Adjustable Design | MNK SHOP - Red",
+     "c": "home, kitchen & furniture",
+     "p": 260.0,
+     "rel": 0
+    },
+    {
+     "t": "VISION Blender VIS-SBL-024 CYCLONE PRO (4-in-1) – Heavy-Duty Mixer Grinder for E",
+     "c": "blender",
+     "p": 6215.0,
+     "rel": 0
+    },
+    {
+     "t": "3 Tiers Multi-Function Mobile Cart | Kitchen Storage Trolley",
+     "c": "kitchen",
+     "p": 1660.0,
+     "rel": 0
+    },
+    {
+     "t": "Zepter 6 Pcs Kitchen Knife Set with (FREE Knife Sharpener & Vegetable Cutter ) W",
+     "c": "home & kitchen living",
+     "p": 976.0,
+     "rel": 0
+    },
+    {
+     "t": "Wooden Silicone Spatula",
+     "c": "kitchen",
+     "p": 369.0,
+     "rel": 0
+    },
+    {
+     "t": "Retractable Clothes Wall Hanger | Indoor & Outdoor Steel Wire Dryer",
+     "c": "kitchen",
+     "p": 1143.0,
+     "rel": 0
+    }
+   ]
+  },
+  {
+   "q": "hand glovs",
+   "lang": "en",
+   "type": "gap",
+   "n_rel_catalog": 143,
+   "n_results": 0,
+   "ms": 381.1,
+   "p10": 0.0,
+   "hit1": 0,
+   "ndcg": 0.0,
+   "intent": {},
+   "notes": [
+    "spelling corrected: 'glovs' -> 'gloss'"
+   ],
+   "top": []
+  },
+  {
+   "q": "water bottle",
+   "lang": "en",
+   "type": "gap",
+   "n_rel_catalog": 234,
+   "n_results": 10,
+   "ms": 486.4,
+   "p10": 0.6,
+   "hit1": 1,
+   "ndcg": 0.696,
+   "intent": {
+    "category": "water bottle",
+    "brand": "water"
+   },
+   "notes": [
+    "product group: water bottle"
+   ],
+   "top": [
+    {
+     "t": "aluminium bottle.high quality aluminium bottle storage for water & others",
+     "c": "water bottles & pots",
+     "p": 2089.0,
+     "rel": 1
+    },
+    {
+     "t": "Cyber Water Bottle 450 ML Assorted",
+     "c": "water bottles & pots",
+     "p": 173.0,
+     "rel": 1
+    },
+    {
+     "t": "aluminium bottle storage .high quality aluminium bottle storage for water & othe",
+     "c": "water bottles & pots",
+     "p": 1875.0,
+     "rel": 1
+    },
+    {
+     "t": "Cute Cartoon Warm Water Bottle Mini Hot Water Bottles Portable Hand Warmer Feet ",
+     "c": "hot water bag",
+     "p": 108.0,
+     "rel": 0
+    },
+    {
+     "t": "Cute Teddy Bear Water Bottle With Straw ,Portable Drinking Bottle For children-M",
+     "c": "teddy bear",
+     "p": 1015.0,
+     "rel": 1
+    },
+    {
+     "t": "POWER WATER BOTTLE",
+     "c": "water bottle",
+     "p": 1194.0,
+     "rel": 1
+    },
+    {
+     "t": "Liquid Empty Clear Bottle Portable Mobile Acrylic Gel Polish Cleaner Remover Dis",
+     "c": "grocery & food",
+     "p": 110.0,
+     "rel": 0
+    },
+    {
+     "t": "Hot Water Bag, Hot Water Bottle For Pain Relief Non Electrical Leakproof- (2 L)-",
+     "c": "hot water bag",
+     "p": 515.0,
+     "rel": 0
+    },
+    {
+     "t": "Portable Automatic Drinking Water Pump Universal Electric Water Dispenser USB Re",
+     "c": "grocery & food",
+     "p": 575.0,
+     "rel": 0
+    },
+    {
+     "t": "500Ml Temperature Display Vacuum Insulated Water Bottle , Flask Made Of Stainles",
+     "c": "water bottles & pots",
+     "p": 516.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "men underwear",
+   "lang": "en",
+   "type": "gap",
+   "n_rel_catalog": 24,
+   "n_results": 10,
+   "ms": 475.0,
+   "p10": 0.0,
+   "hit1": 0,
+   "ndcg": 0.0,
+   "intent": {
+    "gender": "men",
+    "recipient": "men",
+    "affinities": [
+     "shirt",
+     "t-shirt",
+     "panjabi",
+     "jeans",
+     "leather shoes"
+    ]
+   },
+   "notes": [
+    "persona: men",
+    "product group: men's clothing"
+   ],
+   "top": [
+    {
+     "t": "RICHMAN MEN’S OFF-WHITE STRIPE SLIM FIT SHIRT",
+     "c": "shirt",
+     "p": 1570.6,
+     "rel": 0
+    },
+    {
+     "t": "RICHMAN MEN’S GREEN CHECK SLIM FIT SHIRT",
+     "c": "shirt",
+     "p": 2447.7,
+     "rel": 0
+    },
+    {
+     "t": "RICHMAN MEN’S SLIM FIT ASH STRIPE SHIRT",
+     "c": "shirt",
+     "p": 2745.0,
+     "rel": 0
+    },
+    {
+     "t": "RICHMAN MEN’S BAND COLLAR SKY DOBBY SHIRT",
+     "c": "shirt",
+     "p": 2095.0,
+     "rel": 0
+    },
+    {
+     "t": "RICHMAN MEN’S SKY PRINTED CASUAL SHIRT",
+     "c": "shirt",
+     "p": 2147.5,
+     "rel": 0
+    },
+    {
+     "t": "RICHMAN MEN’S REGULAR FIT PINK CHECK SHIRT",
+     "c": "shirt",
+     "p": 2791.6,
+     "rel": 0
+    },
+    {
+     "t": "RICHMAN MEN’S TEAL GREEN HAWAI SHIRT",
+     "c": "shirt",
+     "p": 2452.7,
+     "rel": 0
+    },
+    {
+     "t": "RICHMAN MEN’S BEIGE COLOR HAWAI SHIRT",
+     "c": "shirt",
+     "p": 2434.7,
+     "rel": 0
+    },
+    {
+     "t": "RICHMAN MEN’S BLACK CHECK HALF SLEEVE HAWAI SHIRT",
+     "c": "shirt",
+     "p": 1894.8,
+     "rel": 0
+    },
+    {
+     "t": "RICHMAN MEN’S SLIM FİT KNİT FABRICS BEIGE COLOR HALF SLEEVE SHIRT",
+     "c": "shirt",
+     "p": 2087.0,
+     "rel": 0
+    }
+   ]
+  },
+  {
+   "q": "condom affordable price",
+   "lang": "en",
+   "type": "gap",
+   "n_rel_catalog": 318,
+   "n_results": 4,
+   "ms": 421.2,
+   "p10": 0.0,
+   "hit1": 0,
+   "ndcg": 0.0,
+   "intent": {},
+   "notes": [],
+   "top": [
+    {
+     "t": "Wooden Roti Maker Low Price - Experience Traditional Roti Making With This Affor",
+     "c": "electronics store",
+     "p": 828.0,
+     "rel": 0
+    },
+    {
+     "t": "Wooden Roti Maker Low Price - Experience Traditional Roti Making With This Affor",
+     "c": "electronics store",
+     "p": 937.0,
+     "rel": 0
+    },
+    {
+     "t": "Paddle Bin 20L - Silver",
+     "c": "cleaning & laundry",
+     "p": 773.0,
+     "rel": 0
+    },
+    {
+     "t": "RFL Paddle bin 15Liter",
+     "c": "cleaning & laundry",
+     "p": 920.0,
+     "rel": 0
+    }
+   ]
+  },
+  {
+   "q": "condom cheap",
+   "lang": "en",
+   "type": "gap",
+   "n_rel_catalog": 318,
+   "n_results": 0,
+   "ms": 431.4,
+   "p10": 0.0,
+   "hit1": 0,
+   "ndcg": 0.0,
+   "intent": {},
+   "notes": [],
+   "top": []
+  },
+  {
+   "q": "tank top men",
+   "lang": "en",
+   "type": "gap",
+   "n_rel_catalog": 25,
+   "n_results": 10,
+   "ms": 521.6,
+   "p10": 0.0,
+   "hit1": 0,
+   "ndcg": 0.0,
+   "intent": {
+    "category": "tops",
+    "brand": "top",
+    "gender": "men",
+    "recipient": "men",
+    "affinities": [
+     "shirt",
+     "t-shirt",
+     "panjabi",
+     "jeans",
+     "leather shoes"
+    ]
+   },
+   "notes": [
+    "persona: men",
+    "product group: tops"
+   ],
+   "top": [
+    {
+     "t": "Top Quality Fashionable Men&#8217;s Casual Printed Cotton Shirt",
+     "c": "fashion (shirt)",
+     "p": 1345.0,
+     "rel": 0
+    },
+    {
+     "t": "Top Pure RO 5-Stage Filtration Water Purifier",
+     "c": "water purifiers & filters",
+     "p": 11987.0,
+     "rel": 0
+    },
+    {
+     "t": "Men's Printed Shirt Seaside Vacation Casual Top Large Size Oversized Beach Cloth",
+     "c": "men's fashion",
+     "p": 949.0,
+     "rel": 0
+    },
+    {
+     "t": "Men's Casual and Fashionable Long Sleeved Printed Shirt, Non Ironing and Wrinkle",
+     "c": "men's fashion",
+     "p": 1196.0,
+     "rel": 0
+    },
+    {
+     "t": "Men's Casual and Fashionable Long Sleeved Solid Color Shirt Non Ironing and Wrin",
+     "c": "men's fashion",
+     "p": 1219.0,
+     "rel": 0
+    },
+    {
+     "t": "Gathered Detail Top In Emerald",
+     "c": "shirts & tops",
+     "p": 530.0,
+     "rel": 0
+    },
+    {
+     "t": "Top Quality Elasticity Anti-Wrinkle Mens Shirts Long Sleeves Slim Fit Camisa Bus",
+     "c": "men's fashion",
+     "p": 1744.0,
+     "rel": 0
+    },
+    {
+     "t": "Men's long sleeve shirt Casual stripe non-ironing high quality slim comfortable ",
+     "c": "men's fashion",
+     "p": 1592.0,
+     "rel": 0
+    },
+    {
+     "t": "Men's Sneakers New In High Top Running Shoes Round Toe Platform Shoes Casual Fas",
+     "c": "men's fashion",
+     "p": 2858.0,
+     "rel": 0
+    },
+    {
+     "t": "New Men's Business Casual Long Sleeved Solid Color Shirt Wrinkle Resistant Wrink",
+     "c": "men's fashion",
+     "p": 1308.0,
+     "rel": 0
+    }
+   ]
+  },
+  {
+   "q": "ghori detergent",
+   "lang": "banglish",
+   "type": "gap",
+   "n_rel_catalog": 35,
+   "n_results": 10,
+   "ms": 436.9,
+   "p10": 0.0,
+   "hit1": 0,
+   "ndcg": 0.0,
+   "intent": {
+    "category": "wristwatch",
+    "affinities": [
+     "wristwatch",
+     "smartwatch"
+    ]
+   },
+   "notes": [
+    "spelling corrected: 'ghori' -> 'wristwatch'",
+    "product group: wristwatch"
+   ],
+   "top": [
+    {
+     "t": "Naviforce Quartz Stainless Steel Wristwatch for Men (8081)-Black",
+     "c": "men's watches",
+     "p": 2310.0,
+     "rel": 0
+    },
+    {
+     "t": "Naviforce Wristwatch Silicone Rubber Bracelet Casual for Women (NF5051)-Grey",
+     "c": "women's watches",
+     "p": 1955.0,
+     "rel": 0
+    },
+    {
+     "t": "Naviforce Wristwatch Silicone Rubber Bracelet Casual for Women (NF5051)-Black",
+     "c": "women's watches",
+     "p": 1940.0,
+     "rel": 0
+    },
+    {
+     "t": "Skmei 2190 Rainbow Dial Trendy Women’s Wristwatch",
+     "c": "women's watches",
+     "p": 1493.0,
+     "rel": 0
+    },
+    {
+     "t": "Naviforce Wristwatch Silicone Rubber Bracelet Casual for Women (NF5051)-Rose Gol",
+     "c": "women's watches",
+     "p": 2004.0,
+     "rel": 0
+    },
+    {
+     "t": "SKMEI 1389 Watch For Men Analog Quartz Full Stainless Steel Strap Wristwatch Clo",
+     "c": "fashion 5",
+     "p": 2122.0,
+     "rel": 0
+    },
+    {
+     "t": "Daniel Klein Men's Wristwatch (Dk.1.13804-1)",
+     "c": "men's watches",
+     "p": 6891.0,
+     "rel": 0
+    },
+    {
+     "t": "Daniel Klein Men's Wristwatch (Dk.1.13804-5)",
+     "c": "men's watches",
+     "p": 7835.0,
+     "rel": 0
+    },
+    {
+     "t": "Olevs 9950 Skeleton Design Men’s Wristwatch",
+     "c": "men's watches",
+     "p": 1835.0,
+     "rel": 0
+    },
+    {
+     "t": "T 800 Ultra Smart watch (2.09inch HD Big Screen, Magnetic Wireless Charging,Smar",
+     "c": "computers & it",
+     "p": 534.0,
+     "rel": 0
+    }
+   ]
+  },
+  {
+   "q": "freeze",
+   "lang": "banglish",
+   "type": "gap",
+   "n_rel_catalog": 402,
+   "n_results": 10,
+   "ms": 409.2,
+   "p10": 0.2,
+   "hit1": 0,
+   "ndcg": 0.158,
+   "intent": {},
+   "notes": [],
+   "top": [
+    {
+     "t": "Hitachi 316L Chest Freeze (HRCJ11316MNWBD)",
+     "c": "refrigerator & freezer",
+     "p": 62005.0,
+     "rel": 0
+    },
+    {
+     "t": "Momax Ultra Freeze Portable Icy Cooling Fan - White",
+     "c": "appliances",
+     "p": 3112.0,
+     "rel": 0
+    },
+    {
+     "t": "Momax Ultra Freeze Portable Icy Cooling Fan",
+     "c": "fan &amp; ventilator",
+     "p": 2751.0,
+     "rel": 0
+    },
+    {
+     "t": "Haier 369 Liter Chest Freezer With Fast Freeze Function (HCF-420SME)",
+     "c": "appliances",
+     "p": 61787.0,
+     "rel": 1
+    },
+    {
+     "t": "TTM Freeze Time Ageless Beauty-Snow Algae Perfecting Serum",
+     "c": "skin",
+     "p": 3467.0,
+     "rel": 0
+    },
+    {
+     "t": "Prime Hydration Cherry Freeze Sports Drink 500ml",
+     "c": "grocery & daily needs",
+     "p": 1304.0,
+     "rel": 0
+    },
+    {
+     "t": "Riiffs Freeze EDP Spray Fragrances For Unisex (100ml)",
+     "c": "beauty & personal care (unisex perfume)",
+     "p": 4810.0,
+     "rel": 0
+    },
+    {
+     "t": "MYONE 165 Liter Gorgeous Tulip Black Match Refrigerator (MY-1F5G) -165 Liter Fre",
+     "c": "home appliances",
+     "p": 25020.0,
+     "rel": 0
+    },
+    {
+     "t": "Orphee P40 Phosphor Bronze Hound Acoustic Guitar Strings Set",
+     "c": "guitar strings",
+     "p": 1510.0,
+     "rel": 0
+    },
+    {
+     "t": "Samsung RS72R5001M9/D3 700L Side By Side Refrigerator",
+     "c": "electronics & tech (samsung refrigerator",
+     "p": 154003.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "ac dc light",
+   "lang": "en",
+   "type": "gap",
+   "n_rel_catalog": 3392,
+   "n_results": 10,
+   "ms": 631.0,
+   "p10": 0.0,
+   "hit1": 0,
+   "ndcg": 0.0,
+   "intent": {
+    "category": "air conditioner"
+   },
+   "notes": [
+    "product group: air conditioner"
+   ],
+   "top": [
+    {
+     "t": "Hisense 2 Ton Full DC Inverter Air Conditioner (AS-22TW4RXBTD00BU)",
+     "c": "hisense",
+     "p": 70010.0,
+     "rel": 0
+    },
+    {
+     "t": "Hisense 1 Ton Full DC Inverter Air Conditioner (AS-12TW4RYETD00BU)",
+     "c": "hisense",
+     "p": 45485.0,
+     "rel": 0
+    },
+    {
+     "t": "Hisense 1.5 Ton Full DC Inverter Air Conditioner (AS-18TW4RMATD01BU)",
+     "c": "hisense",
+     "p": 54995.0,
+     "rel": 0
+    },
+    {
+     "t": "DAEWOO 1 Ton DC Inverter Split Type Air Conditioner (DSB-H129B1KLHI-T)",
+     "c": "daewoo",
+     "p": 47880.0,
+     "rel": 0
+    },
+    {
+     "t": "DAEWOO 2 Ton DC Inverter Split Type Air Conditioner (DSB-H249B1KLHI-T)",
+     "c": "daewoo",
+     "p": 74920.0,
+     "rel": 0
+    },
+    {
+     "t": "DAEWOO 1.5 Ton DC Inverter Split Type Air Conditioner (DSB-H189B1KLHI-T)",
+     "c": "daewoo",
+     "p": 54000.0,
+     "rel": 0
+    },
+    {
+     "t": "TCL 2 Ton GentleCool Health+ Full DC Inverter Air Conditioner (TAC-24CSD)",
+     "c": "tcl",
+     "p": 89858.0,
+     "rel": 0
+    },
+    {
+     "t": "TCL 1 Ton GentleCool Health+ Full DC Inverter Air Conditioner (TAC-12CSD)",
+     "c": "tcl",
+     "p": 60082.0,
+     "rel": 0
+    },
+    {
+     "t": "Haier 2 Ton UVCool Inverter Pro DC Inverter Air Conditioner [HSU-24UVCool(INV)(P",
+     "c": "haier",
+     "p": 75980.0,
+     "rel": 0
+    },
+    {
+     "t": "TCL 1.5 Ton GentleCool Health+ Full DC Inverter Air Conditioner (TAC-18CSD)",
+     "c": "tcl",
+     "p": 73886.0,
+     "rel": 0
+    }
+   ]
+  },
+  {
+   "q": "ac dc light bulb",
+   "lang": "en",
+   "type": "gap",
+   "n_rel_catalog": 88,
+   "n_results": 0,
+   "ms": 658.6,
+   "p10": 0.0,
+   "hit1": 0,
+   "ndcg": 0.0,
+   "intent": {
+    "category": "air conditioner",
+    "brand": "bulb"
+   },
+   "notes": [
+    "No air conditioner found from brand 'bulb'",
+    "No relevant products found for 'ac dc light bulb'",
+    "product group: air conditioner"
+   ],
+   "top": []
+  },
+  {
+   "q": "red cotton t-shirt size M for boys",
+   "lang": "en",
+   "type": "gap",
+   "n_rel_catalog": 407,
+   "n_results": 10,
+   "ms": 407.5,
+   "p10": 0.1,
+   "hit1": 1,
+   "ndcg": 0.22,
+   "intent": {
+    "category": "t-shirt",
+    "size": "M",
+    "color": "red",
+    "material": "cotton",
+    "gender": "kids"
+   },
+   "notes": [
+    "No red t-shirt in catalog - showing other popular t-shirt options",
+    "No cotton t-shirt in catalog - showing other t-shirt options",
+    "product group: t-shirt"
+   ],
+   "top": [
+    {
+     "t": "Baby Premium Quality maggie T-shirt Boys Pure Cotton maggie T-shirt, Kids premiu",
+     "c": "grocery & daily needs",
+     "p": 170.0,
+     "rel": 1
+    },
+    {
+     "t": "Infant - Infant Boys or Girls - Floral",
+     "c": "baby clothing, socks & t-shirts",
+     "p": 1695.0,
+     "rel": 0
+    },
+    {
+     "t": "Infant - Infant Boys or Girls - Herlen",
+     "c": "baby clothing, socks & t-shirts",
+     "p": 458.0,
+     "rel": 0
+    },
+    {
+     "t": "Infant - Infant Boys or Girls - Froggy",
+     "c": "baby clothing, socks & t-shirts",
+     "p": 1892.0,
+     "rel": 0
+    },
+    {
+     "t": "Infant - Infant Boys or Girls - Herlen 2",
+     "c": "baby clothing, socks & t-shirts",
+     "p": 540.0,
+     "rel": 0
+    },
+    {
+     "t": "Kids Superman Costume, Superman Suit & Superhero Outfit for Boys, Girls & Childr",
+     "c": "baby clothing, socks & t-shirts",
+     "p": 640.0,
+     "rel": 0
+    },
+    {
+     "t": "LED Shoes for Children 0-3 Yrs Childhood Baby Boy Flat Shoes Luminous Sole Child",
+     "c": "baby clothing, socks & t-shirts",
+     "p": 1754.0,
+     "rel": 0
+    },
+    {
+     "t": "New Baby Sandals for Summer Boys and Girls Fashion slippers Lining Suitable for ",
+     "c": "baby clothing, socks & t-shirts",
+     "p": 1089.0,
+     "rel": 0
+    },
+    {
+     "t": "Baby Socks Cartoon Newborn Baby Girls Boys Anti-Slip Socks Slipper Shoes Boots K",
+     "c": "baby clothing, socks & t-shirts",
+     "p": 136.0,
+     "rel": 0
+    },
+    {
+     "t": "Baby Shoes Boys Girls Infant Sneakers Non-Slip soft bottom Sole Toddler Crib Fir",
+     "c": "baby clothing, socks & t-shirts",
+     "p": 402.0,
+     "rel": 0
+    }
+   ]
+  },
+  {
+   "q": "face creame",
+   "lang": "en",
+   "type": "gap",
+   "n_rel_catalog": 114,
+   "n_results": 1,
+   "ms": 412.2,
+   "p10": 0.0,
+   "hit1": 0,
+   "ndcg": 0.0,
+   "intent": {},
+   "notes": [],
+   "top": [
+    {
+     "t": "Revlon Touch & Glow Advanced Radiance Creame Face Wash (ExpiryDate - December 20",
+     "c": "skin",
+     "p": 397.0,
+     "rel": 0
+    }
+   ]
+  },
+  {
+   "q": "tank top",
+   "lang": "en",
+   "type": "gap",
+   "n_rel_catalog": 98,
+   "n_results": 10,
+   "ms": 515.4,
+   "p10": 0.5,
+   "hit1": 0,
+   "ndcg": 0.452,
+   "intent": {
+    "category": "tops",
+    "brand": "top"
+   },
+   "notes": [
+    "product group: tops"
+   ],
+   "top": [
+    {
+     "t": "Top Pure RO 5-Stage Filtration Water Purifier",
+     "c": "water purifiers & filters",
+     "p": 11987.0,
+     "rel": 0
+    },
+    {
+     "t": "Whitefield Beauty Cotton Ganjy Tank Top Bra System for Teenage Girls and Women E",
+     "c": "women's fashion",
+     "p": 71.0,
+     "rel": 1
+    },
+    {
+     "t": "LG Wall Mount Counter Top Water Purifier- LG-WW172EP",
+     "c": "appliances",
+     "p": 39797.0,
+     "rel": 0
+    },
+    {
+     "t": "1 Pcs High Quality Bra System Tank Top for Women Cotton Ganjy Bra for Teenage Gi",
+     "c": "women's fashion",
+     "p": 94.0,
+     "rel": 1
+    },
+    {
+     "t": "Cotton Top",
+     "c": "fashion (tops)",
+     "p": 997.0,
+     "rel": 0
+    },
+    {
+     "t": "Executive Cotton Linen Shell Top – Sharp Round Neck Sleeveless Professional Tuni",
+     "c": "women's fashion",
+     "p": 1048.0,
+     "rel": 1
+    },
+    {
+     "t": "Women’s Versatile Cotton Linen Sleeveless Top – Soft Textured Loose Fit Tunic",
+     "c": "women's fashion",
+     "p": 1053.0,
+     "rel": 1
+    },
+    {
+     "t": "Value-Top S200i Real 200w ATX PSU",
+     "c": "electrical equipment",
+     "p": 1230.0,
+     "rel": 0
+    },
+    {
+     "t": "Women’s Cotton Linen Party Wear Top – Vibrant Sleeveless Round Neck Collection",
+     "c": "women's fashion",
+     "p": 1070.0,
+     "rel": 1
+    },
+    {
+     "t": "WWM-ATG70 (7 KG TOP LOAD WASHING MACHINE)",
+     "c": "home appliances (washing machine   autom",
+     "p": 31498.0,
+     "rel": 0
+    }
+   ]
+  },
+  {
+   "q": "মায়ের জন্য শাড়ি ২০০০ টাকার উপরে",
+   "lang": "bn",
+   "type": "price",
+   "n_rel_catalog": 138,
+   "n_results": 10,
+   "ms": 635.6,
+   "p10": 0.0,
+   "hit1": 0,
+   "ndcg": 0.0,
+   "intent": {
+    "category": "saree",
+    "gender": "women",
+    "max_price": 2000.0,
+    "recipient": "mother",
+    "affinities": [
+     "saree",
+     "kurti",
+     "salwar kameez",
+     "necklace",
+     "handbag"
+    ]
+   },
+   "notes": [
+    "Bangla/Banglish query detected -> translated: 'mother saree'",
+    "persona: mother",
+    "product group: saree"
+   ],
+   "top": [
+    {
+     "t": "Printed Georgette Saree Jacquard Border DVSS-23558 | Vinay Starwalk",
+     "c": "saree",
+     "p": 1745.0,
+     "rel": 0
+    },
+    {
+     "t": "Printed Georgette Saree Jacquard Border DVSS-23555 | Vinay Starwalk",
+     "c": "saree",
+     "p": 1730.0,
+     "rel": 0
+    },
+    {
+     "t": "Casual Wear Georgette Saree DKGS-1937 | Kashvi Minakshi",
+     "c": "saree",
+     "p": 1360.0,
+     "rel": 0
+    },
+    {
+     "t": "Casual Wear Georgette Saree DKGS-1932 | Kashvi Minakshi",
+     "c": "saree",
+     "p": 1368.0,
+     "rel": 0
+    },
+    {
+     "t": "Sonakshi Satin Patta Saree DLSS-14003 | Lt Fashion",
+     "c": "saree",
+     "p": 1363.0,
+     "rel": 0
+    },
+    {
+     "t": "Sonakshi Satin Patta Saree DLSS-14002 | Lt Fashion",
+     "c": "saree",
+     "p": 1368.0,
+     "rel": 0
+    },
+    {
+     "t": "Casual Wear Chiffon Saree DRCS-13304-B | Ruchi Savera",
+     "c": "saree",
+     "p": 1370.0,
+     "rel": 0
+    },
+    {
+     "t": "Casual Wear Georgette Saree DKGS-1934 | Kashvi Minakshi",
+     "c": "saree",
+     "p": 1370.0,
+     "rel": 0
+    },
+    {
+     "t": "Weightless Georgette Saree DKCS-5007 | Kashvi Reena",
+     "c": "saree",
+     "p": 1420.0,
+     "rel": 0
+    },
+    {
+     "t": "Alfino Chiffon with Fancy Border Saree DKCS-1108 | Kashvi Sawan",
+     "c": "saree",
+     "p": 1257.0,
+     "rel": 0
+    }
+   ]
+  },
+  {
+   "q": "রান্নার কড়াই",
+   "lang": "bn",
+   "type": "gap",
+   "n_rel_catalog": 45,
+   "n_results": 10,
+   "ms": 406.2,
+   "p10": 0.0,
+   "hit1": 0,
+   "ndcg": 0.0,
+   "intent": {
+    "intents": [
+     "cooking_kitchen"
+    ],
+    "affinities": [
+     "cookware",
+     "frying pan",
+     "pressure cooker",
+     "kitchen knife",
+     "blender"
+    ]
+   },
+   "notes": [
+    "Bangla/Banglish query detected -> translated: 'cooking cookware frying pan'",
+    "intent: cooking_kitchen",
+    "product group: kitchenware"
+   ],
+   "top": [
+    {
+     "t": "Panasonic 1.7L 2200W Electric Kettle (NC-GK1)",
+     "c": "electric kettle",
+     "p": 4188.0,
+     "rel": 0
+    },
+    {
+     "t": "Panasonic 1.6L Electric Kettle (NC-SK1)",
+     "c": "electric kettle",
+     "p": 4970.0,
+     "rel": 0
+    },
+    {
+     "t": "Panasonic NC-K101 Electric Kettle",
+     "c": "electric kettle",
+     "p": 3900.0,
+     "rel": 0
+    },
+    {
+     "t": "Panasonic NC-K301 Electric Kettle",
+     "c": "electric kettle",
+     "p": 5075.0,
+     "rel": 0
+    },
+    {
+     "t": "Miyako 1.8Ltr Electric Kettle (MJK-18 KN)",
+     "c": "electric kettle",
+     "p": 1235.0,
+     "rel": 0
+    },
+    {
+     "t": "Miyako 2.3 Liter Automatic Electric Kettle (MJK-S171)",
+     "c": "electric kettle",
+     "p": 2255.0,
+     "rel": 0
+    },
+    {
+     "t": "Miyako 1.8 Liter Automatic Electric Kettle (MJK-18TES)",
+     "c": "electric kettle",
+     "p": 1652.0,
+     "rel": 0
+    },
+    {
+     "t": "Philips 1.7L Double Walled Electric Kettle (HD9395/90)",
+     "c": "electric kettle",
+     "p": 5487.0,
+     "rel": 0
+    },
+    {
+     "t": "Delonghi KBOV2001.GR 1.7L Icona Vintage Electric Kettle",
+     "c": "electronics & tech (electric kettle)",
+     "p": 12005.0,
+     "rel": 0
+    },
+    {
+     "t": "Delonghi KBOT2001.GY 1.7L Icona Metallics Electric Kettle",
+     "c": "electronics & tech (electric kettle)",
+     "p": 12498.0,
+     "rel": 0
+    }
+   ]
+  },
+  {
+   "q": "শাড়ি",
+   "lang": "bn",
+   "type": "plain",
+   "n_rel_catalog": 511,
+   "n_results": 10,
+   "ms": 495.7,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "saree"
+   },
+   "notes": [
+    "Bangla/Banglish query detected -> translated: 'saree'",
+    "product group: saree"
+   ],
+   "top": [
+    {
+     "t": "halfsilk alltime all time saree for women",
+     "c": "women's fashion",
+     "p": 385.0,
+     "rel": 1
+    },
+    {
+     "t": "Soft Silk Katan Saree Without Blouse Piece - Elegant Traditional Saree",
+     "c": "women's fashion",
+     "p": 689.0,
+     "rel": 1
+    },
+    {
+     "t": "New soft Indian gorod saree without blouse piec",
+     "c": "women's fashion",
+     "p": 656.0,
+     "rel": 1
+    },
+    {
+     "t": "Tangail Khesh Katha Pair Saree For Women Sari - শাড়ি",
+     "c": "women's fashion",
+     "p": 735.0,
+     "rel": 1
+    },
+    {
+     "t": "Blue & Silver Combination 12 Hand Halfsilk Saree for Women - Sari",
+     "c": "women's fashion",
+     "p": 205.0,
+     "rel": 1
+    },
+    {
+     "t": "Tangail soft new yellow Jamdani saree for Woman without blouse piec",
+     "c": "women's fashion",
+     "p": 212.0,
+     "rel": 1
+    },
+    {
+     "t": "Tangail Half Silk Saree for Women - Handwoven  sari",
+     "c": "women's fashion",
+     "p": 220.0,
+     "rel": 1
+    },
+    {
+     "t": "Popcorn Khesh With Plus Par Design Saree For Women - Sari",
+     "c": "women's fashion",
+     "p": 352.0,
+     "rel": 1
+    },
+    {
+     "t": "Tangail new soft 8 hand baby katan saree without blouse piec",
+     "c": "women's fashion",
+     "p": 200.0,
+     "rel": 1
+    },
+    {
+     "t": "Stylish & Fashionable New Matching Best/Coupple Dress/For Men & Women / Saree & ",
+     "c": "men's fashion",
+     "p": 484.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "মধু",
+   "lang": "bn",
+   "type": "plain",
+   "n_rel_catalog": 220,
+   "n_results": 10,
+   "ms": 441.9,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {},
+   "notes": [
+    "Bangla/Banglish query detected -> translated: 'honey'"
+   ],
+   "top": [
+    {
+     "t": "Walnut With Honey Mix nut - 500g walnut honey",
+     "c": "grocery & daily needs",
+     "p": 502.0,
+     "rel": 1
+    },
+    {
+     "t": "Mustard Flower Honey 500g ( Shorisha Modhu )",
+     "c": "grocery & daily needs",
+     "p": 345.0,
+     "rel": 1
+    },
+    {
+     "t": "Honey Mix Nuts With 13 Fruits - 500gm NEW HONEY NUTS",
+     "c": "grocery & daily needs",
+     "p": 487.0,
+     "rel": 1
+    },
+    {
+     "t": "HONEY NUTS Mixed dry Fruits - 250 gm with honey mix",
+     "c": "grocery & daily needs",
+     "p": 258.0,
+     "rel": 1
+    },
+    {
+     "t": "Mixed Dry Fruits & Nuts with 13 Fruits - 250gm Honey Nuts NEW",
+     "c": "grocery & daily needs",
+     "p": 223.0,
+     "rel": 1
+    },
+    {
+     "t": "Honey Mix Nuts With 13 Fruits - 500g",
+     "c": "grocery & daily needs",
+     "p": 504.0,
+     "rel": 1
+    },
+    {
+     "t": "HONEY NUTS Mixed dry Fruits - 250 gm with honey nuts NEW",
+     "c": "grocery & daily needs",
+     "p": 243.0,
+     "rel": 1
+    },
+    {
+     "t": "HONEY NUTS Mixed dry Fruits - 500 gm with honey mix",
+     "c": "grocery & daily needs",
+     "p": 459.0,
+     "rel": 1
+    },
+    {
+     "t": "Rongon Herbals Liquorice - যষ্টি মধু",
+     "c": "skin",
+     "p": 137.0,
+     "rel": 1
+    },
+    {
+     "t": "Honey nuts - 500gm With mix nut Honey",
+     "c": "grocery & daily needs",
+     "p": 469.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "সরিষার তেল",
+   "lang": "bn",
+   "type": "plain",
+   "n_rel_catalog": 14,
+   "n_results": 10,
+   "ms": 416.5,
+   "p10": 0.4,
+   "hit1": 0,
+   "ndcg": 0.417,
+   "intent": {},
+   "notes": [
+    "Bangla/Banglish query detected -> translated: 'mustard oil'"
+   ],
+   "top": [
+    {
+     "t": "Pusti Soyebean Oil (সয়াবিন তেল) 5 Litre",
+     "c": "soybean, sunflower, mustard cooking oil",
+     "p": 992.0,
+     "rel": 0
+    },
+    {
+     "t": "Pran Mustard Oil 1ltr",
+     "c": "grocery",
+     "p": 335.0,
+     "rel": 1
+    },
+    {
+     "t": "Sunshine mustard Oil 1ltr",
+     "c": "grocery",
+     "p": 375.0,
+     "rel": 1
+    },
+    {
+     "t": "TopGrain Mustard Oil 120ml",
+     "c": "hair",
+     "p": 170.0,
+     "rel": 1
+    },
+    {
+     "t": "Emami 7 Oils In One Mustard+ Hair Oil",
+     "c": "hair",
+     "p": 290.0,
+     "rel": 0
+    },
+    {
+     "t": "Emami 7 Oils In One Mustard+ Hair Oil 200ml",
+     "c": "hair",
+     "p": 190.0,
+     "rel": 0
+    },
+    {
+     "t": "Pran Mustard Oil 500ml",
+     "c": "grocery",
+     "p": 150.0,
+     "rel": 1
+    },
+    {
+     "t": "Olitalia SUNFLOWER OIL 1 Ltr oil",
+     "c": "soybean, sunflower, mustard cooking oil",
+     "p": 722.0,
+     "rel": 0
+    },
+    {
+     "t": "Rupchada Soyabean Oil 2ltr",
+     "c": "soybean, sunflower, mustard cooking oil",
+     "p": 413.0,
+     "rel": 0
+    },
+    {
+     "t": "Pusti Soyabean Oil 5Ltr.",
+     "c": "soybean, sunflower, mustard cooking oil",
+     "p": 940.0,
+     "rel": 0
+    }
+   ]
+  },
+  {
+   "q": "ছেলেদের পাঞ্জাবি",
+   "lang": "bn",
+   "type": "plain",
+   "n_rel_catalog": 546,
+   "n_results": 10,
+   "ms": 451.6,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "panjabi",
+    "gender": "men",
+    "recipient": "men",
+    "affinities": [
+     "shirt",
+     "t-shirt",
+     "panjabi",
+     "jeans",
+     "leather shoes"
+    ]
+   },
+   "notes": [
+    "Bangla/Banglish query detected -> translated: 'men panjabi'",
+    "persona: men",
+    "product group: panjabi"
+   ],
+   "top": [
+    {
+     "t": "WINNER MEN'S PANJABI",
+     "c": "baby clothing, socks & t-shirts",
+     "p": 1086.0,
+     "rel": 1
+    },
+    {
+     "t": "WINNER MEN'S PANJABI - ASH",
+     "c": "baby clothing, socks & t-shirts",
+     "p": 627.0,
+     "rel": 1
+    },
+    {
+     "t": "Fatua for men - Panjabi - Panjabi For Men - Panjabi",
+     "c": "men's fashion",
+     "p": 492.0,
+     "rel": 1
+    },
+    {
+     "t": "Stylish Menz Comfortable Lemon Panjabi - Panjabi",
+     "c": "men's fashion",
+     "p": 297.0,
+     "rel": 1
+    },
+    {
+     "t": "Stylish Menz Comfortable Purple Panjabi - Panjabi",
+     "c": "men's fashion",
+     "p": 372.0,
+     "rel": 1
+    },
+    {
+     "t": "Fatua For Men - Panjabi - Panjabi For Men - Panjabi - Panjabi",
+     "c": "men's fashion",
+     "p": 484.0,
+     "rel": 1
+    },
+    {
+     "t": "Crimson Red Cotton Printed Panjabi for Boys",
+     "c": "fashion (boys panjabi)",
+     "p": 1060.0,
+     "rel": 1
+    },
+    {
+     "t": "Fatua For Men - Fatua - Panjabi For Men - Panjabi",
+     "c": "men's fashion",
+     "p": 514.0,
+     "rel": 1
+    },
+    {
+     "t": "Designer Black Panjabi with Classical White Print",
+     "c": "fashion (panjabi)",
+     "p": 1730.0,
+     "rel": 1
+    },
+    {
+     "t": "Metallic Bronze Cotton Printed &amp; Hand Embroidered Panjabi for Boys",
+     "c": "fashion (boys panjabi)",
+     "p": 997.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "রাইস কুকার",
+   "lang": "bn",
+   "type": "plain",
+   "n_rel_catalog": 205,
+   "n_results": 10,
+   "ms": 131.2,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "rice cooker"
+   },
+   "notes": [
+    "Bangla/Banglish query detected -> translated: 'rice cooker'",
+    "product group: rice cooker"
+   ],
+   "top": [
+    {
+     "t": "Rice Cooker Power Coed.",
+     "c": "kitchen & dining",
+     "p": 148.0,
+     "rel": 1
+    },
+    {
+     "t": "Rice Cooker Power Cord Longwell Brand.",
+     "c": "kitchen & dining",
+     "p": 270.0,
+     "rel": 1
+    },
+    {
+     "t": "Westinghouse WKRC10D28 2.8L Rice Cooker",
+     "c": "rice cooker",
+     "p": 4970.0,
+     "rel": 1
+    },
+    {
+     "t": "Westinghouse WKRC5D18 1.8L Rice Cooker",
+     "c": "rice cooker",
+     "p": 4231.0,
+     "rel": 1
+    },
+    {
+     "t": "Panasonic SRGA321 3.2L Automatic Rice Cooker",
+     "c": "rice cooker",
+     "p": 10988.0,
+     "rel": 1
+    },
+    {
+     "t": "Westinghouse WKRC5D15 1.5L Rice Cooker",
+     "c": "rice cooker",
+     "p": 3232.0,
+     "rel": 1
+    },
+    {
+     "t": "Panasonic SR-GA721 7.2L Rice Cooker",
+     "c": "rice cooker",
+     "p": 20580.0,
+     "rel": 1
+    },
+    {
+     "t": "Panasonic SRWN36 3.6L Automatic Rice Cooker",
+     "c": "rice cooker",
+     "p": 11510.0,
+     "rel": 1
+    },
+    {
+     "t": "Panasonic 1.8L SR-DA182 Rice Cooker",
+     "c": "rice cooker",
+     "p": 9880.0,
+     "rel": 1
+    },
+    {
+     "t": "Panasonic 1.8L Rice Cooker (SR-W18G)",
+     "c": "rice cooker",
+     "p": 4888.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "ব্লুটুথ হেডফোন",
+   "lang": "bn",
+   "type": "plain",
+   "n_rel_catalog": 3329,
+   "n_results": 10,
+   "ms": 492.3,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "headphones",
+    "brand": "bluetooth"
+   },
+   "notes": [
+    "spelling corrected: 'ব্লুটুথ' -> 'bluetooth', 'headphones' -> 'wireless headphones'",
+    "Bangla/Banglish query detected -> translated: 'bluetooth wireless headphones'",
+    "product group: headphones"
+   ],
+   "top": [
+    {
+     "t": "Realme Buds 5 Lite Bluetooth Neckband",
+     "c": "bluetooth headphone",
+     "p": 1926.0,
+     "rel": 1
+    },
+    {
+     "t": "Realme Buds Wireless 3 In Ear Bluetooth Earphones",
+     "c": "gadgets",
+     "p": 2505.0,
+     "rel": 1
+    },
+    {
+     "t": "Awei AT7 Bluetooth Wireless Headphones - Black",
+     "c": "bluetooth headphone",
+     "p": 1335.0,
+     "rel": 1
+    },
+    {
+     "t": "Wireless Bluetooth Headphone Ms-881A Professional - Enjoy Professional-Grade Aud",
+     "c": "audio & gadgets",
+     "p": 736.0,
+     "rel": 1
+    },
+    {
+     "t": "STEREO WIRELESS BLUETOOTH HEADPHONES-Headphones & Headsets - NR Mart-2024 - Mult",
+     "c": "audio & gadgets",
+     "p": 571.0,
+     "rel": 1
+    },
+    {
+     "t": "Hoco W46 Bluetooth Wireless Headphones",
+     "c": "audio & gadgets",
+     "p": 1099.0,
+     "rel": 1
+    },
+    {
+     "t": "Wireless Bluetooth Headphone Ms-881A Professional - Enjoy Professional-Grade Aud",
+     "c": "audio & gadgets",
+     "p": 596.0,
+     "rel": 1
+    },
+    {
+     "t": "HOCO W66 Wireless Bluetooth Headphones -Black",
+     "c": "audio & gadgets",
+     "p": 1519.0,
+     "rel": 1
+    },
+    {
+     "t": "P47 Bluetooth Wireless Headphones Best Qualitifull Orginal Headphones Multi Colo",
+     "c": "audio & gadgets",
+     "p": 289.0,
+     "rel": 1
+    },
+    {
+     "t": "Hoco W46 Bluetooth Wireless Headphones -Black",
+     "c": "audio & gadgets",
+     "p": 948.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "বাচ্চাদের ডায়াপার",
+   "lang": "bn",
+   "type": "plain",
+   "n_rel_catalog": 240,
+   "n_results": 10,
+   "ms": 481.4,
+   "p10": 0.0,
+   "hit1": 0,
+   "ndcg": 0.0,
+   "intent": {
+    "gender": "unisex",
+    "recipient": "kid",
+    "affinities": [
+     "building blocks",
+     "educational toy",
+     "remote control car",
+     "soft teddy bear",
+     "puzzle board"
+    ]
+   },
+   "notes": [
+    "Bangla/Banglish query detected -> translated: 'kids ডায়াপার'",
+    "persona: kid"
+   ],
+   "top": [
+    {
+     "t": "Woolen Teddy Bear For Kids - Sandy Brown",
+     "c": "teddy bear",
+     "p": 143.0,
+     "rel": 0
+    },
+    {
+     "t": "Inflatable Teddy Bear Chair - Yellow Highly Vital - Cartoon Creative Inflatable ",
+     "c": "teddy bear",
+     "p": 1732.0,
+     "rel": 0
+    },
+    {
+     "t": "54cm valentine gift Teddy Bear Kids Toys & Plush Girls Valentine Day Gift Soft P",
+     "c": "teddy bear",
+     "p": 649.0,
+     "rel": 0
+    },
+    {
+     "t": "44cm valentine gift Teddy Bear Kids Toys & Plush Girls Valentine Day Gift Soft P",
+     "c": "teddy bear",
+     "p": 609.0,
+     "rel": 0
+    },
+    {
+     "t": "52cm valentine gift Teddy Bear Kids Toys & Plush Girls Valentine Day Gift Soft P",
+     "c": "teddy bear",
+     "p": 450.0,
+     "rel": 0
+    },
+    {
+     "t": "Sweet Dreamy Teddy Bear Fantasy-Themed Colorful Lens Sunglasses for Stylish Chil",
+     "c": "teddy bear",
+     "p": 201.0,
+     "rel": 0
+    },
+    {
+     "t": "Racing Toy Car For Kids Remote Control Car Toy Children Car Speed Serise Radio C",
+     "c": "baby, kids & toys",
+     "p": 1406.0,
+     "rel": 0
+    },
+    {
+     "t": "New Mini Inertial Off-Road Vehicle Four Wheel Drive Plastic Children Toy Car Pul",
+     "c": "cars",
+     "p": 255.0,
+     "rel": 0
+    },
+    {
+     "t": "Light Green Kids Velvet Apple 3-Piece Set.",
+     "c": "winter collections",
+     "p": 1652.0,
+     "rel": 0
+    },
+    {
+     "t": "Kids 3-Piece Blue Corduroy Set.",
+     "c": "winter collections",
+     "p": 1648.0,
+     "rel": 0
+    }
+   ]
+  },
+  {
+   "q": "ফেস ওয়াশ",
+   "lang": "bn",
+   "type": "plain",
+   "n_rel_catalog": 825,
+   "n_results": 10,
+   "ms": 517.6,
+   "p10": 0.3,
+   "hit1": 1,
+   "ndcg": 0.353,
+   "intent": {
+    "category": "face wash"
+   },
+   "notes": [
+    "Bangla/Banglish query detected -> translated: 'face wash'",
+    "product group: face wash"
+   ],
+   "top": [
+    {
+     "t": "YUSERA Ozonized Anti Acne Face Wash 80ml",
+     "c": "beauty & personal care",
+     "p": 182.0,
+     "rel": 1
+    },
+    {
+     "t": "YC So White ফেস ওয়াশ + ম্যাজিক ব্যাগ  100ml",
+     "c": "ফেস কেয়ার",
+     "p": 280.0,
+     "rel": 0
+    },
+    {
+     "t": "বায়ো একটিভ হোইটেনিং গট মিল্ক ফেস ওয়াশ",
+     "c": "ফেস কেয়ার",
+     "p": 460.0,
+     "rel": 0
+    },
+    {
+     "t": "জোভিস হার্বাল মেনস এসেনশিয়াল অ্যাডভান্সড 4 ইন 1 ময়েশ্চারাইজিং ফেস ওয়াশ সঙ্গে ",
+     "c": "ফেস কেয়ার",
+     "p": 435.0,
+     "rel": 0
+    },
+    {
+     "t": "জোভিস হারবাল ব্রাইডাল ব্রাইটনিং ফেস ওয়াশ 120 মিলি",
+     "c": "ফেস কেয়ার",
+     "p": 540.0,
+     "rel": 0
+    },
+    {
+     "t": "জোভিস পার্ল হোয়াইটিং ফেস ওয়াশ, 60 গ্রাম",
+     "c": "ফেস কেয়ার",
+     "p": 530.0,
+     "rel": 0
+    },
+    {
+     "t": "জোভিস হারবাল আল্ট্রা রেডিয়েন্স গোল্ড ফেস ওয়াশ 100 গ্রাম",
+     "c": "স্কিন কেয়ার",
+     "p": 577.0,
+     "rel": 0
+    },
+    {
+     "t": "Men New Face Wash New Face Cream Face wash",
+     "c": "beauty & personal care",
+     "p": 82.0,
+     "rel": 1
+    },
+    {
+     "t": "জোভিস হার্বাল ডি-ট্যান ফেস ওয়াশ | নারী/পুরুষদের জন্য",
+     "c": "স্কিন কেয়ার",
+     "p": 552.0,
+     "rel": 0
+    },
+    {
+     "t": "New Cream Face skin care Men's face wash",
+     "c": "beauty & personal care",
+     "p": 77.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "kom dame valo phone",
+   "lang": "banglish",
+   "type": "vague",
+   "n_rel_catalog": 1324,
+   "n_results": 10,
+   "ms": 459.7,
+   "p10": 0.9,
+   "hit1": 1,
+   "ndcg": 0.934,
+   "intent": {
+    "category": "smartphone"
+   },
+   "notes": [
+    "product group: smartphone"
+   ],
+   "top": [
+    {
+     "t": "Motorola Moto A300 (2026) Feature Phone",
+     "c": "phone tab and accessories",
+     "p": 2335.0,
+     "rel": 1
+    },
+    {
+     "t": "Motorola Moto A10e",
+     "c": "motorola mobile phone",
+     "p": 2160.0,
+     "rel": 1
+    },
+    {
+     "t": "Motorola moto a300 (2026)",
+     "c": "motorola mobile phone",
+     "p": 2404.0,
+     "rel": 1
+    },
+    {
+     "t": "Walton Olvio i201 Feature Phone",
+     "c": "phone (cat: 20000299)",
+     "p": 1283.0,
+     "rel": 1
+    },
+    {
+     "t": "Vivo Y21d (6+128GB) Official",
+     "c": "phone (cat: 3)",
+     "p": 26914.0,
+     "rel": 1
+    },
+    {
+     "t": "Vivo Y31d (8+128GB) Official",
+     "c": "phone (cat: 3)",
+     "p": 34004.0,
+     "rel": 1
+    },
+    {
+     "t": "Vivo Y31d (8+256GB) Official",
+     "c": "phone (cat: 3)",
+     "p": 36884.0,
+     "rel": 1
+    },
+    {
+     "t": "Apple iPhone 17 Pro 256GB || Official",
+     "c": "phone (cat: 3)",
+     "p": 210019.0,
+     "rel": 1
+    },
+    {
+     "t": "Walton NEXG N28 (8+128GB) Official",
+     "c": "phone (cat: 3)",
+     "p": 20019.0,
+     "rel": 0
+    },
+    {
+     "t": "Vivo Y31d (6+128GB) Official",
+     "c": "phone (cat: 3)",
+     "p": 28919.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "meyeder kurti",
+   "lang": "banglish",
+   "type": "plain",
+   "n_rel_catalog": 142,
+   "n_results": 10,
+   "ms": 460.7,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "kurti",
+    "gender": "women",
+    "recipient": "women",
+    "affinities": [
+     "saree",
+     "kurti",
+     "salwar kameez",
+     "perfume",
+     "hair dryer"
+    ]
+   },
+   "notes": [
+    "persona: women",
+    "product group: kurti"
+   ],
+   "top": [
+    {
+     "t": "Black Cotton Printed &amp; Embroidered Kurti",
+     "c": "fashion (kurti)",
+     "p": 4565.0,
+     "rel": 1
+    },
+    {
+     "t": "Peach Linen Printed Kurti",
+     "c": "fashion (kurti)",
+     "p": 1675.0,
+     "rel": 1
+    },
+    {
+     "t": "Lemon Yellow Linen Printed Kurti",
+     "c": "fashion (kurti)",
+     "p": 1993.0,
+     "rel": 1
+    },
+    {
+     "t": "Purple Georgette Kurti",
+     "c": "fashion (kurti)",
+     "p": 2127.0,
+     "rel": 1
+    },
+    {
+     "t": "Tan Brown Jacquard Cotton Printed &amp; Embroidered Kurti",
+     "c": "fashion (kurti)",
+     "p": 2897.0,
+     "rel": 1
+    },
+    {
+     "t": "Multicolour Printed Silk Kurti",
+     "c": "fashion (kurti)",
+     "p": 2980.0,
+     "rel": 1
+    },
+    {
+     "t": "Peach Georgette Long Kurti with Exquisite Sequin Detailing",
+     "c": "fashion (kurti)",
+     "p": 7610.0,
+     "rel": 1
+    },
+    {
+     "t": "Multicolour Linen Kurti",
+     "c": "fashion (kurti)",
+     "p": 1648.0,
+     "rel": 1
+    },
+    {
+     "t": "Georgette Printed Kurti",
+     "c": "fashion (kurti)",
+     "p": 2015.0,
+     "rel": 1
+    },
+    {
+     "t": "Mauve Georgette Embroidered Kurti",
+     "c": "fashion (kurti)",
+     "p": 1792.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "cheleder panjabi",
+   "lang": "banglish",
+   "type": "plain",
+   "n_rel_catalog": 542,
+   "n_results": 10,
+   "ms": 435.8,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "panjabi",
+    "gender": "men",
+    "recipient": "men",
+    "affinities": [
+     "shirt",
+     "t-shirt",
+     "panjabi",
+     "jeans",
+     "leather shoes"
+    ]
+   },
+   "notes": [
+    "persona: men",
+    "product group: panjabi"
+   ],
+   "top": [
+    {
+     "t": "WINNER MEN'S PANJABI",
+     "c": "baby clothing, socks & t-shirts",
+     "p": 1086.0,
+     "rel": 1
+    },
+    {
+     "t": "WINNER MEN'S PANJABI - ASH",
+     "c": "baby clothing, socks & t-shirts",
+     "p": 627.0,
+     "rel": 1
+    },
+    {
+     "t": "Designer Black Panjabi with Classical White Print",
+     "c": "fashion (panjabi)",
+     "p": 1730.0,
+     "rel": 1
+    },
+    {
+     "t": "Crimson Red Cotton Printed Panjabi for Boys",
+     "c": "fashion (boys panjabi)",
+     "p": 1060.0,
+     "rel": 1
+    },
+    {
+     "t": "Metallic Bronze Cotton Printed &amp; Hand Embroidered Panjabi for Boys",
+     "c": "fashion (boys panjabi)",
+     "p": 997.0,
+     "rel": 1
+    },
+    {
+     "t": "Fatua For Men - Panjabi - Panjabi For Men - Panjabi - Panjabi",
+     "c": "men's fashion",
+     "p": 484.0,
+     "rel": 1
+    },
+    {
+     "t": "Fatua for men - Panjabi - Panjabi For Men - Panjabi",
+     "c": "men's fashion",
+     "p": 492.0,
+     "rel": 1
+    },
+    {
+     "t": "Fatua For Men - Fatua - Panjabi For Men - Panjabi",
+     "c": "men's fashion",
+     "p": 514.0,
+     "rel": 1
+    },
+    {
+     "t": "Purple Casual Panjabi For Men - Panjabi - কাপল ড্রেস শাড়ি - Panjabi",
+     "c": "men's fashion",
+     "p": 389.0,
+     "rel": 1
+    },
+    {
+     "t": "Katua  Formal Katua For Men - Panjabi - Panjabi For Men - Panjabi",
+     "c": "men's fashion",
+     "p": 489.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "bacchader khelna",
+   "lang": "banglish",
+   "type": "vague",
+   "n_rel_catalog": 507,
+   "n_results": 10,
+   "ms": 419.4,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "educational toy",
+    "gender": "unisex",
+    "recipient": "kid",
+    "affinities": [
+     "building blocks",
+     "educational toy",
+     "remote control car",
+     "soft teddy bear",
+     "puzzle board"
+    ]
+   },
+   "notes": [
+    "spelling corrected: 'khelna' -> 'educational toy'",
+    "persona: kid",
+    "product group: educational toy"
+   ],
+   "top": [
+    {
+     "t": "（New）cience Toy olar ytem Model Atronomy un Earth Moon Planet Experiment Educati",
+     "c": "toys & games",
+     "p": 2291.0,
+     "rel": 1
+    },
+    {
+     "t": "Magnetic Arithmetic Learning Toys, Intelligence Brain Developing Toy Math Blocks",
+     "c": "toys & games",
+     "p": 250.0,
+     "rel": 1
+    },
+    {
+     "t": "Barbie Children Colourful Magic Water Book Baby Early Educational Toy Reusable M",
+     "c": "toys & games",
+     "p": 260.0,
+     "rel": 1
+    },
+    {
+     "t": "Baby Wind Up Toys Cute Jumping Pigeon Clockwork Toy Funny Simulation Animal Kids",
+     "c": "toys & games",
+     "p": 336.0,
+     "rel": 1
+    },
+    {
+     "t": "Premium Educational Toys for Kids (Colorful Pattern Shape Creating Toy for Smart",
+     "c": "toys & games",
+     "p": 494.0,
+     "rel": 1
+    },
+    {
+     "t": "Montessori Busy Cube For Toddlers Baby Learning Educational Toys  0-3 Year Old F",
+     "c": "toys & games",
+     "p": 1199.0,
+     "rel": 1
+    },
+    {
+     "t": "（New）Mini Ball Claw Manual Candy Grabber Machine Children Interactive Educationa",
+     "c": "toys & games",
+     "p": 1516.0,
+     "rel": 1
+    },
+    {
+     "t": "1 Set Children's Fun Montessori Learn Basic Life Skills Teaching Aid Clothes Thr",
+     "c": "toys & games",
+     "p": 871.0,
+     "rel": 1
+    },
+    {
+     "t": "Tic Tac Toe XO Wooden Board Games Family Children Kids Educational Toy for Gift ",
+     "c": "toys & games",
+     "p": 127.0,
+     "rel": 1
+    },
+    {
+     "t": "Kitchen Toys for Kids 59/69 PCS Pretend Cooking Set Play with Pots Pans Cookware",
+     "c": "home & kitchen living",
+     "p": 1459.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "mobile er charger",
+   "lang": "banglish",
+   "type": "plain",
+   "n_rel_catalog": 2396,
+   "n_results": 10,
+   "ms": 428.7,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "phone charger"
+   },
+   "notes": [
+    "product group: phone charger"
+   ],
+   "top": [
+    {
+     "t": "USB Charger 4 Ports Quick Charge 3.0 For lightning android universal Phone EU Ad",
+     "c": "mobiles & tablets",
+     "p": 211.0,
+     "rel": 1
+    },
+    {
+     "t": "Arif Auto Charger For mobile Phone Battery",
+     "c": "phones & tablets",
+     "p": 259.0,
+     "rel": 1
+    },
+    {
+     "t": "Bseus Jelly Wireless Charger 15W Fast Qi Wireless Charger For iPhone Airpods Pro",
+     "c": "phones & tablets",
+     "p": 1799.0,
+     "rel": 1
+    },
+    {
+     "t": "USB C GaN Charger 65W QC3.0 Fast Charging Phone Charger Adapter For iPhone Samsu",
+     "c": "mobiles & tablets",
+     "p": 523.0,
+     "rel": 1
+    },
+    {
+     "t": "Crouch Mini Car Charger 100W QC3.0 Fast Charging Car USB Charger PD Type C Mobil",
+     "c": "mobiles & tablets",
+     "p": 404.0,
+     "rel": 1
+    },
+    {
+     "t": "Olaf PD 60W USB C Charger Fast Charging Type C Charger Quick charge 3.0 Phone Ch",
+     "c": "mobiles & tablets",
+     "p": 527.0,
+     "rel": 1
+    },
+    {
+     "t": "4 Port USB Charger Total 120W Fast Charging EU/US/UK Plug Wall Charger Mobile Ph",
+     "c": "mobiles & tablets",
+     "p": 325.0,
+     "rel": 1
+    },
+    {
+     "t": "120W Multi Ports USB Charger Type C Mobile Phone Charger Adapter Fast Charging F",
+     "c": "mobiles & tablets",
+     "p": 507.0,
+     "rel": 1
+    },
+    {
+     "t": "Google 30W USB-C Charger Fast Charging Pixel Phone Charger Adapter and Type C To",
+     "c": "phones & tablets",
+     "p": 1192.0,
+     "rel": 1
+    },
+    {
+     "t": "Motorcycle 2 in 1 USB Phone Charger",
+     "c": "phones & tablets",
+     "p": 1330.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "laptop er bag",
+   "lang": "banglish",
+   "type": "plain",
+   "n_rel_catalog": 389,
+   "n_results": 10,
+   "ms": 420.1,
+   "p10": 0.7,
+   "hit1": 1,
+   "ndcg": 0.768,
+   "intent": {
+    "category": "laptop"
+   },
+   "notes": [
+    "product group: laptop"
+   ],
+   "top": [
+    {
+     "t": "Laptop Bag | New Classic Laptop Backpack for Men | Office Bag | Unique Design La",
+     "c": "bags and travel 2",
+     "p": 665.0,
+     "rel": 1
+    },
+    {
+     "t": "Bange BG 7702 Professional Hand Carry Laptop Bag Portable Zip Soft Laptop Protec",
+     "c": "bags, wallets & belts",
+     "p": 3568.0,
+     "rel": 1
+    },
+    {
+     "t": "Loupin School College & Laptop BackPack for Men / College bag / Travel Backpack ",
+     "c": "bags and travel 2",
+     "p": 995.0,
+     "rel": 1
+    },
+    {
+     "t": "Laptop Pouch Bag Premium Quality Canvas Fabric bag with Waterproof bag",
+     "c": "hand bags",
+     "p": 510.0,
+     "rel": 0
+    },
+    {
+     "t": "Waterproof Laptop Bag Cover 13.3 14 15 15.6 inch Sleeve Computer bag Laptop Pouc",
+     "c": "bags and travel 2",
+     "p": 758.0,
+     "rel": 1
+    },
+    {
+     "t": "Arctic Hunter 18.6'' Laptop Backpack – Water-Resistant Slim Bag with Office, Tra",
+     "c": "bags and travel 2",
+     "p": 1095.0,
+     "rel": 1
+    },
+    {
+     "t": "Ryan Laptop Organizer Bag – Black",
+     "c": "bags and travel 2",
+     "p": 4368.0,
+     "rel": 0
+    },
+    {
+     "t": "FANTECH BG984 WATERPROOF GAMING BACKPACK, LAPTOP BAG SHOLDER BAG-Black",
+     "c": "bags and travel 2",
+     "p": 3980.0,
+     "rel": 1
+    },
+    {
+     "t": "Kronos Laptop Bag",
+     "c": "bags",
+     "p": 1535.0,
+     "rel": 1
+    },
+    {
+     "t": "Amsburg Laptop Leather Bag(Black)",
+     "c": "bags, wallets & belts",
+     "p": 1347.0,
+     "rel": 0
+    }
+   ]
+  },
+  {
+   "q": "laptop under 50000",
+   "lang": "en",
+   "type": "price",
+   "n_rel_catalog": 163,
+   "n_results": 10,
+   "ms": 518.6,
+   "p10": 0.6,
+   "hit1": 1,
+   "ndcg": 0.727,
+   "intent": {
+    "category": "laptop",
+    "max_price": 50000
+   },
+   "notes": [
+    "no product matches all conditions inside price range — showing closest prices",
+    "product group: laptop"
+   ],
+   "top": [
+    {
+     "t": "Laptop Display for 14\" Laptop & Notebook with Ultra Micro Port",
+     "c": "electronics & tech (laptop notebook/lapt",
+     "p": 6010.0,
+     "rel": 1
+    },
+    {
+     "t": "Laptop Display for 14\" Laptop & Notebook with Ultra Normal Port",
+     "c": "electronics & tech (laptop notebook/lapt",
+     "p": 4995.0,
+     "rel": 1
+    },
+    {
+     "t": "Laptop Display for 15.6\" Ultra Slim High Resolution Laptop",
+     "c": "electronics & tech (laptop notebook/lapt",
+     "p": 4995.0,
+     "rel": 1
+    },
+    {
+     "t": "Laptop Display for 14\" HD Laptop & Notebook",
+     "c": "electronics & tech (laptop notebook/lapt",
+     "p": 5015.0,
+     "rel": 1
+    },
+    {
+     "t": "Laptop Display for 15.6\" HD Laptop",
+     "c": "electronics & tech (laptop notebook/lapt",
+     "p": 5020.0,
+     "rel": 1
+    },
+    {
+     "t": "Laptop Display Full HD 15.6\" Ultra 40pin 144Hz Series",
+     "c": "electronics & tech (laptop notebook/lapt",
+     "p": 9005.0,
+     "rel": 1
+    },
+    {
+     "t": "Laptop Battery A Grade For FUJITSU Laptop and Notebook",
+     "c": "electronics & tech (laptop battery)",
+     "p": 2185.0,
+     "rel": 0
+    },
+    {
+     "t": "Laptop Bag | New Classic Laptop Backpack for Men | Office Bag | Unique Design La",
+     "c": "bags and travel 2",
+     "p": 665.0,
+     "rel": 0
+    },
+    {
+     "t": "15 inch Keyboard for Laptop & Notebook",
+     "c": "electronics & tech (laptop notebook/lapt",
+     "p": 1797.0,
+     "rel": 0
+    },
+    {
+     "t": "Beautyful Nature with Green Car Laptop Sticker Laptop Skin Sticker for laptop Ba",
+     "c": "computers & it",
+     "p": 111.0,
+     "rel": 0
+    }
+   ]
+  },
+  {
+   "q": "smartphone under 15000",
+   "lang": "en",
+   "type": "price",
+   "n_rel_catalog": 690,
+   "n_results": 10,
+   "ms": 611.6,
+   "p10": 0.7,
+   "hit1": 1,
+   "ndcg": 0.718,
+   "intent": {
+    "category": "smartphone",
+    "max_price": 15000
+   },
+   "notes": [
+    "no product matches all conditions inside price range — showing closest prices",
+    "product group: smartphone"
+   ],
+   "top": [
+    {
+     "t": "Xiaomi Mi Play Smartphone 4/64GB",
+     "c": "phones & gadgets",
+     "p": 12980.0,
+     "rel": 1
+    },
+    {
+     "t": "Gameing Cooler Fan For Smartphone",
+     "c": "phones & tablets",
+     "p": 240.0,
+     "rel": 0
+    },
+    {
+     "t": "Bluetooth Calling Smart Connecting Device For Smartphone",
+     "c": "phones & tablets",
+     "p": 305.0,
+     "rel": 1
+    },
+    {
+     "t": "Ulanzi U200 Smartphone and Camera Cage with Lighting",
+     "c": "camera and accessories",
+     "p": 6537.0,
+     "rel": 1
+    },
+    {
+     "t": "Hoco Wireless Smartphone Remote Controller (GM204)",
+     "c": "smart gadget",
+     "p": 1260.0,
+     "rel": 1
+    },
+    {
+     "t": "Universal Ejector Pin For Smartphones Stainless Still",
+     "c": "phones & tablets",
+     "p": 34.0,
+     "rel": 1
+    },
+    {
+     "t": "Ulanzi ST-29 Tripod Mount for Smartphone and Tablet",
+     "c": "camera and accessories",
+     "p": 1074.0,
+     "rel": 0
+    },
+    {
+     "t": "Bluetooth Remote Shutter Portable Selfie Clicker For Smartphone",
+     "c": "phones & tablets",
+     "p": 160.0,
+     "rel": 0
+    },
+    {
+     "t": "HOCO GM204 Wireless Smartphone Remote Controller - Black",
+     "c": "phones & tablets",
+     "p": 1300.0,
+     "rel": 1
+    },
+    {
+     "t": "W58 LED Magsafe Magnet Fill-In Light For Smartphones",
+     "c": "phones & tablets",
+     "p": 1272.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "headphone 2000 takar niche",
+   "lang": "banglish",
+   "type": "price",
+   "n_rel_catalog": 1848,
+   "n_results": 10,
+   "ms": 590.2,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "headphones",
+    "max_price": 2000.0
+   },
+   "notes": [
+    "spelling corrected: 'headphone' -> 'wireless headphones'",
+    "product group: headphones"
+   ],
+   "top": [
+    {
+     "t": "MI In Ear Headphones Basic - Black - PN10398",
+     "c": "sound and audio system",
+     "p": 592.0,
+     "rel": 1
+    },
+    {
+     "t": "Xiaomi Wired Headphone DDQ02WM",
+     "c": "wired headphones",
+     "p": 545.0,
+     "rel": 1
+    },
+    {
+     "t": "Redmi Buds 6 Play True Wireless Earbuds",
+     "c": "bluetooth headphones",
+     "p": 1710.0,
+     "rel": 1
+    },
+    {
+     "t": "Mi In-Ear Headphones Basic",
+     "c": "earphones",
+     "p": 650.0,
+     "rel": 1
+    },
+    {
+     "t": "Realme Buds Wireless 5 Lite Neckband",
+     "c": "bluetooth headphones",
+     "p": 1875.0,
+     "rel": 1
+    },
+    {
+     "t": "Monster Airmars SG03 Pro Neckband",
+     "c": "bluetooth headphones",
+     "p": 1087.0,
+     "rel": 1
+    },
+    {
+     "t": "Samsung AKG Type-C In-Ear Headphones",
+     "c": "earphones",
+     "p": 1938.0,
+     "rel": 1
+    },
+    {
+     "t": "Motorola 3.5mm In-Ear Wired Earphone",
+     "c": "wired headphone",
+     "p": 154.0,
+     "rel": 1
+    },
+    {
+     "t": "Vivo 3.5mm Wired Earphone (B8752)",
+     "c": "wired headphone",
+     "p": 163.0,
+     "rel": 1
+    },
+    {
+     "t": "Realme Buds 5 Lite Bluetooth Neckband",
+     "c": "bluetooth headphone",
+     "p": 1926.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "saree above 3000",
+   "lang": "en",
+   "type": "price",
+   "n_rel_catalog": 70,
+   "n_results": 5,
+   "ms": 624.0,
+   "p10": 0.5,
+   "hit1": 1,
+   "ndcg": 0.649,
+   "intent": {
+    "category": "saree",
+    "min_price": 3000
+   },
+   "notes": [
+    "no product matches all conditions inside price range — showing closest prices",
+    "product group: saree"
+   ],
+   "top": [
+    {
+     "t": "Premium Soft Shamuz Silk Tissue Saree for Women",
+     "c": "women's fashion",
+     "p": 4465.0,
+     "rel": 1
+    },
+    {
+     "t": "Georgette  High Quality Stylish Fashionable & Elegant Design Saree. Saree with B",
+     "c": "women's fashion",
+     "p": 3197.0,
+     "rel": 1
+    },
+    {
+     "t": "Yellow Printed Half Silk Saree",
+     "c": "fashion (saree)",
+     "p": 3253.0,
+     "rel": 1
+    },
+    {
+     "t": "Ash Half Silk Printed &amp; Hand Embroidered Saree",
+     "c": "fashion (saree)",
+     "p": 8005.0,
+     "rel": 1
+    },
+    {
+     "t": "Soft Maslin Organza Party Saree for woman With Blouse Piece",
+     "c": "women's fashion",
+     "p": 4604.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "rice cooker between 2000 and 4000",
+   "lang": "en",
+   "type": "price",
+   "n_rel_catalog": 75,
+   "n_results": 10,
+   "ms": 720.8,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "rice cooker",
+    "min_price": 2000,
+    "max_price": 4000
+   },
+   "notes": [
+    "product group: rice cooker"
+   ],
+   "top": [
+    {
+     "t": "Westinghouse WKRC5D15 1.5L Rice Cooker",
+     "c": "rice cooker",
+     "p": 3232.0,
+     "rel": 1
+    },
+    {
+     "t": "Miyako 2.8 Liter Rice Cooker (ASL1280-KND)",
+     "c": "rice cooker",
+     "p": 3995.0,
+     "rel": 1
+    },
+    {
+     "t": "Miyako 3.2L Rice Cooker (MRC-320-JPN)",
+     "c": "rice cooker",
+     "p": 3888.0,
+     "rel": 1
+    },
+    {
+     "t": "Miyako Electric Rice Cooker (2.8 Liters)",
+     "c": "rice cooker",
+     "p": 2940.0,
+     "rel": 1
+    },
+    {
+     "t": "Miyako Electric Rice Cooker (1.8 Liters)",
+     "c": "rice cooker",
+     "p": 2387.0,
+     "rel": 1
+    },
+    {
+     "t": "Panasonic SR-3NA 0.3L 200W Baby Rice Cooker",
+     "c": "rice cooker",
+     "p": 3992.0,
+     "rel": 1
+    },
+    {
+     "t": "Casper 2.8L 1000W Rice Cooker (CR-25)",
+     "c": "rice cooker",
+     "p": 3492.0,
+     "rel": 1
+    },
+    {
+     "t": "RedSwiss 1.5 Liters Rice Cooker (RSRC-1501)",
+     "c": "rice cooker",
+     "p": 3980.0,
+     "rel": 1
+    },
+    {
+     "t": "HAMKO 2.8 Liter Rice Cooker-Single Aluminum Pot",
+     "c": "rice cooker",
+     "p": 3023.0,
+     "rel": 1
+    },
+    {
+     "t": "HAMKO 1.8 Liter Rice Cooker-Single Aluminum Pot",
+     "c": "rice cooker",
+     "p": 2348.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "walton fridge",
+   "lang": "en",
+   "type": "brand",
+   "n_rel_catalog": 79,
+   "n_results": 10,
+   "ms": 491.0,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "refrigerator",
+    "brand": "walton"
+   },
+   "notes": [
+    "spelling corrected: 'fridge' -> 'refrigerator'",
+    "product group: refrigerator"
+   ],
+   "top": [
+    {
+     "t": "Walton 252L Direct Cool Refrigerator (WFB-2B6-GDEL-SC)",
+     "c": "refrigerator & freezer",
+     "p": 37210.0,
+     "rel": 1
+    },
+    {
+     "t": "Walton 217L No-Frost Refrigerator (WNM-2A7-GEHE-XX) [INVERTER]",
+     "c": "refrigerator & freezer",
+     "p": 36200.0,
+     "rel": 1
+    },
+    {
+     "t": "Walton 213L Direct Cool Refrigerator (WFA-2A3-GERB-XX)",
+     "c": "refrigerator & freezer",
+     "p": 32195.0,
+     "rel": 1
+    },
+    {
+     "t": "Walton 268L Direct Cool Inverter Refrigerator (WFB-2E4-GAXB-WD)",
+     "c": "refrigerator & freezer",
+     "p": 42405.0,
+     "rel": 1
+    },
+    {
+     "t": "Walton 176L Direct Cool Inverter Refrigerator (WFD-1F3-GDEL-SC)",
+     "c": "refrigerator & freezer",
+     "p": 32610.0,
+     "rel": 1
+    },
+    {
+     "t": "Walton 341L Direct Cool Inverter Refrigerator (WFE-3B0-GDEV-XX)",
+     "c": "refrigerator & freezer",
+     "p": 42995.0,
+     "rel": 1
+    },
+    {
+     "t": "Walton 591L No-Frost Inverter Refrigerator (WNI-6A9-GVHE-WI)",
+     "c": "refrigerator & freezer",
+     "p": 105885.0,
+     "rel": 1
+    },
+    {
+     "t": "Walton 380L Direct Cool Inverter Refrigerator (WFC-3F5-GDNE-XX)",
+     "c": "refrigerator & freezer",
+     "p": 45880.0,
+     "rel": 1
+    },
+    {
+     "t": "Walton 386 Ltr Non-Frost Refrigerator (WNH-3H6-GDEL-DD) [INVERTER]",
+     "c": "refrigerator & freezer",
+     "p": 56780.0,
+     "rel": 1
+    },
+    {
+     "t": "Walton 333L Direct Cool Inverter Refrigerator (WFE-3C3-GDEN-DD)",
+     "c": "refrigerator & freezer",
+     "p": 45500.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "samsung galaxy phone",
+   "lang": "en",
+   "type": "brand",
+   "n_rel_catalog": 117,
+   "n_results": 10,
+   "ms": 500.2,
+   "p10": 0.9,
+   "hit1": 1,
+   "ndcg": 0.931,
+   "intent": {
+    "category": "smartphone",
+    "brand": "samsung"
+   },
+   "notes": [
+    "product group: smartphone"
+   ],
+   "top": [
+    {
+     "t": "Samsung Galaxy A17 5G 8GB/128GB",
+     "c": "5g smartphone",
+     "p": 42204.0,
+     "rel": 1
+    },
+    {
+     "t": "Samsung Galaxy A17 5G 6GB/128GB",
+     "c": "5g smartphone",
+     "p": 38804.0,
+     "rel": 1
+    },
+    {
+     "t": "Samsung Galaxy S25 FE 5G 8GB/256GB",
+     "c": "5g smartphone",
+     "p": 97104.0,
+     "rel": 1
+    },
+    {
+     "t": "Samsung Galaxy S26 FE",
+     "c": "mobile",
+     "p": 82485.0,
+     "rel": 1
+    },
+    {
+     "t": "Samsung Galaxy A07 4G",
+     "c": "mobile",
+     "p": 19005.0,
+     "rel": 1
+    },
+    {
+     "t": "Samsung Galaxy A07",
+     "c": "electronics & tech (samsung mobile phone",
+     "p": 21502.0,
+     "rel": 1
+    },
+    {
+     "t": "Samsung Galaxy A37 5G",
+     "c": "electronics & tech (samsung mobile phone",
+     "p": 58184.0,
+     "rel": 1
+    },
+    {
+     "t": "Galaxy Tab S11",
+     "c": "phones & gadgets",
+     "p": 88989.0,
+     "rel": 0
+    },
+    {
+     "t": "Samsung Galaxy S25 FE",
+     "c": "electronics & tech (samsung mobile phone",
+     "p": 94280.0,
+     "rel": 1
+    },
+    {
+     "t": "Samsung Galaxy A17",
+     "c": "mobile",
+     "p": 28002.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "xiaomi power bank",
+   "lang": "en",
+   "type": "brand",
+   "n_rel_catalog": 21,
+   "n_results": 10,
+   "ms": 466.1,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "power bank",
+    "brand": "xiaomi",
+    "intents": [
+     "travel"
+    ],
+    "affinities": [
+     "power bank"
+    ]
+   },
+   "notes": [
+    "intent: travel",
+    "product group: power bank"
+   ],
+   "top": [
+    {
+     "t": "Xiaomi Power Bank 20000mAh (Integrated Cable) GL (PB2020MI)",
+     "c": "power bank",
+     "p": 2702.0,
+     "rel": 1
+    },
+    {
+     "t": "Xiaomi 67W Power Bank 20000mAh (Integrated Cable) (PB2067)",
+     "c": "power bank",
+     "p": 5007.0,
+     "rel": 1
+    },
+    {
+     "t": "Xiaomi Mi WPB15PDZM 10000mAh Qi Wireless Power Bank",
+     "c": "electronics & tech (power bank)",
+     "p": 1988.0,
+     "rel": 1
+    },
+    {
+     "t": "Redmi 20000mAh Power Bank",
+     "c": "power bank",
+     "p": 2096.0,
+     "rel": 1
+    },
+    {
+     "t": "Xiaomi Solove X3s USB Flashlight With 3000mAh Power Bank",
+     "c": "light",
+     "p": 1495.0,
+     "rel": 1
+    },
+    {
+     "t": "Xiaomi Power bank 3 30000mAh 18W Fast Charging",
+     "c": "gadgets",
+     "p": 3605.0,
+     "rel": 1
+    },
+    {
+     "t": "Xiaomi 22.5W Power Bank 10000mAh",
+     "c": "gadgets",
+     "p": 1685.0,
+     "rel": 1
+    },
+    {
+     "t": "Xiaomi 33W Power Bank",
+     "c": "power & accessories",
+     "p": 2619.0,
+     "rel": 1
+    },
+    {
+     "t": "Mi Power Bank 3 20000mAh",
+     "c": "gadgets",
+     "p": 2285.0,
+     "rel": 1
+    },
+    {
+     "t": "Xiaomi SOLOVE X3 USB Flashlight & 3000mAh Power Bank",
+     "c": "audio & gadgets",
+     "p": 1865.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "baseus charger",
+   "lang": "en",
+   "type": "brand",
+   "n_rel_catalog": 101,
+   "n_results": 10,
+   "ms": 518.2,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "charger",
+    "brand": "baseus"
+   },
+   "notes": [
+    "product group: charger"
+   ],
+   "top": [
+    {
+     "t": "Baseus 15W Simple Mini3 Magnetic Wireless Charger-Purple",
+     "c": "charger & adapter",
+     "p": 1619.0,
+     "rel": 1
+    },
+    {
+     "t": "Baseus 15W Simple Mini3 Magnetic Wireless Charger-Black",
+     "c": "charger & adapter",
+     "p": 1601.0,
+     "rel": 1
+    },
+    {
+     "t": "Baseus Digital LED Display Gen 2 15W Wireless Charger (CCED000001)",
+     "c": "charger & adapter",
+     "p": 1659.0,
+     "rel": 1
+    },
+    {
+     "t": "Baseus Enjoyment Pro Retractable USB-C 60W Car Charger",
+     "c": "charger & adapter",
+     "p": 1717.0,
+     "rel": 1
+    },
+    {
+     "t": "Baseus GaN5 Pro 65w Fast Charger",
+     "c": "phone tab and accessories",
+     "p": 2160.0,
+     "rel": 1
+    },
+    {
+     "t": "Baseus WXJN-01 Big Energy 15W Magnetic Car Mount Wireless Charger",
+     "c": "charger & adapter",
+     "p": 2865.0,
+     "rel": 1
+    },
+    {
+     "t": "Baseus Magic Series Digital Display Dual USB 45W Car Charger",
+     "c": "charger & adapter",
+     "p": 1135.0,
+     "rel": 1
+    },
+    {
+     "t": "Baseus AE11 PicoGO Series 67W PD US Plug Charger - Black",
+     "c": "charger & adapter",
+     "p": 2280.0,
+     "rel": 1
+    },
+    {
+     "t": "Baseus 30W Car Charger Dual Output Type-C PD & USB-A (BS-C15C1)",
+     "c": "charger & adapter",
+     "p": 970.0,
+     "rel": 1
+    },
+    {
+     "t": "Baseus Wisdom Auto Alignment QI 15W Car Mount Wireless Charger (CGZX000001)",
+     "c": "charger & adapter",
+     "p": 2539.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "hoco earbuds",
+   "lang": "en",
+   "type": "brand",
+   "n_rel_catalog": 170,
+   "n_results": 10,
+   "ms": 545.7,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "earbuds",
+    "brand": "hoco"
+   },
+   "notes": [
+    "product group: earbuds"
+   ],
+   "top": [
+    {
+     "t": "Hoco EQ12 Rima TWS Earbuds",
+     "c": "true wireless earbuds",
+     "p": 1530.0,
+     "rel": 1
+    },
+    {
+     "t": "Hoco EA4 Open-Ear TWS Earbuds",
+     "c": "true wireless earbuds",
+     "p": 1929.0,
+     "rel": 1
+    },
+    {
+     "t": "Hoco EQ21 ANC & ENC TWS Earbuds",
+     "c": "true wireless earbuds",
+     "p": 1734.0,
+     "rel": 1
+    },
+    {
+     "t": "Hoco EQ33 Gem Wireless Earbuds with App Control",
+     "c": "true wireless earbuds",
+     "p": 890.0,
+     "rel": 1
+    },
+    {
+     "t": "Hoco EQ34 Plus TWS Earbuds- Black",
+     "c": "true wireless earbuds",
+     "p": 965.0,
+     "rel": 1
+    },
+    {
+     "t": "Hoco MMJ24 Cool Leather Texture True Wireless Earbuds",
+     "c": "true wireless earbuds",
+     "p": 917.0,
+     "rel": 1
+    },
+    {
+     "t": "Hoco EQ16 ANC+ENC TWS Bluetooth Earbuds",
+     "c": "electronics & tech (hoco earbuds)",
+     "p": 1643.0,
+     "rel": 1
+    },
+    {
+     "t": "Hoco EW63 ANC True Wireless Bluetooth Earbuds",
+     "c": "electronics & tech (hoco earbuds)",
+     "p": 1475.0,
+     "rel": 1
+    },
+    {
+     "t": "Hoco EQ5 Dual Mic ANC+ENC Bluetooth 5.3 Wireless Earbuds",
+     "c": "earbuds",
+     "p": 1485.0,
+     "rel": 1
+    },
+    {
+     "t": "Hoco EW05 Plus ANC True Wireless Bluetooth Earbuds",
+     "c": "electronics & tech (hoco earbuds)",
+     "p": 1455.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "leptop",
+   "lang": "en",
+   "type": "typo",
+   "n_rel_catalog": 744,
+   "n_results": 10,
+   "ms": 42.1,
+   "p10": 0.6,
+   "hit1": 1,
+   "ndcg": 0.727,
+   "intent": {
+    "category": "laptop"
+   },
+   "notes": [
+    "spelling corrected: 'leptop' -> 'laptop'",
+    "product group: laptop"
+   ],
+   "top": [
+    {
+     "t": "Laptop Display for 14\" Laptop & Notebook with Ultra Micro Port",
+     "c": "electronics & tech (laptop notebook/lapt",
+     "p": 6010.0,
+     "rel": 1
+    },
+    {
+     "t": "Laptop Display for 14\" Laptop & Notebook with Ultra Normal Port",
+     "c": "electronics & tech (laptop notebook/lapt",
+     "p": 4995.0,
+     "rel": 1
+    },
+    {
+     "t": "Laptop Display for 15.6\" Ultra Slim High Resolution Laptop",
+     "c": "electronics & tech (laptop notebook/lapt",
+     "p": 4995.0,
+     "rel": 1
+    },
+    {
+     "t": "Laptop Display for 14\" HD Laptop & Notebook",
+     "c": "electronics & tech (laptop notebook/lapt",
+     "p": 5015.0,
+     "rel": 1
+    },
+    {
+     "t": "Laptop Display for 15.6\" HD Laptop",
+     "c": "electronics & tech (laptop notebook/lapt",
+     "p": 5020.0,
+     "rel": 1
+    },
+    {
+     "t": "Laptop Display Full HD 15.6\" Ultra 40pin 144Hz Series",
+     "c": "electronics & tech (laptop notebook/lapt",
+     "p": 9005.0,
+     "rel": 1
+    },
+    {
+     "t": "Laptop Battery A Grade For FUJITSU Laptop and Notebook",
+     "c": "electronics & tech (laptop battery)",
+     "p": 2185.0,
+     "rel": 0
+    },
+    {
+     "t": "Laptop Bag | New Classic Laptop Backpack for Men | Office Bag | Unique Design La",
+     "c": "bags and travel 2",
+     "p": 665.0,
+     "rel": 0
+    },
+    {
+     "t": "15 inch Keyboard for Laptop & Notebook",
+     "c": "electronics & tech (laptop notebook/lapt",
+     "p": 1797.0,
+     "rel": 0
+    },
+    {
+     "t": "Beautyful Nature with Green Car Laptop Sticker Laptop Skin Sticker for laptop Ba",
+     "c": "computers & it",
+     "p": 111.0,
+     "rel": 0
+    }
+   ]
+  },
+  {
+   "q": "shampo",
+   "lang": "en",
+   "type": "typo",
+   "n_rel_catalog": 1199,
+   "n_results": 10,
+   "ms": 420.5,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "shampoo"
+   },
+   "notes": [
+    "spelling corrected: 'shampo' -> 'shampoo'",
+    "product group: shampoo"
+   ],
+   "top": [
+    {
+     "t": "Alpecin Coffein Shampoo C1 Shampoo",
+     "c": "men",
+     "p": 952.0,
+     "rel": 1
+    },
+    {
+     "t": "Couple Combo (Shampoo) - Studio X Anti Dandruff Shampoo for Men 355ml & Parachut",
+     "c": "hair",
+     "p": 835.0,
+     "rel": 1
+    },
+    {
+     "t": "Pantene Hair Biology Shampoo Gray & Glowing Shampoo",
+     "c": "hair",
+     "p": 930.0,
+     "rel": 1
+    },
+    {
+     "t": "Sunsilk Shampoo Lusciously Thick & Long (650ml)",
+     "c": "beauty & personal care (shampoo)",
+     "p": 551.0,
+     "rel": 1
+    },
+    {
+     "t": "Sunsilk Hair Fall Solution Shampoo (340ml)",
+     "c": "beauty & personal care (shampoo)",
+     "p": 340.0,
+     "rel": 1
+    },
+    {
+     "t": "Shiseido Fino Premium Touch Shampoo (550ml)",
+     "c": "beauty & personal care (shampoo)",
+     "p": 2252.0,
+     "rel": 1
+    },
+    {
+     "t": "Ogx Nourishing + Coconut Milk Shampoo (385ml)",
+     "c": "beauty & personal care (shampoo)",
+     "p": 1280.0,
+     "rel": 1
+    },
+    {
+     "t": "Dove Men Shampoo+Conditioner Invigoration Ignite Shampoo",
+     "c": "men",
+     "p": 955.0,
+     "rel": 1
+    },
+    {
+     "t": "Tsubaki Premium Volume & Repair Shampoo (490ml)",
+     "c": "beauty & personal care (shampoo)",
+     "p": 2290.0,
+     "rel": 1
+    },
+    {
+     "t": "Meril Baby Shampoo (110 ml)",
+     "c": "beauty & personal care (baby shampoo)",
+     "p": 242.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "lipstik",
+   "lang": "en",
+   "type": "typo",
+   "n_rel_catalog": 1283,
+   "n_results": 10,
+   "ms": 397.1,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "lipstick"
+   },
+   "notes": [
+    "spelling corrected: 'lipstik' -> 'lipstick'",
+    "product group: lipstick"
+   ],
+   "top": [
+    {
+     "t": "Imagic Waterproof Matte Lipstick #805 Brown (4gm)",
+     "c": "beauty & personal care (lipstick)",
+     "p": 465.0,
+     "rel": 1
+    },
+    {
+     "t": "Imagic Waterproof Matte Lipstick #810 Chilli (4gm)",
+     "c": "beauty & personal care (lipstick)",
+     "p": 503.0,
+     "rel": 1
+    },
+    {
+     "t": "Imagic Waterproof Matte Lipstick #809 Plum (4gm)",
+     "c": "beauty & personal care (lipstick)",
+     "p": 502.0,
+     "rel": 1
+    },
+    {
+     "t": "Swiss Beauty Pure Matte Lipstick #216 Lust on (3.8gm)",
+     "c": "beauty & personal care (lipstick)",
+     "p": 435.0,
+     "rel": 1
+    },
+    {
+     "t": "Swiss Beauty Pure Matte Lipstick #222 Hot Nude (3.8gm)",
+     "c": "beauty & personal care (lipstick)",
+     "p": 465.0,
+     "rel": 1
+    },
+    {
+     "t": "Swiss Beauty Pure Matte Lipstick #225 Café Mocha (3.8gm)",
+     "c": "beauty & personal care (lipstick)",
+     "p": 430.0,
+     "rel": 1
+    },
+    {
+     "t": "Wet N Wild Megalast Liquid Catsuit Matte Lipstick #Give Me Mocha",
+     "c": "beauty & personal care (lipstick)",
+     "p": 523.0,
+     "rel": 1
+    },
+    {
+     "t": "MARS Cosmetics Matte Muse Mousse Lipstick #18 Fierce Star (3ml)",
+     "c": "beauty & personal care (lipstick)",
+     "p": 803.0,
+     "rel": 1
+    },
+    {
+     "t": "MARS Cosmetics Matte Muse Mousse Lipstick #11-Show Stopper (3ml)",
+     "c": "beauty & personal care (lipstick)",
+     "p": 810.0,
+     "rel": 1
+    },
+    {
+     "t": "Mars Cosmetics Plush Velvet Matte Lipstick #08 Caramel Joy (3.2gm)",
+     "c": "beauty & personal care (lipstick)",
+     "p": 653.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "perfum for men",
+   "lang": "en",
+   "type": "typo",
+   "n_rel_catalog": 1224,
+   "n_results": 10,
+   "ms": 429.0,
+   "p10": 0.0,
+   "hit1": 0,
+   "ndcg": 0.0,
+   "intent": {
+    "gender": "men",
+    "recipient": "men",
+    "affinities": [
+     "shirt",
+     "t-shirt",
+     "panjabi",
+     "jeans",
+     "leather shoes"
+    ]
+   },
+   "notes": [
+    "persona: men"
+   ],
+   "top": [
+    {
+     "t": "Maverick Men's Shirt",
+     "c": "apex shirt",
+     "p": 1931.0,
+     "rel": 0
+    },
+    {
+     "t": "Maverick Men’s T-Shirt",
+     "c": "apex t-shirt",
+     "p": 862.0,
+     "rel": 0
+    },
+    {
+     "t": "Maverick Men's Half Sleeve Shirt",
+     "c": "apex shirt",
+     "p": 1438.0,
+     "rel": 0
+    },
+    {
+     "t": "Maverick Men's T-Shirt",
+     "c": "apex t-shirt",
+     "p": 1286.0,
+     "rel": 0
+    },
+    {
+     "t": "Sprint Men's T-Shirt",
+     "c": "apex t-shirt",
+     "p": 827.0,
+     "rel": 0
+    },
+    {
+     "t": "Maverick Men's Turtle Neck T-Shirt",
+     "c": "apex t-shirt",
+     "p": 1446.0,
+     "rel": 0
+    },
+    {
+     "t": "Sprint Men’s Sports T-Shirt",
+     "c": "apex t-shirt",
+     "p": 662.0,
+     "rel": 0
+    },
+    {
+     "t": "Maverick Men’s Shirt",
+     "c": "apex shirt",
+     "p": 1936.0,
+     "rel": 0
+    },
+    {
+     "t": "Maverick Men's Undershirt",
+     "c": "apex shirt",
+     "p": 406.0,
+     "rel": 0
+    },
+    {
+     "t": "WINNER MEN'S PANJABI",
+     "c": "baby clothing, socks & t-shirts",
+     "p": 1086.0,
+     "rel": 0
+    }
+   ]
+  },
+  {
+   "q": "smart wach",
+   "lang": "en",
+   "type": "typo",
+   "n_rel_catalog": 796,
+   "n_results": 0,
+   "ms": 419.0,
+   "p10": 0.0,
+   "hit1": 0,
+   "ndcg": 0.0,
+   "intent": {},
+   "notes": [],
+   "top": []
+  },
+  {
+   "q": "something to keep my coffee hot",
+   "lang": "en",
+   "type": "vague",
+   "n_rel_catalog": 271,
+   "n_results": 10,
+   "ms": 538.7,
+   "p10": 0.0,
+   "hit1": 0,
+   "ndcg": 0.0,
+   "intent": {
+    "brand": "hot",
+    "intents": [
+     "hot_coffee_drink"
+    ],
+    "affinities": [
+     "stainless steel water bottle",
+     "ceramic coffee mug"
+    ]
+   },
+   "notes": [
+    "intent: hot_coffee_drink"
+   ],
+   "top": [
+    {
+     "t": "Hot Black Pour Homme Gentlemen",
+     "c": "men",
+     "p": 645.0,
+     "rel": 0
+    },
+    {
+     "t": "Hot Black Pour Homme Orginal",
+     "c": "men",
+     "p": 638.0,
+     "rel": 0
+    },
+    {
+     "t": "Hot Black Pour Homme Ice",
+     "c": "men",
+     "p": 637.0,
+     "rel": 0
+    },
+    {
+     "t": "Hot Black Pour Homme Savior",
+     "c": "men",
+     "p": 632.0,
+     "rel": 0
+    },
+    {
+     "t": "Hot Blanc  Eau De Toilette",
+     "c": "fragrance",
+     "p": 1635.0,
+     "rel": 0
+    },
+    {
+     "t": "Hot Black Perfumed Body Spray",
+     "c": "men",
+     "p": 632.0,
+     "rel": 0
+    },
+    {
+     "t": "Hot Melt 20W Glue Gun",
+     "c": "tools & hardware",
+     "p": 165.0,
+     "rel": 0
+    },
+    {
+     "t": "Hot Black Red Eau De Parfume",
+     "c": "men",
+     "p": 2380.0,
+     "rel": 0
+    },
+    {
+     "t": "Hot Black Sensual Eau De Parfume",
+     "c": "fragrance",
+     "p": 1623.0,
+     "rel": 0
+    },
+    {
+     "t": "Hot Black Sport Eau De Parfume",
+     "c": "men",
+     "p": 1810.0,
+     "rel": 0
+    }
+   ]
+  },
+  {
+   "q": "keep room cool in summer",
+   "lang": "en",
+   "type": "vague",
+   "n_rel_catalog": 1506,
+   "n_results": 10,
+   "ms": 928.4,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "air conditioner"
+   },
+   "notes": [
+    "product group: room cooling"
+   ],
+   "top": [
+    {
+     "t": "Xiaomi Microhoo Mini Air Conditioner Cooler Fan",
+     "c": "appliances",
+     "p": 5171.0,
+     "rel": 1
+    },
+    {
+     "t": "Portable Air Conditioner Cooling Fan Mini Portable Fan Air Cooling fan Air Coole",
+     "c": "beauty & personal care",
+     "p": 1539.0,
+     "rel": 1
+    },
+    {
+     "t": "Air Conditioner Cooling Fan With 5 Sprays 7 Color Light Portable Fan Air Cooler ",
+     "c": "beauty & personal care",
+     "p": 989.0,
+     "rel": 1
+    },
+    {
+     "t": "Livpure 40L Multicool Air Cooler",
+     "c": "air conditioner",
+     "p": 17685.0,
+     "rel": 1
+    },
+    {
+     "t": "Livpure Chill 35L Air Cooler",
+     "c": "air conditioner",
+     "p": 17300.0,
+     "rel": 1
+    },
+    {
+     "t": "\"Portable Fan SMILING SHARK Cooling Fan Mini Air Conditioner Evaporative Air Coo",
+     "c": "beauty & personal care",
+     "p": 1679.0,
+     "rel": 1
+    },
+    {
+     "t": "Portable Fan SMILING SHARK Cooling Mini Air Conditioner Evaporative Air Cooler W",
+     "c": "beauty & personal care",
+     "p": 1677.0,
+     "rel": 1
+    },
+    {
+     "t": "Portable Air Cooler Table Fan with Water Mist Spray",
+     "c": "fan",
+     "p": 788.0,
+     "rel": 1
+    },
+    {
+     "t": "Mini Air cooler ultra cooling technology 2x Powerful Fan,Mini Ac and Air cooler ",
+     "c": "appliances",
+     "p": 2189.0,
+     "rel": 1
+    },
+    {
+     "t": "Air Cooler Fan Humidifier Fan Water Mist Fan with RGB light- Non rechargeable - ",
+     "c": "grocery & food",
+     "p": 941.0,
+     "rel": 1
+    }
+   ]
+  }
+ ]
+}

@@ -2,7 +2,7 @@
 .env
 
 # Index and persisted embeddings
-.lite_search_index/
+.lite_search_index*/
 
 # Python bytecode and caches
 __pycache__/

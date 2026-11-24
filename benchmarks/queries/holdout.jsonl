@@ -1,0 +1,30 @@
+{"q": "coffee maker", "lang": "en", "type": "plain", "rel": "coffee maker|coffee machine|espresso machine|\\bmoka\\b", "not": "cover|filter|capsule|pod|mug|cleaner|descaler|spare|carafe|jug|bean"}
+{"q": "chess board", "lang": "en", "type": "plain", "rel": "chess ?board|chess set|chess game", "not": "cookie|cookies|sneaker|shoe|biscuit"}
+{"q": "air purifier", "lang": "en", "type": "plain", "rel": "air purifier", "not": "filter|cartridge|cover|pre-?filter|hepa|spare|replacement"}
+{"q": "hair straightener under 3000", "lang": "en", "type": "price", "rel": "straightener|straightner", "not": "cover|brush|pouch|bag|clip", "max_price": 3000}
+{"q": "gaming laptop above 100000", "lang": "en", "type": "price", "rel": "gaming laptop|(gaming|legion|rog|tuf|victus|predator|nitro|alienware|loq).*(laptop|notebook)|(laptop|notebook).*(gaming|legion|rog|tuf|victus|predator|nitro|alienware|loq)", "not": "bag|sleeve|charger|adapter|cable|keyboard|mouse|skin|cover|stand|cooler|battery|screen|protector|backpack|lock|hub|pad|compatible|for lenovo|for hp|for dell|for asus", "min_price": 100000}
+{"q": "xiaomi watch", "lang": "en", "type": "brand", "rel": "xiaomi.*watch|watch.*xiaomi|redmi watch|\\bmi watch", "not": "strap|band|protector|glass|cover|case|for xiaomi|screwdriver|tool|bits"}
+{"q": "samsung ssd", "lang": "en", "type": "brand", "rel": "samsung.*(ssd|nvme|evo)|(ssd|nvme|evo).*samsung", "not": "case|enclosure|cover|reader|bag|usb"}
+{"q": "lipglos", "lang": "en", "type": "typo", "rel": "lip ?gloss", "not": "lipstick|balm"}
+{"q": "sneekers", "lang": "en", "type": "typo", "rel": "sneaker", "not": "polish|lace|insole|sock|cleaner|bag|rack|horn|tree|kit|cleaning"}
+{"q": "stainles steel pan", "lang": "en", "type": "typo", "rel": "stainless.*(pan|kadai|wok|cookware)|(pan|kadai|wok|cookware).*stainless", "not": "watch|rice cooker|kettle|bottle|sink|bowl|tumbler|cup|cooker|\\bpot\\b|clock"}
+{"q": "something to relax after work", "lang": "en", "type": "vague", "rel": "massage|foot spa|aroma|essential oil|diffuser|bath salt|lavender", "not": "nail|lip|hair|cake|birthday|party"}
+{"q": "camera tripod", "lang": "en", "type": "gap", "rel": "camera tripod|tripod.*(camera|dslr|vlog|video)|(camera|dslr|vlog|video).*tripod", "not": "screen|projection|laser|level|phone holder|mobile holder|selfie|bag|phone"}
+{"q": "কফি মেকার", "lang": "bn", "type": "plain", "rel": "coffee maker|coffee machine|espresso machine", "not": "cover|filter|capsule|pod|mug|cleaner|descaler|spare|carafe|jug|bean"}
+{"q": "কম্বল", "lang": "bn", "type": "plain", "rel": "blanket|quilt|comforter", "not": "cover|sheet|pillow"}
+{"q": "২০০০ টাকার নিচে ব্যাকপ্যাক", "lang": "bn", "type": "price", "rel": "backpack", "not": "cover|rain", "max_price": 2000}
+{"q": "১০০০ থেকে ২০০০ টাকার মধ্যে কেটলি", "lang": "bn", "type": "price", "rel": "kettle", "not": "stand|cover|spare|jug|base|lid", "min_price": 1000, "max_price": 2000}
+{"q": "কলগেট টুথপেস্ট", "lang": "bn", "type": "brand", "rel": "colgate", "not": "brush|holder|cup|stand|bag|dispenser|plax|mouth ?wash"}
+{"q": "লিপিস্টিক", "lang": "bn", "type": "typo", "rel": "lipstick|lip stick", "not": "balm|liner|pencil"}
+{"q": "পায়ের ব্যথার জন্য", "lang": "bn", "type": "vague", "rel": "massage roller|foot massager|pain relief|pain balm|muscle|heating pad|hot pack", "not": "breast|controller|shoe|sock|slipper|sandal|bag|wireless"}
+{"q": "গ্যাস লাইটার", "lang": "bn", "type": "gap", "rel": "\\blighter\\b", "not": "gas stove|stove|cooker|burner|cover"}
+{"q": "ওয়াটার হিটার", "lang": "bn", "type": "gap", "rel": "water heater|geyser|instant heater", "not": "filter|purifier|cover|spare|tap|faucet"}
+{"q": "bolpen", "lang": "banglish", "type": "plain", "rel": "ball ?pen|\\bpen\\b", "not": "refill|holder|stand|drive|pen ?drive|case|cover|light|torch|laser|palette|eye|lip"}
+{"q": "chasma frame", "lang": "banglish", "type": "plain", "rel": "eyeglass|spectacle|eye ?frame|optical frame|glasses frame|eye glass", "not": "sun|mouse|keyboard|rain|photo|picture|mirror|lens"}
+{"q": "1000 takar niche kettle", "lang": "banglish", "type": "price", "rel": "kettle", "not": "stand|cover|spare|jug|base|lid|oil", "max_price": 1000}
+{"q": "100 takar niche biscuit", "lang": "banglish", "type": "price", "rel": "biscuit|cookie|cracker", "max_price": 100}
+{"q": "lipton er cha", "lang": "banglish", "type": "brand", "rel": "lipton"}
+{"q": "philips er iron", "lang": "banglish", "type": "brand", "rel": "philips.*(iron|steam)|(iron|steam).*philips", "not": "board|table|stand|cover|hair|straightener|curler|steamer"}
+{"q": "kofee mesin", "lang": "banglish", "type": "typo", "rel": "coffee maker|coffee machine|espresso machine", "not": "cover|filter|capsule|pod|mug|cleaner|descaler|spare|carafe|jug|bean"}
+{"q": "office er jonno chair", "lang": "banglish", "type": "vague", "rel": "office chair|ergonomic chair|executive chair|\\bchair\\b", "not": "cover|cushion|gaming|kids|mat|table|plastic|dining|stool|sofa"}
+{"q": "fan er regulator", "lang": "banglish", "type": "gap", "rel": "regulator", "not": "remote|cover|capacitor|phone|mobile|voltage|stabilizer|tv|lpg|gas|cylinder|ceiling|fan "}

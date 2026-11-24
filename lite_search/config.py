@@ -71,6 +71,7 @@ class Settings:
     cos_min: float = 0.30         # confidence gate for the "closest products" fallback
     ce_min: float = -8.0
     min_results: int = 3          # relax size/gender filters when fewer products survive
+    never_empty: bool = True      # if strict filters leave 0 results, show closest matches (business can turn off)
 
     # ---- server ----
     cors_origins: Optional[str] = None          # "*" or "https://shop.example.com,https://admin.example.com"
@@ -93,7 +94,7 @@ class Settings:
                 v = int(v)
             elif t in (float, "float"):
                 v = float(v)
-            elif "Optional[int]" in str(t):
+            elif "Optional[int]" in str(t) or "int | None" in str(t):
                 v = int(v)
             setattr(s, f.name, v)
         cm = os.environ.get("COLUMN_MAP")  # "product_name:title,cat:category"

@@ -1,0 +1,120 @@
+{"q": "gaming mouse", "lang": "en", "type": "plain", "rel": "\\bmouse\\b", "not": "pad|mat|cover|bungee"}
+{"q": "usb flash drive", "lang": "en", "type": "plain", "rel": "pen ?drive|flash drive|usb drive|usb stick", "not": "reader|cover|keychain"}
+{"q": "hair dryer", "lang": "en", "type": "plain", "rel": "hair dryer|blow dryer|hair blower|hairdryer", "not": "cover|brush|nozzle"}
+{"q": "lip balm", "lang": "en", "type": "plain", "rel": "lip ?balm"}
+{"q": "bath towel", "lang": "en", "type": "plain", "rel": "towel", "not": "wipe|tissue|kitchen|sanitary|ring|basin|rack|hanger|holder|hand towel|bag"}
+{"q": "dumbbell set", "lang": "en", "type": "plain", "rel": "dumbbell", "not": "rack|stand|bench|bracelet|bangle|ring|necklace|jewel|earring"}
+{"q": "table fan", "lang": "en", "type": "plain", "rel": "table fan|desk fan|stand fan|pedestal fan", "not": "cover|regulator|blade"}
+{"q": "bluetooth speaker", "lang": "en", "type": "plain", "rel": "speaker", "not": "cover|stand|mount|bracket|cable|wire|amplifier"}
+{"q": "smart tv", "lang": "en", "type": "plain", "rel": "smart tv|android tv|google tv|\\b(led|qled|uhd|4k|oled|hd) tv", "not": "stand|bracket|mount|remote|cover|wall|cable|\\bups\\b|backup|inverter|power|portable|lithium|battery"}
+{"q": "nail polish", "lang": "en", "type": "plain", "rel": "nail ?polish|nail (paint|enamel)|nail lacquer", "not": "remover"}
+{"q": "yoga mat", "lang": "en", "type": "plain", "rel": "yoga mat|exercise mat|fitness mat", "not": "bag|strap|towel|cleaner"}
+{"q": "ইয়ারফোন", "lang": "bn", "type": "plain", "rel": "earphone|earbud|handsfree|in-?ear|earpod", "not": "case|cover|stand|adapter|tips|cable"}
+{"q": "চুলের শ্যাম্পু", "lang": "bn", "type": "plain", "rel": "shampoo", "not": "conditioner|mask|serum"}
+{"q": "বিস্কুট", "lang": "bn", "type": "plain", "rel": "biscuit|cookie|cracker"}
+{"q": "খেজুর", "lang": "bn", "type": "plain", "rel": "khejur|khajur|khurma|ajwa|medjool|sukkari|dry dates|date fruit|dates? (palm|seeded)"}
+{"q": "ইস্ত্রি", "lang": "bn", "type": "plain", "rel": "steam iron|dry iron|electric iron|cordless iron|travel iron|garment iron|clothes iron|ceramic iron|iron box", "not": "soldering|oxide|hair|curling|straightener|flat iron|board|table|stand|cover|steamer|\\bman\\b|cast|tawa|pitha|pigment|rework"}
+{"q": "মশার কয়েল", "lang": "bn", "type": "plain", "rel": "mosquito|mortein|good knight|repellent"}
+{"q": "ঘড়ি", "lang": "bn", "type": "plain", "rel": "\\bwatch(es)?\\b", "not": "strap|band|protector|case|cover|charger|glass|box|repair|tool"}
+{"q": "ডাম্বেল", "lang": "bn", "type": "plain", "rel": "dumbbell", "not": "rack|stand|bench|bracelet|bangle|ring|necklace|jewel|earring"}
+{"q": "হেয়ার ড্রায়ার", "lang": "bn", "type": "plain", "rel": "hair dryer|blow dryer|hair blower|hairdryer", "not": "cover|brush|nozzle"}
+{"q": "বাসমতি চাল", "lang": "bn", "type": "plain", "rel": "basmati"}
+{"q": "istri machine", "lang": "banglish", "type": "plain", "rel": "steam iron|dry iron|electric iron|cordless iron|travel iron|garment iron|clothes iron|ceramic iron|iron box", "not": "soldering|oxide|hair|curling|straightener|flat iron|board|table|stand|cover|steamer|\\bman\\b|cast|tawa|pitha|pigment|rework"}
+{"q": "mosharir coil", "lang": "banglish", "type": "plain", "rel": "mosquito|mortein|good knight|repellent"}
+{"q": "bichana chadar", "lang": "banglish", "type": "plain", "rel": "bed ?sheet|bedsheet|bed cover", "not": "pillow"}
+{"q": "pani er filter", "lang": "banglish", "type": "plain", "rel": "water (filter|purifier)|\\bro (purifier|water)|\\buv (water|purifier)|water purifier", "not": "air|cartridge|candle|spare|tap|cover|faucet|bottle|\\bcar\\b"}
+{"q": "chhat fan", "lang": "banglish", "type": "plain", "rel": "ceiling fan", "not": "cover|regulator|blade|capacitor|remote"}
+{"q": "dhulai machine", "lang": "banglish", "type": "plain", "rel": "washing machine", "not": "cover|stand|pipe|hose|cleaner|powder|liquid|detergent|tablet"}
+{"q": "jutar polish", "lang": "banglish", "type": "plain", "rel": "shoe polish|\\bpolish\\b", "not": "nail|hair|car|wood|furniture|floor|silver|gold|guitar"}
+{"q": "gas chula", "lang": "banglish", "type": "plain", "rel": "gas stove|gas cooker|stove|cooktop|burner", "not": "cover|regulator|knob|pipe|hose|cleaner"}
+{"q": "১০০০ টাকার নিচে ঘড়ি", "lang": "bn", "type": "price", "rel": "\\bwatch(es)?\\b", "not": "strap|band|protector|case|cover|charger|glass|box|repair|battery|lee-?ion|polymer|lithium|cable", "max_price": 1000}
+{"q": "৫০০ টাকার নিচে ইয়ারফোন", "lang": "bn", "type": "price", "rel": "earphone|earbud|handsfree|in-?ear|earpod", "not": "case|cover|stand|adapter|tips|cable", "max_price": 500}
+{"q": "১৫০০ টাকার উপরে জুতা", "lang": "bn", "type": "price", "rel": "shoe|sneaker|sandal|loafer|boot", "not": "polish|lace|shine|cleaner|insole|sock|horn|tree|rack|bag|cream", "min_price": 1500}
+{"q": "৫০০ থেকে ১০০০ টাকার মধ্যে ইস্ত্রি", "lang": "bn", "type": "price", "rel": "steam iron|dry iron|electric iron|cordless iron|travel iron|garment iron|clothes iron|ceramic iron|iron box", "not": "soldering|oxide|hair|curling|straightener|flat iron|board|table|stand|cover|steamer|\\bman\\b|cast|tawa|pitha|pigment|rework", "min_price": 500, "max_price": 1000}
+{"q": "৫০০০ টাকার উপরে স্মার্টওয়াচ", "lang": "bn", "type": "price", "rel": "smart ?watch", "not": "strap|band|protector|case|cover|charger|glass", "min_price": 5000}
+{"q": "৩০০ টাকার নিচে বিস্কুট", "lang": "bn", "type": "price", "rel": "biscuit|cookie|cracker", "not": "marker|pen|colou?r|cutter|mold|decorat|fondant", "max_price": 300}
+{"q": "1000 takar niche earphone", "lang": "banglish", "type": "price", "rel": "earphone|earbud|handsfree|in-?ear|earpod", "not": "case|cover|stand|adapter|tips|cable", "max_price": 1000}
+{"q": "2000 takar upore sneaker", "lang": "banglish", "type": "price", "rel": "sneaker", "min_price": 2000}
+{"q": "5k er niche tablet", "lang": "banglish", "type": "price", "rel": "\\bipad\\b|galaxy tab|android tablet|tablet pc|\\btab [a-z]*\\d", "not": "case|cover|protector|glass|stand|pen|keyboard|holder|charger|cable|sleeve|screen guard|\\bmic\\b|cooler|writing|drawing|lcd|graphic|magnetic|board|e-?writer", "max_price": 5000}
+{"q": "30k er upore smart tv", "lang": "banglish", "type": "price", "rel": "smart tv|android tv|google tv|\\b(led|qled|uhd|4k|oled|hd) tv", "not": "stand|bracket|mount|remote|cover|wall|cable|\\bups\\b|backup|inverter|power|portable|lithium|battery", "min_price": 30000}
+{"q": "300-500 takar moddhe lip balm", "lang": "banglish", "type": "price", "rel": "lip ?balm", "min_price": 300, "max_price": 500}
+{"q": "1500 takar niche backpack", "lang": "banglish", "type": "price", "rel": "backpack", "not": "cover|rain", "max_price": 1500}
+{"q": "earphone under 500", "lang": "en", "type": "price", "rel": "earphone|earbud|handsfree|in-?ear|earpod", "not": "case|cover|stand|adapter|tips|cable", "max_price": 500}
+{"q": "watch above 5000", "lang": "en", "type": "price", "rel": "\\bwatch(es)?\\b", "not": "strap|band|protector|case|cover|charger|glass|box|repair", "min_price": 5000}
+{"q": "shoes under 1500", "lang": "en", "type": "price", "rel": "shoe|sneaker|sandal|loafer|boot", "not": "polish|lace|shine|cleaner|insole|sock|horn|tree|rack|bag|cream", "max_price": 1500}
+{"q": "tablet under 15000", "lang": "en", "type": "price", "rel": "\\bipad\\b|galaxy tab|android tablet|tablet pc|\\btab [a-z]*\\d", "not": "case|cover|protector|glass|stand|pen|keyboard|holder|charger|cable|sleeve|screen guard|\\bmic\\b|cooler|writing|drawing|lcd|graphic|magnetic|board|e-?writer", "max_price": 15000}
+{"q": "air fryer under 8000", "lang": "en", "type": "price", "rel": "air ?fryer", "not": "mold|silicone|baking|tray|liner|cup|pot|basket|set|cover|paper|mat|rack|sheet|pan|bag|cake|muffin|accessor|skewer|brush|cutter|egg|biscuit|compatible", "max_price": 8000}
+{"q": "perfume above 2000", "lang": "en", "type": "price", "rel": "perfume|eau de parfum|\\bedp\\b|\\bedt\\b", "not": "body spray", "min_price": 2000}
+{"q": "smart tv above 40000", "lang": "en", "type": "price", "rel": "smart tv|android tv|google tv|\\b(led|qled|uhd|4k|oled|hd) tv", "not": "stand|bracket|mount|remote|cover|wall|cable|\\bups\\b|backup|inverter|power|portable|lithium|battery", "min_price": 40000}
+{"q": "fridge between 20000 and 40000", "lang": "en", "type": "price", "rel": "fridge|refrigerator|freezer", "min_price": 20000, "max_price": 40000}
+{"q": "headfone", "lang": "en", "type": "typo", "rel": "headphone|headset|head ?phone", "not": "case|cover|stand|adapter|cushion|ear ?pad|tips|socket|jack|pcb|mount"}
+{"q": "bluetooth speekar", "lang": "en", "type": "typo", "rel": "speaker", "not": "cover|stand|mount|bracket|cable"}
+{"q": "conditionar", "lang": "en", "type": "typo", "rel": "conditioner", "not": "shampoo|\\bair\\b|\\bac\\b|split|inverter|\\bton\\b|cassette|window|fixed"}
+{"q": "keybord", "lang": "en", "type": "typo", "rel": "keyboard", "not": "cover|protector|skin|cleaner|mouse ?pad|tray|laptop|replacement|compatible|for lenovo|for hp|for dell|for asus|controller"}
+{"q": "ipone charger", "lang": "en", "type": "typo", "rel": "\\bcharger\\b", "not": "watch|cable only|\\bcar\\b"}
+{"q": "powerbnk", "lang": "en", "type": "typo", "rel": "power ?bank", "not": "18650|battery for|lithium battery|cell|holder|case|cover|pouch|stand"}
+{"q": "refridgerator", "lang": "en", "type": "typo", "rel": "fridge|refrigerator|freezer", "not": "portable|lithium|power|\\bups\\b|battery|solar|1000w|magnet|cover|stand|sticker|organi[sz]er|box|container|mat|tray"}
+{"q": "washign machin", "lang": "en", "type": "typo", "rel": "washing machine", "not": "cover|stand|pipe|hose|cleaner|powder|liquid|detergent|tablet"}
+{"q": "airfryar", "lang": "en", "type": "typo", "rel": "air ?fryer"}
+{"q": "শ্যামপু", "lang": "bn", "type": "typo", "rel": "shampoo", "not": "conditioner|mask|serum"}
+{"q": "চারজার", "lang": "bn", "type": "typo", "rel": "\\bcharger\\b", "not": "watch|cable only|\\bcar\\b"}
+{"q": "ব্লেন্ডর", "lang": "bn", "type": "typo", "rel": "blender", "not": "beauty|makeup|sponge|frother|whisk|mushroom|egg|jar|cover|spare|replacement|blade|cup|bottle"}
+{"q": "ইয়ারবাদ", "lang": "bn", "type": "typo", "rel": "earbud|earphone|handsfree|tws|buds|in-?ear|earpod", "not": "case|cover|stand|adapter|tips|cable"}
+{"q": "হেডফোণ", "lang": "bn", "type": "typo", "rel": "headphone|headset", "not": "case|cover|stand|adapter|cushion|ear ?pad"}
+{"q": "রেফ্রিজারেটার", "lang": "bn", "type": "typo", "rel": "fridge|refrigerator|freezer", "not": "portable|lithium|power|\\bups\\b|battery|solar|1000w|magnet|cover|stand|sticker|organi[sz]er|box|container|mat|tray"}
+{"q": "chhat fen", "lang": "banglish", "type": "typo", "rel": "ceiling fan", "not": "cover|regulator|blade|capacitor|remote"}
+{"q": "tebil fen", "lang": "banglish", "type": "typo", "rel": "table fan|desk fan|stand fan|pedestal fan", "not": "cover|regulator|blade"}
+{"q": "mobil charjar", "lang": "banglish", "type": "typo", "rel": "\\bcharger\\b", "not": "watch|cable only|\\bcar\\b"}
+{"q": "shaving reyzar", "lang": "banglish", "type": "typo", "rel": "razor|shaver|trimmer", "not": "blade refill|cartridge|women|ladies"}
+{"q": "bluetoth earfon", "lang": "banglish", "type": "typo", "rel": "earphone|earbud|handsfree|in-?ear|earpod|headphone", "not": "case|cover|stand|adapter|tips|cable"}
+{"q": "fridj", "lang": "banglish", "type": "typo", "rel": "fridge|refrigerator|freezer", "not": "portable|lithium|power|\\bups\\b|battery|solar|1000w|magnet|cover|stand|sticker|organi[sz]er|box|container|mat|tray"}
+{"q": "gift for wife", "lang": "en", "type": "vague", "rel": "perfume|fragrance|lipstick|earring|bangle|necklace|bracelet|handbag|makeup kit|body spray|gift set", "not": "men|boy"}
+{"q": "something for dry skin", "lang": "en", "type": "vague", "rel": "moisturi[sz]er|body lotion|face cream|body butter|lotion|body cream|night cream", "not": "hair|men"}
+{"q": "something to help me sleep", "lang": "en", "type": "vague", "rel": "\\bpillows?\\b|mattress|sleep mask|eye mask|blanket", "not": "lip|nail|talk|lipstick|liner|enamel"}
+{"q": "something for pimples on my face", "lang": "en", "type": "vague", "rel": "acne|pimple|anti-?blemish|spot treatment|tea tree|blemish"}
+{"q": "winter clothes for kids", "lang": "en", "type": "vague", "rel": "(?=.*\\b(kids?|children|baby|boys?|girls?|toddler|infant)\\b)(?=.*\\b(jacket|sweater|hoodie|cardigan|muffler|shawl|woollen|woolen|blazer)\\b)", "not": "women|ladies"}
+{"q": "stuff to clean my kitchen", "lang": "en", "type": "vague", "rel": "dish ?wash|dish ?soap|dish ?cloth|kitchen (cleaner|towel|brush)|sponge|scouring|scrubber|cleaning cloth|microfiber cloth", "not": "face|body|skin|hair|makeup|cosmetic|sunscreen|mask|lip|serum|bath|shower|beauty"}
+{"q": "বাবার জন্য উপহার", "lang": "bn", "type": "vague", "rel": "wallet|watch|perfume|cologne|belt|shaver|trimmer|sunglass|panjabi|body spray", "not": "women|ladies|girl|protector|screen|strap|band|glass|cover"}
+{"q": "রোদ থেকে বাঁচার জন্য", "lang": "bn", "type": "vague", "rel": "sunglass|umbrella|sun ?cap|sunscreen|sun ?block|sunblock|\\bcap\\b|\\bhat\\b", "not": "stand|tripod|light|photo|led"}
+{"q": "ঘুম ভালো হওয়ার জন্য", "lang": "bn", "type": "vague", "rel": "\\bpillows?\\b|mattress|sleep mask|eye mask|blanket", "not": "lip|nail|talk|lipstick|liner|enamel"}
+{"q": "রান্নাঘরের জন্য কী লাগবে", "lang": "bn", "type": "vague", "rel": "cookware|kadai|karai|\\bpan\\b|\\bpot\\b|knife|cutting board|spatula|ladle|tawa|tongs"}
+{"q": "মায়ের জন্য উপহার", "lang": "bn", "type": "vague", "rel": "perfume|lipstick|earring|bangle|necklace|bracelet|handbag|makeup|gift set|saree"}
+{"q": "office er jonno bag", "lang": "banglish", "type": "vague", "rel": "laptop (bag|backpack|sleeve)|office bag|briefcase|messenger bag|backpack"}
+{"q": "eid er jonno panjabi", "lang": "banglish", "type": "vague", "rel": "panjabi|punjabi|kurta|sherwani"}
+{"q": "bhalo ghumer jonno kichu", "lang": "banglish", "type": "vague", "rel": "\\bpillows?\\b|mattress|sleep mask|eye mask|blanket", "not": "lip|nail|talk|lipstick|liner|enamel"}
+{"q": "shitkaler jama", "lang": "banglish", "type": "vague", "rel": "jacket|sweater|hoodie|cardigan|muffler|shawl|woollen|woolen|blazer"}
+{"q": "bachchader jonno gift", "lang": "banglish", "type": "vague", "rel": "\\btoys?\\b|puzzle|\\blego\\b|building block|\\bdolls?\\b|teddy|rc car|remote control car", "not": "toyota|corolla|t-?shirt|\\btee\\b"}
+{"q": "baby soap", "lang": "en", "type": "gap", "rel": "baby.*soap|soap.*baby"}
+{"q": "laptop stand", "lang": "en", "type": "gap", "rel": "laptop (stand|riser|holder)|notebook stand"}
+{"q": "65w charger", "lang": "en", "type": "gap", "rel": "\\b65 ?w\\b|65 ?watt", "not": "cable only"}
+{"q": "1.5 ton ac", "lang": "en", "type": "gap", "rel": "1\\.5 ?ton|1\\.5 ?tr\\b", "not": "remote|cover|stand|bracket|cleaner|pipe|capacitor|purifier"}
+{"q": "ssd 1tb", "lang": "en", "type": "gap", "rel": "(?=.*\\bssd\\b)(?=.*\\b1 ?tb\\b)", "not": "enclosure|caddy|case|cover|adapter|\\bpc\\b|laptop|all-in-one|desktop|computer|notebook"}
+{"q": "pillow case", "lang": "en", "type": "gap", "rel": "\\bpillow ?(case|cover)s?\\b|\\bcushion cover", "not": "bed ?sheet|bedsheet|bed sheet|bedspread|flat sheet|fitted|duvet|comforter|blanket|quilt|king|queen|double|single size|panel"}
+{"q": "realme phone cover", "lang": "en", "type": "gap", "rel": "realme.*(cover|case)|(cover|case).*realme"}
+{"q": "tv remote", "lang": "en", "type": "gap", "rel": "(?=.*\\bremote\\b)(?=.*\\btv\\b)", "not": "cover|bracket|mount|battery|stand|\\bcar\\b|\\bkey\\b|toy|drone|gate|fan|light|speaker|chandelier|lamp"}
+{"q": "মোবাইল কভার", "lang": "bn", "type": "gap", "rel": "\\b(phone|mobile|iphone|galaxy|redmi|realme|oppo|vivo|samsung|xiaomi|infinix|tecno|pixel|moto|oneplus|huawei) (back )?(cover|case)\\b|(cover|case)\\b.*\\b(iphone|galaxy|redmi|realme|oppo|vivo|samsung|xiaomi|infinix|tecno|pixel|moto|oneplus|huawei)", "not": "charger|cable|tempered|glass|protector|camera|stand|adapter|earphone|power bank|gaming|\\bpc\\b|tower|computer|keyboard|tablet|watch|fan|lamp|\\bcar\\b|laptop|bag"}
+{"q": "ল্যাপটপ স্ট্যান্ড", "lang": "bn", "type": "gap", "rel": "laptop (stand|riser|holder)|notebook stand"}
+{"q": "৬৫ ওয়াট চার্জার", "lang": "bn", "type": "gap", "rel": "\\b65 ?w\\b|65 ?watt", "not": "cable only"}
+{"q": "১.৫ টন এসি", "lang": "bn", "type": "gap", "rel": "1\\.5 ?ton|1\\.5 ?tr\\b", "not": "remote|cover|stand|bracket|cleaner|pipe|capacitor|purifier"}
+{"q": "balish er cover", "lang": "banglish", "type": "gap", "rel": "\\bpillow ?(case|cover)s?\\b|\\bcushion cover", "not": "bed ?sheet|bedsheet|bed sheet|bedspread|flat sheet|fitted|duvet|comforter|blanket|quilt|king|queen|double|single size|panel"}
+{"q": "mobile er cover", "lang": "banglish", "type": "gap", "rel": "\\b(phone|mobile|iphone|galaxy|redmi|realme|oppo|vivo|samsung|xiaomi|infinix|tecno|pixel|moto|oneplus|huawei) (back )?(cover|case)\\b|(cover|case)\\b.*\\b(iphone|galaxy|redmi|realme|oppo|vivo|samsung|xiaomi|infinix|tecno|pixel|moto|oneplus|huawei)", "not": "charger|cable|tempered|glass|protector|camera|stand|adapter|earphone|power bank|gaming|\\bpc\\b|tower|computer|keyboard|tablet|watch|fan|lamp|\\bcar\\b|laptop|bag"}
+{"q": "1.5 tonner ac", "lang": "banglish", "type": "gap", "rel": "1\\.5 ?ton", "not": "remote|cover|stand|bracket|cleaner|pipe|capacitor|purifier"}
+{"q": "65w er charger", "lang": "banglish", "type": "gap", "rel": "\\b65 ?w\\b|65 ?watt", "not": "cable only"}
+{"q": "laptop er stand", "lang": "banglish", "type": "gap", "rel": "laptop (stand|riser|holder)|notebook stand"}
+{"q": "tv er remote", "lang": "banglish", "type": "gap", "rel": "(?=.*\\bremote\\b)(?=.*\\btv\\b)", "not": "cover|bracket|mount|battery|stand|\\bcar\\b|\\bkey\\b|toy|drone|gate|fan|light|speaker|chandelier|lamp"}
+{"q": "Nivea lotion", "lang": "en", "type": "brand", "rel": "nivea.*(lotion|body|cream)|(lotion|body|cream).*nivea"}
+{"q": "maybelline mascara", "lang": "en", "type": "brand", "rel": "maybelline.*mascara|mascara.*maybelline"}
+{"q": "adidas shoes", "lang": "en", "type": "brand", "rel": "adidas.*(shoe|sneaker|runn|boot|slide)|(shoe|sneaker|runn|boot|slide).*adidas"}
+{"q": "canon camera", "lang": "en", "type": "brand", "rel": "canon.*(camera|dslr|eos|powershot|mirrorless)|(camera|dslr|eos|powershot|mirrorless).*canon", "not": "bag|strap|battery|charger|cover|lens cap|remote"}
+{"q": "asus laptop", "lang": "en", "type": "brand", "rel": "asus.*(laptop|notebook|vivobook|zenbook|rog|tuf)|(laptop|notebook|vivobook|zenbook|rog|tuf).*asus", "not": "bag|sleeve|charger|adapter|cable|keyboard|mouse|skin|cover|stand|cooler|battery|webcam|compatible|for asus|screen|display"}
+{"q": "gillette razor", "lang": "en", "type": "brand", "rel": "gillette", "not": "foam|gel|cream|after ?shave|aftershave|lotion"}
+{"q": "ডাভ সাবান", "lang": "bn", "type": "brand", "rel": "\\bdove\\b", "not": "deodorant|roll|spray|shampoo|lotion|cream|conditioner|body wash|wash|lip|serum|antiperspirant|sunscreen|hair|shower|shave"}
+{"q": "প্যারাসুট নারকেল তেল", "lang": "bn", "type": "brand", "rel": "parachute.*(oil|coconut)|(oil|coconut).*parachute", "not": "jacket|hood|aloe|gel|soap|shampoo"}
+{"q": "রাধুনি মসলা", "lang": "bn", "type": "brand", "rel": "radhuni"}
+{"q": "লেনোভো ল্যাপটপ", "lang": "bn", "type": "brand", "rel": "lenovo|ideapad|thinkpad", "not": "bag|sleeve|charger|adapter|cable|keyboard|mouse|skin|cover|stand|cooler"}
+{"q": "ফিলিপস ট্রিমার", "lang": "bn", "type": "brand", "rel": "philips.*(trimmer|shaver|razor)|(trimmer|shaver|razor).*philips"}
+{"q": "xiaomi er earbuds", "lang": "banglish", "type": "brand", "rel": "xiaomi.*(buds|earbud|tws|earphone)|(buds|earbud|tws|earphone).*xiaomi", "not": "speaker|sound box|for xiaomi|compatible|iphone|huawei|samsung"}
+{"q": "apple er charger", "lang": "banglish", "type": "brand", "rel": "(apple|iphone|magsafe).*\\bcharger\\b|\\bcharger\\b.*(apple|iphone|magsafe)", "not": "adapter|otg|headphone|cable only|jack|speaker|converter"}
+{"q": "samsung er tablet", "lang": "banglish", "type": "brand", "rel": "samsung.*(tab|tablet)|galaxy tab", "not": "case|cover|protector|glass|stand|pen|keyboard|holder|charger|cable|sleeve|screen guard"}
+{"q": "realme er buds", "lang": "banglish", "type": "brand", "rel": "realme.*(buds|earbud|tws)|(buds|earbud|tws).*realme"}
+{"q": "nescafe er coffee", "lang": "banglish", "type": "brand", "rel": "nescaf"}

@@ -369,10 +369,9 @@ class SearchEngine:
             parsed["brand"] = None
         if not parsed.get("material") and nlp_intent.material:
             parsed["material"] = nlp_intent.material
-        if not parsed.get("max_price") and nlp_intent.max_price:
-            parsed["max_price"] = nlp_intent.max_price
-        if not parsed.get("min_price") and nlp_intent.min_price:
-            parsed["min_price"] = nlp_intent.min_price
+        # One price source: the NLP parser knows direction words in en/bn/banglish; RuleParser is only a fallback
+        if nlp_intent.max_price or nlp_intent.min_price:
+            parsed["min_price"], parsed["max_price"] = nlp_intent.min_price, nlp_intent.max_price
         if not parsed.get("size") and nlp_intent.size:
             parsed["size"] = nlp_intent.size
         if not parsed.get("gender") and nlp_intent.target_gender:
@@ -1040,6 +1039,27 @@ class SearchEngine:
         else:
             order = []
             top = []
+
+        # Never-empty fallback: when the strict filters leave nothing, show the closest text/semantic matches
+        # (still honouring exclusions and a hard price) instead of a blank page. Off via NEVER_EMPTY=false.
+        if not top and s.never_empty and "uncatalogued_item_" not in nlp_intent.normalized_query:
+            ok = (bm > 0) | (cos >= 0.25)
+            for ex_bm in ex_b_masks:
+                ok &= ~ex_bm
+            for ex_c in nlp_intent.excluded_colors or []:
+                ok &= c.color_n != alnum(ex_c)
+            if is_device_query:
+                ok &= ~c.is_phone_accessory
+            if s.hard_price and p_in is not None:
+                ok &= p_in
+            fb = _BM25_W * self._rrf_ranks(bm, min_val=0.0) + _DENSE_W * self._rrf_ranks(cos, min_val=0.0)
+            if p_in is not None:
+                fb = fb + 0.01 * p_in  # inside the price range first
+            idx = np.where(ok)[0]
+            if len(idx):
+                top = [int(i) for i in idx[np.argsort(-fb[idx])][:k]]
+                final, label, order = fb[top], ["closest"] * len(top), list(range(len(top)))
+                notes.append("no exact match - showing closest results")
         mflags = dict(flags)
         if p_in is not None:
             mflags["price"] = p_in

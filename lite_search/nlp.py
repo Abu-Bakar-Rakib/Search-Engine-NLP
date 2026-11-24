@@ -763,45 +763,49 @@ class QueryParser:
         min_p: Optional[float] = None
         max_p: Optional[float] = None
 
-        CURR = r"(?:tk|taka|takar|bdt|টাকা|টাকার|টাকায়)"
+        CURR = r"(?:tk|taka|takar|bdt|৳|টাকা|টাকার|টাকায়)"
+        # number with optional "k" (5k = 5000); never a spec like 128gb / 5000mah / 65w / 55 inch
+        NUM = r"(\d+(?:\.\d+)?)\s*(k)?(?![\w.]|\s*(?:gb|tb|mb|mah|w|watt|inch|hz|mp|ml|l|kg|g|cm|mm)\b)"
 
-        # Range: "between X and Y" / "X to Y" / "X theke Y" / "X theke Y taka" / "X থেকে Y টাকা"
-        range_match = re.search(
-            rf"(?:between|from|theke|থেকে)?\s*(\d+)\s*(?:and|to|-|theke|থেকে)\s*(\d+)\s*{CURR}?",
-            stripped, re.IGNORECASE,
-        )
-        if range_match:
-            p1, p2 = float(range_match.group(1)), float(range_match.group(2))
-            min_p, max_p = min(p1, p2), max(p1, p2)
-            stripped = stripped[: range_match.start()] + " " + stripped[range_match.end() :]
+        def val(m, i=1):
+            return float(m.group(i)) * (1000 if m.group(i + 1) else 1)
 
-        # Max price / under
-        if max_p is None:
-            under_patterns = [
-                rf"(?:under|below|less than|max|maximum|budget|upto|within)\s*[:=]?\s*(\d+)\s*{CURR}?",
-                rf"(\d+)\s*{CURR}?\s*(?:er niche|niche|er kom|kom|moddhe|er moddhe|er vitor|ভিতর|নিচে|কম|মধ্যে|ভেতর|পর্যন্ত)",
-                rf"(\d+)\s*{CURR}\s*(?:budget)?",
-                rf"\b(?:ac|air\s*conditioner|laptop|phone|smartphone|tv|fridge|refrigerator|panjabi|saree|shoes?)\s+(\d{{4,7}})\b",
-            ]
-            for pat in under_patterns:
-                m = re.search(pat, stripped, re.IGNORECASE)
-                if m:
-                    max_p = float(m.group(1))
-                    stripped = stripped[: m.start()] + " " + stripped[m.end() :]
-                    break
+        def cut(m):
+            return stripped[: m.start()] + " " + stripped[m.end():]
 
-        # Min price / above
-        if min_p is None:
-            above_patterns = [
-                rf"(?:above|over|more than|min|minimum)\s*[:=]?\s*(\d+)\s*{CURR}?",
-                rf"(\d+)\s*{CURR}?\s*(?:er beshi|beshi|er upore|upore|বেশি|উপরে)",
-            ]
-            for pat in above_patterns:
-                m = re.search(pat, stripped, re.IGNORECASE)
-                if m:
-                    min_p = float(m.group(1))
-                    stripped = stripped[: m.start()] + " " + stripped[m.end() :]
-                    break
+        # Range: "between X and Y" / "X to Y" / "X theke Y taka" / "X থেকে Y টাকা"
+        m = re.search(rf"(?:between|from|theke|থেকে)?\s*{NUM}\s*{CURR}?\s*(?:and|to|-|theke|থেকে)\s*{NUM}\s*{CURR}?",
+                      stripped, re.IGNORECASE)
+        if m:
+            a, b = val(m, 1), val(m, 3)
+            min_p, max_p = min(a, b), max(a, b)
+            stripped = cut(m)
+
+        # Direction words win over the bare "N taka" fallback ("2000 টাকার উপরে" is a minimum, not a cap)
+        rules = [
+            ("max", rf"(?:under|below|less than|maximum|max|budget|upto|up to|within|cheaper than)\s*[:=]?\s*{CURR}?\s*{NUM}\s*{CURR}?"),
+            ("min", rf"(?:above|over|more than|at least|minimum|min|starting from)\s*[:=]?\s*{CURR}?\s*{NUM}\s*{CURR}?"),
+            ("max", rf"{NUM}\s*{CURR}?\s*(?:er niche|niche|er kom|kom|er moddhe|moddhe|er vitor|ভিতর|নিচে|কম|মধ্যে|ভেতর|পর্যন্ত)"),
+            ("min", rf"{NUM}\s*{CURR}?\s*(?:er beshi|beshi|er upore|upore|বেশি|উপরে|ঊর্ধ্বে)"),
+            ("max", rf"{NUM}\s*{CURR}(?:\s*budget)?"),
+            ("max", rf"\b(?:ac|air\s*conditioner|laptop|phone|smartphone|tv|fridge|refrigerator|panjabi|saree|shoes?)\s+{NUM}"),
+        ]
+        for side, pat in rules:
+            if (side == "max" and max_p is not None) or (side == "min" and min_p is not None):
+                continue
+            if side == "max" and min_p is not None and not pat.startswith("(?:under") and "niche" not in pat:
+                continue  # an explicit minimum already used the only number; bare fallbacks must not add a cap
+            m = re.search(pat, stripped, re.IGNORECASE)
+            if not m:
+                continue
+            v = val(m)
+            if side == "max" and pat.startswith(r"\b(?:ac") and v < 1000:
+                continue  # "phone 15" is a model, not a price
+            if side == "max":
+                max_p = v
+            else:
+                min_p = v
+            stripped = cut(m)
 
         stripped = re.sub(r"\s+", " ", stripped).strip()
         return min_p, max_p, stripped

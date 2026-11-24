@@ -1,0 +1,66 @@
+{"q": "rice cooker", "lang": "en", "type": "plain", "rel": "rice cooker"}
+{"q": "power bank", "lang": "en", "type": "plain", "rel": "power ?bank", "not": "case|cover|pouch"}
+{"q": "electric kettle", "lang": "en", "type": "plain", "rel": "kettle"}
+{"q": "washing machine", "lang": "en", "type": "plain", "rel": "washing machine", "not": "cover|stand|pipe|hose|cleaner|powder|liquid|detergent|tablet"}
+{"q": "wireless mouse", "lang": "en", "type": "plain", "rel": "\\bmouse\\b", "not": "pad|mat"}
+{"q": "mechanical keyboard", "lang": "en", "type": "plain", "rel": "keyboard", "not": "cover|protector|skin|cleaner|mouse ?pad"}
+{"q": "hair oil", "lang": "en", "type": "plain", "rel": "hair oil"}
+{"q": "toothpaste", "lang": "en", "type": "plain", "rel": "toothpaste"}
+{"q": "football", "lang": "en", "type": "plain", "rel": "\\bfootball\\b", "not": "jersey|shoe|boot|sock|game|table"}
+{"q": "cricket bat", "lang": "en", "type": "plain", "rel": "cricket bat", "not": "grip|cover"}
+{"q": "chocolate", "lang": "en", "type": "plain", "rel": "chocolate", "not": "lipstick|lip|perfume|soap|cream|scrub|mask|serum|shampoo"}
+{"q": "sunscreen", "lang": "en", "type": "plain", "rel": "sunscreen|\\bspf\\b|sun ?block"}
+{"q": "wifi router", "lang": "en", "type": "plain", "rel": "router", "not": "stand|bracket|ups|battery"}
+{"q": "microwave oven", "lang": "en", "type": "plain", "rel": "microwave", "not": "cover|stand|bowl|container|cleaner|plate|safe"}
+{"q": "air conditioner", "lang": "en", "type": "plain", "rel": "air conditioner|\\bac\\b.*\\bton\\b|\\bton\\b.*\\bac\\b|split ac|inverter ac", "not": "remote|cover|stand|bracket|cleaner|pipe|capacitor|purifier"}
+{"q": "baby diaper", "lang": "en", "type": "plain", "rel": "diaper", "not": "bag|cream|rash"}
+{"q": "wireless headphones", "lang": "en", "type": "plain", "rel": "headphone|earbud|earphone|headset|neckband|\\btws\\b|\\bbuds\\b", "not": "case|cover|stand|adapter|cushion|ear ?pad|tips"}
+{"q": "black nike shoes", "lang": "en", "type": "gap", "rel": "shoe|sneaker|keds|boot|loafer", "not": "rack|shine|polish|bag|cleaner|lace|insole|horn|tree"}
+{"q": "churi", "lang": "banglish", "type": "gap", "rel": "knife|knives|ছুরি|chopper", "not": "sharpener|stand|holder|block|rack"}
+{"q": "hand glovs", "lang": "en", "type": "gap", "rel": "\\bgloves?\\b"}
+{"q": "water bottle", "lang": "en", "type": "gap", "rel": "bottle", "not": "hot water|polish|perfume|shampoo|oil|serum|spray|feeding|milk|lotion|cream|wine|sauce|bag|brush|holder|cleaner|warmer|sterilizer|gel|toner|wash|vinegar|soy|ketchup|dispenser|pump"}
+{"q": "men underwear", "lang": "en", "type": "gap", "rel": "underwear|boxer|brief", "not": "women|ladies|girl"}
+{"q": "condom affordable price", "lang": "en", "type": "gap", "rel": "condom"}
+{"q": "condom cheap", "lang": "en", "type": "gap", "rel": "condom"}
+{"q": "tank top men", "lang": "en", "type": "gap", "rel": "tank top|sleeveless|singlet|sando", "not": "women|ladies|girl"}
+{"q": "ghori detergent", "lang": "banglish", "type": "gap", "rel": "detergent"}
+{"q": "freeze", "lang": "banglish", "type": "gap", "rel": "fridge|freezer|refrigerator", "not": "magnet|cover|stand|sticker|organi[sz]er|box|container|mat|tray"}
+{"q": "ac dc light", "lang": "en", "type": "gap", "rel": "light|lamp|bulb", "not": "air conditioner|shade"}
+{"q": "ac dc light bulb", "lang": "en", "type": "gap", "rel": "\\bbulb\\b", "not": "shade|holder"}
+{"q": "iphone 13 pro max 128gb", "lang": "en", "type": "gap", "rel": "iphone 13 pro max", "not": "case|cover|protector|tempered|glass|charger|cable|holder|stand|tripod|lens|earphone|headphone|earbud|watch|band|adapter|ring light|gimbal|selfie|skin|battery|power ?bank|speaker|mic|sim|pouch|strap|mount|cooler|fan"}
+{"q": "red cotton t-shirt size M for boys", "lang": "en", "type": "gap", "rel": "t-?shirt", "not": "women|ladies|girl"}
+{"q": "face creame", "lang": "en", "type": "gap", "rel": "face cream|cream.*\\bface\\b|\\bface\\b.*cream", "not": "wash|cleanser|foam"}
+{"q": "tank top", "lang": "en", "type": "gap", "rel": "tank top|sleeveless|singlet"}
+{"q": "মায়ের জন্য শাড়ি ২০০০ টাকার উপরে", "lang": "bn", "type": "price", "rel": "saree|sari\\b|শাড়ি", "min_price": 2000}
+{"q": "রান্নার কড়াই", "lang": "bn", "type": "gap", "rel": "frying pan|fry pan|kadai|karai|kodai|korai|\\bwok\\b|কড়াই|কড়াই"}
+{"q": "শাড়ি", "lang": "bn", "type": "plain", "rel": "saree|sari\\b|শাড়ি"}
+{"q": "মধু", "lang": "bn", "type": "plain", "rel": "honey|মধু", "not": "shampoo|soap|cream|lotion|lip|wash|mask|scrub|serum|conditioner"}
+{"q": "সরিষার তেল", "lang": "bn", "type": "plain", "rel": "mustard oil|সরিষা"}
+{"q": "ছেলেদের পাঞ্জাবি", "lang": "bn", "type": "plain", "rel": "panjabi|punjabi|পাঞ্জাবি", "not": "women|ladies|girl"}
+{"q": "রাইস কুকার", "lang": "bn", "type": "plain", "rel": "rice cooker"}
+{"q": "ব্লুটুথ হেডফোন", "lang": "bn", "type": "plain", "rel": "headphone|earbud|earphone|headset|neckband|\\btws\\b|\\bbuds\\b", "not": "case|cover|stand|adapter|cushion"}
+{"q": "বাচ্চাদের ডায়াপার", "lang": "bn", "type": "plain", "rel": "diaper", "not": "bag|cream|rash"}
+{"q": "ফেস ওয়াশ", "lang": "bn", "type": "plain", "rel": "face ?wash|facewash"}
+{"q": "kom dame valo phone", "lang": "banglish", "type": "vague", "rel": "phone|galaxy|redmi|realme|iphone|vivo|oppo|infinix|tecno|symphony|nokia|poco|oneplus|motorola|honor|walton primo", "not": "case|cover|protector|tempered|glass|charger|cable|holder|stand|tripod|lens|earphone|headphone|earbud|watch|band|adapter|ring light|gimbal|selfie|skin|battery|power ?bank|speaker|mic|sim|pouch|strap|mount|cooler|fan"}
+{"q": "meyeder kurti", "lang": "banglish", "type": "plain", "rel": "kurti"}
+{"q": "cheleder panjabi", "lang": "banglish", "type": "plain", "rel": "panjabi|punjabi", "not": "women|ladies|girl"}
+{"q": "bacchader khelna", "lang": "banglish", "type": "vague", "rel": "\\btoys?\\b|puzzle|doll|lego|building block|rc car"}
+{"q": "mobile er charger", "lang": "banglish", "type": "plain", "rel": "charger|adapter", "not": "watch|laptop|cable only"}
+{"q": "laptop er bag", "lang": "banglish", "type": "plain", "rel": "laptop (bag|backpack|sleeve)|backpack"}
+{"q": "laptop under 50000", "lang": "en", "type": "price", "rel": "laptop", "not": "bag|stand|cooling|sleeve|skin|keyboard|charger|adapter|battery|mouse|table|desk|screen guard|protector|cover|backpack|lock|cable|hub|fan|pad", "max_price": 50000}
+{"q": "smartphone under 15000", "lang": "en", "type": "price", "rel": "phone|galaxy|redmi|realme|iphone|vivo|oppo|infinix|tecno|symphony|nokia|poco|oneplus|motorola|honor|walton primo", "not": "case|cover|protector|tempered|glass|charger|cable|holder|stand|tripod|lens|earphone|headphone|earbud|watch|band|adapter|ring light|gimbal|selfie|skin|battery|power ?bank|speaker|mic|sim|pouch|strap|mount|cooler|fan", "max_price": 15000}
+{"q": "headphone 2000 takar niche", "lang": "banglish", "type": "price", "rel": "headphone|earbud|earphone|headset|neckband|\\btws\\b|\\bbuds\\b", "not": "case|cover|stand|adapter", "max_price": 2000}
+{"q": "saree above 3000", "lang": "en", "type": "price", "rel": "saree|sari\\b|শাড়ি", "min_price": 3000}
+{"q": "rice cooker between 2000 and 4000", "lang": "en", "type": "price", "rel": "rice cooker", "min_price": 2000, "max_price": 4000}
+{"q": "walton fridge", "lang": "en", "type": "brand", "rel": "walton.*(fridge|refrigerator|freezer)"}
+{"q": "samsung galaxy phone", "lang": "en", "type": "brand", "rel": "samsung galaxy|galaxy [amsz]\\d", "not": "case|cover|protector|tempered|glass|charger|cable|holder|stand|tripod|lens|earphone|headphone|earbud|watch|band|adapter|ring light|gimbal|selfie|skin|battery|power ?bank|speaker|mic|sim|pouch|strap|mount|cooler|fan"}
+{"q": "xiaomi power bank", "lang": "en", "type": "brand", "rel": "(xiaomi|\\bmi\\b|redmi).*power ?bank"}
+{"q": "baseus charger", "lang": "en", "type": "brand", "rel": "baseus.*(charger|adapter)"}
+{"q": "hoco earbuds", "lang": "en", "type": "brand", "rel": "hoco.*(earbud|tws|buds|earphone)"}
+{"q": "leptop", "lang": "en", "type": "typo", "rel": "laptop", "not": "bag|stand|cooling|sleeve|skin|keyboard|charger|adapter|battery|mouse|table|desk|screen guard|protector|cover|backpack|lock|cable|hub|fan|pad"}
+{"q": "shampo", "lang": "en", "type": "typo", "rel": "shampoo"}
+{"q": "lipstik", "lang": "en", "type": "typo", "rel": "lipstick"}
+{"q": "perfum for men", "lang": "en", "type": "typo", "rel": "perfume|fragrance|body spray|eau de|attar", "not": "women|ladies"}
+{"q": "smart wach", "lang": "en", "type": "typo", "rel": "smart ?watch", "not": "strap|band|protector|case|cover|charger|glass"}
+{"q": "something to keep my coffee hot", "lang": "en", "type": "vague", "rel": "flask|thermos|vacuum|insulated|tumbler"}
+{"q": "keep room cool in summer", "lang": "en", "type": "vague", "rel": "air conditioner|\\bfan\\b|air cooler", "not": "laptop|cpu|cooling pad|processor"}
