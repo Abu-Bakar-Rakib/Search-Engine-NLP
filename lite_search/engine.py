@@ -38,7 +38,6 @@ _CANDIDATE_POOL = 50
 
 # Affinity boost weights
 _AFF_BOOST = 12.0
-_AFF_COS_MIN = 0.45   # product must be this close in meaning to an affinity phrase to count as that affinity
 _BRAND_BOOST = 14.0
 _COLOR_BOOST = 7.0
 _MATERIAL_BOOST = 6.0
@@ -73,18 +72,12 @@ class SearchEngine:
         self._nlp.set_catalog(catalog)
         # Intent compatibility score cache
         self._intent_score_cache: Dict[Tuple, np.ndarray] = {}
-        self._aff_hit_cache: Dict[str, np.ndarray] = {}
         # Words that only describe WHO or WHY (persona, gender, intent, filler). Every other query word is a
         # product term: persona/intent affinities may only re-rank products that match a product term.
         dp = self._nlp.dp
         mods = set(STOP) | set(_FILLER)
-        person = set(persona for persona in dp.persona_config)
         for cfg in dp.persona_config.values():
-            person.update(a.lower() for a in cfg.get("aliases", []))
-        for cues in L.GENDER_CUES.values():
-            person.update(cues)
-        self._person_words = {w for m in person for w in toks(m)}
-        mods |= person
+            mods.update(a.lower() for a in cfg.get("aliases", []))
         for cfg in dp.intent_config.values():
             mods.update(t.lower() for t in cfg.get("triggers", []))
         for cues in L.GENDER_CUES.values():
@@ -202,8 +195,7 @@ class SearchEngine:
         if gender in ("boys", "girls") or (toks & L.KID_WORDS):
             return -self.s.kid_penalty * (~self.cat.kid_item)
         if gender in ("women", "men") or recipient in ("mother", "father", "wife", "husband"):
-            opposite = self.cat.title_men if gender == "women" else self.cat.title_women if gender == "men" else 0
-            return -self.s.kid_penalty * (self.cat.kid_item | opposite)
+            return -self.s.kid_penalty * self.cat.kid_item
         # For general queries without explicit kid words, mildly penalize kids items so adult products rank higher
         return -15.0 * self.cat.kid_item
 
@@ -285,14 +277,16 @@ class SearchEngine:
             return self._intent_score_cache[cache_key].copy()
 
         scores = np.zeros(c.n, dtype=np.float32)
-        # WHO beats WHY: affinities of the persona (father) count fully; generic intent ones (gift -> saree) half
-        persona_affs = set(self._nlp.dp.persona_config.get(intent.recipient or "", {}).get("affinities", []))
-        for a in dict.fromkeys(intent.affinities):
-            w = 1.0 if (not persona_affs or a in persona_affs) else 0.5
-            a_low = a.lower()
-            # category phrase (clean catalogs) OR the phrase's head noun in the title (noisy shop catalogs:
-            # "leather wallet" -> any title with "wallet")
-            scores += _AFF_BOOST * w * self._aff_hit(a_low)
+        aff_lower = [a.lower().rstrip("s") for a in intent.affinities]
+        for i, c_low in enumerate(c.cat_lower):
+            c_stem = c_low.rstrip("s")
+            if any(a in c_low or c_stem in a for a in aff_lower):
+                scores[i] += _AFF_BOOST
+        for i, t_low in enumerate(c.title_lower):
+            for a in aff_lower:
+                if a in t_low:
+                    scores[i] += _AFF_BOOST * 0.5
+                    break
         # If gifting to mother, suppress 'mom fit' denim style false positives
         if intent.recipient == "mother" and hasattr(c, "is_mom_fit"):
             scores -= 30.0 * c.is_mom_fit
@@ -300,45 +294,6 @@ class SearchEngine:
         if len(self._intent_score_cache) < 2000:
             self._intent_score_cache[cache_key] = scores.copy()
         return scores
-
-    def _title_has(self, word: str) -> np.ndarray:
-        """Rows whose TITLE contains word (or its plural). Uses the BM25 index: title words have tf >= 3.
-        shortcut: a word said 3+ times only in the description also passes; fine for boosts, not for filters."""
-        c, out = self.cat, np.zeros(self.cat.n, dtype=bool)
-        for w in {word, word.rstrip("s"), word.rstrip("s") + "s"}:
-            j = c.vocab.get(w)
-            if j is not None:
-                s, e = c.tf.indptr[j], c.tf.indptr[j + 1]
-                out[c.tf.indices[s:e][c.tf.data[s:e] >= 3]] = True
-        return out
-
-    def _aff_hit(self, a: str) -> np.ndarray:
-        """Rows that belong to affinity `a`: category phrase (clean catalogs) OR the phrase's head noun
-        in the title (noisy shop catalogs: 'leather wallet' -> any title with 'wallet')."""
-        hit = self._aff_hit_cache.get(a)
-        if hit is None:
-            c, ca = self.cat, cat_norm(a)
-            head = self._title_has(a.split()[-1])
-            # head noun alone is loose ('perfume bottle' is not a 'water bottle'): also require meaning closeness
-            idx = np.where(head)[0]
-            if len(idx):
-                close = c.emb[idx] @ self.qemb.encode_query(a) >= _AFF_COS_MIN
-                head[idx[~close]] = False
-            hit = np.array([ca in u for u in c.cat_uni], dtype=bool)[c.cat_code] | head
-            if len(self._aff_hit_cache) < 500:
-                self._aff_hit_cache[a] = hit
-        return hit
-
-    def _diversify(self, order, cand, affinities, per_group=2):
-        """Need queries ('gift for father') get a mix: at most `per_group` items per affinity in a row,
-        like Typesense group_by + group_limit. Overflow items keep their order after the mix."""
-        hits = [self._aff_hit(a.lower()) for a in dict.fromkeys(affinities)]
-        seen, head, tail = {}, [], []
-        for j in order:
-            g = next((n for n, h in enumerate(hits) if h[cand[j]]), -1)
-            seen[g] = seen.get(g, 0) + 1
-            (head if seen[g] <= per_group else tail).append(j)
-        return head + tail
 
     def _soft_boost_nlp(self, intent: StructuredIntent, aff_gate=1.0) -> np.ndarray:
         """Apply soft boosts from NLP structured intent (brand, color, material, affinity)."""
@@ -495,8 +450,7 @@ class SearchEngine:
                     if a not in ("t-shirt", "jeans", "sneakers", "shirt", "hoodie", "polo-shirt", "pant")
                 ]
 
-        q_all_toks = set(toks(q_all))  # whole words: 'underwear' must not trigger 'wear'
-        is_generic_apparel = any(w in q_all_toks for w in (
+        is_generic_apparel = any(w in q_all for w in (
             "dress", "dresses", "clothes", "clothing", "apparel", "wear", "outfit", "attire",
             "jama", "jaama", "kapor", "kapod", "poshak", "posak",
             "পোশাক", "পোষাক", "ড্রেস", "জামা", "কাপড়", "বস্ত্র"
@@ -677,11 +631,8 @@ class SearchEngine:
         # so persona/intent affinities (toys) may re-rank diapers but never outrank them.
         prod_toks = [w for w in set(toks(q_bm25)) if w not in self._modifiers and not w.isdigit()]
         aff_gate = (c.bm25(" ".join(prod_toks)) > 0) if prod_toks else None
-        need_query = aff_gate is None or not aff_gate.any()   # "gift for father": a need, no product named
-        if need_query:
+        if aff_gate is None or not aff_gate.any():
             aff_gate = np.ones(c.n, dtype=bool)
-            if nlp_intent.recipient:  # person words are not keywords: 'mother gift' must not find 'Mother of Pearl'
-                bm = c.bm25(" ".join(w for w in toks(q_bm25) if w not in self._person_words))
         intent_scores = self._intent_compat_scores(nlp_intent).astype(np.float64) * aff_gate
         # Normalize intent scores to [0,1] range for RRF
         intent_norm = intent_scores / (intent_scores.max() + 1e-9)
@@ -1105,8 +1056,6 @@ class SearchEngine:
                     filtered_cand_order.append(j)
 
             effective_order = filtered_cand_order if filtered_cand_order else []
-            if need_query and nlp_intent.affinities:
-                effective_order = self._diversify(effective_order, cand, nlp_intent.affinities)
             order = effective_order[:k]
             top = [cand[j] for j in order]
         else:

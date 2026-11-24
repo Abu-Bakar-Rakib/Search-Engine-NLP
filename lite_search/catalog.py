@@ -227,12 +227,6 @@ class Catalog:
         self.kid_item = np.array([
             (c in _toy_cats) or (g in ("boys", "girls")) or bool(KID_TITLE & set(t.lower().split()))
             for c, g, t in zip(d["category"], d["gender"], d["title"])])
-        # gender said in the title (shop catalogs have no gender column): 'ladies watch', "men's wallet"
-        _w = re.compile(r"\b(?:women|womens|women's|ladies|lady|female|girls?)\b")
-        _m = re.compile(r"\b(?:men|mens|men's|gents|male|boys?)\b")
-        tw = np.array([bool(_w.search(t)) for t in self.title_lower])
-        tm = np.array([bool(_m.search(t)) for t in self.title_lower])
-        self.title_women, self.title_men = tw & ~tm, tm & ~tw   # both = unisex
 
 
     def size_mask(self, size: str) -> np.ndarray:
