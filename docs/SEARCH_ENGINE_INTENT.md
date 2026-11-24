@@ -40,6 +40,9 @@ Fixed: baby diaper 0→1.0, perfum for men 0→0.73, churi 0.10→0.59. Worse: s
 Holdout (30 unseen queries): step1 0.484 · step2a 0.488 · step2b 0.474. Step 2b was tuned around manually tried queries
 (gift for father) and did not generalize: unseen vague queries stayed ~0, so it was reverted (60a6772).
 Note: holdout is small (30, only 3 vague) — one query moves it by ~0.015. Grow it before trusting small deltas.
+Holdout grown to 100 (vague 20, typo 20, gap 18, plain 15, price 15, brand 12; en 40, bn 30, banglish 30).
+Reference on step2a: **holdout nDCG@10 0.465** — en 0.70, banglish 0.41, **bn 0.20**; price 0.83, brand 0.61, plain 0.50, gap 0.40, **typo 0.30, vague 0.29**.
+Accept rule from here: tuning set (185) up AND holdout (100) not down. Only holdout totals are read, never per-query rows.
 This is the number later steps must beat. `holdout.jsonl` (30) is checked only at the end of each step.
 
 The engine scores well on the clean catalog it was tuned on, and poorly on the real catalog. Most of the gap comes from the design, not from the models.
