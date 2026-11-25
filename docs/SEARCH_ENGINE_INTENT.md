@@ -165,3 +165,26 @@ Rule for every step: run `benchmarks/relevance_eval.py live` and `curated`. Acce
 - Relevance: a title regex, plus an optional exclude regex and price range. It is deterministic and cheap. Queries with 0 relevant items in the catalog are skipped and listed.
 - Metrics: P@10, Hit@1, nDCG@10, zero-result rate, p50/p95 latency (cold, cache off).
 - Limit: regex labels are a proxy. Grow the set over time (target 200+). Add a held-out set so we do not tune to these queries.
+
+## 7. Investigation (2026-11-25): what limits quality now
+
+Priority change (user, 2026-11-25): **relevance first, speed later.** Step 5 (speed) is postponed.
+Method: tuning set only (holdout untouched). Per-query signal diagnosis, a plain-hybrid ablation, and an LLM label audit.
+
+| Finding | Evidence | Meaning |
+|---|---|---|
+| Labels undercount | LLM judge on 674 results of the 74 weakest queries: 139 right results marked wrong, 11 wrong ones marked right. True P@10 0.36 vs measured 0.19 (bn 0.43 vs 0.19). | Scores read low, Bangla most. The yardstick needs fixing before we can see real gains. |
+| Bangla/Banglish words not understood | 67% of bn queries keep untranslated Bangla words after normalization. ~60% of the 40 truly bad queries are this (শ্যামপু, চারজার, istri, chhat fan, gas chula, pani er filter). Only 7.4% of titles are Bangla. | Main cause is the query side (no translation/transliteration), not missing Bangla product text. |
+| Old rule layer misfires | Plain hybrid (BM25+typo, meaning, price) scores 0.625 vs full engine 0.647: rules add +0.02 net, but are worse on gap queries (0.56 vs 0.65); 13 queries better without rules, 21 worse. ~25% of bad queries are rule misfires (product group +50 on toothpaste, "wear" in underwear, "ac" phrase map, "case" → phone case). | Keep the rule families that help (price, brand, Bangla dictionary, needs), remove or soften the rest. |
+| Vague needs | 5 of the 40 bad queries ("sleep better", "keep coffee hot"). | Needs a need → product-type layer that holds for any query. |
+| English-only reranker | ms-marco cross-encoder runs on Bangla too. | A/B a multilingual reranker. |
+
+## 8. Roadmap (quality first; every step: alignment check + gate)
+
+1. **Judged labels (measurement).** Pool the top 10 from Light Search and Typesense for all 285 queries. An LLM judges each result, and a human spot-checks 10%. This becomes the main score, and the regex score stays as a second number. It changes the yardstick, not the engine.
+2. **Bangla/Banglish understanding (biggest gain).** (a) Transliterate Bangla script to Latin, then run the catalog typo matcher (handles every English loanword: শ্যামপু → shampoo). (b) A bilingual lexicon built **from catalog vocabulary**, never from benchmark queries: the top product nouns get Bangla script and Banglish spellings (LLM-drafted, human-checked). It is stored as config data.
+3. **Retire the rule layer by family.** Ablate each family (product groups, phrase maps, category hacks, per-product rules). A family is kept only if the holdout says it helps. The rest is replaced by soft, data-driven features.
+4. **Learned global weights.** Run a coordinate search over the ~6 ranking weights on the tuning set, then check on the holdout.
+5. **Multilingual reranker A/B.** Keep it only if it wins.
+6. **Need → product layer for vague queries** (config data + meaning model).
+Postponed: speed (Step 5).
