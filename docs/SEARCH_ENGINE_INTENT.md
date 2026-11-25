@@ -1,6 +1,6 @@
 # lite_search — Intent, Gap Analysis and Improvement Plan
 
-Status: analysis done, baseline measured (2026-11-24). Implementation not started.
+Status: steps 1, 2a, 6a done (see Progress). Updated 2026-11-25.
 Companion files: `docs/search_gaps.md` (manual query log), `benchmarks/relevance_eval.py` (benchmark),
 `benchmarks/queries/*.jsonl` (labeled queries), `benchmarks/results/*_baseline.json` (baseline numbers).
 
@@ -15,6 +15,30 @@ lexical + vector search, pinning, business ranking rules), but:
   and fallback policy live in one validated profile file. A client changes a few lines, not Python.
 - **Light and fast.** CPU only. 100k products in under 150 ms p95. Small RAM.
 - **Measured.** Every change runs the relevance benchmark. A change ships only if nDCG@10 does not drop.
+
+### 1.1 Rule zero: no per-query tuning
+
+The first version failed because it was tuned to specific queries and products (about 25 hard-coded rules that
+worked on the curated set and broke on the real catalog). We do not repeat that.
+
+- A failing query is **evidence, not a target**. It becomes a labeled test case. It never gets its own code path.
+- A fix must name a **general cause** ("the category text is too vague", "the meaning score is outweighed by
+  bonuses"). It must work for any catalog and any language, not only for the query that exposed it.
+- Comments describe the **rule**, never example queries or products.
+- No product, brand or query word lists in the core. Language data (stopwords, Banglish map) and business data
+  (synonyms, boosts) live in config, not in ranking code.
+- Global parameters (weights, thresholds) may be tuned on the tuning set. They must hold on the **holdout**
+  (`benchmarks/queries/holdout.jsonl`, 100 queries, totals only, never read per query).
+- Example of a breach: Step 2b (gift-query fixes, reverted). It helped the queries it was tuned on and did
+  nothing on unseen ones.
+
+### 1.2 Alignment check (written before every step)
+
+Before each step, answer in the Progress log:
+1. Which intent bullet does it serve?
+2. Is the change general (any catalog, any query), or does it target specific queries or products?
+3. Does it move logic into config, or add more code-side rules?
+4. Gate: tuning set up, curated within 0.01, holdout not down.
 
 ## 2. Baseline (before any change)
 
@@ -49,6 +73,14 @@ Step 6 (moved up) — embedding model A/B:
 | paraphrase-multilingual-MiniLM-L12-v2 | 0.316 | **0.012** | 0.50 | 0.592 | 0.465 |
 | multilingual-e5-small (query = raw + translated) | **0.500** | 0.146 | 0.72 | **0.602** | **0.476** |
 The old model barely understood Bangla. e5 alone (0.50) is close to the full engine; inside the engine the gain is small, so rules/bonuses outweigh the dense signal. Adopted e5 (EMB_MODEL, EMB_QUERY=both).
+Step 7 — meaning-score weight. Alignment check:
+1. Intent: *Robust core* (works on any catalog) and *Business rules are config* (weight read from settings).
+2. General: one global weight for the meaning score on the same scale as the other bonuses. No query, product or word list.
+3. Config, not code: `DENSE_TIER` setting (later in the profile file). It shifts ranking power from hand rules to the model.
+4. Gate: tuning up, curated within 0.01, holdout not down.
+Cause: the keyword score added up to 15 bonus points, the meaning score only ~0.02 (via rank fusion), so rules decided ranking.
+Sweep (tuning / curated): w=0 0.602/0.941 · 10 0.622/0.942 · 15 0.625/0.939 · **25 0.641/0.936** · 40 0.635/0.927 (fails curated).
+Holdout with 25: 0.476 → **0.492** (typo 0.34→0.37, vague 0.31→0.33, banglish 0.42→0.45). Adopted `DENSE_TIER=25`.
 This is the number later steps must beat. `holdout.jsonl` (30) is checked only at the end of each step.
 
 The engine scores well on the clean catalog it was tuned on, and poorly on the real catalog. Most of the gap comes from the design, not from the models.

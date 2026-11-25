@@ -664,6 +664,10 @@ class SearchEngine:
         aud = self._audience(q_norm, parsed, nlp_intent)
         grp_bonus = s.group_tier * grp_mask if grp_mask is not None else np.zeros(c.n)
         bm_bonus = np.where(bm > 0, 15.0 * (bm / (bm.max() + 1e-9)), 0.0)
+        # meaning score on the same scale as the keyword bonus; scaled per query against the median product,
+        # because embedding models differ in their raw cosine range
+        med = float(np.median(cos))
+        dense_bonus = s.dense_tier * np.clip((cos - med) / (float(cos.max()) - med + 1e-9), 0.0, 1.0)
         # Dedicated boost for in-ear audio queries (earphones, earbuds, airpods)
         ear_bonus = np.zeros(c.n)
         if any(w in q_clean or w in q_norm for w in ("earbud", "earphone", "airpod", "ইয়ারবাড", "ইয়ারফোন", "ইয়ারবাড", "ইয়ারফোন")):
@@ -791,7 +795,7 @@ class SearchEngine:
             top_brands = {"nike", "adidas", "asics", "skechers", "hoka", "puma", "bata", "apex"}
             quality_bonus = np.where(np.isin(c.brand_n, list(top_brands)), 5.0, 0.0)
 
-        tiers = grp_bonus + bonus + bm_bonus + ear_bonus + anc_bonus + budget_bonus + everyday_bonus + quality_bonus + model_bonus + feature_bonus + nlp_boost + p_bonus + aud
+        tiers = grp_bonus + bonus + bm_bonus + dense_bonus + ear_bonus + anc_bonus + budget_bonus + everyday_bonus + quality_bonus + model_bonus + feature_bonus + nlp_boost + p_bonus + aud
 
         sel = np.where(base > -1e8, base + tiers, base)
 
