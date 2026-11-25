@@ -17,6 +17,44 @@ PREFIX_MAX_DF = 20  # last word gets prefix matches only when it is rare/unknown
 MAX_PREFIX = 5
 W_TYPO = {1: 0.7, 2: 0.5}
 W_PREFIX = 0.8
+W_TRANSLIT = 0.7
+MAX_TRANSLIT = 2
+TRANSLIT_MAX_RATIO = 0.5  # edit distance / length between the transliteration and the catalog word
+
+# ---- Bangla script -> Latin (phonetic, loanword-friendly) ----
+_BN_CONS = {"ক": "k", "খ": "kh", "গ": "g", "ঘ": "gh", "ঙ": "ng", "চ": "ch", "ছ": "chh", "জ": "j", "ঝ": "jh", "ঞ": "n",
+            "ট": "t", "ঠ": "th", "ড": "d", "ঢ": "dh", "ণ": "n", "ত": "t", "থ": "th", "দ": "d", "ধ": "dh", "ন": "n",
+            "প": "p", "ফ": "f", "ব": "b", "ভ": "v", "ম": "m", "য": "j", "র": "r", "ল": "l", "শ": "sh", "ষ": "sh",
+            "স": "s", "হ": "h", "\u09dc": "r", "\u09dd": "r", "\u09df": "y", "ৎ": "t", "ং": "ng", "ঃ": "h"}
+_BN_VOW = {"অ": "o", "আ": "a", "ই": "i", "ঈ": "i", "উ": "u", "ঊ": "u", "ঋ": "ri", "এ": "e", "ঐ": "oi", "ও": "o", "ঔ": "ou",
+           "া": "a", "ি": "i", "ী": "i", "ু": "u", "ূ": "u", "ৃ": "ri", "ে": "e", "ৈ": "oi", "ো": "o", "ৌ": "ou"}
+
+
+def has_bangla(t: str) -> bool:
+    return any("\u0980" <= ch <= "\u09ff" for ch in t)
+
+
+def translit(t: str) -> str:
+    """Bangla script -> rough Latin spelling. The inherent vowel is dropped (loanwords rarely keep it);
+    the y-phala after a consonant is dropped."""
+    # য়/ড়/ঢ় are stored as base letter + nukta (NFC keeps them decomposed): fold to single code points first
+    t = t.replace("\u09af\u09bc", "\u09df").replace("\u09a1\u09bc", "\u09dc").replace("\u09a2\u09bc", "\u09dd")
+    out, chars = [], list(t.replace("\u09cd\u09af", "").replace("\u09bc", ""))
+    for ch in chars:
+        out.append(_BN_CONS.get(ch) or _BN_VOW.get(ch) or "")
+    return "".join(out)
+
+
+def phon_key(latin: str) -> str:
+    """Consonant skeleton shared by English spellings and transliterated Bangla: shampoo / শ্যাম্পু -> SMP."""
+    w = latin.lower()
+    for a, b in (("chh", "C"), ("ch", "C"), ("sh", "S"), ("ph", "F"), ("kh", "K"), ("gh", "J"), ("th", "T"), ("dh", "T"),
+                 ("bh", "P"), ("jh", "J"), ("ng", "N"), ("ck", "K")):
+        w = w.replace(a, b)
+    m = {"k": "K", "c": "K", "q": "K", "g": "J", "j": "J", "z": "J", "s": "S", "x": "KS", "t": "T", "d": "T",
+         "p": "P", "b": "P", "v": "P", "f": "F", "r": "R", "l": "L", "m": "M", "n": "N"}
+    key = "".join(ch if ch.isupper() else m.get(ch, "") for ch in w)
+    return "".join(c for i, c in enumerate(key) if i == 0 or c != key[i - 1])
 
 
 def _deletes(w: str, k: int) -> set:
@@ -40,6 +78,24 @@ class TermExpander:
             for d in _deletes(w, max_edits(w)):
                 self.index[d].append(w)
         self.sorted_vocab = sorted(vocab)
+        self.keys = defaultdict(list)           # phonetic key -> Latin catalog words (for Bangla loanwords)
+        for w in vocab:
+            if w.isascii() and w.isalpha() and len(w) >= 3:
+                self.keys[phon_key(w)].append(w)
+
+    def transliterations(self, t: str):
+        if not has_bangla(t) or self.df.get(t, 0) >= PREFIX_MAX_DF:
+            return []
+        lat = translit(t)
+        key = phon_key(lat)
+        if len(lat) < 3 or len(key) < 2:  # one-consonant skeletons match too many words
+            return []
+        hits = []
+        for w in self.keys.get(key, ()):
+            d = levenshtein_dist(lat, w)
+            if d <= TRANSLIT_MAX_RATIO * max(len(lat), len(w)):
+                hits.append((d, -self.df[w], w))
+        return [w for _, _, w in sorted(hits)[:MAX_TRANSLIT]]
 
     def corrections(self, t: str):
         k = max_edits(t)
@@ -66,13 +122,16 @@ class TermExpander:
             i += 1
         return sorted(hits, key=lambda w: -self.df[w])[:MAX_PREFIX]
 
-    def expand(self, tokens) -> Dict[str, float]:
+    def expand(self, tokens, translit: bool = False) -> Dict[str, float]:
         """tokens -> {term: weight}. Original words weigh 1.0; corrections and prefix matches less."""
         out: Dict[str, float] = {}
         for n, t in enumerate(tokens):
             out[t] = max(out.get(t, 0.0), 1.0)
             for w, dist in self.corrections(t):
                 out[w] = max(out.get(w, 0.0), W_TYPO[dist])
+            if translit:
+                for w in self.transliterations(t):
+                    out[w] = max(out.get(w, 0.0), W_TRANSLIT)
             if n == len(tokens) - 1:
                 for w in self.prefixes(t):
                     out[w] = max(out.get(w, 0.0), W_PREFIX)

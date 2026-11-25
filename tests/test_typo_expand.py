@@ -22,6 +22,19 @@ def test_expand():
     assert set(e.expand(["tv"])) == {"tv"}                           # short words are left alone
 
 
+def test_bangla_loanwords():
+    df = {"shampoo": 1198, "charger": 1200, "earbud": 300, "earbuds": 900, "blender": 400, "refrigerator": 500,
+          "robot": 200, "year": 3000, "hair": 800}
+    e = TermExpander(df)
+    assert "shampoo" in e.expand(["শ্যামপু"], translit=True)        # missing hasant spelling
+    assert "charger" in e.expand(["চারজার"], translit=True)
+    assert "earbud" in e.expand(["ইয়ারবাদ"], translit=True) and "robot" not in e.expand(["ইয়ারবাদ"], translit=True)
+    assert "refrigerator" in e.expand(["রেফ্রিজারেটার"], translit=True)
+    assert set(e.expand(["হেয়ার"], translit=True)) == {"হেয়ার"}  # one-consonant skeleton: no guess
+    assert set(e.expand(["শ্যামপু"])) == {"শ্যামপু"}                # off unless asked
+
+
 if __name__ == "__main__":
+    test_bangla_loanwords()
     test_expand()
     print("ok - typo/prefix expansion")

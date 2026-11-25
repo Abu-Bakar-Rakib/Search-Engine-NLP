@@ -159,14 +159,14 @@ class Catalog:
 
     _expander = None
 
-    def bm25(self, query: str, expand: bool = False) -> np.ndarray:
+    def bm25(self, query: str, expand: bool = False, translit: bool = False) -> np.ndarray:
         """expand=True adds typo corrections and last-word prefix matches (lite_search/typo.py), down-weighted."""
         words = list(dict.fromkeys(toks(query)))
         if expand:
             if self._expander is None:
                 from .typo import TermExpander
                 self._expander = TermExpander(self.doc_freq)
-            terms = self._expander.expand(words)
+            terms = self._expander.expand(words, translit)
         else:
             terms = dict.fromkeys(words, 1.0)
         out = np.zeros(self.n)

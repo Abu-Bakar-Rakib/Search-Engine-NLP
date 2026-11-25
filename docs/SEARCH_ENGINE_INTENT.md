@@ -231,3 +231,15 @@ Weakest holdout groups: bn 0.33, vague 0.38, typo 0.43, gap 0.46. **Gate from no
 5. **Multilingual reranker A/B.** Keep it only if it wins.
 6. **Need → product layer for vague queries** (config data + meaning model).
 Postponed: speed (Step 5).
+
+### Roadmap 2a — Bangla-script loanwords (transliteration + phonetic match). Alignment check
+1. Intent: *Bangla, English and Banglish shoppers* and *robust core* (works for any catalog).
+2. General: many Bangla-script product words are English loanwords (শ্যাম্পু, চার্জার, ব্লেন্ডার, ইয়ারবাড, রেফ্রিজারেটর).
+   A Bangla token that is rare or unknown in the catalog is transliterated to Latin. It matches catalog words with the same
+   consonant skeleton (a phonetic key) when the spelling is close (edit distance ≤ half the length). This is pure script and
+   sound rules: no word list and no query list. It works for every loanword in any catalog.
+3. Config: `BN_TRANSLIT` on/off. Lives in the catalog-built term expander (`lite_search/typo.py`), the same place as typo
+   tolerance. It only adds down-weighted BM25 terms and never removes anything.
+4. Gate (judged): tuning up, curated within 0.01, holdout not down, original tests pass. New result pairs are judged first.
+Result (judged): tuning 0.671 → **0.686** (bn 0.54 → 0.60, typo 0.61 → 0.70, 0 queries worse), curated 0.936 (no change),
+holdout 0.533 → **0.554** (bn 0.33 → 0.40, typo 0.43 → 0.51). 77 new pairs judged first (judged coverage 100%). Adopted `BN_TRANSLIT=true`.
