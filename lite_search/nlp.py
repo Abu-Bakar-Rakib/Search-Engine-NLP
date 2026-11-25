@@ -592,6 +592,7 @@ class QueryParser:
 
     def __init__(self, domain_pack: Optional[DomainPack] = None):
         self.dp = domain_pack or DomainPack.default()
+        self.off: set = set()  # disabled legacy rule families (set by the engine from RULES_OFF)
         self.colors = _COLORS
         self.materials = _MATERIALS
 
@@ -667,7 +668,7 @@ class QueryParser:
                 out_tokens.append(canon)
                 continue
             # 2. Known typo dictionary
-            if t_low in _TYPO_MAP:
+            if t_low in _TYPO_MAP and "typomap" not in self.off:
                 canon = _TYPO_MAP[t_low]
                 corrections.append(f"'{t}' -> '{canon}'")
                 out_tokens.append(canon)

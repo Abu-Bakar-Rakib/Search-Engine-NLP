@@ -257,3 +257,27 @@ words (`PRICE_WORDS` in nlp.py: currencies, above/below/between in en/bn/banglis
 (`DomainPack.merge_bangla_words`, unit test `test_price_survives_lexicon`).
 Result (judged): tuning 0.686 → **0.722** (bn 0.60 → 0.70, banglish 0.60 → 0.65, 0 queries worse), curated 0.936 (no change),
 holdout 0.554 → **0.578** (bn 0.40 → 0.45, banglish 0.47 → 0.50, gap 0.46 → 0.54). Adopted `BN_LEXICON=true`.
+
+### Roadmap 3 — retire the rule layer by family. Alignment check
+1. Intent: *Robust core, no per-product hacks* (§1, §1.1) and *business rules are config*. This step removes the code
+   that broke Rule zero in the first version.
+2. General: this step only deletes special cases. Nothing is added except a switch per family (`RULES_OFF`, a comma list) for
+   measurement. A family is deleted when switching it off does not hurt the judged tuning score, the curated score stays within
+   the gate, and the holdout does not drop. Families that help stay for now and get a general replacement later (roadmap 4/6).
+3. Config: `RULES_OFF` lists disabled families. Final state: dead families deleted from code, helpful ones documented as debt.
+4. Business invariants (§1.3) are checked by the 20 original tests after every deletion.
+Families: ear_anc, budget, model, feature (inverter/purifier/rain/programming/blocks/shoes/mom/iphone/sony), everyday (phone brands, "good" brands),
+apparel (casual + gender clothing + footwear routing), affmap (watch/shoe/jacket → fixed affinities), catspecial (per-category group
+special cases), cooling, phoneacc (device vs accessory guard), typomap (old per-word typo/alias map).
+Ablation (judged, one family off at a time; tuning 186 q / holdout 100 q / curated 50 q):
+| Family | Tuning Δ | Holdout Δ | Curated Δ | Decision |
+|---|---|---|---|---|
+| ear_anc | 0.000 | 0.000 | 0.000 | deleted |
+| feature (12 product rules + mom-fit) | −0.001 | 0.000 | 0.000 | deleted |
+| everyday (phone brands, "good" brands) | −0.001 | 0.000 | 0.000 | deleted |
+| affmap (watch/shoe/jacket fixed affinities) | −0.001 | 0.000 | 0.000 | deleted |
+| cooling | −0.001 | +0.010 | 0.000 | deleted (hurt the holdout) |
+| catspecial | **−0.024** | **−0.013** | −0.001 | **kept** (it helps) |
+| apparel, budget, model, phoneacc, typomap | ≈0 | ≈0 | ≈0 | kept: general behaviour, move to profile (roadmap 4) |
+Result after deleting 139 lines of `engine.py`: tuning 0.722 → 0.720, holdout 0.578 → **0.588**, curated 0.936 (no change), 20/20 tests.
+`RULES_OFF` and `benchmarks/ablate_rules.py` stay as the measurement tool for the remaining families.

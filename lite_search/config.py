@@ -68,6 +68,7 @@ class Settings:
     typo_expand: bool = True      # typo + last-word prefix matching from catalog vocabulary (lite_search/typo.py)
     bn_translit: bool = True      # Bangla-script loanwords -> catalog words via transliteration + phonetic key
     bn_lexicon: bool = True       # merge lite_search/lexicon_bn_catalog.json into the Bangla dictionary
+    rules_off: str = ""            # comma list of legacy rule families to disable (measurement / retirement, see intent doc roadmap 3)
     dense_tier: float = 25.0      # max bonus from the meaning (embedding) score; keyword bonus max is 15
     group_tier: float = 50.0      # same product type as the query always ranks first
     price_tier: float = 6.0       # inside the price range

@@ -68,7 +68,9 @@ class SearchEngine:
         self.parser = RuleParser(catalog, aliases, groups)
         self._ce = None
         # Advanced NLP parser (Bangla/Banglish + persona + intent)
+        self.off = {x.strip() for x in settings.rules_off.split(",") if x.strip()}  # disabled legacy rule families
         self._nlp = QueryParser(DomainPack.default())
+        self._nlp.off = self.off
         if settings.bn_lexicon:  # catalog-built Bangla/Banglish words (config data); hand-made domain-pack entries win
             p = os.path.join(os.path.dirname(__file__), "lexicon_bn_catalog.json")
             self._nlp.dp.merge_bangla_words(json.load(open(p, encoding="utf-8"))["bangla_dictionary"])
@@ -290,9 +292,6 @@ class SearchEngine:
                 if a in t_low:
                     scores[i] += _AFF_BOOST * 0.5
                     break
-        # If gifting to mother, suppress 'mom fit' denim style false positives
-        if intent.recipient == "mother" and hasattr(c, "is_mom_fit"):
-            scores -= 30.0 * c.is_mom_fit
 
         if len(self._intent_score_cache) < 2000:
             self._intent_score_cache[cache_key] = scores.copy()
@@ -425,7 +424,7 @@ class SearchEngine:
             is_kid_query = True
 
         # Detect casual/everyday intent (only for apparel queries)
-        is_casual_query = any(w in q_all for w in (
+        is_casual_query = "apparel" not in self.off and any(w in q_all for w in (
             "casual", "everyday", "daily wear", "daily use", "regular outfit",
             "simple outfit", "daily outfit", "casual outfit", "casual wear"
         ))
@@ -453,7 +452,7 @@ class SearchEngine:
                     if a not in ("t-shirt", "jeans", "sneakers", "shirt", "hoodie", "polo-shirt", "pant")
                 ]
 
-        is_generic_apparel = any(w in q_all for w in (
+        is_generic_apparel = "apparel" not in self.off and any(w in q_all for w in (
             "dress", "dresses", "clothes", "clothing", "apparel", "wear", "outfit", "attire",
             "jama", "jaama", "kapor", "kapod", "poshak", "posak",
             "পোশাক", "পোষাক", "ড্রেস", "জামা", "কাপড়", "বস্ত্র"
@@ -468,23 +467,7 @@ class SearchEngine:
                           "sandal", "sandals", "slipper", "slippers", "juta", "juto"}
         FOOTWEAR_CATS = {"running shoes", "sneakers", "formal shoes", "sandals", "walking shoes",
                          "boots", "slippers", "school shoes", "sports shoes"}
-        query_has_footwear = any(re.search(rf"\b{re.escape(w)}\b", q_all) for w in FOOTWEAR_WORDS)
-
-        _PRODUCT_AFFINITY_MAP = [
-            ({"shoe", "shoes", "juta", "juto", "footwear"}, ["running shoes", "sneakers", "formal shoes", "sandals"]),
-            ({"boot", "boots"}, ["boots"]),
-            ({"sneaker", "sneakers"}, ["sneakers"]),
-            ({"sandal", "sandals"}, ["sandals"]),
-            ({"backpack", "bagpack"}, ["backpack"]),
-            ({"jacket"}, ["jacket"]),
-            ({"hoodie"}, ["hoodie"]),
-            ({"watch", "ghori"}, ["wristwatch", "smartwatch"]),
-            ({"smartwatch"}, ["smartwatch"]),
-        ]
-        for _pwords, _paffs in _PRODUCT_AFFINITY_MAP:
-            if any(re.search(rf"\b{re.escape(pw)}\b", q_all) for pw in _pwords):
-                nlp_intent.affinities = _paffs
-                break
+        query_has_footwear = "apparel" not in self.off and any(re.search(rf"\b{re.escape(w)}\b", q_all) for w in FOOTWEAR_WORDS)
 
         MEN_CLOTHING_CATS = {
             "panjabi", "shirt", "t-shirt", "jeans", "trousers", "jacket", "fotua",
@@ -530,7 +513,7 @@ class SearchEngine:
             w in q_clean.lower() or w in q_norm.lower()
             for w in ("case", "cover", "protector", "charger", "adapter", "cable", "holder", "stand", "keyboard", "strap", "battery")
         )
-        is_device_query = (cat_norm(parsed["category"]) in ("smartphone", "laptop", "tablet") if parsed.get("category") else False) and not is_accessory_query
+        is_device_query = (cat_norm(parsed["category"]) in ("smartphone", "laptop", "tablet") if parsed.get("category") else False) and not is_accessory_query and "phoneacc" not in self.off
 
         if parsed.get("category"):
             c_target = cat_norm(parsed["category"])
@@ -552,7 +535,9 @@ class SearchEngine:
                 if not is_accessory_query:
                     cm |= np.array([c_target in t and c.cat_n[i] not in accessory_cats and not c.is_phone_accessory[i] for i, t in enumerate(c.title_lower)])
 
-                if c_target == "smartwatch":
+                if "catspecial" in self.off:
+                    pass
+                elif c_target == "smartwatch":
                     cm |= np.array([
                         ("wearable" in cat) or ("smartwatch" in t) or ("smart watch" in t) or ("smart" in t and "watch" in t)
                         for cat, t in zip(c.cat_lower, c.title_lower)
@@ -615,15 +600,6 @@ class SearchEngine:
                 if cm.any():
                     grp_mask, grp_names = cm, [str(parsed["category"])]
 
-        if "room_cooling" in nlp_intent.intents or ("air conditioner" in q_clean and "fan" in q_clean):
-            cm_cool = np.array([
-                bool(re.search(r"\b(?:air\s*conditioner|air\s*cooler|multicool|ceiling\s*fan|table\s*fan|portable\s*fan|cooling\s*fan|exhaust\s*fan|fan|ac)\b", cat + " " + t))
-                and not any(bad in t for bad in ("sandal", "shoe", "shirt", "hanger", "jacket", "laptop", "stand", "holder", "cpu cooler", "cooling pad"))
-                for cat, t in zip(c.cat_lower, c.title_lower)
-            ], dtype=bool)
-            if cm_cool.any():
-                grp_mask, grp_names = cm_cool, ["room cooling"]
-
         # ── Step 3: Dual retrieval — BM25 + Dense embeddings ──
         mode, raw = s.emb_query, nfc(query)
         emb_text = raw if mode == "raw" else f"{raw} {q_clean}" if (mode == "both" and raw.lower() != q_clean.lower()) else q_clean
@@ -671,23 +647,10 @@ class SearchEngine:
         # because embedding models differ in their raw cosine range
         med = float(np.median(cos))
         dense_bonus = s.dense_tier * np.clip((cos - med) / (float(cos.max()) - med + 1e-9), 0.0, 1.0)
-        # Dedicated boost for in-ear audio queries (earphones, earbuds, airpods)
-        ear_bonus = np.zeros(c.n)
-        if any(w in q_clean or w in q_norm for w in ("earbud", "earphone", "airpod", "ইয়ারবাড", "ইয়ারফোন", "ইয়ারবাড", "ইয়ারফোন")):
-            ear_bonus = np.where(c.is_earbud, 20.0, 0.0)
-
-        # Dedicated boost for noise cancelling / flight audio queries
-        anc_bonus = np.zeros(c.n)
-        if any(w in q_clean or w in q_norm for w in ("noise cancel", "cancellation", "anc", "flight", "plane", "travel")):
-            anc_bonus = np.where(c.is_anc, 25.0, 0.0)
-            if any(w in q_clean or w in q_norm for w in ("headphone", "headphones")):
-                anc_bonus += np.where(c.is_anc & np.isin(c.cat_n, ["headphone", "wirelessheadphone"]), 20.0, 0.0)
-                anc_bonus += np.where(c.is_anc & (c.cat_n == "earbud"), -15.0, 0.0)
-
         # Budget boost when query implies budget/cheap/affordable but no numeric max_price is given
         is_budget_query = bool(re.search(r"\b(?:budget|budget-friendly|cheap|affordable|low\s*cost|কম\s*বাজেটে|সাশ্রয়ী)\b", q_clean.lower() + " " + q_norm.lower()))
         budget_bonus = np.zeros(c.n)
-        if is_budget_query and not parsed.get("max_price"):
+        if "budget" not in self.off and is_budget_query and not parsed.get("max_price"):
             rel_mask = grp_mask if (grp_mask is not None and grp_mask.any()) else np.ones(c.n, dtype=bool)
             valid_p = c.price[rel_mask & (c.price > 0)]
             if len(valid_p):
@@ -699,7 +662,7 @@ class SearchEngine:
         q_text_all = (query.lower() + " " + q_clean.lower() + " " + q_norm.lower())
         q_tokens = [w for w in re.findall(r"[a-z0-9]+", q_text_all) if w not in STOP]
         distinctive_tokens = [w for w in q_tokens if any(ch.isdigit() for ch in w) or w in ("ultra", "pro", "max", "air", "plus", "mini", "lite", "slim")]
-        if distinctive_tokens:
+        if distinctive_tokens and "model" not in self.off:
             for i in range(c.n):
                 t_lower = c.title_lower[i]
                 matched = sum(1 for dt in distinctive_tokens if re.search(rf"\b{re.escape(dt)}\b", t_lower))
@@ -708,97 +671,7 @@ class SearchEngine:
                 elif matched > 0:
                     model_bonus[i] = 12.0 * (matched / len(distinctive_tokens))
 
-        # Specialized feature bonuses (inverter AC, genuine AC vs purifier, waterproof rain gear, programming laptops)
-        feature_bonus = np.zeros(c.n)
-        if "inverter" in q_text_all and "non-inverter" not in q_text_all and "non inverter" not in q_text_all:
-            is_inv = np.array(["inverter" in t and "non-inverter" not in t and "non inverter" not in t for t in c.title_lower])
-            is_non_inv = np.array(["non-inverter" in t or "non inverter" in t for t in c.title_lower])
-            feature_bonus += np.where(is_inv, 25.0, 0.0)
-            feature_bonus += np.where(is_non_inv, -25.0, 0.0)
-
-        if any(w in q_text_all for w in ("ac", "air conditioner")):
-            is_purifier = np.array(["air purifier" in t for t in c.title_lower])
-            feature_bonus += np.where(is_purifier, -25.0, 0.0)
-
-        if any(w in q_text_all for w in ("waterproof", "rain", "rainy", "বৃষ্টি")):
-            if parsed.get("category") in ("jacket", "raincoat") or any(w in q_text_all for w in ("jacket", "raincoat")):
-                is_rain_gear = np.array(["waterproof" in t or "rain" in t or "raincoat" in t for t in c.title_lower])
-                is_warm_gear = np.array(["puffer" in t or "fleece" in t for t in c.title_lower])
-                feature_bonus += np.where(is_rain_gear, 25.0, 0.0)
-                feature_bonus += np.where(is_warm_gear, -15.0, 0.0)
-
-        if any(w in q_text_all for w in ("programming", "coding", "developer")):
-            is_prog_laptop = np.array([
-                bool(re.search(r"16gb|core\s*i5|core\s*i7|ryzen\s*5|ryzen\s*7|thinkpad|victus|gaming|ideapad|pavilion|inspiron|latitude", t + " " + desc))
-                for t, desc in zip(c.title_lower, c.desc_lower)
-            ])
-            feature_bonus += np.where(is_prog_laptop, 20.0, 0.0)
-            if is_budget_query:
-                # Promote budget-friendly workhorse laptops (50k - 85k BDT) and penalize expensive 100k+ laptops
-                mid_budget_prog = (c.cat_n == "laptop") & (c.price >= 45000) & (c.price <= 85000)
-                expensive_laptop = (c.cat_n == "laptop") & (c.price > 100000)
-                feature_bonus += np.where(mid_budget_prog, 20.0, 0.0)
-                feature_bonus += np.where(expensive_laptop, -25.0, 0.0)
-
-        # Building blocks for kids
-        if any(w in q_text_all for w in ("build thing", "building block", "build", "নির্মাণ")):
-            is_building = (c.cat_n == "buildingblocks") | np.array(["building block" in t for t in c.title_lower])
-            feature_bonus += np.where(is_building, 25.0, 0.0)
-
-        # Long distance running shoes
-        if any(w in q_text_all for w in ("distance", "marathon", "cushion")):
-            is_distance_shoe = np.array([bool(re.search(r"\b(pegasus|ultraboost|vomero|solarboost|kayano|cumulus|gel-kayano|gel-cumulus|distance)\b", t)) for t in c.title_lower])
-            feature_bonus += np.where(is_distance_shoe, 25.0, 0.0)
-
-        # Gift for mom
-        if any(w in q_text_all for w in ("gift for mom", "gift for mother", "for mom", "for mother", "মায়ের জন্য", "মার জন্য")):
-            is_mom_jeans = np.array([bool(re.search(r"\bmom\s*fit|\bmom\s*jeans\b", t)) for t in c.title_lower])
-            feature_bonus += np.where(is_mom_jeans, -35.0, 0.0)
-            is_mom_gift = np.isin(c.cat_n, ["necklace", "saree", "kurti", "salwarkameez", "handbag", "perfume"])
-            feature_bonus += np.where(is_mom_gift, 20.0, 0.0)
-
-        # Title keyword matching: when 'iphone' is queried, products containing 'iphone' in title rank highest
-        if "iphone" in q_text_all:
-            is_iphone = np.array(["iphone" in t for t in c.title_lower])
-            feature_bonus += np.where(is_iphone, 25.0, 0.0)
-
-        # Sony flagship headphones boost
-        if "sony" in q_text_all and any(w in q_text_all for w in ("headphone", "headphones")):
-            is_sony_flagship = np.array([bool(re.search(r"\b(wh-|wh\b|wf-|1000xm|ch720|ch520)", t)) for t in c.title_lower])
-            feature_bonus += np.where(is_sony_flagship, 15.0, 0.0)
-
-        # Flagship athletic shoes for broad shoes queries
-        if any(w in q_text_all for w in ("good shoes", "best shoes", "জুতো", "জুতা")):
-            is_flagship_shoe = np.array([bool(re.search(r"\b(pegasus|ultraboost|vomero|cumulus|gel-cumulus|air max|stan smith|galaxy|duramo|softride|venturini)\b", t)) for t in c.title_lower])
-            is_premier_runner = np.array([bool(re.search(r"\b(pegasus|ultraboost|vomero|cumulus|gel-cumulus|kayano|venturini)\b", t)) for t in c.title_lower])
-            is_school_kids_shoe = np.array([bool(re.search(r"\b(school|kids|baby|boy|girl)\b", t)) for t in c.title_lower])
-            feature_bonus += np.where(is_flagship_shoe, 20.0, 0.0)
-            feature_bonus += np.where(is_premier_runner, 12.0, 0.0)
-            feature_bonus += np.where(is_school_kids_shoe, -25.0, 0.0)
-
-        # Boost for everyday/daily use phones (mid-range 15000-36000 BDT) & authentic smartphone brands
-        everyday_bonus = np.zeros(c.n)
-        is_phone_query = (parsed.get("category") == "smartphone" or "phone" in q_text_all) and not is_accessory_query
-        if is_phone_query:
-            AUTH_PHONE_BRANDS = {"samsung", "xiaomi", "apple", "oneplus", "vivo", "realme", "walton", "oppo", "google", "motorola", "symphony", "poco", "honor", "nothing"}
-            SPAM_PHONE_BRANDS = {"dell", "hp", "logitech", "anker", "canon", "lenovo"}
-            is_auth = np.isin(c.brand_n, list(AUTH_PHONE_BRANDS))
-            is_spam = np.isin(c.brand_n, list(SPAM_PHONE_BRANDS))
-            everyday_bonus += np.where(is_auth, 12.0, 0.0)
-            everyday_bonus += np.where(is_spam, -35.0, 0.0)
-
-            if any(w in q_clean or w in q_norm for w in ("everyday", "daily", "প্রতিদিনের", "best phone", "regular")):
-                mid_range = (c.cat_n == "smartphone") & (c.price >= 12000) & (c.price <= 36000)
-                pop_models = np.array([bool(re.search(r"\b(a15|redmi|note|nord|primo|galaxy\s*a)\b", t)) for t in c.title_lower])
-                everyday_bonus += np.where(mid_range & pop_models, 20.0, np.where(mid_range, 10.0, 0.0))
-
-        # Quality brand boost for broad queries like "good shoes" / "best shoes"
-        quality_bonus = np.zeros(c.n)
-        if any(w in q_clean or w in q_norm for w in ("good", "best", "ভালো")):
-            top_brands = {"nike", "adidas", "asics", "skechers", "hoka", "puma", "bata", "apex"}
-            quality_bonus = np.where(np.isin(c.brand_n, list(top_brands)), 5.0, 0.0)
-
-        tiers = grp_bonus + bonus + bm_bonus + dense_bonus + ear_bonus + anc_bonus + budget_bonus + everyday_bonus + quality_bonus + model_bonus + feature_bonus + nlp_boost + p_bonus + aud
+        tiers = grp_bonus + bonus + bm_bonus + dense_bonus + budget_bonus + model_bonus + nlp_boost + p_bonus + aud
 
         sel = np.where(base > -1e8, base + tiers, base)
 

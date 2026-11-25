@@ -1,0 +1,4001 @@
+{
+ "dataset": "curated",
+ "tag": "abl_affmap",
+ "products": 1886,
+ "overall": {
+  "queries": 50,
+  "P@10": 0.88,
+  "Hit@1": 0.98,
+  "nDCG@10": 0.936,
+  "Zero%": 0.0,
+  "lat_p50_ms": 196.7,
+  "lat_p95_ms": 295.1
+ },
+ "by_lang": {
+  "banglish": {
+   "queries": 7,
+   "P@10": 0.914,
+   "Hit@1": 1.0,
+   "nDCG@10": 0.942,
+   "Zero%": 0.0,
+   "lat_p50_ms": 204.9,
+   "lat_p95_ms": 233.1
+  },
+  "bn": {
+   "queries": 7,
+   "P@10": 0.914,
+   "Hit@1": 1.0,
+   "nDCG@10": 0.968,
+   "Zero%": 0.0,
+   "lat_p50_ms": 148.0,
+   "lat_p95_ms": 329.9
+  },
+  "en": {
+   "queries": 36,
+   "P@10": 0.867,
+   "Hit@1": 0.972,
+   "nDCG@10": 0.928,
+   "Zero%": 0.0,
+   "lat_p50_ms": 196.8,
+   "lat_p95_ms": 295.1
+  }
+ },
+ "by_type": {
+  "brand": {
+   "queries": 3,
+   "P@10": 0.567,
+   "Hit@1": 1.0,
+   "nDCG@10": 0.902,
+   "Zero%": 0.0,
+   "lat_p50_ms": 194.3,
+   "lat_p95_ms": 286.5
+  },
+  "gap": {
+   "queries": 3,
+   "P@10": 0.4,
+   "Hit@1": 0.667,
+   "nDCG@10": 0.435,
+   "Zero%": 0.0,
+   "lat_p50_ms": 187.6,
+   "lat_p95_ms": 197.2
+  },
+  "plain": {
+   "queries": 28,
+   "P@10": 0.961,
+   "Hit@1": 1.0,
+   "nDCG@10": 0.971,
+   "Zero%": 0.0,
+   "lat_p50_ms": 217.6,
+   "lat_p95_ms": 295.1
+  },
+  "price": {
+   "queries": 6,
+   "P@10": 0.783,
+   "Hit@1": 1.0,
+   "nDCG@10": 0.985,
+   "Zero%": 0.0,
+   "lat_p50_ms": 219.8,
+   "lat_p95_ms": 329.9
+  },
+  "typo": {
+   "queries": 5,
+   "P@10": 0.98,
+   "Hit@1": 1.0,
+   "nDCG@10": 0.987,
+   "Zero%": 0.0,
+   "lat_p50_ms": 49.8,
+   "lat_p95_ms": 163.6
+  },
+  "vague": {
+   "queries": 5,
+   "P@10": 0.92,
+   "Hit@1": 1.0,
+   "nDCG@10": 0.948,
+   "Zero%": 0.0,
+   "lat_p50_ms": 204.9,
+   "lat_p95_ms": 287.5
+  }
+ },
+ "skipped_no_relevant_in_catalog": [],
+ "queries": [
+  {
+   "q": "running shoes",
+   "lang": "en",
+   "type": "plain",
+   "n_rel_catalog": 71,
+   "n_results": 10,
+   "ms": 120.0,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "running shoes",
+    "intents": [
+     "gym_fitness"
+    ],
+    "affinities": [
+     "running shoes",
+     "smartwatch",
+     "stainless steel water bottle",
+     "wireless headphones",
+     "t-shirt"
+    ]
+   },
+   "notes": [
+    "intent: gym_fitness",
+    "product group: running shoes"
+   ],
+   "top": [
+    {
+     "t": "Adidas Ultraboost Running Shoe",
+     "c": "running shoes",
+     "p": 9800.0,
+     "rel": 1
+    },
+    {
+     "t": "Adidas Duramo SL Running Shoe",
+     "c": "running shoes",
+     "p": 3600.0,
+     "rel": 1
+    },
+    {
+     "t": "Nike Revolution 6 Running Shoe",
+     "c": "running shoes",
+     "p": 3900.0,
+     "rel": 1
+    },
+    {
+     "t": "Adidas Runfalcon 3 Women's Running Shoe",
+     "c": "running shoes",
+     "p": 3400.0,
+     "rel": 1
+    },
+    {
+     "t": "Nike Running Shoes for Women",
+     "c": "running shoes",
+     "p": 6270.0,
+     "rel": 1
+    },
+    {
+     "t": "Under Armour HOVR Sonic 6 Running Shoes",
+     "c": "running shoes",
+     "p": 11000.0,
+     "rel": 1
+    },
+    {
+     "t": "Adidas Galaxy 6 Running Shoe",
+     "c": "running shoes",
+     "p": 3800.0,
+     "rel": 1
+    },
+    {
+     "t": "Adidas Ultraboost Light Running Shoes",
+     "c": "running shoes",
+     "p": 16800.0,
+     "rel": 1
+    },
+    {
+     "t": "Nike Running Shoes for Unisex",
+     "c": "running shoes",
+     "p": 7720.0,
+     "rel": 1
+    },
+    {
+     "t": "Nike Premium Running Shoes",
+     "c": "running shoes",
+     "p": 6310.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "nike running shoes under 5000",
+   "lang": "en",
+   "type": "price",
+   "n_rel_catalog": 5,
+   "n_results": 5,
+   "ms": 219.8,
+   "p10": 0.5,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "running shoes",
+    "brand": "nike",
+    "max_price": 5000.0,
+    "intents": [
+     "gym_fitness"
+    ],
+    "affinities": [
+     "running shoes",
+     "smartwatch",
+     "stainless steel water bottle",
+     "wireless headphones",
+     "t-shirt"
+    ]
+   },
+   "notes": [
+    "intent: gym_fitness",
+    "product group: running shoes"
+   ],
+   "top": [
+    {
+     "t": "Nike Revolution 6 Running Shoe",
+     "c": "running shoes",
+     "p": 3900.0,
+     "rel": 1
+    },
+    {
+     "t": "Nike Downshifter 12 Running Shoe",
+     "c": "running shoes",
+     "p": 3500.0,
+     "rel": 1
+    },
+    {
+     "t": "Nike Air Zoom Pegasus Running Shoe",
+     "c": "running shoes",
+     "p": 4800.0,
+     "rel": 1
+    },
+    {
+     "t": "Nike Flex Experience Running Shoe",
+     "c": "running shoes",
+     "p": 3300.0,
+     "rel": 1
+    },
+    {
+     "t": "Nike Air Zoom Winflo Running Shoe",
+     "c": "running shoes",
+     "p": 4600.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "black cotton t-shirt for men",
+   "lang": "en",
+   "type": "plain",
+   "n_rel_catalog": 44,
+   "n_results": 3,
+   "ms": 78.7,
+   "p10": 0.3,
+   "hit1": 1,
+   "ndcg": 0.469,
+   "intent": {
+    "category": "t-shirt",
+    "color": "black",
+    "material": "cotton",
+    "gender": "men",
+    "recipient": "men",
+    "affinities": [
+     "panjabi",
+     "leather shoes",
+     "running shoes",
+     "leather wallet",
+     "beard trimmer"
+    ]
+   },
+   "notes": [
+    "persona: men",
+    "product group: t-shirt"
+   ],
+   "top": [
+    {
+     "t": "H&M Oversized Printed Graphic Tee",
+     "c": "t-shirt",
+     "p": 1900.0,
+     "rel": 1
+    },
+    {
+     "t": "রিচম্যান ক্লাসিক ব্ল্যাক সলিড পোলো শার্ট",
+     "c": "t-shirt",
+     "p": 1550.0,
+     "rel": 1
+    },
+    {
+     "t": "সেইলর ১০০% সুতি ড্রপ শোল্ডার ব্ল্যাক টি-শার্ট",
+     "c": "t-shirt",
+     "p": 850.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "panjabi",
+   "lang": "en",
+   "type": "plain",
+   "n_rel_catalog": 60,
+   "n_results": 10,
+   "ms": 227.8,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "panjabi"
+   },
+   "notes": [
+    "product group: panjabi"
+   ],
+   "top": [
+    {
+     "t": "Beige Semi-pure silk Panjabi by Lotto",
+     "c": "panjabi",
+     "p": 4990.0,
+     "rel": 1
+    },
+    {
+     "t": "Aarong Premium Panjabi",
+     "c": "panjabi",
+     "p": 2999.0,
+     "rel": 1
+    },
+    {
+     "t": "Manyavar Silk Wedding Sherwani & Panjabi Set (বিয়ের শেরওয়ানি সেট)",
+     "c": "panjabi",
+     "p": 18500.0,
+     "rel": 1
+    },
+    {
+     "t": "Aarong Embroidered Panjabi",
+     "c": "panjabi",
+     "p": 4200.0,
+     "rel": 1
+    },
+    {
+     "t": "Gold Semi-pure silk Panjabi by Zara",
+     "c": "panjabi",
+     "p": 3330.0,
+     "rel": 1
+    },
+    {
+     "t": "Sailor Premium Embroidered Wedding Panjabi (সেইলর বিয়ের পাঞ্জাবি)",
+     "c": "panjabi",
+     "p": 6800.0,
+     "rel": 1
+    },
+    {
+     "t": "Navy blue Cotton Panjabi by Richman",
+     "c": "panjabi",
+     "p": 3710.0,
+     "rel": 1
+    },
+    {
+     "t": "Aarong Endi Silk Luxury Panjabi",
+     "c": "panjabi",
+     "p": 7500.0,
+     "rel": 1
+    },
+    {
+     "t": "Aarong Khadi Handloom Casual Panjabi",
+     "c": "panjabi",
+     "p": 2400.0,
+     "rel": 1
+    },
+    {
+     "t": "Yellow Modern Cut Silk Blend Panjabi (ইয়েলো সিল্ক ব্লেন্ড পাঞ্জাবি)",
+     "c": "panjabi",
+     "p": 4200.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "aarong panjabi",
+   "lang": "en",
+   "type": "brand",
+   "n_rel_catalog": 13,
+   "n_results": 10,
+   "ms": 286.5,
+   "p10": 0.7,
+   "hit1": 1,
+   "ndcg": 0.77,
+   "intent": {
+    "category": "panjabi",
+    "brand": "aarong"
+   },
+   "notes": [
+    "product group: panjabi"
+   ],
+   "top": [
+    {
+     "t": "Aarong Khadi Handloom Casual Panjabi",
+     "c": "panjabi",
+     "p": 2400.0,
+     "rel": 1
+    },
+    {
+     "t": "Aarong Fine Cotton Festive Eid Panjabi (আড়ং সুতি ঈদ পাঞ্জাবি)",
+     "c": "panjabi",
+     "p": 3400.0,
+     "rel": 1
+    },
+    {
+     "t": "Aarong Short Semi-Fitting Panjabi",
+     "c": "panjabi",
+     "p": 2600.0,
+     "rel": 1
+    },
+    {
+     "t": "Aarong Premium Panjabi",
+     "c": "panjabi",
+     "p": 2999.0,
+     "rel": 1
+    },
+    {
+     "t": "আড়ং প্রিমিয়াম সাদা সুতি হাতের কাজের পাঞ্জাবি",
+     "c": "panjabi",
+     "p": 3600.0,
+     "rel": 0
+    },
+    {
+     "t": "আড়ং কাঠালি চাঁপা রঙের সিল্ক মিক্স পাঞ্জাবি",
+     "c": "panjabi",
+     "p": 4800.0,
+     "rel": 0
+    },
+    {
+     "t": "Aarong Fine Cotton Tussar Panjabi",
+     "c": "panjabi",
+     "p": 3600.0,
+     "rel": 1
+    },
+    {
+     "t": "Aarong Cotton Panjabi",
+     "c": "panjabi",
+     "p": 2900.0,
+     "rel": 1
+    },
+    {
+     "t": "আড়ং ক্লাসিক প্লেইন হোয়াইট সুতি পাঞ্জাবি",
+     "c": "panjabi",
+     "p": 2100.0,
+     "rel": 0
+    },
+    {
+     "t": "Aarong Embroidered Panjabi",
+     "c": "panjabi",
+     "p": 4200.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "saree for mother",
+   "lang": "en",
+   "type": "plain",
+   "n_rel_catalog": 63,
+   "n_results": 10,
+   "ms": 221.3,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "saree",
+    "gender": "women",
+    "recipient": "mother",
+    "affinities": [
+     "saree",
+     "kurti",
+     "salwar kameez",
+     "necklace",
+     "handbag"
+    ]
+   },
+   "notes": [
+    "persona: mother",
+    "product group: saree"
+   ],
+   "top": [
+    {
+     "t": "Monipuri Handwoven Traditional Saree (মণিপুরী তাঁতের শাড়ি)",
+     "c": "saree",
+     "p": 2800.0,
+     "rel": 1
+    },
+    {
+     "t": "H&M Saree for Women",
+     "c": "saree",
+     "p": 10000.0,
+     "rel": 1
+    },
+    {
+     "t": "Ecstasy Saree for Women",
+     "c": "saree",
+     "p": 7310.0,
+     "rel": 1
+    },
+    {
+     "t": "টাঙ্গাইল তাঁতের সুতি নরম ডেইলী শাড়ি",
+     "c": "saree",
+     "p": 2200.0,
+     "rel": 1
+    },
+    {
+     "t": "Adidas Saree for Women",
+     "c": "saree",
+     "p": 5140.0,
+     "rel": 1
+    },
+    {
+     "t": "Gold Jamdani Saree by Ecstasy",
+     "c": "saree",
+     "p": 999.0,
+     "rel": 1
+    },
+    {
+     "t": "Traditional Dhakai Jamdani Saree",
+     "c": "saree",
+     "p": 14500.0,
+     "rel": 1
+    },
+    {
+     "t": "Aarong Royal Dhakai Jamdani Saree (আড়ং ঢাকাই জামদানি শাড়ি)",
+     "c": "saree",
+     "p": 18500.0,
+     "rel": 1
+    },
+    {
+     "t": "Aarong Muslin Floral Jamdani Luxury Saree",
+     "c": "saree",
+     "p": 32000.0,
+     "rel": 1
+    },
+    {
+     "t": "Rajshahi Pure Silk Floral Saree (রাজশাহী রেশম সিল্ক শাড়ি)",
+     "c": "saree",
+     "p": 12500.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "smartphone under 25000",
+   "lang": "en",
+   "type": "price",
+   "n_rel_catalog": 22,
+   "n_results": 10,
+   "ms": 214.7,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "smartphone",
+    "max_price": 25000.0
+   },
+   "notes": [
+    "product group: smartphone"
+   ],
+   "top": [
+    {
+     "t": "Samsung Galaxy A15 Smartphone",
+     "c": "smartphone",
+     "p": 24500.0,
+     "rel": 1
+    },
+    {
+     "t": "Xiaomi Smartphone for Unisex",
+     "c": "smartphone",
+     "p": 13770.0,
+     "rel": 1
+    },
+    {
+     "t": "Walton Primo S8 128GB Smartphone (ওয়ালটন প্রিমো স্মার্টফোন)",
+     "c": "smartphone",
+     "p": 18500.0,
+     "rel": 1
+    },
+    {
+     "t": "Xiaomi Premium Smartphone",
+     "c": "smartphone",
+     "p": 950.0,
+     "rel": 1
+    },
+    {
+     "t": "Xiaomi Black Smartphone",
+     "c": "smartphone",
+     "p": 19910.0,
+     "rel": 1
+    },
+    {
+     "t": "Samsung Galaxy A15 5G 128GB",
+     "c": "smartphone",
+     "p": 22500.0,
+     "rel": 1
+    },
+    {
+     "t": "Realme C67 4G 128GB",
+     "c": "smartphone",
+     "p": 18500.0,
+     "rel": 1
+    },
+    {
+     "t": "ওয়ালটন প্রিমো জিএইচ১১ বাজেট স্মার্টফোন",
+     "c": "smartphone",
+     "p": 8990.0,
+     "rel": 1
+    },
+    {
+     "t": "Apple Green Smartphone",
+     "c": "smartphone",
+     "p": 19250.0,
+     "rel": 1
+    },
+    {
+     "t": "Xiaomi Redmi 13C 128GB",
+     "c": "smartphone",
+     "p": 15500.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "samsung phone",
+   "lang": "en",
+   "type": "brand",
+   "n_rel_catalog": 15,
+   "n_results": 10,
+   "ms": 160.5,
+   "p10": 0.9,
+   "hit1": 1,
+   "ndcg": 0.936,
+   "intent": {
+    "category": "smartphone",
+    "brand": "samsung"
+   },
+   "notes": [
+    "product group: smartphone"
+   ],
+   "top": [
+    {
+     "t": "Samsung Galaxy S24+ 256GB",
+     "c": "smartphone",
+     "p": 125000.0,
+     "rel": 1
+    },
+    {
+     "t": "Samsung Galaxy A15 5G 128GB",
+     "c": "smartphone",
+     "p": 22500.0,
+     "rel": 1
+    },
+    {
+     "t": "Samsung Galaxy A15 Smartphone",
+     "c": "smartphone",
+     "p": 24500.0,
+     "rel": 1
+    },
+    {
+     "t": "Samsung Galaxy S24 Ultra",
+     "c": "smartphone",
+     "p": 155000.0,
+     "rel": 1
+    },
+    {
+     "t": "Samsung Galaxy S23 FE 5G",
+     "c": "smartphone",
+     "p": 64000.0,
+     "rel": 1
+    },
+    {
+     "t": "Samsung Galaxy A55 5G 128GB",
+     "c": "smartphone",
+     "p": 48500.0,
+     "rel": 1
+    },
+    {
+     "t": "Samsung Galaxy A35 5G 128GB",
+     "c": "smartphone",
+     "p": 38000.0,
+     "rel": 1
+    },
+    {
+     "t": "Samsung Galaxy Z Flip 5 256GB",
+     "c": "smartphone",
+     "p": 105000.0,
+     "rel": 1
+    },
+    {
+     "t": "Samsung Galaxy Z Fold 5 512GB",
+     "c": "smartphone",
+     "p": 189000.0,
+     "rel": 1
+    },
+    {
+     "t": "Samsung Black Wireless Headphones",
+     "c": "wireless headphones",
+     "p": 10140.0,
+     "rel": 0
+    }
+   ]
+  },
+  {
+   "q": "laptop for programming",
+   "lang": "en",
+   "type": "vague",
+   "n_rel_catalog": 47,
+   "n_results": 10,
+   "ms": 230.1,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "laptop"
+   },
+   "notes": [
+    "product group: laptop"
+   ],
+   "top": [
+    {
+     "t": "Dell Latitude 5440 Business Laptop",
+     "c": "laptop",
+     "p": 98000.0,
+     "rel": 1
+    },
+    {
+     "t": "Dell Inspiron 15 Laptop",
+     "c": "laptop",
+     "p": 62000.0,
+     "rel": 1
+    },
+    {
+     "t": "Dell Inspiron 14 2-in-1 Touch Laptop",
+     "c": "laptop",
+     "p": 79000.0,
+     "rel": 1
+    },
+    {
+     "t": "Dell Alienware m16 R2 Gaming Laptop",
+     "c": "laptop",
+     "p": 215000.0,
+     "rel": 1
+    },
+    {
+     "t": "MSI Katana 15 Gaming Laptop",
+     "c": "laptop",
+     "p": 128000.0,
+     "rel": 1
+    },
+    {
+     "t": "ASUS ROG Strix G16 Gaming Laptop",
+     "c": "laptop",
+     "p": 179000.0,
+     "rel": 1
+    },
+    {
+     "t": "Acer Nitro V 15 Gaming Laptop",
+     "c": "laptop",
+     "p": 89000.0,
+     "rel": 1
+    },
+    {
+     "t": "Acer Predator Helios 16 Gaming Laptop",
+     "c": "laptop",
+     "p": 189000.0,
+     "rel": 1
+    },
+    {
+     "t": "ASUS TUF Gaming A15 Laptop",
+     "c": "laptop",
+     "p": 115000.0,
+     "rel": 1
+    },
+    {
+     "t": "ASUS ROG Zephyrus G14 Gaming Laptop",
+     "c": "laptop",
+     "p": 185000.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "wireless headphones",
+   "lang": "en",
+   "type": "plain",
+   "n_rel_catalog": 42,
+   "n_results": 10,
+   "ms": 265.0,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "wireless headphones"
+   },
+   "notes": [
+    "spelling corrected: 'headphones' -> 'wireless headphones'",
+    "product group: wireless headphones"
+   ],
+   "top": [
+    {
+     "t": "Aluminum Wireless Headphones by Samsung",
+     "c": "wireless headphones",
+     "p": 15980.0,
+     "rel": 1
+    },
+    {
+     "t": "Apple Premium Wireless Headphones",
+     "c": "wireless headphones",
+     "p": 3990.0,
+     "rel": 1
+    },
+    {
+     "t": "Xiaomi Wireless Headphones for Unisex",
+     "c": "wireless headphones",
+     "p": 13160.0,
+     "rel": 1
+    },
+    {
+     "t": "Samsung Premium Wireless Headphones",
+     "c": "wireless headphones",
+     "p": 10010.0,
+     "rel": 1
+    },
+    {
+     "t": "Blue Matte plastic Wireless Headphones by Apple",
+     "c": "wireless headphones",
+     "p": 6940.0,
+     "rel": 1
+    },
+    {
+     "t": "Apple Gold Wireless Headphones",
+     "c": "wireless headphones",
+     "p": 12190.0,
+     "rel": 1
+    },
+    {
+     "t": "Samsung Black Wireless Headphones",
+     "c": "wireless headphones",
+     "p": 10140.0,
+     "rel": 1
+    },
+    {
+     "t": "Grey Wireless Headphones by Sony",
+     "c": "wireless headphones",
+     "p": 12970.0,
+     "rel": 1
+    },
+    {
+     "t": "Sony WH-CH520 Wireless Headphones",
+     "c": "headphones",
+     "p": 5900.0,
+     "rel": 1
+    },
+    {
+     "t": "Sony WH-1000XM5 Wireless Headphones",
+     "c": "headphones",
+     "p": 28000.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "smartwatch",
+   "lang": "en",
+   "type": "plain",
+   "n_rel_catalog": 38,
+   "n_results": 10,
+   "ms": 180.6,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "smartwatch"
+   },
+   "notes": [
+    "product group: smartwatch"
+   ],
+   "top": [
+    {
+     "t": "Amazfit Bip Smartwatch",
+     "c": "smartwatch",
+     "p": 5400.0,
+     "rel": 1
+    },
+    {
+     "t": "Samsung Premium Smartwatch",
+     "c": "smartwatch",
+     "p": 20680.0,
+     "rel": 1
+    },
+    {
+     "t": "Fitbit Versa 4 Health Smartwatch",
+     "c": "smartwatch",
+     "p": 24500.0,
+     "rel": 1
+    },
+    {
+     "t": "Apple Smartwatch for Women",
+     "c": "smartwatch",
+     "p": 2800.0,
+     "rel": 1
+    },
+    {
+     "t": "Xiaomi Smartwatch for Men",
+     "c": "smartwatch",
+     "p": 3680.0,
+     "rel": 1
+    },
+    {
+     "t": "Silver Stainless steel Smartwatch by Xiaomi",
+     "c": "smartwatch",
+     "p": 10090.0,
+     "rel": 1
+    },
+    {
+     "t": "Sony Smartwatch for Women",
+     "c": "smartwatch",
+     "p": 3870.0,
+     "rel": 1
+    },
+    {
+     "t": "Dell Gold Smartwatch",
+     "c": "smartwatch",
+     "p": 16410.0,
+     "rel": 1
+    },
+    {
+     "t": "Xiaomi Gold Smartwatch",
+     "c": "smartwatch",
+     "p": 4110.0,
+     "rel": 1
+    },
+    {
+     "t": "Dell Smartwatch for Women",
+     "c": "smartwatch",
+     "p": 12980.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "leather wallet for men",
+   "lang": "en",
+   "type": "plain",
+   "n_rel_catalog": 25,
+   "n_results": 10,
+   "ms": 295.1,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "leather wallet",
+    "material": "leather",
+    "gender": "men",
+    "recipient": "men",
+    "affinities": [
+     "shirt",
+     "t-shirt",
+     "panjabi",
+     "jeans",
+     "leather shoes"
+    ]
+   },
+   "notes": [
+    "persona: men",
+    "product group: leather wallet"
+   ],
+   "top": [
+    {
+     "t": "Wildcraft Leather Wallet for Men",
+     "c": "leather wallet",
+     "p": 1030.0,
+     "rel": 1
+    },
+    {
+     "t": "Casio Premium Leather Wallet",
+     "c": "leather wallet",
+     "p": 2360.0,
+     "rel": 1
+    },
+    {
+     "t": "Titan Premium Leather Wallet",
+     "c": "leather wallet",
+     "p": 1780.0,
+     "rel": 1
+    },
+    {
+     "t": "Silver Synthetic leather Leather Wallet by Casio",
+     "c": "leather wallet",
+     "p": 1580.0,
+     "rel": 1
+    },
+    {
+     "t": "Wildcraft Premium Leather Wallet",
+     "c": "leather wallet",
+     "p": 2020.0,
+     "rel": 1
+    },
+    {
+     "t": "Aarong Pure Full-Grain Leather Wallet for Men (আড়ং জেনুইন লেদার মানিব্যাগ)",
+     "c": "leather wallet",
+     "p": 1850.0,
+     "rel": 1
+    },
+    {
+     "t": "Fastrack Premium Leather Wallet",
+     "c": "leather wallet",
+     "p": 1010.0,
+     "rel": 1
+    },
+    {
+     "t": "Fossil Premium Leather Wallet",
+     "c": "leather wallet",
+     "p": 2800.0,
+     "rel": 1
+    },
+    {
+     "t": "Wildcraft White Leather Wallet",
+     "c": "leather wallet",
+     "p": 930.0,
+     "rel": 1
+    },
+    {
+     "t": "Gold Genuine cowhide leather Leather Wallet by Aarong",
+     "c": "leather wallet",
+     "p": 9500.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "backpack for school",
+   "lang": "en",
+   "type": "plain",
+   "n_rel_catalog": 25,
+   "n_results": 10,
+   "ms": 227.1,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "backpack",
+    "intents": [
+     "school_student"
+    ],
+    "affinities": [
+     "backpack",
+     "notebook",
+     "pen set",
+     "school shoes",
+     "scientific calculator"
+    ]
+   },
+   "notes": [
+    "intent: school_student",
+    "product group: backpack"
+   ],
+   "top": [
+    {
+     "t": "Skybags School Backpack",
+     "c": "backpack",
+     "p": 2100.0,
+     "rel": 1
+    },
+    {
+     "t": "ওয়াইল্ডক্রাফট হালকা কলেজ স্কুল ব্যাকপ্যাক",
+     "c": "backpack",
+     "p": 1650.0,
+     "rel": 1
+    },
+    {
+     "t": "Skybags Laptop Backpack",
+     "c": "backpack",
+     "p": 2200.0,
+     "rel": 1
+    },
+    {
+     "t": "Wildcraft Backpack for Youth",
+     "c": "backpack",
+     "p": 4830.0,
+     "rel": 1
+    },
+    {
+     "t": "Wildcraft Backpack for Youth",
+     "c": "backpack",
+     "p": 5000.0,
+     "rel": 1
+    },
+    {
+     "t": "Titan Backpack for Youth",
+     "c": "backpack",
+     "p": 2180.0,
+     "rel": 1
+    },
+    {
+     "t": "Puma Laptop Backpack 15 inch",
+     "c": "backpack",
+     "p": 2500.0,
+     "rel": 1
+    },
+    {
+     "t": "Wildcraft Premium Backpack",
+     "c": "backpack",
+     "p": 2830.0,
+     "rel": 1
+    },
+    {
+     "t": "Aarong Premium Backpack",
+     "c": "backpack",
+     "p": 1410.0,
+     "rel": 1
+    },
+    {
+     "t": "Wildcraft Hiking Backpack 40L",
+     "c": "backpack",
+     "p": 3800.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "power bank",
+   "lang": "en",
+   "type": "plain",
+   "n_rel_catalog": 20,
+   "n_results": 10,
+   "ms": 188.4,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "power bank",
+    "intents": [
+     "travel"
+    ],
+    "affinities": [
+     "power bank"
+    ]
+   },
+   "notes": [
+    "intent: travel",
+    "product group: power bank"
+   ],
+   "top": [
+    {
+     "t": "Anker Power Bank 20000mAh",
+     "c": "power bank",
+     "p": 3400.0,
+     "rel": 1
+    },
+    {
+     "t": "Anker 737 Power Bank 24000mAh PowerCore 24K",
+     "c": "power bank",
+     "p": 13500.0,
+     "rel": 1
+    },
+    {
+     "t": "Xiaomi Power Bank 10000mAh",
+     "c": "power bank",
+     "p": 2100.0,
+     "rel": 1
+    },
+    {
+     "t": "Anker PowerCore 20000mAh Power Bank",
+     "c": "power bank",
+     "p": 3800.0,
+     "rel": 1
+    },
+    {
+     "t": "Black Abs plastic Power Bank by HP",
+     "c": "power bank",
+     "p": 4800.0,
+     "rel": 1
+    },
+    {
+     "t": "Xiaomi Power Bank for Unisex",
+     "c": "power bank",
+     "p": 2220.0,
+     "rel": 1
+    },
+    {
+     "t": "Silver Abs plastic Power Bank by Dell",
+     "c": "power bank",
+     "p": 2400.0,
+     "rel": 1
+    },
+    {
+     "t": "HP Premium Power Bank",
+     "c": "power bank",
+     "p": 1380.0,
+     "rel": 1
+    },
+    {
+     "t": "Lenovo Premium Power Bank",
+     "c": "power bank",
+     "p": 1640.0,
+     "rel": 1
+    },
+    {
+     "t": "Anker Power Bank for Unisex",
+     "c": "power bank",
+     "p": 3280.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "beard trimmer",
+   "lang": "en",
+   "type": "plain",
+   "n_rel_catalog": 15,
+   "n_results": 10,
+   "ms": 117.6,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "beard trimmer"
+   },
+   "notes": [
+    "spelling corrected: 'trimmer' -> 'beard trimmer'",
+    "product group: beard trimmer"
+   ],
+   "top": [
+    {
+     "t": "Philips Beard Trimmer for Men",
+     "c": "beard trimmer",
+     "p": 1420.0,
+     "rel": 1
+    },
+    {
+     "t": "Grey Stainless steel blade Beard Trimmer by The Body Shop",
+     "c": "beard trimmer",
+     "p": 2960.0,
+     "rel": 1
+    },
+    {
+     "t": "Braun Beige Beard Trimmer",
+     "c": "beard trimmer",
+     "p": 3220.0,
+     "rel": 1
+    },
+    {
+     "t": "Black Beard Trimmer by L'Oreal",
+     "c": "beard trimmer",
+     "p": 3190.0,
+     "rel": 1
+    },
+    {
+     "t": "Philips Premium Beard Trimmer",
+     "c": "beard trimmer",
+     "p": 4300.0,
+     "rel": 1
+    },
+    {
+     "t": "Philips Premium Beard Trimmer",
+     "c": "beard trimmer",
+     "p": 3990.0,
+     "rel": 1
+    },
+    {
+     "t": "Silver Stainless steel blade Beard Trimmer by Braun",
+     "c": "beard trimmer",
+     "p": 4080.0,
+     "rel": 1
+    },
+    {
+     "t": "Philips Premium Beard Trimmer",
+     "c": "beard trimmer",
+     "p": 4060.0,
+     "rel": 1
+    },
+    {
+     "t": "L'Oreal Premium Beard Trimmer",
+     "c": "beard trimmer",
+     "p": 5000.0,
+     "rel": 1
+    },
+    {
+     "t": "L'Oreal Premium Beard Trimmer",
+     "c": "beard trimmer",
+     "p": 1770.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "perfume for women",
+   "lang": "en",
+   "type": "plain",
+   "n_rel_catalog": 22,
+   "n_results": 10,
+   "ms": 192.8,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "perfume",
+    "gender": "women",
+    "recipient": "women",
+    "affinities": [
+     "saree",
+     "kurti",
+     "salwar kameez",
+     "perfume",
+     "hair dryer"
+    ]
+   },
+   "notes": [
+    "persona: women",
+    "product group: perfume"
+   ],
+   "top": [
+    {
+     "t": "L'Oreal Perfume for Women",
+     "c": "perfume",
+     "p": 8020.0,
+     "rel": 1
+    },
+    {
+     "t": "Nivea Perfume for Women",
+     "c": "perfume",
+     "p": 9080.0,
+     "rel": 1
+    },
+    {
+     "t": "Zara Women Eau de Parfum",
+     "c": "perfume",
+     "p": 3500.0,
+     "rel": 1
+    },
+    {
+     "t": "Nivea Premium Perfume",
+     "c": "perfume",
+     "p": 3180.0,
+     "rel": 1
+    },
+    {
+     "t": "The Body Shop Premium Perfume",
+     "c": "perfume",
+     "p": 1740.0,
+     "rel": 1
+    },
+    {
+     "t": "White Fragrance oils Perfume by Braun",
+     "c": "perfume",
+     "p": 4520.0,
+     "rel": 1
+    },
+    {
+     "t": "Yves Saint Laurent Libre Eau de Parfum 90ml",
+     "c": "perfume",
+     "p": 17500.0,
+     "rel": 1
+    },
+    {
+     "t": "Chanel Coco Mademoiselle Eau de Parfum 100ml",
+     "c": "perfume",
+     "p": 26000.0,
+     "rel": 1
+    },
+    {
+     "t": "The Body Shop Red Perfume",
+     "c": "perfume",
+     "p": 1470.0,
+     "rel": 1
+    },
+    {
+     "t": "Victoria's Secret Bare Vanilla Fragrance Body Mist",
+     "c": "perfume",
+     "p": 1850.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "kurti",
+   "lang": "en",
+   "type": "plain",
+   "n_rel_catalog": 42,
+   "n_results": 10,
+   "ms": 253.0,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "kurti"
+   },
+   "notes": [
+    "product group: kurti"
+   ],
+   "top": [
+    {
+     "t": "Cotton Printed Kurti",
+     "c": "kurti",
+     "p": 1900.0,
+     "rel": 1
+    },
+    {
+     "t": "Yellow Premium Kurti",
+     "c": "kurti",
+     "p": 950.0,
+     "rel": 1
+    },
+    {
+     "t": "Aarong Nakshi Embroidered Long Kurti",
+     "c": "kurti",
+     "p": 2800.0,
+     "rel": 1
+    },
+    {
+     "t": "Yellow Contemporary Floral Printed Kurti (ইয়েলো সুতি কুর্তি)",
+     "c": "kurti",
+     "p": 2400.0,
+     "rel": 1
+    },
+    {
+     "t": "Sailor Designer Embroidered A-Line Kurti (সেইলর ডিজাইনার কুর্তি)",
+     "c": "kurti",
+     "p": 2800.0,
+     "rel": 1
+    },
+    {
+     "t": "Nike Kurti for Women",
+     "c": "kurti",
+     "p": 2420.0,
+     "rel": 1
+    },
+    {
+     "t": "Richman Premium Kurti",
+     "c": "kurti",
+     "p": 2150.0,
+     "rel": 1
+    },
+    {
+     "t": "Richman White Kurti",
+     "c": "kurti",
+     "p": 1970.0,
+     "rel": 1
+    },
+    {
+     "t": "Taaga Cotton Fusion Kurti for Daily Wear",
+     "c": "kurti",
+     "p": 1750.0,
+     "rel": 1
+    },
+    {
+     "t": "Green Viscose Kurti by Richman",
+     "c": "kurti",
+     "p": 1340.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "salwar kameez",
+   "lang": "en",
+   "type": "plain",
+   "n_rel_catalog": 27,
+   "n_results": 10,
+   "ms": 313.0,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "salwar kameez"
+   },
+   "notes": [
+    "spelling corrected: 'kameez' -> 'salwar kameez'",
+    "product group: salwar kameez"
+   ],
+   "top": [
+    {
+     "t": "Salwar Kameez Three-Piece Set",
+     "c": "salwar kameez",
+     "p": 3600.0,
+     "rel": 1
+    },
+    {
+     "t": "Anjans Block Printed Cotton Salwar Kameez (অঞ্জনস ব্লক প্রিন্ট সালোয়ার কামিজ)",
+     "c": "salwar kameez",
+     "p": 3800.0,
+     "rel": 1
+    },
+    {
+     "t": "Aarong Embroidered Georgette Salwar Kameez",
+     "c": "salwar",
+     "p": 7200.0,
+     "rel": 1
+    },
+    {
+     "t": "অঞ্জনস লাল সুতি উৎসব সালোয়ার কামিজ",
+     "c": "salwar kameez",
+     "p": 3800.0,
+     "rel": 1
+    },
+    {
+     "t": "আড়ং রয়্যাল ব্লু এমব্রয়ডারি স্টিচড সালোয়ার কামিজ",
+     "c": "salwar kameez",
+     "p": 5800.0,
+     "rel": 1
+    },
+    {
+     "t": "ইয়েলো ইয়েলো সামার ভাইব কটন থ্রি পিস",
+     "c": "salwar kameez",
+     "p": 3900.0,
+     "rel": 1
+    },
+    {
+     "t": "Aarong Hand-Embroidered Cotton Three-Piece Set (আড়ং সুতি থ্রি পিস)",
+     "c": "salwar kameez",
+     "p": 4800.0,
+     "rel": 1
+    },
+    {
+     "t": "সেইলর পেস্টেল গ্রিন সিল্ক এমব্রয়ডারি থ্রি পিস",
+     "c": "salwar kameez",
+     "p": 7500.0,
+     "rel": 1
+    },
+    {
+     "t": "আড়ং মেরুন সুতি নকশী কাঁথা স্টিচ থ্রি পিস",
+     "c": "salwar kameez",
+     "p": 6200.0,
+     "rel": 1
+    },
+    {
+     "t": "কে ক্রাফট হ্যান্ডলুম অ্যাপ্লিক কাজের থ্রি পিস",
+     "c": "salwar kameez",
+     "p": 4600.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "winter jacket",
+   "lang": "en",
+   "type": "plain",
+   "n_rel_catalog": 38,
+   "n_results": 10,
+   "ms": 130.6,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "jacket",
+    "intents": [
+     "winter"
+    ],
+    "affinities": [
+     "jacket",
+     "sweater",
+     "thermals",
+     "coat",
+     "boots"
+    ]
+   },
+   "notes": [
+    "intent: winter",
+    "product group: jacket"
+   ],
+   "top": [
+    {
+     "t": "North Face Puffer Jacket",
+     "c": "jacket",
+     "p": 14500.0,
+     "rel": 1
+    },
+    {
+     "t": "Columbia Fleece Jacket",
+     "c": "jacket",
+     "p": 5200.0,
+     "rel": 1
+    },
+    {
+     "t": "Forever 21 Faux Fur Cropped Jacket",
+     "c": "jacket",
+     "p": 4500.0,
+     "rel": 1
+    },
+    {
+     "t": "Uniqlo Fluffy Yarn Fleece Full-Zip Jacket",
+     "c": "jacket",
+     "p": 3900.0,
+     "rel": 1
+    },
+    {
+     "t": "Yellow Windbreaker Zip-Up Jacket",
+     "c": "jacket",
+     "p": 3400.0,
+     "rel": 1
+    },
+    {
+     "t": "Manyavar Jacquard Nehru Waistcoat Jacket",
+     "c": "jacket",
+     "p": 4800.0,
+     "rel": 1
+    },
+    {
+     "t": "Zara Premium Jacket",
+     "c": "jacket",
+     "p": 8200.0,
+     "rel": 1
+    },
+    {
+     "t": "Tommy Hilfiger Reversible Quilted Bomber Jacket",
+     "c": "jacket",
+     "p": 14500.0,
+     "rel": 1
+    },
+    {
+     "t": "Zara Faux Leather Biker Motorcycle Jacket",
+     "c": "jacket",
+     "p": 8500.0,
+     "rel": 1
+    },
+    {
+     "t": "Levi's Sherpa Lined Corduroy Trucker Jacket",
+     "c": "jacket",
+     "p": 9500.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "hoodie",
+   "lang": "en",
+   "type": "plain",
+   "n_rel_catalog": 23,
+   "n_results": 10,
+   "ms": 196.8,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "hoodie"
+   },
+   "notes": [
+    "product group: hoodie"
+   ],
+   "top": [
+    {
+     "t": "Zara Cropped Hoodie",
+     "c": "hoodie",
+     "p": 3300.0,
+     "rel": 1
+    },
+    {
+     "t": "H&M Hoodie for Unisex",
+     "c": "hoodie",
+     "p": 2880.0,
+     "rel": 1
+    },
+    {
+     "t": "Adidas Essentials Hoodie",
+     "c": "hoodie",
+     "p": 4600.0,
+     "rel": 1
+    },
+    {
+     "t": "Yellow Hoodie for Unisex",
+     "c": "hoodie",
+     "p": 3220.0,
+     "rel": 1
+    },
+    {
+     "t": "Calvin Klein Monogram Logo Hoodie",
+     "c": "hoodie",
+     "p": 7200.0,
+     "rel": 1
+    },
+    {
+     "t": "Zara Premium Hoodie",
+     "c": "hoodie",
+     "p": 3360.0,
+     "rel": 1
+    },
+    {
+     "t": "H&M Heavyweight Relaxed Fit Hoodie",
+     "c": "hoodie",
+     "p": 3200.0,
+     "rel": 1
+    },
+    {
+     "t": "Silver Cotton blend Hoodie by Lotto",
+     "c": "hoodie",
+     "p": 2860.0,
+     "rel": 1
+    },
+    {
+     "t": "Adidas Brown Hoodie",
+     "c": "hoodie",
+     "p": 2050.0,
+     "rel": 1
+    },
+    {
+     "t": "Red Cotton blend Hoodie by Zara",
+     "c": "hoodie",
+     "p": 3220.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "tablet",
+   "lang": "en",
+   "type": "plain",
+   "n_rel_catalog": 23,
+   "n_results": 10,
+   "ms": 167.9,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "tablet"
+   },
+   "notes": [
+    "product group: tablet"
+   ],
+   "top": [
+    {
+     "t": "Samsung Galaxy Tab A9 Tablet",
+     "c": "tablet",
+     "p": 19500.0,
+     "rel": 1
+    },
+    {
+     "t": "Apple Premium Tablet",
+     "c": "tablet",
+     "p": 35480.0,
+     "rel": 1
+    },
+    {
+     "t": "Sony Tablet for Unisex",
+     "c": "tablet",
+     "p": 54010.0,
+     "rel": 1
+    },
+    {
+     "t": "Green Metal Tablet by Lenovo",
+     "c": "tablet",
+     "p": 32380.0,
+     "rel": 1
+    },
+    {
+     "t": "Logitech Tablet",
+     "c": "tablet",
+     "p": 38520.0,
+     "rel": 1
+    },
+    {
+     "t": "Samsung Tablet for Unisex",
+     "c": "tablet",
+     "p": 20370.0,
+     "rel": 1
+    },
+    {
+     "t": "Apple Tablet for Unisex",
+     "c": "tablet",
+     "p": 21350.0,
+     "rel": 1
+    },
+    {
+     "t": "Anker Pink Tablet",
+     "c": "tablet",
+     "p": 33370.0,
+     "rel": 1
+    },
+    {
+     "t": "HP Grey Tablet",
+     "c": "tablet",
+     "p": 18060.0,
+     "rel": 1
+    },
+    {
+     "t": "Logitech Premium Tablet",
+     "c": "tablet",
+     "p": 2999.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "sandals",
+   "lang": "en",
+   "type": "plain",
+   "n_rel_catalog": 40,
+   "n_results": 10,
+   "ms": 246.6,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "sandals"
+   },
+   "notes": [
+    "product group: sandals"
+   ],
+   "top": [
+    {
+     "t": "Apex Ladies Leather Sandals",
+     "c": "sandals",
+     "p": 1900.0,
+     "rel": 1
+    },
+    {
+     "t": "Bata Premium Sandals",
+     "c": "sandals",
+     "p": 1530.0,
+     "rel": 1
+    },
+    {
+     "t": "Bata Sandals for Women",
+     "c": "sandals",
+     "p": 1920.0,
+     "rel": 1
+    },
+    {
+     "t": "Gold Leather Sandals by Puma",
+     "c": "sandals",
+     "p": 1060.0,
+     "rel": 1
+    },
+    {
+     "t": "Bay Emporium Premium Sandals",
+     "c": "sandals",
+     "p": 670.0,
+     "rel": 1
+    },
+    {
+     "t": "Bata Blue Sandals",
+     "c": "sandals",
+     "p": 1730.0,
+     "rel": 1
+    },
+    {
+     "t": "Bata Comfort Sandals",
+     "c": "sandals",
+     "p": 1500.0,
+     "rel": 1
+    },
+    {
+     "t": "Bay Emporium Sandals for Men",
+     "c": "sandals",
+     "p": 2180.0,
+     "rel": 1
+    },
+    {
+     "t": "Lotto Sandals for Men",
+     "c": "sandals",
+     "p": 1920.0,
+     "rel": 1
+    },
+    {
+     "t": "Charles & Keith Strappy Chunky Platform Sandals",
+     "c": "sandals",
+     "p": 6800.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "formal shoes for office",
+   "lang": "en",
+   "type": "plain",
+   "n_rel_catalog": 20,
+   "n_results": 10,
+   "ms": 235.3,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "formal shoes",
+    "intents": [
+     "office",
+     "formal_wear"
+    ],
+    "affinities": [
+     "leather shoes",
+     "shirt",
+     "leather wallet",
+     "laptop",
+     "leather belt"
+    ]
+   },
+   "notes": [
+    "intent: office, formal_wear",
+    "product group: formal shoes"
+   ],
+   "top": [
+    {
+     "t": "Apex Leather Formal Shoes",
+     "c": "formal shoes",
+     "p": 3900.0,
+     "rel": 1
+    },
+    {
+     "t": "Clarks Tilden Cap Oxford Formal Shoes",
+     "c": "formal shoes",
+     "p": 8900.0,
+     "rel": 1
+    },
+    {
+     "t": "Apex Venturini Premium Leather Formal Shoes (এপেক্স ভেনচুরিনি ফরমাল জুতা)",
+     "c": "formal shoes",
+     "p": 6490.0,
+     "rel": 1
+    },
+    {
+     "t": "Bata Formal Oxford Shoes",
+     "c": "formal shoes",
+     "p": 3400.0,
+     "rel": 1
+    },
+    {
+     "t": "বাটা ক্লাসিক ব্ল্যাক ডার্বি ফরমাল শু",
+     "c": "formal shoes",
+     "p": 3890.0,
+     "rel": 1
+    },
+    {
+     "t": "বে এম্পোরিয়াম ব্ল্যাক স্লিপ-অন চামড়ার জুতো",
+     "c": "formal shoes",
+     "p": 3990.0,
+     "rel": 1
+    },
+    {
+     "t": "Bata Executive Formal Cap-Toe Brogues",
+     "c": "formal shoes",
+     "p": 4600.0,
+     "rel": 1
+    },
+    {
+     "t": "বাটা ক্লাসিক ব্রাউন লেদার অফিস লোফার",
+     "c": "formal shoes",
+     "p": 4290.0,
+     "rel": 1
+    },
+    {
+     "t": "এপেক্স ভেনচুরিনি আসল চামড়ার ব্ল্যাক অক্সফোর্ড জুতা",
+     "c": "formal shoes",
+     "p": 6490.0,
+     "rel": 1
+    },
+    {
+     "t": "এপেক্স ভেনচুরিনি ব্রাউন লেদার ডার্বি জুতো",
+     "c": "formal shoes",
+     "p": 5990.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "jeans",
+   "lang": "en",
+   "type": "plain",
+   "n_rel_catalog": 40,
+   "n_results": 10,
+   "ms": 122.8,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "jeans"
+   },
+   "notes": [
+    "product group: jeans"
+   ],
+   "top": [
+    {
+     "t": "Levi's 511 Slim Jeans",
+     "c": "jeans",
+     "p": 4500.0,
+     "rel": 1
+    },
+    {
+     "t": "Levi's 501 Original Jeans",
+     "c": "jeans",
+     "p": 5200.0,
+     "rel": 1
+    },
+    {
+     "t": "Yellow Premium Jeans",
+     "c": "jeans",
+     "p": 3270.0,
+     "rel": 1
+    },
+    {
+     "t": "Levi's 721 High Rise Skinny Jeans",
+     "c": "jeans",
+     "p": 4800.0,
+     "rel": 1
+    },
+    {
+     "t": "Yellow Basic Denim Jeans Slim",
+     "c": "jeans",
+     "p": 2400.0,
+     "rel": 1
+    },
+    {
+     "t": "Levi's Slim Fit Jeans",
+     "c": "jeans",
+     "p": 4200.0,
+     "rel": 1
+    },
+    {
+     "t": "Levi's 512 Slim Tapered Fit Jeans",
+     "c": "jeans",
+     "p": 4800.0,
+     "rel": 1
+    },
+    {
+     "t": "Brown Denim Jeans by Yellow",
+     "c": "jeans",
+     "p": 4450.0,
+     "rel": 1
+    },
+    {
+     "t": "Levi's High Rise Jeans",
+     "c": "jeans",
+     "p": 4600.0,
+     "rel": 1
+    },
+    {
+     "t": "Levi's 511 Slim Fit Stretch Jeans",
+     "c": "jeans",
+     "p": 4500.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "cookware set",
+   "lang": "en",
+   "type": "plain",
+   "n_rel_catalog": 24,
+   "n_results": 10,
+   "ms": 217.6,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "cookware"
+   },
+   "notes": [
+    "product group: cookware"
+   ],
+   "top": [
+    {
+     "t": "Prestige Deluxe Alpha Stainless Steel Cookware Set 3pc",
+     "c": "cookware",
+     "p": 6800.0,
+     "rel": 1
+    },
+    {
+     "t": "Aarong Ceramic Dinner Plate Set 6pc",
+     "c": "cookware",
+     "p": 3600.0,
+     "rel": 1
+    },
+    {
+     "t": "Lock & Lock Borosilicate Glass Food Storage 3pc Set",
+     "c": "cookware",
+     "p": 2400.0,
+     "rel": 1
+    },
+    {
+     "t": "Terracotta Dinner Plate & Curry Bowl Set (পোড়ামাটির থালা ও বাটি)",
+     "c": "cookware",
+     "p": 1650.0,
+     "rel": 1
+    },
+    {
+     "t": "পোড়ামাটির ঐতিহ্যবাহী থালা ও তরকারির বাটি সেট",
+     "c": "cookware",
+     "p": 1650.0,
+     "rel": 1
+    },
+    {
+     "t": "Le Creuset Signature Enameled Cast Iron Dutch Oven 5.3L",
+     "c": "cookware",
+     "p": 39000.0,
+     "rel": 1
+    },
+    {
+     "t": "Prestige Smart Induction Cooktop",
+     "c": "cookware",
+     "p": 4200.0,
+     "rel": 1
+    },
+    {
+     "t": "Singer 2-Burner Auto Ignition Glass Gas Stove",
+     "c": "cookware",
+     "p": 5200.0,
+     "rel": 1
+    },
+    {
+     "t": "Tefal Non-Stick Frying Pan 28cm",
+     "c": "cookware",
+     "p": 3200.0,
+     "rel": 1
+    },
+    {
+     "t": "ওয়ালটন ইন্ডাকশন কুকার ২২০০ ওয়াট টাচ প্যানেল",
+     "c": "cookware",
+     "p": 3950.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "adiddas sneakers",
+   "lang": "en",
+   "type": "typo",
+   "n_rel_catalog": 42,
+   "n_results": 9,
+   "ms": 163.6,
+   "p10": 0.9,
+   "hit1": 1,
+   "ndcg": 0.936,
+   "intent": {
+    "category": "sneakers",
+    "brand": "adidas"
+   },
+   "notes": [
+    "spelling corrected: 'adiddas' -> 'adidas'",
+    "product group: sneakers"
+   ],
+   "top": [
+    {
+     "t": "Adidas Handball Spezial Retro Sneakers",
+     "c": "sneakers",
+     "p": 10500.0,
+     "rel": 1
+    },
+    {
+     "t": "Adidas Samba OG Sneakers",
+     "c": "sneakers",
+     "p": 8200.0,
+     "rel": 1
+    },
+    {
+     "t": "Adidas Stan Smith Sneakers",
+     "c": "sneakers",
+     "p": 7200.0,
+     "rel": 1
+    },
+    {
+     "t": "Adidas Superstar Shell Toe Sneakers",
+     "c": "sneakers",
+     "p": 9200.0,
+     "rel": 1
+    },
+    {
+     "t": "Adidas Samba Classic Indoor Soccer Shoes",
+     "c": "sneakers",
+     "p": 9500.0,
+     "rel": 1
+    },
+    {
+     "t": "Adidas Grand Court 2.0 Women Sneakers",
+     "c": "sneakers",
+     "p": 6500.0,
+     "rel": 1
+    },
+    {
+     "t": "Adidas Gazelle Suede Low-Tops",
+     "c": "sneakers",
+     "p": 9800.0,
+     "rel": 1
+    },
+    {
+     "t": "Adidas Stan Smith Classic White Green",
+     "c": "sneakers",
+     "p": 8800.0,
+     "rel": 1
+    },
+    {
+     "t": "Adidas Kids Sports Sneakers",
+     "c": "sneakers",
+     "p": 3100.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "samsang phone",
+   "lang": "en",
+   "type": "typo",
+   "n_rel_catalog": 29,
+   "n_results": 10,
+   "ms": 25.3,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "smartphone",
+    "brand": "samsung"
+   },
+   "notes": [
+    "spelling corrected: 'samsang' -> 'samsung'",
+    "product group: smartphone"
+   ],
+   "top": [
+    {
+     "t": "Samsung Galaxy A15 5G 128GB",
+     "c": "smartphone",
+     "p": 22500.0,
+     "rel": 1
+    },
+    {
+     "t": "Samsung Galaxy S24+ 256GB",
+     "c": "smartphone",
+     "p": 125000.0,
+     "rel": 1
+    },
+    {
+     "t": "Samsung Galaxy A15 Smartphone",
+     "c": "smartphone",
+     "p": 24500.0,
+     "rel": 1
+    },
+    {
+     "t": "Samsung Galaxy S24 Ultra",
+     "c": "smartphone",
+     "p": 155000.0,
+     "rel": 1
+    },
+    {
+     "t": "Samsung Galaxy S23 FE 5G",
+     "c": "smartphone",
+     "p": 64000.0,
+     "rel": 1
+    },
+    {
+     "t": "Samsung Galaxy Z Flip 5 256GB",
+     "c": "smartphone",
+     "p": 105000.0,
+     "rel": 1
+    },
+    {
+     "t": "Samsung Galaxy A35 5G 128GB",
+     "c": "smartphone",
+     "p": 38000.0,
+     "rel": 1
+    },
+    {
+     "t": "Samsung Galaxy A55 5G 128GB",
+     "c": "smartphone",
+     "p": 48500.0,
+     "rel": 1
+    },
+    {
+     "t": "Samsung Black Wireless Headphones",
+     "c": "wireless headphones",
+     "p": 10140.0,
+     "rel": 1
+    },
+    {
+     "t": "Samsung Premium Wireless Headphones",
+     "c": "wireless headphones",
+     "p": 10010.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "leptop",
+   "lang": "en",
+   "type": "typo",
+   "n_rel_catalog": 47,
+   "n_results": 10,
+   "ms": 136.8,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "laptop"
+   },
+   "notes": [
+    "spelling corrected: 'leptop' -> 'laptop'",
+    "product group: laptop"
+   ],
+   "top": [
+    {
+     "t": "Dell Latitude 5440 Business Laptop",
+     "c": "laptop",
+     "p": 98000.0,
+     "rel": 1
+    },
+    {
+     "t": "ASUS TUF Gaming A15 Laptop",
+     "c": "laptop",
+     "p": 115000.0,
+     "rel": 1
+    },
+    {
+     "t": "Lenovo Laptop for Unisex",
+     "c": "laptop",
+     "p": 81990.0,
+     "rel": 1
+    },
+    {
+     "t": "Lenovo Laptop for Unisex",
+     "c": "laptop",
+     "p": 89460.0,
+     "rel": 1
+    },
+    {
+     "t": "Lenovo Legion Slim 5 16-inch Gaming Laptop",
+     "c": "laptop",
+     "p": 148000.0,
+     "rel": 1
+    },
+    {
+     "t": "Anker Premium Laptop",
+     "c": "laptop",
+     "p": 4999.0,
+     "rel": 1
+    },
+    {
+     "t": "Xiaomi Laptop for Unisex",
+     "c": "laptop",
+     "p": 112420.0,
+     "rel": 1
+    },
+    {
+     "t": "MSI Stealth 16 Studio AI Laptop",
+     "c": "laptop",
+     "p": 235000.0,
+     "rel": 1
+    },
+    {
+     "t": "Dell Inspiron 15 Laptop",
+     "c": "laptop",
+     "p": 62000.0,
+     "rel": 1
+    },
+    {
+     "t": "Acer Predator Helios 16 Gaming Laptop",
+     "c": "laptop",
+     "p": 189000.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "hedphone",
+   "lang": "en",
+   "type": "typo",
+   "n_rel_catalog": 42,
+   "n_results": 10,
+   "ms": 49.8,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "wireless headphones"
+   },
+   "notes": [
+    "spelling corrected: 'hedphone' -> 'wireless headphones'",
+    "product group: wireless headphones"
+   ],
+   "top": [
+    {
+     "t": "Apple Gold Wireless Headphones",
+     "c": "wireless headphones",
+     "p": 12190.0,
+     "rel": 1
+    },
+    {
+     "t": "Samsung Premium Wireless Headphones",
+     "c": "wireless headphones",
+     "p": 10010.0,
+     "rel": 1
+    },
+    {
+     "t": "Xiaomi Wireless Headphones for Unisex",
+     "c": "wireless headphones",
+     "p": 13160.0,
+     "rel": 1
+    },
+    {
+     "t": "Apple Premium Wireless Headphones",
+     "c": "wireless headphones",
+     "p": 3990.0,
+     "rel": 1
+    },
+    {
+     "t": "Blue Matte plastic Wireless Headphones by Apple",
+     "c": "wireless headphones",
+     "p": 6940.0,
+     "rel": 1
+    },
+    {
+     "t": "Aluminum Wireless Headphones by Samsung",
+     "c": "wireless headphones",
+     "p": 15980.0,
+     "rel": 1
+    },
+    {
+     "t": "Samsung Black Wireless Headphones",
+     "c": "wireless headphones",
+     "p": 10140.0,
+     "rel": 1
+    },
+    {
+     "t": "Grey Wireless Headphones by Sony",
+     "c": "wireless headphones",
+     "p": 12970.0,
+     "rel": 1
+    },
+    {
+     "t": "সিম্ফনি ট্রু ওয়্যারলেস ইয়ারবাডস ব্ল্যাক",
+     "c": "wireless headphones",
+     "p": 1490.0,
+     "rel": 1
+    },
+    {
+     "t": "Sony WH-CH520 Wireless Headphones",
+     "c": "headphones",
+     "p": 5900.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "punjaby",
+   "lang": "banglish",
+   "type": "typo",
+   "n_rel_catalog": 60,
+   "n_results": 10,
+   "ms": 40.0,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "panjabi"
+   },
+   "notes": [
+    "spelling corrected: 'punjaby' -> 'panjabi'",
+    "product group: panjabi"
+   ],
+   "top": [
+    {
+     "t": "Sailor Premium Embroidered Wedding Panjabi (সেইলর বিয়ের পাঞ্জাবি)",
+     "c": "panjabi",
+     "p": 6800.0,
+     "rel": 1
+    },
+    {
+     "t": "Aarong Fine Cotton Festive Eid Panjabi (আড়ং সুতি ঈদ পাঞ্জাবি)",
+     "c": "panjabi",
+     "p": 3400.0,
+     "rel": 1
+    },
+    {
+     "t": "Beige Semi-pure silk Panjabi by Lotto",
+     "c": "panjabi",
+     "p": 4990.0,
+     "rel": 1
+    },
+    {
+     "t": "Yellow Modern Cut Silk Blend Panjabi (ইয়েলো সিল্ক ব্লেন্ড পাঞ্জাবি)",
+     "c": "panjabi",
+     "p": 4200.0,
+     "rel": 1
+    },
+    {
+     "t": "Manyavar Silk Wedding Sherwani & Panjabi Set (বিয়ের শেরওয়ানি সেট)",
+     "c": "panjabi",
+     "p": 18500.0,
+     "rel": 1
+    },
+    {
+     "t": "Gold Semi-pure silk Panjabi by Zara",
+     "c": "panjabi",
+     "p": 3330.0,
+     "rel": 1
+    },
+    {
+     "t": "Aarong Endi Silk Luxury Panjabi",
+     "c": "panjabi",
+     "p": 7500.0,
+     "rel": 1
+    },
+    {
+     "t": "Aarong Premium Panjabi",
+     "c": "panjabi",
+     "p": 2999.0,
+     "rel": 1
+    },
+    {
+     "t": "Kay Kraft Kantha Stitch Handloom Panjabi (কে ক্রাফট কাঁথা স্টিচ পাঞ্জাবি)",
+     "c": "panjabi",
+     "p": 2950.0,
+     "rel": 1
+    },
+    {
+     "t": "Aarong Pure Silk Embroidered Eid Panjabi",
+     "c": "panjabi",
+     "p": 6800.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "juta",
+   "lang": "banglish",
+   "type": "plain",
+   "n_rel_catalog": 231,
+   "n_results": 10,
+   "ms": 233.1,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {},
+   "notes": [
+    "spelling corrected: 'juta' -> 'shoes'",
+    "product group: footwear"
+   ],
+   "top": [
+    {
+     "t": "Bata Traditional Wedding Mojari Juta",
+     "c": "formal shoes",
+     "p": 2400.0,
+     "rel": 1
+    },
+    {
+     "t": "Puma Deviate Nitro 2 Carbon Running Shoes",
+     "c": "running shoes",
+     "p": 16500.0,
+     "rel": 1
+    },
+    {
+     "t": "Adidas Duramo SL Running Shoe",
+     "c": "running shoes",
+     "p": 3600.0,
+     "rel": 1
+    },
+    {
+     "t": "Bata Power Sports Shoes",
+     "c": "running shoes",
+     "p": 2400.0,
+     "rel": 1
+    },
+    {
+     "t": "Dr. Martens 1461 3-Eye Oxford Shoes",
+     "c": "formal shoes",
+     "p": 14500.0,
+     "rel": 1
+    },
+    {
+     "t": "Bata Running Shoes for Unisex",
+     "c": "running shoes",
+     "p": 8480.0,
+     "rel": 1
+    },
+    {
+     "t": "Asics GEL-Kayano 30 Stability Running Shoes",
+     "c": "running shoes",
+     "p": 15800.0,
+     "rel": 1
+    },
+    {
+     "t": "Bata Formal Oxford Shoes",
+     "c": "formal shoes",
+     "p": 3400.0,
+     "rel": 1
+    },
+    {
+     "t": "Gold Synthetic leather Running Shoes by Lotto",
+     "c": "running shoes",
+     "p": 2700.0,
+     "rel": 1
+    },
+    {
+     "t": "Apex Venturini Leather Nagra Mojari Shoes",
+     "c": "formal shoes",
+     "p": 3800.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "babar jonno ghori",
+   "lang": "banglish",
+   "type": "plain",
+   "n_rel_catalog": 60,
+   "n_results": 10,
+   "ms": 218.2,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "wristwatch",
+    "gender": "men",
+    "recipient": "father",
+    "affinities": [
+     "leather wallet",
+     "leather belt",
+     "panjabi",
+     "wristwatch",
+     "ceramic coffee mug"
+    ]
+   },
+   "notes": [
+    "spelling corrected: 'ghori' -> 'wristwatch'",
+    "persona: father",
+    "product group: wristwatch"
+   ],
+   "top": [
+    {
+     "t": "White Leather strap Wristwatch by Aarong",
+     "c": "wristwatch",
+     "p": 2800.0,
+     "rel": 1
+    },
+    {
+     "t": "Fossil Wristwatch for Men",
+     "c": "wristwatch",
+     "p": 10000.0,
+     "rel": 1
+    },
+    {
+     "t": "Titan Gold Wristwatch",
+     "c": "wristwatch",
+     "p": 13530.0,
+     "rel": 1
+    },
+    {
+     "t": "Wildcraft Wristwatch for Unisex",
+     "c": "wristwatch",
+     "p": 4800.0,
+     "rel": 1
+    },
+    {
+     "t": "Titan Wristwatch for Unisex",
+     "c": "wristwatch",
+     "p": 23780.0,
+     "rel": 1
+    },
+    {
+     "t": "Casio Wristwatch for Men",
+     "c": "wristwatch",
+     "p": 19760.0,
+     "rel": 1
+    },
+    {
+     "t": "টাইটান ক্লাসিক ব্রাউন লেদার স্ট্র্যাপ হাতঘড়ি",
+     "c": "wristwatch",
+     "p": 4950.0,
+     "rel": 1
+    },
+    {
+     "t": "Titan White Wristwatch",
+     "c": "wristwatch",
+     "p": 4700.0,
+     "rel": 1
+    },
+    {
+     "t": "ক্যাসিও ক্লাসিক ব্ল্যাক ওয়াটার রেজিস্ট্যান্ট ওয়াচ",
+     "c": "wristwatch",
+     "p": 2250.0,
+     "rel": 1
+    },
+    {
+     "t": "ক্যাসিও এন্টারাইসার ব্ল্যাক স্পোর্টস ঘড়ি",
+     "c": "wristwatch",
+     "p": 3450.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "meyeder kurti",
+   "lang": "banglish",
+   "type": "plain",
+   "n_rel_catalog": 42,
+   "n_results": 10,
+   "ms": 218.6,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "kurti",
+    "gender": "women",
+    "recipient": "women",
+    "affinities": [
+     "saree",
+     "kurti",
+     "salwar kameez",
+     "perfume",
+     "hair dryer"
+    ]
+   },
+   "notes": [
+    "Bangla/Banglish query detected -> translated: 'women kurti'",
+    "persona: women",
+    "product group: kurti"
+   ],
+   "top": [
+    {
+     "t": "Nike Kurti for Women",
+     "c": "kurti",
+     "p": 2420.0,
+     "rel": 1
+    },
+    {
+     "t": "Yellow Premium Kurti",
+     "c": "kurti",
+     "p": 950.0,
+     "rel": 1
+    },
+    {
+     "t": "Richman White Kurti",
+     "c": "kurti",
+     "p": 1970.0,
+     "rel": 1
+    },
+    {
+     "t": "Sailor Designer Embroidered A-Line Kurti (সেইলর ডিজাইনার কুর্তি)",
+     "c": "kurti",
+     "p": 2800.0,
+     "rel": 1
+    },
+    {
+     "t": "Zara Premium Kurti",
+     "c": "kurti",
+     "p": 1310.0,
+     "rel": 1
+    },
+    {
+     "t": "Richman Premium Kurti",
+     "c": "kurti",
+     "p": 2150.0,
+     "rel": 1
+    },
+    {
+     "t": "Aarong Nakshi Embroidered Long Kurti",
+     "c": "kurti",
+     "p": 2800.0,
+     "rel": 1
+    },
+    {
+     "t": "Green Viscose Kurti by Richman",
+     "c": "kurti",
+     "p": 1340.0,
+     "rel": 1
+    },
+    {
+     "t": "Yellow Contemporary Floral Printed Kurti (ইয়েলো সুতি কুর্তি)",
+     "c": "kurti",
+     "p": 2400.0,
+     "rel": 1
+    },
+    {
+     "t": "Cotton Printed Kurti",
+     "c": "kurti",
+     "p": 1900.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "kom dame valo phone",
+   "lang": "banglish",
+   "type": "vague",
+   "n_rel_catalog": 72,
+   "n_results": 10,
+   "ms": 204.9,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "smartphone"
+   },
+   "notes": [
+    "product group: smartphone"
+   ],
+   "top": [
+    {
+     "t": "Vivo V30 Pro 5G Zeiss",
+     "c": "smartphone",
+     "p": 59000.0,
+     "rel": 1
+    },
+    {
+     "t": "Nothing Phone 2a 128GB",
+     "c": "smartphone",
+     "p": 36500.0,
+     "rel": 1
+    },
+    {
+     "t": "ওয়ালটন ওলসিও ক্লাসিক কিপ্যাড বাটন ফোন",
+     "c": "smartphone",
+     "p": 1650.0,
+     "rel": 1
+    },
+    {
+     "t": "Nothing Phone 2 256GB",
+     "c": "smartphone",
+     "p": 68000.0,
+     "rel": 1
+    },
+    {
+     "t": "Motorola Edge 50 Pro 5G",
+     "c": "smartphone",
+     "p": 49000.0,
+     "rel": 1
+    },
+    {
+     "t": "Samsung Galaxy S24+ 256GB",
+     "c": "smartphone",
+     "p": 125000.0,
+     "rel": 1
+    },
+    {
+     "t": "Vivo V30e 5G 128GB",
+     "c": "smartphone",
+     "p": 34000.0,
+     "rel": 1
+    },
+    {
+     "t": "Walton Primo S8 128GB Smartphone (ওয়ালটন প্রিমো স্মার্টফোন)",
+     "c": "smartphone",
+     "p": 18500.0,
+     "rel": 1
+    },
+    {
+     "t": "Xiaomi Redmi Note 13",
+     "c": "smartphone",
+     "p": 21900.0,
+     "rel": 1
+    },
+    {
+     "t": "Xiaomi Poco X6 Pro 5G",
+     "c": "smartphone",
+     "p": 37500.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "bacchader khelna",
+   "lang": "banglish",
+   "type": "vague",
+   "n_rel_catalog": 58,
+   "n_results": 8,
+   "ms": 88.9,
+   "p10": 0.8,
+   "hit1": 1,
+   "ndcg": 0.87,
+   "intent": {
+    "category": "educational toy",
+    "gender": "unisex",
+    "recipient": "kid",
+    "affinities": [
+     "building blocks",
+     "educational toy",
+     "remote control car",
+     "soft teddy bear",
+     "puzzle board"
+    ]
+   },
+   "notes": [
+    "spelling corrected: 'khelna' -> 'educational toy'",
+    "persona: kid",
+    "product group: educational toy"
+   ],
+   "top": [
+    {
+     "t": "Funskool Premium Educational Toy",
+     "c": "educational toy",
+     "p": 2800.0,
+     "rel": 1
+    },
+    {
+     "t": "Funskool Educational Toy for Kids",
+     "c": "educational toy",
+     "p": 1820.0,
+     "rel": 1
+    },
+    {
+     "t": "Funskool Educational Toy for Toddler",
+     "c": "educational toy",
+     "p": 5000.0,
+     "rel": 1
+    },
+    {
+     "t": "Funskool Green Educational Toy",
+     "c": "educational toy",
+     "p": 1460.0,
+     "rel": 1
+    },
+    {
+     "t": "Lego Educational Toy for Toddler",
+     "c": "educational toy",
+     "p": 1690.0,
+     "rel": 1
+    },
+    {
+     "t": "Barbie Premium Educational Toy",
+     "c": "educational toy",
+     "p": 2040.0,
+     "rel": 1
+    },
+    {
+     "t": "Fisher-Price Pink Educational Toy",
+     "c": "educational toy",
+     "p": 2000.0,
+     "rel": 1
+    },
+    {
+     "t": "Green Wood Educational Toy by Fisher-Price",
+     "c": "educational toy",
+     "p": 1900.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "mobile er cover",
+   "lang": "banglish",
+   "type": "plain",
+   "n_rel_catalog": 15,
+   "n_results": 6,
+   "ms": 196.7,
+   "p10": 0.6,
+   "hit1": 1,
+   "ndcg": 0.727,
+   "intent": {
+    "category": "phone case"
+   },
+   "notes": [
+    "product group: phone case"
+   ],
+   "top": [
+    {
+     "t": "Samsung Galaxy Silicone Phone Case",
+     "c": "phone case",
+     "p": 900.0,
+     "rel": 1
+    },
+    {
+     "t": "Spigen Rugged Armor Case for iPhone 15 Pro",
+     "c": "phone case",
+     "p": 2200.0,
+     "rel": 1
+    },
+    {
+     "t": "Spigen Liquid Air Case for Galaxy S24 Ultra",
+     "c": "phone case",
+     "p": 2100.0,
+     "rel": 1
+    },
+    {
+     "t": "Samsung Galaxy S23 Case",
+     "c": "phone case",
+     "p": 1100.0,
+     "rel": 1
+    },
+    {
+     "t": "Apple iPhone Clear Case",
+     "c": "phone case",
+     "p": 1800.0,
+     "rel": 1
+    },
+    {
+     "t": "iPhone 15 Silicone Case",
+     "c": "phone case",
+     "p": 3500.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "শাড়ি",
+   "lang": "bn",
+   "type": "plain",
+   "n_rel_catalog": 63,
+   "n_results": 10,
+   "ms": 239.0,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "saree"
+   },
+   "notes": [
+    "Bangla/Banglish query detected -> translated: 'saree'",
+    "product group: saree"
+   ],
+   "top": [
+    {
+     "t": "টাঙ্গাইল তাঁতের তসর সিল্ক শাড়ি",
+     "c": "saree",
+     "p": 8500.0,
+     "rel": 1
+    },
+    {
+     "t": "Monipuri Handwoven Traditional Saree (মণিপুরী তাঁতের শাড়ি)",
+     "c": "saree",
+     "p": 2800.0,
+     "rel": 1
+    },
+    {
+     "t": "মণিপুরী তাঁতের জ্যামিতিক নকশার সুতি শাড়ি",
+     "c": "saree",
+     "p": 2800.0,
+     "rel": 1
+    },
+    {
+     "t": "Dhakai Muslin Heritage Luxury Saree (ঢাকাই ঐতিহ্যবাহী মসলিন শাড়ি)",
+     "c": "saree",
+     "p": 35000.0,
+     "rel": 1
+    },
+    {
+     "t": "Rajshahi Pure Silk Floral Saree (রাজশাহী রেশম সিল্ক শাড়ি)",
+     "c": "saree",
+     "p": 12500.0,
+     "rel": 1
+    },
+    {
+     "t": "সেইলর ল্যাভেন্ডার অর্গানজা এমব্রয়ডারি শাড়ি",
+     "c": "saree",
+     "p": 6400.0,
+     "rel": 1
+    },
+    {
+     "t": "রাজশাহী খাঁটি সিল্ক ফ্লোরাল প্রিন্ট শাড়ি",
+     "c": "saree",
+     "p": 11500.0,
+     "rel": 1
+    },
+    {
+     "t": "মিরপুর বেনারসি জর্জেট ব্রাইডাল শাড়ি",
+     "c": "saree",
+     "p": 18500.0,
+     "rel": 1
+    },
+    {
+     "t": "Aarong Nakshi Kantha Hand-Stitched Silk Saree (নকশী কাঁথা সিল্ক শাড়ি)",
+     "c": "saree",
+     "p": 21500.0,
+     "rel": 1
+    },
+    {
+     "t": "টাঙ্গাইল তাঁতের সুতি নরম ডেইলী শাড়ি",
+     "c": "saree",
+     "p": 2200.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "পাঞ্জাবি",
+   "lang": "bn",
+   "type": "plain",
+   "n_rel_catalog": 60,
+   "n_results": 10,
+   "ms": 146.1,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "panjabi"
+   },
+   "notes": [
+    "Bangla/Banglish query detected -> translated: 'panjabi'",
+    "product group: panjabi"
+   ],
+   "top": [
+    {
+     "t": "Sailor Premium Embroidered Wedding Panjabi (সেইলর বিয়ের পাঞ্জাবি)",
+     "c": "panjabi",
+     "p": 6800.0,
+     "rel": 1
+    },
+    {
+     "t": "অঞ্জনস বেগুনি সুতি উৎসব পাঞ্জাবি",
+     "c": "panjabi",
+     "p": 2500.0,
+     "rel": 1
+    },
+    {
+     "t": "Kay Kraft Kantha Stitch Handloom Panjabi (কে ক্রাফট কাঁথা স্টিচ পাঞ্জাবি)",
+     "c": "panjabi",
+     "p": 2950.0,
+     "rel": 1
+    },
+    {
+     "t": "Anjans Deshi Handloom Cotton Panjabi (অঞ্জনস তাঁতের সুতি পাঞ্জাবি)",
+     "c": "panjabi",
+     "p": 2400.0,
+     "rel": 1
+    },
+    {
+     "t": "Yellow Modern Cut Silk Blend Panjabi (ইয়েলো সিল্ক ব্লেন্ড পাঞ্জাবি)",
+     "c": "panjabi",
+     "p": 4200.0,
+     "rel": 1
+    },
+    {
+     "t": "আড়ং কাঠালি চাঁপা রঙের সিল্ক মিক্স পাঞ্জাবি",
+     "c": "panjabi",
+     "p": 4800.0,
+     "rel": 1
+    },
+    {
+     "t": "অঞ্জনস কটন স্ট্রাইপ হ্যান্ডলুম পাঞ্জাবি",
+     "c": "panjabi",
+     "p": 2300.0,
+     "rel": 1
+    },
+    {
+     "t": "মায়ানভার ব্রাইডাল মেরুন শেরওয়ানি পাঞ্জাবি সেট",
+     "c": "panjabi",
+     "p": 16500.0,
+     "rel": 1
+    },
+    {
+     "t": "Aarong Fine Cotton Festive Eid Panjabi (আড়ং সুতি ঈদ পাঞ্জাবি)",
+     "c": "panjabi",
+     "p": 3400.0,
+     "rel": 1
+    },
+    {
+     "t": "আড়ং সুতি সুতার কাজে তৈরি হলুদ হলুদের পাঞ্জাবি",
+     "c": "panjabi",
+     "p": 3300.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "জুতা",
+   "lang": "bn",
+   "type": "plain",
+   "n_rel_catalog": 231,
+   "n_results": 10,
+   "ms": 148.0,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "running shoes",
+    "intents": [
+     "gym_fitness"
+    ],
+    "affinities": [
+     "running shoes",
+     "smartwatch",
+     "stainless steel water bottle",
+     "wireless headphones",
+     "t-shirt"
+    ]
+   },
+   "notes": [
+    "Bangla/Banglish query detected -> translated: 'running shoes'",
+    "intent: gym_fitness",
+    "product group: running shoes"
+   ],
+   "top": [
+    {
+     "t": "Adidas Ultraboost Running Shoe",
+     "c": "running shoes",
+     "p": 9800.0,
+     "rel": 1
+    },
+    {
+     "t": "Adidas Ultraboost Light Running Shoes",
+     "c": "running shoes",
+     "p": 16800.0,
+     "rel": 1
+    },
+    {
+     "t": "Nike Pegasus 40 Women's Running Shoe",
+     "c": "running shoes",
+     "p": 5200.0,
+     "rel": 1
+    },
+    {
+     "t": "Nike Vomero 17 Plush Cushion Running Shoes",
+     "c": "running shoes",
+     "p": 14500.0,
+     "rel": 1
+    },
+    {
+     "t": "Asics GEL-Cumulus 25 Road Running Shoes",
+     "c": "running shoes",
+     "p": 12500.0,
+     "rel": 1
+    },
+    {
+     "t": "Nike Air Zoom Pegasus Running Shoe",
+     "c": "running shoes",
+     "p": 4800.0,
+     "rel": 1
+    },
+    {
+     "t": "Nike Air Zoom Pegasus 40 Road Running Shoe",
+     "c": "running shoes",
+     "p": 12500.0,
+     "rel": 1
+    },
+    {
+     "t": "Nike Pegasus Trail 4 GORE-TEX Trail Shoes",
+     "c": "running shoes",
+     "p": 15200.0,
+     "rel": 1
+    },
+    {
+     "t": "Nike Pegasus Trail Shoe",
+     "c": "running shoes",
+     "p": 8900.0,
+     "rel": 1
+    },
+    {
+     "t": "Adidas Duramo SL Running Shoe",
+     "c": "running shoes",
+     "p": 3600.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "ঘড়ি",
+   "lang": "bn",
+   "type": "plain",
+   "n_rel_catalog": 60,
+   "n_results": 10,
+   "ms": 154.2,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "wristwatch"
+   },
+   "notes": [
+    "Bangla/Banglish query detected -> translated: 'wristwatch'",
+    "product group: wristwatch"
+   ],
+   "top": [
+    {
+     "t": "ক্যাসিও এন্টারাইসার ব্ল্যাক স্পোর্টস ঘড়ি",
+     "c": "wristwatch",
+     "p": 3450.0,
+     "rel": 1
+    },
+    {
+     "t": "টাইটান উইমেন্স রোজ গোল্ড মেটাল ঘড়ি",
+     "c": "wristwatch",
+     "p": 5800.0,
+     "rel": 1
+    },
+    {
+     "t": "টাইটান ক্লাসিক ব্রাউন লেদার স্ট্র্যাপ হাতঘড়ি",
+     "c": "wristwatch",
+     "p": 4950.0,
+     "rel": 1
+    },
+    {
+     "t": "ক্যাসিও ক্লাসিক ব্ল্যাক ওয়াটার রেজিস্ট্যান্ট ওয়াচ",
+     "c": "wristwatch",
+     "p": 2250.0,
+     "rel": 1
+    },
+    {
+     "t": "White Leather strap Wristwatch by Aarong",
+     "c": "wristwatch",
+     "p": 2800.0,
+     "rel": 1
+    },
+    {
+     "t": "Aarong Wristwatch",
+     "c": "wristwatch",
+     "p": 8330.0,
+     "rel": 1
+    },
+    {
+     "t": "Wildcraft Wristwatch for Unisex",
+     "c": "wristwatch",
+     "p": 4800.0,
+     "rel": 1
+    },
+    {
+     "t": "Casio Wristwatch for Men",
+     "c": "wristwatch",
+     "p": 19760.0,
+     "rel": 1
+    },
+    {
+     "t": "Titan Wristwatch for Unisex",
+     "c": "wristwatch",
+     "p": 23780.0,
+     "rel": 1
+    },
+    {
+     "t": "Titan Gold Wristwatch",
+     "c": "wristwatch",
+     "p": 13530.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "ল্যাপটপ ৫০০০০ টাকার নিচে",
+   "lang": "bn",
+   "type": "price",
+   "n_rel_catalog": 7,
+   "n_results": 6,
+   "ms": 84.4,
+   "p10": 0.6,
+   "hit1": 1,
+   "ndcg": 0.908,
+   "intent": {
+    "category": "laptop",
+    "max_price": 50000.0
+   },
+   "notes": [
+    "spelling corrected: 'ল্যাপটপ' -> 'laptop'",
+    "Bangla/Banglish query detected -> translated: 'laptop'",
+    "product group: laptop"
+   ],
+   "top": [
+    {
+     "t": "Apple Laptop for Unisex",
+     "c": "laptop",
+     "p": 9500.0,
+     "rel": 1
+    },
+    {
+     "t": "Lenovo IdeaPad Slim 3",
+     "c": "laptop",
+     "p": 49000.0,
+     "rel": 1
+    },
+    {
+     "t": "Anker Premium Laptop",
+     "c": "laptop",
+     "p": 4999.0,
+     "rel": 1
+    },
+    {
+     "t": "Baseus Blade 100W Ultra Thin Laptop Power Bank",
+     "c": "power bank",
+     "p": 8900.0,
+     "rel": 1
+    },
+    {
+     "t": "Lenovo IdeaPad Slim 3 Core i3",
+     "c": "laptop",
+     "p": 49000.0,
+     "rel": 1
+    },
+    {
+     "t": "HP Premium Laptop",
+     "c": "laptop",
+     "p": 10000.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "মায়ের জন্য শাড়ি ২০০০ টাকার উপরে",
+   "lang": "bn",
+   "type": "price",
+   "n_rel_catalog": 59,
+   "n_results": 10,
+   "ms": 329.9,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "saree",
+    "gender": "women",
+    "min_price": 2000.0,
+    "recipient": "mother",
+    "affinities": [
+     "saree",
+     "kurti",
+     "salwar kameez",
+     "necklace",
+     "handbag"
+    ]
+   },
+   "notes": [
+    "Bangla/Banglish query detected -> translated: 'mother saree'",
+    "persona: mother",
+    "product group: saree"
+   ],
+   "top": [
+    {
+     "t": "টাঙ্গাইল তাঁতের সুতি নরম ডেইলী শাড়ি",
+     "c": "saree",
+     "p": 2200.0,
+     "rel": 1
+    },
+    {
+     "t": "Monipuri Handwoven Traditional Saree (মণিপুরী তাঁতের শাড়ি)",
+     "c": "saree",
+     "p": 2800.0,
+     "rel": 1
+    },
+    {
+     "t": "Aarong Nakshi Kantha Hand-Stitched Silk Saree (নকশী কাঁথা সিল্ক শাড়ি)",
+     "c": "saree",
+     "p": 21500.0,
+     "rel": 1
+    },
+    {
+     "t": "মণিপুরী তাঁতের জ্যামিতিক নকশার সুতি শাড়ি",
+     "c": "saree",
+     "p": 2800.0,
+     "rel": 1
+    },
+    {
+     "t": "Rajshahi Pure Silk Floral Saree (রাজশাহী রেশম সিল্ক শাড়ি)",
+     "c": "saree",
+     "p": 12500.0,
+     "rel": 1
+    },
+    {
+     "t": "Dhakai Muslin Heritage Luxury Saree (ঢাকাই ঐতিহ্যবাহী মসলিন শাড়ি)",
+     "c": "saree",
+     "p": 35000.0,
+     "rel": 1
+    },
+    {
+     "t": "Mirpur Traditional Benarasi Katan Wedding Saree (মিরপুর বেনারসি কাতান শাড়ি)",
+     "c": "saree",
+     "p": 24000.0,
+     "rel": 1
+    },
+    {
+     "t": "Aarong Royal Dhakai Jamdani Saree (আড়ং ঢাকাই জামদানি শাড়ি)",
+     "c": "saree",
+     "p": 18500.0,
+     "rel": 1
+    },
+    {
+     "t": "আড়ং খাঁটি সুতি খাদি তাঁতের শাড়ি",
+     "c": "saree",
+     "p": 2700.0,
+     "rel": 1
+    },
+    {
+     "t": "আড়ং মেজেন্টা পিওর সিল্ক পার্টি শাড়ি",
+     "c": "saree",
+     "p": 12800.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "বাচ্চাদের খেলনা",
+   "lang": "bn",
+   "type": "vague",
+   "n_rel_catalog": 58,
+   "n_results": 8,
+   "ms": 115.3,
+   "p10": 0.8,
+   "hit1": 1,
+   "ndcg": 0.87,
+   "intent": {
+    "category": "educational toy",
+    "gender": "unisex",
+    "recipient": "kid",
+    "affinities": [
+     "building blocks",
+     "educational toy",
+     "remote control car",
+     "soft teddy bear",
+     "puzzle board"
+    ]
+   },
+   "notes": [
+    "Bangla/Banglish query detected -> translated: 'kids educational toy'",
+    "persona: kid",
+    "product group: educational toy"
+   ],
+   "top": [
+    {
+     "t": "Funskool Premium Educational Toy",
+     "c": "educational toy",
+     "p": 2800.0,
+     "rel": 1
+    },
+    {
+     "t": "Funskool Educational Toy for Kids",
+     "c": "educational toy",
+     "p": 1820.0,
+     "rel": 1
+    },
+    {
+     "t": "Barbie Premium Educational Toy",
+     "c": "educational toy",
+     "p": 2040.0,
+     "rel": 1
+    },
+    {
+     "t": "Lego Educational Toy for Toddler",
+     "c": "educational toy",
+     "p": 1690.0,
+     "rel": 1
+    },
+    {
+     "t": "Green Wood Educational Toy by Fisher-Price",
+     "c": "educational toy",
+     "p": 1900.0,
+     "rel": 1
+    },
+    {
+     "t": "Funskool Educational Toy for Toddler",
+     "c": "educational toy",
+     "p": 5000.0,
+     "rel": 1
+    },
+    {
+     "t": "Fisher-Price Pink Educational Toy",
+     "c": "educational toy",
+     "p": 2000.0,
+     "rel": 1
+    },
+    {
+     "t": "Funskool Green Educational Toy",
+     "c": "educational toy",
+     "p": 1460.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "saree above 5000",
+   "lang": "en",
+   "type": "price",
+   "n_rel_catalog": 37,
+   "n_results": 10,
+   "ms": 226.7,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "saree",
+    "min_price": 5000.0
+   },
+   "notes": [
+    "product group: saree"
+   ],
+   "top": [
+    {
+     "t": "Nike Premium Saree",
+     "c": "saree",
+     "p": 7260.0,
+     "rel": 1
+    },
+    {
+     "t": "Aarong Muslin Floral Jamdani Luxury Saree",
+     "c": "saree",
+     "p": 32000.0,
+     "rel": 1
+    },
+    {
+     "t": "Aarong Royal Dhakai Jamdani Saree (আড়ং ঢাকাই জামদানি শাড়ি)",
+     "c": "saree",
+     "p": 18500.0,
+     "rel": 1
+    },
+    {
+     "t": "Ecstasy Saree for Women",
+     "c": "saree",
+     "p": 7310.0,
+     "rel": 1
+    },
+    {
+     "t": "Dhakai Muslin Heritage Luxury Saree (ঢাকাই ঐতিহ্যবাহী মসলিন শাড়ি)",
+     "c": "saree",
+     "p": 35000.0,
+     "rel": 1
+    },
+    {
+     "t": "Aarong Nakshi Kantha Hand-Stitched Silk Saree (নকশী কাঁথা সিল্ক শাড়ি)",
+     "c": "saree",
+     "p": 21500.0,
+     "rel": 1
+    },
+    {
+     "t": "H&M Saree for Women",
+     "c": "saree",
+     "p": 10000.0,
+     "rel": 1
+    },
+    {
+     "t": "Mirpur Traditional Benarasi Katan Wedding Saree (মিরপুর বেনারসি কাতান শাড়ি)",
+     "c": "saree",
+     "p": 24000.0,
+     "rel": 1
+    },
+    {
+     "t": "Aarong Dhakai Jamdani Saree Golden Flower",
+     "c": "saree",
+     "p": 18500.0,
+     "rel": 1
+    },
+    {
+     "t": "Aarong Jamdani Handloom Silk Saree Royal",
+     "c": "saree",
+     "p": 22000.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "laptop between 50000 and 80000",
+   "lang": "en",
+   "type": "price",
+   "n_rel_catalog": 6,
+   "n_results": 6,
+   "ms": 143.5,
+   "p10": 0.6,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "laptop",
+    "min_price": 50000.0,
+    "max_price": 80000.0
+   },
+   "notes": [
+    "product group: laptop"
+   ],
+   "top": [
+    {
+     "t": "Dell Inspiron 15 Laptop",
+     "c": "laptop",
+     "p": 62000.0,
+     "rel": 1
+    },
+    {
+     "t": "HP Pavilion Laptop",
+     "c": "laptop",
+     "p": 58000.0,
+     "rel": 1
+    },
+    {
+     "t": "HP Pavilion 15 Core i5 16GB",
+     "c": "laptop",
+     "p": 68000.0,
+     "rel": 1
+    },
+    {
+     "t": "Apple Premium Laptop",
+     "c": "laptop",
+     "p": 78660.0,
+     "rel": 1
+    },
+    {
+     "t": "Dell Inspiron 14 2-in-1 Touch Laptop",
+     "c": "laptop",
+     "p": 79000.0,
+     "rel": 1
+    },
+    {
+     "t": "Xiaomi Navy blue Laptop",
+     "c": "laptop",
+     "p": 51670.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "iphone 15 pro max 256gb",
+   "lang": "en",
+   "type": "brand",
+   "n_rel_catalog": 1,
+   "n_results": 1,
+   "ms": 194.3,
+   "p10": 0.1,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "smartphone",
+    "brand": "apple"
+   },
+   "notes": [
+    "product group: smartphone"
+   ],
+   "top": [
+    {
+     "t": "Apple iPhone 15 Pro Max 256GB",
+     "c": "smartphone",
+     "p": 175000.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "tank top men",
+   "lang": "en",
+   "type": "gap",
+   "n_rel_catalog": 46,
+   "n_results": 10,
+   "ms": 197.2,
+   "p10": 0.2,
+   "hit1": 1,
+   "ndcg": 0.305,
+   "intent": {
+    "gender": "men",
+    "recipient": "men",
+    "affinities": [
+     "shirt",
+     "t-shirt",
+     "panjabi",
+     "jeans",
+     "leather shoes"
+    ]
+   },
+   "notes": [
+    "persona: men"
+   ],
+   "top": [
+    {
+     "t": "Nike Pro Dri-FIT Compression Top",
+     "c": "t-shirt",
+     "p": 2900.0,
+     "rel": 1
+    },
+    {
+     "t": "Men's Thermal Innerwear Set",
+     "c": "thermals",
+     "p": 2100.0,
+     "rel": 0
+    },
+    {
+     "t": "Adidas Essentials 3-Stripes Track Top",
+     "c": "jacket",
+     "p": 5600.0,
+     "rel": 0
+    },
+    {
+     "t": "New Balance Fresh Foam X 1080v13 Shoes",
+     "c": "running shoes",
+     "p": 15800.0,
+     "rel": 0
+    },
+    {
+     "t": "Canon PIXMA G3010 Wireless Ink Tank Printer",
+     "c": "printer",
+     "p": 19800.0,
+     "rel": 1
+    },
+    {
+     "t": "Converse Chuck Taylor All Star Canvas High-Top",
+     "c": "sneakers",
+     "p": 6200.0,
+     "rel": 0
+    },
+    {
+     "t": "Nike Blazer Mid 77 Vintage High-Tops",
+     "c": "sneakers",
+     "p": 9500.0,
+     "rel": 0
+    },
+    {
+     "t": "Lotto Jeans for Men",
+     "c": "jeans",
+     "p": 950.0,
+     "rel": 0
+    },
+    {
+     "t": "এপেক্স মাভেরিক ব্ল্যাক হাই টপ স্নিকার",
+     "c": "sneakers",
+     "p": 3890.0,
+     "rel": 0
+    },
+    {
+     "t": "Adidas Tiro 23 League Training Pants",
+     "c": "trousers",
+     "p": 4200.0,
+     "rel": 0
+    }
+   ]
+  },
+  {
+   "q": "water bottle",
+   "lang": "en",
+   "type": "gap",
+   "n_rel_catalog": 19,
+   "n_results": 10,
+   "ms": 187.6,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "water bottle"
+   },
+   "notes": [
+    "product group: water bottle"
+   ],
+   "top": [
+    {
+     "t": "Nike Sports Water Bottle",
+     "c": "water bottle",
+     "p": 800.0,
+     "rel": 1
+    },
+    {
+     "t": "Milton Steel Water Bottle 1L",
+     "c": "water bottle",
+     "p": 700.0,
+     "rel": 1
+    },
+    {
+     "t": "Reusable Glass Water Bottle",
+     "c": "water bottle",
+     "p": 1400.0,
+     "rel": 1
+    },
+    {
+     "t": "Tupperware Aquasafe 1L Water Bottles 4-Pack",
+     "c": "water bottle",
+     "p": 1600.0,
+     "rel": 1
+    },
+    {
+     "t": "Milton Premium Stainless Steel Water Bottle",
+     "c": "stainless steel water bottle",
+     "p": 680.0,
+     "rel": 1
+    },
+    {
+     "t": "Gold Food-grade stainless steel Stainless Steel Water Bottle by IKEA",
+     "c": "stainless steel water bottle",
+     "p": 900.0,
+     "rel": 1
+    },
+    {
+     "t": "Milton Thermosteel Flip Lid Bottle 1000ml",
+     "c": "water bottle",
+     "p": 1250.0,
+     "rel": 1
+    },
+    {
+     "t": "CamelBak Podium Chill Insulated Bike Bottle 620ml",
+     "c": "water bottle",
+     "p": 1950.0,
+     "rel": 1
+    },
+    {
+     "t": "Milton Premium Stainless Steel Water Bottle",
+     "c": "stainless steel water bottle",
+     "p": 1500.0,
+     "rel": 1
+    },
+    {
+     "t": "Philips Stainless Steel Water Bottle for Unisex",
+     "c": "stainless steel water bottle",
+     "p": 1480.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "ac dc light bulb",
+   "lang": "en",
+   "type": "gap",
+   "n_rel_catalog": 20,
+   "n_results": 3,
+   "ms": 95.4,
+   "p10": 0.0,
+   "hit1": 0,
+   "ndcg": 0.0,
+   "intent": {
+    "category": "air conditioner"
+   },
+   "notes": [
+    "product group: air conditioner"
+   ],
+   "top": [
+    {
+     "t": "Panasonic 1.5 Ton Inverter Split Air Conditioner",
+     "c": "air conditioner",
+     "p": 78000.0,
+     "rel": 0
+    },
+    {
+     "t": "Gree 1.5 Ton Fairy Non-Inverter Air Conditioner",
+     "c": "air conditioner",
+     "p": 52000.0,
+     "rel": 0
+    },
+    {
+     "t": "Dyson Pure Cool TP07 Air Purifier and Tower Fan",
+     "c": "air conditioner",
+     "p": 64000.0,
+     "rel": 0
+    }
+   ]
+  },
+  {
+   "q": "gift for father under 3000",
+   "lang": "en",
+   "type": "vague",
+   "n_rel_catalog": 152,
+   "n_results": 10,
+   "ms": 287.5,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "gender": "men",
+    "max_price": 3000.0,
+    "recipient": "father",
+    "intents": [
+     "gift"
+    ],
+    "affinities": [
+     "leather wallet",
+     "leather belt",
+     "panjabi",
+     "wristwatch",
+     "ceramic coffee mug"
+    ]
+   },
+   "notes": [
+    "persona: father",
+    "intent: gift"
+   ],
+   "top": [
+    {
+     "t": "Aarong Premium Panjabi",
+     "c": "panjabi",
+     "p": 2999.0,
+     "rel": 1
+    },
+    {
+     "t": "আড়ং খাঁটি গরুর চামড়ার পুরুষদের মানিব্যাগ",
+     "c": "leather wallet",
+     "p": 1850.0,
+     "rel": 1
+    },
+    {
+     "t": "Fossil Premium Leather Wallet",
+     "c": "leather wallet",
+     "p": 2800.0,
+     "rel": 1
+    },
+    {
+     "t": "Fastrack Premium Leather Wallet",
+     "c": "leather wallet",
+     "p": 1010.0,
+     "rel": 1
+    },
+    {
+     "t": "Aarong Pure Full-Grain Leather Wallet for Men (আড়ং জেনুইন লেদার মানিব্যাগ)",
+     "c": "leather wallet",
+     "p": 1850.0,
+     "rel": 1
+    },
+    {
+     "t": "Titan Premium Leather Wallet",
+     "c": "leather wallet",
+     "p": 1780.0,
+     "rel": 1
+    },
+    {
+     "t": "Aarong Silver Leather Wallet",
+     "c": "leather wallet",
+     "p": 740.0,
+     "rel": 1
+    },
+    {
+     "t": "Casio Premium Leather Wallet",
+     "c": "leather wallet",
+     "p": 2360.0,
+     "rel": 1
+    },
+    {
+     "t": "Wildcraft Leather Wallet for Men",
+     "c": "leather wallet",
+     "p": 1030.0,
+     "rel": 1
+    },
+    {
+     "t": "Gold Leather Wallet by Fastrack",
+     "c": "leather wallet",
+     "p": 1640.0,
+     "rel": 1
+    }
+   ]
+  }
+ ]
+}
