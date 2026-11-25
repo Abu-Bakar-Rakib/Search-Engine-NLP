@@ -92,6 +92,7 @@ def main():
     ap.add_argument("dataset", choices=["live", "curated"])
     ap.add_argument("--tag", default="baseline")
     ap.add_argument("--sets", default=None, help="comma list of query files, default: <dataset>")
+    ap.add_argument("--dense-only", action="store_true", help="rank by embedding cosine only (measures the model, not the engine)")
     a = ap.parse_args()
 
     queries = []
@@ -100,6 +101,8 @@ def main():
             queries += [json.loads(ln) for ln in f if ln.strip() and not ln.startswith("//")]
     if a.sets:
         a.tag = f"{a.tag}__{a.sets.replace(',', '+')}"
+    if a.dense_only:
+        a.tag += "__dense"
 
     t0 = time.perf_counter()
     eng = build_engine(settings_for(a.dataset))
@@ -114,7 +117,11 @@ def main():
             skipped.append(qd["q"])
             continue
         t = time.perf_counter()
-        out = eng.search(qd["q"], k=K, use_cache=False)
+        if a.dense_only:
+            top = (eng.cat.emb @ eng.qemb.encode_query(qd["q"])).argsort()[::-1][:K]
+            out = {"results": [df.iloc[i].to_dict() for i in top]}
+        else:
+            out = eng.search(qd["q"], k=K, use_cache=False)
         ms = (time.perf_counter() - t) * 1000
         res = out.get("results", [])[:K]
         rels = [1 if is_rel(r, qd, a.dataset) else 0 for r in res]

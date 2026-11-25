@@ -43,6 +43,12 @@ Note: holdout is small (30, only 3 vague) — one query moves it by ~0.015. Grow
 Holdout grown to 100 (vague 20, typo 20, gap 18, plain 15, price 15, brand 12; en 40, bn 30, banglish 30).
 Reference on step2a: **holdout nDCG@10 0.465** — en 0.70, banglish 0.41, **bn 0.20**; price 0.83, brand 0.61, plain 0.50, gap 0.40, **typo 0.30, vague 0.29**.
 Accept rule from here: tuning set (185) up AND holdout (100) not down. Only holdout totals are read, never per-query rows.
+Step 6 (moved up) — embedding model A/B:
+| Model | dense-only nDCG (185) | bn | en | engine nDCG (185) | holdout (100) |
+|---|---|---|---|---|---|
+| paraphrase-multilingual-MiniLM-L12-v2 | 0.316 | **0.012** | 0.50 | 0.592 | 0.465 |
+| multilingual-e5-small (query = raw + translated) | **0.500** | 0.146 | 0.72 | **0.602** | **0.476** |
+The old model barely understood Bangla. e5 alone (0.50) is close to the full engine; inside the engine the gain is small, so rules/bonuses outweigh the dense signal. Adopted e5 (EMB_MODEL, EMB_QUERY=both).
 This is the number later steps must beat. `holdout.jsonl` (30) is checked only at the end of each step.
 
 The engine scores well on the clean catalog it was tuned on, and poorly on the real catalog. Most of the gap comes from the design, not from the models.

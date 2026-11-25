@@ -39,10 +39,12 @@ class Settings:
     warm_file: Optional[str] = None             # text file, one common query per line, pre-cached at start-up
 
     # ---- models ----
-    emb_model: str = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+    emb_model: str = "intfloat/multilingual-e5-small"
     embedder: str = "sentence-transformers"     # "sentence-transformers" | "hashing" (no download, tests)
     index_dir: str = ".lite_search_index"       # product embeddings are persisted here
     use_rerank: bool = True                     # cross-encoder: more accurate, ~+40 ms and +90 MB RAM
+    emb_max_len: int = 128        # tokens per product text for the embedder
+    emb_query: str = "both"        # text embedded for the query: translated | raw | both (raw + translated)
     ce_model: str = "cross-encoder/ms-marco-MiniLM-L-6-v2"
 
     # ---- cache ----

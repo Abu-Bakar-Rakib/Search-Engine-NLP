@@ -622,7 +622,9 @@ class SearchEngine:
                 grp_mask, grp_names = cm_cool, ["room cooling"]
 
         # ── Step 3: Dual retrieval — BM25 + Dense embeddings ──
-        cos = c.emb @ self.qemb.encode_query(q_clean)
+        mode, raw = s.emb_query, nfc(query)
+        emb_text = raw if mode == "raw" else f"{raw} {q_clean}" if (mode == "both" and raw.lower() != q_clean.lower()) else q_clean
+        cos = c.emb @ self.qemb.encode_query(emb_text)
         q_bm25 = f"{q_clean} {re.sub(r'[0-9০-৯]+', ' ', nfc(query.lower()))}" if nlp_intent.language == "bn" else q_clean
         bm = c.bm25(q_bm25)
 
