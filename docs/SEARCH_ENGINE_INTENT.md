@@ -215,6 +215,15 @@ Method: tuning set only (holdout untouched). Per-query signal diagnosis, a plain
 
 ## 8. Roadmap (quality first; every step: alignment check + gate)
 
+**Roadmap 1: done (2026-11-25).** 5,230 pooled (query, product) pairs from Light Search + Typesense were graded 0/1/2 by
+4 Haiku judges (`benchmarks/qrels/qrels.jsonl`). A 45-pair spot check found ~44 right. The main score is now
+`relevance_eval.py --judged`: graded nDCG@10 with a conservative ideal (all-perfect top-10, sized by
+max(judged right, regex catalog count)); every query counts. New (query, product) pairs from later versions:
+`judge_pool.py pool` → judge → `merge`.
+Current (step 3) judged: tuning **0.671**, holdout **0.533** (P@10 0.60, Hit@1 0.71). Typesense hybrid holdout 0.433, keyword 0.328.
+Weakest holdout groups: bn 0.33, vague 0.38, typo 0.43, gap 0.46. **Gate from now on uses judged scores.**
+
+
 1. **Judged labels (measurement).** Pool the top 10 from Light Search and Typesense for all 285 queries. An LLM judges each result, and a human spot-checks 10%. This becomes the main score, and the regex score stays as a second number. It changes the yardstick, not the engine.
 2. **Bangla/Banglish understanding (biggest gain).** (a) Transliterate Bangla script to Latin, then run the catalog typo matcher (handles every English loanword: শ্যামপু → shampoo). (b) A bilingual lexicon built **from catalog vocabulary**, never from benchmark queries: the top product nouns get Bangla script and Banglish spellings (LLM-drafted, human-checked). It is stored as config data.
 3. **Retire the rule layer by family.** Ablate each family (product groups, phrase maps, category hacks, per-product rules). A family is kept only if the holdout says it helps. The rest is replaced by soft, data-driven features.

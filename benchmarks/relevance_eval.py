@@ -140,7 +140,9 @@ def main():
 
     rows, skipped = [], []
     for qd in queries:
-        n_rel = catalog_rel_count(df, qd, a.dataset) if not a.judged else sum(g > 0 for g in ideal.get(qd["q"], []))
+        n_rel = catalog_rel_count(df, qd, a.dataset)
+        if a.judged:  # conservative: catalog may hold more right items than the pool found; queries with none found still count
+            n_rel = max(n_rel, sum(g > 0 for g in ideal.get(qd["q"], [])))
         if n_rel == 0:
             skipped.append(qd["q"])
             continue
@@ -163,7 +165,7 @@ def main():
             "q": qd["q"], "lang": qd.get("lang", "en"), "type": qd.get("type", "plain"),
             "n_rel_catalog": n_rel, "n_results": len(res), "ms": round(ms, 1),
             "p10": sum(rels) / K, "hit1": rels[0] if rels else 0,
-            "ndcg": round(ndcg_graded(grades, ideal[qd["q"]]) if a.judged else ndcg(rels, n_rel), 3),
+            "ndcg": round(ndcg_graded(grades, [2] * min(K, n_rel)) if a.judged else ndcg(rels, n_rel), 3),
             **({"judged": judged} if a.judged else {}),
             "intent": out.get("intent", {}), "notes": out.get("notes", []),
             "top": [{"t": str(r["title"])[:80], "c": str(r["category"])[:40], "p": r["price"], "rel": x}
