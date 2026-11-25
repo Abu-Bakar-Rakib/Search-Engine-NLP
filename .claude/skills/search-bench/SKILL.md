@@ -20,7 +20,7 @@ Measures search quality with labeled queries and blocks changes that make it wor
 3. Compare:
    `.venv/bin/python benchmarks/compare.py curated <baseline_tag> <tag>`
    `.venv/bin/python benchmarks/compare.py live <baseline_tag> <tag>`
-4. Gate (from `docs/SEARCH_ENGINE_INTENT.md` §5): accept only if live nDCG@10 (`--sets live,live_extra`) goes up, curated drops by no more than 0.01, AND holdout (`--sets holdout`, 100 q) does not drop (`compare.py` exits 1 on a drop). Read only holdout totals, never its per-query rows.
+4. Gate (from `docs/SEARCH_ENGINE_INTENT.md` §5): accept only if live nDCG@10 (`--sets live,live_extra`) goes up, curated drops by no more than 0.01, AND holdout (`--sets holdout`, 100 q) does not drop. Use `--judged` (LLM-graded qrels) as the main score; judge new pairs with `judge_pool.py` (`compare.py` exits 1 on a drop). Read only holdout totals, never its per-query rows.
 5. For every query in the "worse" list, open its `top` list in `benchmarks/results/<ds>_<tag>.json` and give the cause in one line.
 6. Report in a short table: dataset · nDCG@10 · P@10 · Zero% · p95, old → new, then PASS/FAIL, then the worse-query causes.
 7. Add the new row to the baseline table section in `docs/SEARCH_ENGINE_INTENT.md` ("Progress" table).
