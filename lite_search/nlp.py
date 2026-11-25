@@ -86,6 +86,15 @@ class DomainPack:
         )
         self.bangla_dict_items = sorted(self.bangla_dict.items(), key=lambda x: -len(x[0]))
 
+    def merge_bangla_words(self, words: Dict[str, str]) -> None:
+        """Add extra Bangla/Banglish -> English words (e.g. the catalog-built lexicon). Existing entries win, and the
+        words the price parser reads are never translated."""
+        for k, v in words.items():
+            k = unicodedata.normalize("NFC", k)
+            if k not in PRICE_WORDS:
+                self.bangla_dict.setdefault(k, v)
+        self.bangla_dict_items = sorted(self.bangla_dict.items(), key=lambda x: -len(x[0]))
+
     @classmethod
     def from_file(cls, filepath: str) -> "DomainPack":
         with open(filepath, "r", encoding="utf-8") as f:
@@ -572,6 +581,12 @@ _EN_PHRASE_MAPS = [
 _COMPILED_EN_PHRASE_MAPS = [(re.compile(pat, flags=re.IGNORECASE), rep) for pat, rep in _EN_PHRASE_MAPS]
 
 
+# Words the price parser reads. Dictionaries must never translate them (e.g. টাকা -> "money" breaks "২০০০ টাকার উপরে").
+CURRENCY_WORDS = {"tk", "taka", "takar", "bdt", "৳", "টাকা", "টাকার", "টাকায়"}
+PRICE_WORDS = CURRENCY_WORDS | {"under", "below", "above", "over", "between", "upto", "within", "niche", "upore", "beshi", "kom",
+                                "moddhe", "theke", "নিচে", "উপরে", "বেশি", "কম", "মধ্যে", "থেকে", "ভিতর", "ভেতর", "পর্যন্ত", "ঊর্ধ্বে"}
+
+
 class QueryParser:
     """Full Bangla/Banglish/English query parser with structured intent extraction."""
 
@@ -763,7 +778,7 @@ class QueryParser:
         min_p: Optional[float] = None
         max_p: Optional[float] = None
 
-        CURR = r"(?:tk|taka|takar|bdt|৳|টাকা|টাকার|টাকায়)"
+        CURR = rf"(?:{'|'.join(sorted(CURRENCY_WORDS, key=len, reverse=True))})"
         # number with optional "k" (5k = 5000); never a spec like 128gb / 5000mah / 65w / 55 inch
         NUM = r"(\d+(?:\.\d+)?)\s*(k)?(?![\w.]|\s*(?:gb|tb|mb|mah|w|watt|inch|hz|mp|ml|l|kg|g|cm|mm)\b)"
 

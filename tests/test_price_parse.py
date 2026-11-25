@@ -29,6 +29,16 @@ def test_price():
     assert not bad, "\n".join(bad)
 
 
+def test_price_survives_lexicon():
+    """A word list that translates currency words (টাকা -> money) must not break Bangla price phrases."""
+    qp = QueryParser()
+    qp.dp.merge_bangla_words({"টাকা": "money", "উপরে": "top", "niche": "bottom"})
+    for q, lo, hi in [("৫০০০ টাকার উপরে ঘড়ি", 5000, None), ("500 takar niche t-shirt", None, 500)]:
+        it = qp.parse(q)
+        assert (it.min_price, it.max_price) == (lo, hi), (q, it.min_price, it.max_price)
+
+
 if __name__ == "__main__":
     test_price()
+    test_price_survives_lexicon()
     print(f"ok - {len(CASES)} price cases")

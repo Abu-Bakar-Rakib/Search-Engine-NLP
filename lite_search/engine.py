@@ -69,6 +69,9 @@ class SearchEngine:
         self._ce = None
         # Advanced NLP parser (Bangla/Banglish + persona + intent)
         self._nlp = QueryParser(DomainPack.default())
+        if settings.bn_lexicon:  # catalog-built Bangla/Banglish words (config data); hand-made domain-pack entries win
+            p = os.path.join(os.path.dirname(__file__), "lexicon_bn_catalog.json")
+            self._nlp.dp.merge_bangla_words(json.load(open(p, encoding="utf-8"))["bangla_dictionary"])
         self._nlp.set_catalog(catalog)
         # Intent compatibility score cache
         self._intent_score_cache: Dict[Tuple, np.ndarray] = {}

@@ -243,3 +243,17 @@ Postponed: speed (Step 5).
 4. Gate (judged): tuning up, curated within 0.01, holdout not down, original tests pass. New result pairs are judged first.
 Result (judged): tuning 0.671 → **0.686** (bn 0.54 → 0.60, typo 0.61 → 0.70, 0 queries worse), curated 0.936 (no change),
 holdout 0.533 → **0.554** (bn 0.33 → 0.40, typo 0.43 → 0.51). 77 new pairs judged first (judged coverage 100%). Adopted `BN_TRANSLIT=true`.
+
+### Roadmap 2b — catalog-built Bangla/Banglish lexicon. Alignment check
+1. Intent: *Bangla and Banglish shoppers*; *business rules and language data are config, not code*.
+2. General: the word list comes from the catalog's top 2,500 title words (not from benchmark queries; the drafting LLM
+   never saw them). 1,035 words → 1,400 Bangla/Banglish spellings. Filters: Banglish spellings that are real catalog words
+   are dropped; ambiguous spellings go to the more common catalog word; hand-made entries win.
+3. Config: `lite_search/lexicon_bn_catalog.json` (data) + `BN_LEXICON` on/off. Same lookup path as the existing dictionary.
+4. Gate (judged): tuning up, curated within 0.01, holdout not down, tests pass.
+First run: tuning +0.021 but Bangla price queries broke (curated −0.02, gate FAIL). General cause: the list mapped টাকা → "money",
+and suffix stripping made টাকার → টাকা, so the price parser lost its currency word. Fix (general): the price parser's own
+words (`PRICE_WORDS` in nlp.py: currencies, above/below/between in en/bn/banglish) are never translated by any dictionary
+(`DomainPack.merge_bangla_words`, unit test `test_price_survives_lexicon`).
+Result (judged): tuning 0.686 → **0.722** (bn 0.60 → 0.70, banglish 0.60 → 0.65, 0 queries worse), curated 0.936 (no change),
+holdout 0.554 → **0.578** (bn 0.40 → 0.45, banglish 0.47 → 0.50, gap 0.46 → 0.54). Adopted `BN_LEXICON=true`.
