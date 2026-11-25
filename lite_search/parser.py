@@ -13,7 +13,7 @@ SCHEMA_KEYS = ["category", "brand", "size", "color", "material", "gender", "requ
 SIGNAL_KEYS = ["category", "brand", "size", "color", "material", "gender", "min_price", "max_price"]
 
 # ---------------- price ----------------
-_NUM = r"(?:[$₹৳£€]\s*)?(\d+(?:\.\d+)?)\s*(k)?\b"
+_NUM = r"(?:[$₹৳£€]\s*)?(\d+(?:\.\d+)?)\s*(k)?\b(?!\s*(?:gb|tb|mb|mah|w|watt|inch|hz|mp)\b)"
 _CUR = r"(?:\s*(?:usd|dollars?|taka|tk|bdt|rs|inr|rupees?|eur|euros?|gbp|pounds?))?"
 _LOW = r"(?:under|below|less than|upto|up to|within|maximum|max|cheaper than|not more than|<)"
 _HIGH = r"(?:over|above|more than|at least|minimum|min|starting from|>)"
@@ -162,7 +162,8 @@ class RuleParser:
         self.groups = groups or L.GROUPS
         by_len = lambda x: -len(x)
         raw_brands = catalog.vocab_values("brand")
-        self.brands = sorted([b for b in raw_brands if b.lower() not in _NOISY_BRANDS and len(b.strip()) >= 2], key=by_len)
+        self.brands = sorted([b for b in raw_brands if b.lower() not in _NOISY_BRANDS and len(b.strip()) >= 2
+                              and self._brandlike(b, catalog)], key=by_len)
         brand_alnum = {alnum(b) for b in self.brands}
         raw_cats = catalog.vocab_values("category")
         self.cats = sorted(
@@ -178,6 +179,25 @@ class RuleParser:
             m = catalog.category_mask(cats)
             if m.any():
                 self.group_masks[g] = m
+
+    _brand_stats = None
+
+    @classmethod
+    def _brandlike(cls, b, catalog, min_ratio=0.15, rare_df=20):
+        """A one-word brand counts only if titles using the word mostly carry it as their brand.
+        Drops generic words a shop typed as brand ('top', 'hot', 'water': ratio < 0.05)."""
+        if " " in b.strip():
+            return True
+        if cls._brand_stats is None or cls._brand_stats[0] is not catalog:
+            from collections import Counter
+            bcount = Counter(catalog.brand_n)
+            words = {k for k in bcount if k}
+            tdf = Counter(w for t in catalog.title_lower for w in set(re.findall(r"[a-z0-9]+", t)) if w in words)
+            cls._brand_stats = (catalog, bcount, tdf)
+        _, bcount, tdf = cls._brand_stats
+        k = alnum(b)
+        df = tdf.get(k, 0)
+        return df < rare_df or bcount.get(k, 0) / df >= min_ratio
 
     # ---- normalisation: Banglish -> English ----
     def alias_pass(self, query: str) -> str:

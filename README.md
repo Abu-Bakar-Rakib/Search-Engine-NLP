@@ -10,6 +10,8 @@
 
 **High-Performance Multilingual Hybrid Search Engine for E-Commerce Backends**  
 *Dual Sparse BM25 + Dense Semantic Vectors + Reciprocal Rank Fusion (RRF) + Neural Cross-Encoder Reranking*  
+
+> **Design intent, rules and progress:** see [`docs/SEARCH_ENGINE_INTENT.md`](docs/SEARCH_ENGINE_INTENT.md). Rule zero: no per-query tuning.
 *Full Native Support for Bangla (বাংলা), Banglish Phonetics, and English*
 </div>
 

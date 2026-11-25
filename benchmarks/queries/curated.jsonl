@@ -1,0 +1,50 @@
+{"q": "running shoes", "lang": "en", "type": "plain", "rel": "running shoes"}
+{"q": "nike running shoes under 5000", "lang": "en", "type": "price", "rel": "nike.*running shoes|running shoes.*nike", "max_price": 5000}
+{"q": "black cotton t-shirt for men", "lang": "en", "type": "plain", "rel": "t-shirt"}
+{"q": "panjabi", "lang": "en", "type": "plain", "rel": "panjabi"}
+{"q": "aarong panjabi", "lang": "en", "type": "brand", "rel": "aarong.*panjabi|panjabi.*aarong"}
+{"q": "saree for mother", "lang": "en", "type": "plain", "rel": "saree"}
+{"q": "smartphone under 25000", "lang": "en", "type": "price", "rel": "smartphone", "not": "case|cover|protector|charger|cable|strap", "max_price": 25000}
+{"q": "samsung phone", "lang": "en", "type": "brand", "rel": "samsung.*smartphone|smartphone.*samsung|galaxy", "not": "case|cover|protector|charger|cable|strap"}
+{"q": "laptop for programming", "lang": "en", "type": "vague", "rel": "laptop", "not": "bag|stand"}
+{"q": "wireless headphones", "lang": "en", "type": "plain", "rel": "headphone|earbud"}
+{"q": "smartwatch", "lang": "en", "type": "plain", "rel": "smartwatch"}
+{"q": "leather wallet for men", "lang": "en", "type": "plain", "rel": "wallet"}
+{"q": "backpack for school", "lang": "en", "type": "plain", "rel": "backpack"}
+{"q": "power bank", "lang": "en", "type": "plain", "rel": "power bank"}
+{"q": "beard trimmer", "lang": "en", "type": "plain", "rel": "trimmer"}
+{"q": "perfume for women", "lang": "en", "type": "plain", "rel": "perfume"}
+{"q": "kurti", "lang": "en", "type": "plain", "rel": "kurti"}
+{"q": "salwar kameez", "lang": "en", "type": "plain", "rel": "salwar"}
+{"q": "winter jacket", "lang": "en", "type": "plain", "rel": "jacket"}
+{"q": "hoodie", "lang": "en", "type": "plain", "rel": "hoodie"}
+{"q": "tablet", "lang": "en", "type": "plain", "rel": "tablet", "not": "case|cover"}
+{"q": "sandals", "lang": "en", "type": "plain", "rel": "sandal"}
+{"q": "formal shoes for office", "lang": "en", "type": "plain", "rel": "formal shoes"}
+{"q": "jeans", "lang": "en", "type": "plain", "rel": "jeans"}
+{"q": "cookware set", "lang": "en", "type": "plain", "rel": "cookware"}
+{"q": "adiddas sneakers", "lang": "en", "type": "typo", "rel": "adidas"}
+{"q": "samsang phone", "lang": "en", "type": "typo", "rel": "samsung", "not": "case|cover|protector|charger|cable|strap"}
+{"q": "leptop", "lang": "en", "type": "typo", "rel": "laptop", "not": "bag|stand"}
+{"q": "hedphone", "lang": "en", "type": "typo", "rel": "headphone|earbud"}
+{"q": "punjaby", "lang": "banglish", "type": "typo", "rel": "panjabi"}
+{"q": "juta", "lang": "banglish", "type": "plain", "rel": "shoe|sneaker|sandal"}
+{"q": "babar jonno ghori", "lang": "banglish", "type": "plain", "rel": "watch"}
+{"q": "meyeder kurti", "lang": "banglish", "type": "plain", "rel": "kurti"}
+{"q": "kom dame valo phone", "lang": "banglish", "type": "vague", "rel": "smartphone", "not": "case|cover|protector|charger|cable|strap"}
+{"q": "bacchader khelna", "lang": "banglish", "type": "vague", "rel": "toy|puzzle|block|doll|lego"}
+{"q": "mobile er cover", "lang": "banglish", "type": "plain", "rel": "case|cover"}
+{"q": "শাড়ি", "lang": "bn", "type": "plain", "rel": "saree"}
+{"q": "পাঞ্জাবি", "lang": "bn", "type": "plain", "rel": "panjabi"}
+{"q": "জুতা", "lang": "bn", "type": "plain", "rel": "shoe|sneaker|sandal"}
+{"q": "ঘড়ি", "lang": "bn", "type": "plain", "rel": "watch"}
+{"q": "ল্যাপটপ ৫০০০০ টাকার নিচে", "lang": "bn", "type": "price", "rel": "laptop", "not": "bag|stand", "max_price": 50000}
+{"q": "মায়ের জন্য শাড়ি ২০০০ টাকার উপরে", "lang": "bn", "type": "price", "rel": "saree", "min_price": 2000}
+{"q": "বাচ্চাদের খেলনা", "lang": "bn", "type": "vague", "rel": "toy|puzzle|block|doll|lego"}
+{"q": "saree above 5000", "lang": "en", "type": "price", "rel": "saree", "min_price": 5000}
+{"q": "laptop between 50000 and 80000", "lang": "en", "type": "price", "rel": "laptop", "not": "bag|stand", "min_price": 50000, "max_price": 80000}
+{"q": "iphone 15 pro max 256gb", "lang": "en", "type": "brand", "rel": "iphone 15 pro max", "not": "case|cover|protector|charger|cable|strap"}
+{"q": "tank top men", "lang": "en", "type": "gap", "rel": "tank|sleeveless|t-shirt|vest"}
+{"q": "water bottle", "lang": "en", "type": "gap", "rel": "bottle"}
+{"q": "ac dc light bulb", "lang": "en", "type": "gap", "rel": "bulb|light|lamp"}
+{"q": "gift for father under 3000", "lang": "en", "type": "vague", "rel": "wallet|watch|panjabi|shirt|perfume|trimmer|belt|sunglass", "max_price": 3000}

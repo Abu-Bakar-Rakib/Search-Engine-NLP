@@ -39,10 +39,12 @@ class Settings:
     warm_file: Optional[str] = None             # text file, one common query per line, pre-cached at start-up
 
     # ---- models ----
-    emb_model: str = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+    emb_model: str = "intfloat/multilingual-e5-small"
     embedder: str = "sentence-transformers"     # "sentence-transformers" | "hashing" (no download, tests)
     index_dir: str = ".lite_search_index"       # product embeddings are persisted here
     use_rerank: bool = True                     # cross-encoder: more accurate, ~+40 ms and +90 MB RAM
+    emb_max_len: int = 128        # tokens per product text for the embedder
+    emb_query: str = "both"        # text embedded for the query: translated | raw | both (raw + translated)
     ce_model: str = "cross-encoder/ms-marco-MiniLM-L-6-v2"
 
     # ---- cache ----
@@ -63,6 +65,11 @@ class Settings:
     boost_scale: float = 1.0
     pool: int = 20                # candidates kept for tiers / rerank
     ce_weight: float = 0.5
+    typo_expand: bool = True      # typo + last-word prefix matching from catalog vocabulary (lite_search/typo.py)
+    bn_translit: bool = True      # Bangla-script loanwords -> catalog words via transliteration + phonetic key
+    bn_lexicon: bool = True       # merge lite_search/lexicon_bn_catalog.json into the Bangla dictionary
+    rules_off: str = ""            # comma list of legacy rule families to disable (measurement / retirement, see intent doc roadmap 3)
+    dense_tier: float = 25.0      # max bonus from the meaning (embedding) score; keyword bonus max is 15
     group_tier: float = 50.0      # same product type as the query always ranks first
     price_tier: float = 6.0       # inside the price range
     price_near: float = 3.0       # outside the range, closer = higher
@@ -71,6 +78,7 @@ class Settings:
     cos_min: float = 0.30         # confidence gate for the "closest products" fallback
     ce_min: float = -8.0
     min_results: int = 3          # relax size/gender filters when fewer products survive
+    never_empty: bool = True      # if strict filters leave 0 results, show closest matches (business can turn off)
 
     # ---- server ----
     cors_origins: Optional[str] = None          # "*" or "https://shop.example.com,https://admin.example.com"
@@ -93,7 +101,7 @@ class Settings:
                 v = int(v)
             elif t in (float, "float"):
                 v = float(v)
-            elif "Optional[int]" in str(t):
+            elif "Optional[int]" in str(t) or "int | None" in str(t):
                 v = int(v)
             setattr(s, f.name, v)
         cm = os.environ.get("COLUMN_MAP")  # "product_name:title,cat:category"

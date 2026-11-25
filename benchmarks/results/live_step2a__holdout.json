@@ -1,0 +1,2438 @@
+{
+ "dataset": "live",
+ "tag": "step2a__holdout",
+ "products": 100420,
+ "overall": {
+  "queries": 30,
+  "P@10": 0.44,
+  "Hit@1": 0.533,
+  "nDCG@10": 0.488,
+  "Zero%": 0.0,
+  "lat_p50_ms": 463.4,
+  "lat_p95_ms": 694.2
+ },
+ "by_lang": {
+  "banglish": {
+   "queries": 9,
+   "P@10": 0.344,
+   "Hit@1": 0.444,
+   "nDCG@10": 0.414,
+   "Zero%": 0.0,
+   "lat_p50_ms": 443.2,
+   "lat_p95_ms": 694.2
+  },
+  "bn": {
+   "queries": 9,
+   "P@10": 0.233,
+   "Hit@1": 0.222,
+   "nDCG@10": 0.23,
+   "Zero%": 0.0,
+   "lat_p50_ms": 490.2,
+   "lat_p95_ms": 642.3
+  },
+  "en": {
+   "queries": 12,
+   "P@10": 0.667,
+   "Hit@1": 0.833,
+   "nDCG@10": 0.738,
+   "Zero%": 0.0,
+   "lat_p50_ms": 433.0,
+   "lat_p95_ms": 741.0
+  }
+ },
+ "by_type": {
+  "brand": {
+   "queries": 5,
+   "P@10": 0.54,
+   "Hit@1": 0.8,
+   "nDCG@10": 0.704,
+   "Zero%": 0.0,
+   "lat_p50_ms": 447.2,
+   "lat_p95_ms": 554.5
+  },
+  "gap": {
+   "queries": 4,
+   "P@10": 0.2,
+   "Hit@1": 0.25,
+   "nDCG@10": 0.214,
+   "Zero%": 0.0,
+   "lat_p50_ms": 438.8,
+   "lat_p95_ms": 487.0
+  },
+  "plain": {
+   "queries": 7,
+   "P@10": 0.286,
+   "Hit@1": 0.429,
+   "nDCG@10": 0.353,
+   "Zero%": 0.0,
+   "lat_p50_ms": 453.6,
+   "lat_p95_ms": 741.0
+  },
+  "price": {
+   "queries": 6,
+   "P@10": 0.933,
+   "Hit@1": 1.0,
+   "nDCG@10": 0.955,
+   "Zero%": 0.0,
+   "lat_p50_ms": 624.5,
+   "lat_p95_ms": 694.2
+  },
+  "typo": {
+   "queries": 5,
+   "P@10": 0.4,
+   "Hit@1": 0.4,
+   "nDCG@10": 0.4,
+   "Zero%": 0.0,
+   "lat_p50_ms": 429.0,
+   "lat_p95_ms": 490.2
+  },
+  "vague": {
+   "queries": 3,
+   "P@10": 0.033,
+   "Hit@1": 0.0,
+   "nDCG@10": 0.024,
+   "Zero%": 0.0,
+   "lat_p50_ms": 463.4,
+   "lat_p95_ms": 538.6
+  }
+ },
+ "skipped_no_relevant_in_catalog": [],
+ "queries": [
+  {
+   "q": "coffee maker",
+   "lang": "en",
+   "type": "plain",
+   "n_rel_catalog": 78,
+   "n_results": 10,
+   "ms": 421.0,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "coffee maker"
+   },
+   "notes": [
+    "product group: coffee maker"
+   ],
+   "top": [
+    {
+     "t": "Siemens Tc80104 Coffee Maker",
+     "c": "coffee maker",
+     "p": 8647.0,
+     "rel": 1
+    },
+    {
+     "t": "Westinghouse CH800 1.5L Coffee Maker",
+     "c": "coffee maker",
+     "p": 3564.0,
+     "rel": 1
+    },
+    {
+     "t": "Miyako CM-327 2L Coffee Maker",
+     "c": "coffee maker",
+     "p": 2829.0,
+     "rel": 1
+    },
+    {
+     "t": "Braun Drip Coffee Maker (KF1100BK)",
+     "c": "coffee maker",
+     "p": 6587.0,
+     "rel": 1
+    },
+    {
+     "t": "Miyako CM-2010A Espresso Coffee Maker",
+     "c": "coffee maker",
+     "p": 9989.0,
+     "rel": 1
+    },
+    {
+     "t": "RedSwiss 1200W Electric Coffee Maker (RSCM-118)",
+     "c": "coffee maker",
+     "p": 3205.0,
+     "rel": 1
+    },
+    {
+     "t": "Ocean 1.25L Coffee Maker (OCM2037)",
+     "c": "coffee maker",
+     "p": 3288.0,
+     "rel": 1
+    },
+    {
+     "t": "Philips 1.8L Coffee Maker (EP4346/70)",
+     "c": "coffee maker",
+     "p": 152985.0,
+     "rel": 1
+    },
+    {
+     "t": "Miyako Espresso Coffee Maker (CM-2036 BT)",
+     "c": "coffee maker",
+     "p": 10470.0,
+     "rel": 1
+    },
+    {
+     "t": "Ocean 1.5L Electric Coffee Maker (OCM6622)",
+     "c": "coffee maker",
+     "p": 4695.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "chess board",
+   "lang": "en",
+   "type": "plain",
+   "n_rel_catalog": 2,
+   "n_results": 10,
+   "ms": 409.8,
+   "p10": 0.1,
+   "hit1": 1,
+   "ndcg": 0.613,
+   "intent": {},
+   "notes": [
+    "no exact match - showing closest results"
+   ],
+   "top": [
+    {
+     "t": "Wooden Memory Match Game, Stick Chess Game, Educational Toy BD, Brain Training B",
+     "c": "toys & games",
+     "p": 409.0,
+     "rel": 1
+    },
+    {
+     "t": "Table Tennis Board with Wheels",
+     "c": "table tennis",
+     "p": 35558.0,
+     "rel": 0
+    },
+    {
+     "t": "Board Multipurpose Double-Sided Magnetic Mathematical Calculations and English A",
+     "c": "bags and travel 2",
+     "p": 278.0,
+     "rel": 0
+    },
+    {
+     "t": "Table Tennis Board - Giant Dragon - 6808 Blue - Blue",
+     "c": "table tennis",
+     "p": 33420.0,
+     "rel": 0
+    },
+    {
+     "t": "Bisk Club Chessboard Cookies 185gm",
+     "c": "bread & bakery",
+     "p": 63.0,
+     "rel": 0
+    },
+    {
+     "t": "New Double Balance Ball Maze Puzzle Handheld Board Game for Kids - Children 3D E",
+     "c": "toys & games",
+     "p": 50.0,
+     "rel": 0
+    },
+    {
+     "t": "Xigmatek DUKE #EN49158# ATX Mid Tower Gaming Casing",
+     "c": "computers & it",
+     "p": 4248.0,
+     "rel": 0
+    },
+    {
+     "t": "Shoe Rack MDF Board with Lacqer polish",
+     "c": "mdf board",
+     "p": 3936.0,
+     "rel": 0
+    },
+    {
+     "t": "FANTECH MARS II HQ54 WIRED GAMING HEADSET FOR MULTI-PLATFORM COMPATIBILITY MOBIL",
+     "c": "computers & it",
+     "p": 1195.0,
+     "rel": 0
+    },
+    {
+     "t": "Table Tennis Board - Giant Dragon - 2005 - Blue",
+     "c": "table tennis",
+     "p": 62985.0,
+     "rel": 0
+    }
+   ]
+  },
+  {
+   "q": "air purifier",
+   "lang": "en",
+   "type": "plain",
+   "n_rel_catalog": 49,
+   "n_results": 10,
+   "ms": 741.0,
+   "p10": 0.9,
+   "hit1": 1,
+   "ndcg": 0.861,
+   "intent": {
+    "category": "air purifier"
+   },
+   "notes": [
+    "product group: air purifier"
+   ],
+   "top": [
+    {
+     "t": "Panasonic Air Purifier (F-PXJ30AHM)",
+     "c": "air purifier",
+     "p": 20988.0,
+     "rel": 1
+    },
+    {
+     "t": "Xiaomi Mi Air Purifier HEPA Filter",
+     "c": "air purifier",
+     "p": 4989.0,
+     "rel": 0
+    },
+    {
+     "t": "Hitachi EP-P50J Air Purifier",
+     "c": "air purifier",
+     "p": 42500.0,
+     "rel": 1
+    },
+    {
+     "t": "Philips Air Purifier (AC3033/10)",
+     "c": "air purifier",
+     "p": 61980.0,
+     "rel": 1
+    },
+    {
+     "t": "Philips Air Purifier AC-0917",
+     "c": "air purifier",
+     "p": 28192.0,
+     "rel": 1
+    },
+    {
+     "t": "Philips 44m² Air Purifier (AC0650/20)",
+     "c": "air purifier",
+     "p": 20900.0,
+     "rel": 1
+    },
+    {
+     "t": "Philips 527Sqft Air Purifier (AC0850/20)",
+     "c": "air purifier",
+     "p": 26705.0,
+     "rel": 1
+    },
+    {
+     "t": "Gree Portable Inverter Air Purifier (GCF-350ASNB)",
+     "c": "air purifier",
+     "p": 19987.0,
+     "rel": 1
+    },
+    {
+     "t": "Sharp FP-J80E-H Inverter Air Purifier",
+     "c": "air purifier",
+     "p": 55587.0,
+     "rel": 1
+    },
+    {
+     "t": "Sharp FP-J60E-W Inverter Air Purifier",
+     "c": "air purifier",
+     "p": 43585.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "hair straightener under 3000",
+   "lang": "en",
+   "type": "price",
+   "n_rel_catalog": 90,
+   "n_results": 10,
+   "ms": 573.7,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "hair straighteners",
+    "max_price": 3000.0
+   },
+   "notes": [
+    "product group: hair straighteners"
+   ],
+   "top": [
+    {
+     "t": "Decakila 43W Hair Straightener (KEHS034B)",
+     "c": "hair straighteners",
+     "p": 2175.0,
+     "rel": 1
+    },
+    {
+     "t": "Mino 3-in-1 Hair Straightener and Hair Curler",
+     "c": "hair straighteners",
+     "p": 925.0,
+     "rel": 1
+    },
+    {
+     "t": "Philips Hair Straightener (HP8303/06)",
+     "c": "hair straighteners",
+     "p": 2734.0,
+     "rel": 1
+    },
+    {
+     "t": "Kemei KM-531 Professional Hair Straightener",
+     "c": "hair straighteners",
+     "p": 915.0,
+     "rel": 1
+    },
+    {
+     "t": "Kemei Professional Hair Straightener (KM-328)",
+     "c": "hair straighteners",
+     "p": 868.0,
+     "rel": 1
+    },
+    {
+     "t": "Kemei KM-329 Ceramic Flat Hair Straightener",
+     "c": "hair straighteners",
+     "p": 916.0,
+     "rel": 1
+    },
+    {
+     "t": "FB161 Electronic Modelling Hair Comb Iron for Beauty Modeling Comb Hair Straight",
+     "c": "hair straighteners",
+     "p": 594.0,
+     "rel": 1
+    },
+    {
+     "t": "Weston Hair Straightener",
+     "c": "hair",
+     "p": 1498.0,
+     "rel": 1
+    },
+    {
+     "t": "Mini Hair Straightening And Curling Irons Portable Hair Curler - Mini Hair Strai",
+     "c": "beauty & personal care",
+     "p": 335.0,
+     "rel": 1
+    },
+    {
+     "t": "KEMEI KM-2218A Professional Hair Straightener",
+     "c": "hair",
+     "p": 1815.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "gaming laptop above 100000",
+   "lang": "en",
+   "type": "price",
+   "n_rel_catalog": 146,
+   "n_results": 10,
+   "ms": 624.5,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "gaming",
+    "min_price": 100000.0
+   },
+   "notes": [
+    "product group: gaming"
+   ],
+   "top": [
+    {
+     "t": "ASUS TUF Gaming A15 Ryzen 7 7445HS 8GB RAM 512GB SSD RTX 3050 Graphics Gaming La",
+     "c": "laptop & notebook",
+     "p": 131995.0,
+     "rel": 1
+    },
+    {
+     "t": "ASUS TUF Gaming A16 FA607NUQ Ryzen 7 170 16\" WUXGA Gaming Laptop",
+     "c": "laptop notebook",
+     "p": 191985.0,
+     "rel": 1
+    },
+    {
+     "t": "Gigabyte Gaming A16 GA63H Ryzen 7 260 RTX 5060 8GB Graphics 16\" WUXGA Gaming Lap",
+     "c": "laptop notebook",
+     "p": 170005.0,
+     "rel": 1
+    },
+    {
+     "t": "Gigabyte Gaming A16 GA63H Ryzen 7 260 RTX 5050 8GB Graphics 16\" WUXGA Gaming Lap",
+     "c": "laptop notebook",
+     "p": 156990.0,
+     "rel": 1
+    },
+    {
+     "t": "ASUS TUF Gaming A16 FA608UH Ryzen 7 260 16\" FHD+ Gaming Laptop",
+     "c": "laptop notebook",
+     "p": 219997.0,
+     "rel": 1
+    },
+    {
+     "t": "ASUS TUF Gaming A14 FA401UH Ryzen 7 260 14\" 2.5K WQXGA Gaming Laptop",
+     "c": "laptop notebook",
+     "p": 199485.0,
+     "rel": 1
+    },
+    {
+     "t": "ASUS TUF Gaming A15 FA507RM Ryzen 7 6800H RTX 3060 6GB Graphics 15.6″ FHD Gaming",
+     "c": "asus laptop",
+     "p": 162910.0,
+     "rel": 1
+    },
+    {
+     "t": "ASUS TUF Gaming F16 FX608JHI Core i7 14th Gen RTX 5050 8GB Graphics 16\" WUXGA Ga",
+     "c": "laptop notebook",
+     "p": 244995.0,
+     "rel": 1
+    },
+    {
+     "t": "ASUS TUF Gaming F16 FX608JMI Core i7 14th Gen RTX 5060 8GB Graphics 16\" WUXGA Ga",
+     "c": "laptop notebook",
+     "p": 268995.0,
+     "rel": 1
+    },
+    {
+     "t": "ASUS TUF Gaming 16 FX610JH Core i7 14th Gen RTX 5050 8GB Graphics 16\" Gaming Lap",
+     "c": "laptop notebook",
+     "p": 230015.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "xiaomi watch",
+   "lang": "en",
+   "type": "brand",
+   "n_rel_catalog": 21,
+   "n_results": 10,
+   "ms": 554.5,
+   "p10": 0.5,
+   "hit1": 1,
+   "ndcg": 0.521,
+   "intent": {
+    "category": "watch",
+    "brand": "xiaomi",
+    "affinities": [
+     "wristwatch",
+     "smartwatch"
+    ]
+   },
+   "notes": [
+    "product group: watch"
+   ],
+   "top": [
+    {
+     "t": "Xiaomi Watch S4 AMOLED GPS Smartwatch",
+     "c": "gadgets",
+     "p": 17475.0,
+     "rel": 1
+    },
+    {
+     "t": "Xiaomi Haylou GS LS09A Smart Watch Screen Protector",
+     "c": "smart watch accessories",
+     "p": 60.0,
+     "rel": 0
+    },
+    {
+     "t": "Xiaomi Haylou GST LS09B Smart Watch Screen Protector",
+     "c": "smart watch accessories",
+     "p": 50.0,
+     "rel": 0
+    },
+    {
+     "t": "Xiaomi Mi Band 6 Smart Watch Screen Protector",
+     "c": "smart watch accessories",
+     "p": 85.0,
+     "rel": 0
+    },
+    {
+     "t": "Xiaomi Redmi Watch 4 Smart Watch",
+     "c": "gadgets",
+     "p": 9985.0,
+     "rel": 1
+    },
+    {
+     "t": "Xiaomi Redmi Watch 5 Active",
+     "c": "gadgets",
+     "p": 4392.0,
+     "rel": 1
+    },
+    {
+     "t": "Xiaomi Mi Watch Lite",
+     "c": "gadgets",
+     "p": 5085.0,
+     "rel": 1
+    },
+    {
+     "t": "Xiaomi Smart Band 10 (Global Version)",
+     "c": "smart watch",
+     "p": 7032.0,
+     "rel": 0
+    },
+    {
+     "t": "Xiaomi Smart Band 5 and 6 Strap (3 Pack) Black + Orange + Teal",
+     "c": "smart watch accessories",
+     "p": 862.0,
+     "rel": 0
+    },
+    {
+     "t": "Redmi Watch 5 Lite Black",
+     "c": "fitness & wearable",
+     "p": 7302.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "samsung ssd",
+   "lang": "en",
+   "type": "brand",
+   "n_rel_catalog": 7,
+   "n_results": 7,
+   "ms": 431.8,
+   "p10": 0.7,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "samsung ssd",
+    "brand": "samsung"
+   },
+   "notes": [
+    "product group: samsung ssd"
+   ],
+   "top": [
+    {
+     "t": "Samsung 980 500GB PCIe 3.0 M.2 NVMe SSD",
+     "c": "samsung ssd",
+     "p": 5902.0,
+     "rel": 1
+    },
+    {
+     "t": "Samsung 980 1TB PCIe 3.0 M.2 NVMe SSD",
+     "c": "samsung ssd",
+     "p": 9920.0,
+     "rel": 1
+    },
+    {
+     "t": "Samsung PM9A1 1TB M.2 PCIe Gen 4.0 NVMe SSD",
+     "c": "samsung ssd",
+     "p": 10603.0,
+     "rel": 1
+    },
+    {
+     "t": "Samsung 990 Pro 2TB PCIe 4.0 M.2 NVMe SSD",
+     "c": "samsung ssd",
+     "p": 21480.0,
+     "rel": 1
+    },
+    {
+     "t": "Samsung 990 Pro 1TB PCIe 4.0 M.2 NVMe SSD",
+     "c": "samsung ssd",
+     "p": 12498.0,
+     "rel": 1
+    },
+    {
+     "t": "Samsung 990 EVO 2TB PCIe 4.0 M.2 NVMe SSD",
+     "c": "samsung ssd",
+     "p": 19010.0,
+     "rel": 1
+    },
+    {
+     "t": "Samsung 990 EVO 1TB PCIe 4.0 M.2 NVMe SSD",
+     "c": "samsung ssd",
+     "p": 12520.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "lipglos",
+   "lang": "en",
+   "type": "typo",
+   "n_rel_catalog": 137,
+   "n_results": 10,
+   "ms": 420.7,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {},
+   "notes": [
+    "spelling corrected: 'lipglos' -> 'lipgloss'"
+   ],
+   "top": [
+    {
+     "t": "Lily Glazed Lipgloss",
+     "c": "makeup",
+     "p": 303.0,
+     "rel": 1
+    },
+    {
+     "t": "Lily Starry Lipgloss",
+     "c": "makeup",
+     "p": 320.0,
+     "rel": 1
+    },
+    {
+     "t": "NICKA K WHIPPED LIPGLOSS RUSSET NKC06",
+     "c": "makeup",
+     "p": 335.0,
+     "rel": 1
+    },
+    {
+     "t": "NICKA K WHIPPED LIPGLOSS CORDOVAN NKC02",
+     "c": "makeup",
+     "p": 448.0,
+     "rel": 1
+    },
+    {
+     "t": "NICKA K WHIPPED LIPGLOSS SEPIA NKC08",
+     "c": "makeup",
+     "p": 453.0,
+     "rel": 1
+    },
+    {
+     "t": "NICKA K WHIPPED LIPGLOSS REDWOOD NKC04",
+     "c": "makeup",
+     "p": 447.0,
+     "rel": 1
+    },
+    {
+     "t": "Note Mattemist Lipgloss (Vitamin E) Angel 409",
+     "c": "makeup",
+     "p": 620.0,
+     "rel": 1
+    },
+    {
+     "t": "NICKA K WHIPPED LIPGLOSS COYOTE NKC03",
+     "c": "makeup",
+     "p": 460.0,
+     "rel": 1
+    },
+    {
+     "t": "NICKA K WHIPPED LIPGLOSS VIVIVD BURGUNDY NKC01",
+     "c": "makeup",
+     "p": 305.0,
+     "rel": 1
+    },
+    {
+     "t": "Topface Focus Point Perfect Gleam Lipgloss 104",
+     "c": "makeup",
+     "p": 887.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "sneekers",
+   "lang": "en",
+   "type": "typo",
+   "n_rel_catalog": 250,
+   "n_results": 10,
+   "ms": 433.0,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "sneaker",
+    "affinities": [
+     "sneakers"
+    ]
+   },
+   "notes": [
+    "spelling corrected: 'sneekers' -> 'sneakers'",
+    "product group: sneaker"
+   ],
+   "top": [
+    {
+     "t": "Sprint Women's Sneakers",
+     "c": "apex sneaker",
+     "p": 3407.0,
+     "rel": 1
+    },
+    {
+     "t": "Twinkler Boy's Sneakers",
+     "c": "apex sneaker",
+     "p": 1251.0,
+     "rel": 1
+    },
+    {
+     "t": "Twinkler Kid's Sneakers",
+     "c": "apex sneaker",
+     "p": 2289.0,
+     "rel": 1
+    },
+    {
+     "t": "NORTH STAR STRIKER MENS CANVAS F.TIME SNEAKER",
+     "c": "sneaker",
+     "p": 4014.0,
+     "rel": 1
+    },
+    {
+     "t": "BUBBLE GUMMERS PLAYMAX C. CLOSED SNEAKER",
+     "c": "sneaker",
+     "p": 1309.0,
+     "rel": 1
+    },
+    {
+     "t": "BATA (MEN) VICTOR SNEAKER",
+     "c": "sneaker",
+     "p": 1125.0,
+     "rel": 1
+    },
+    {
+     "t": "NORTH STAR STRIKER LADIES CANVAS F.TIME SNEAKER",
+     "c": "sneaker",
+     "p": 3989.0,
+     "rel": 1
+    },
+    {
+     "t": "Sprint Sneaker Deo",
+     "c": "apex sneaker",
+     "p": 652.0,
+     "rel": 1
+    },
+    {
+     "t": "Sprint Men’s Sneaker",
+     "c": "apex sneaker",
+     "p": 3390.0,
+     "rel": 1
+    },
+    {
+     "t": "Sprint Men's Sneaker",
+     "c": "apex sneaker",
+     "p": 1672.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "stainles steel pan",
+   "lang": "en",
+   "type": "typo",
+   "n_rel_catalog": 58,
+   "n_results": 10,
+   "ms": 417.2,
+   "p10": 0.0,
+   "hit1": 0,
+   "ndcg": 0.0,
+   "intent": {
+    "material": "steel"
+   },
+   "notes": [
+    "spelling corrected: 'stainles' -> 'stainless'",
+    "No steel kitchenware in catalog - showing other kitchenware options",
+    "product group: kitchenware"
+   ],
+   "top": [
+    {
+     "t": "Miyako 2L 1500W Stainless Steel Electric Kettle",
+     "c": "electric kettle",
+     "p": 1260.0,
+     "rel": 0
+    },
+    {
+     "t": "170ml idrop Stainless Steel Vacuum Drinking Flask With Cup",
+     "c": "water bottles & pots",
+     "p": 1215.0,
+     "rel": 0
+    },
+    {
+     "t": "Hometro Vision Stainless Steel 1.8L Electric Kettle (SS-18)-Silver & Black",
+     "c": "electric kettle",
+     "p": 1170.0,
+     "rel": 0
+    },
+    {
+     "t": "Miyako 2.5L 1500W Brushed Stainless Steel Kettle (MK-1925)",
+     "c": "electric kettle",
+     "p": 1570.0,
+     "rel": 0
+    },
+    {
+     "t": "OnePlus Portable Thermal Cup Set Premium Stainless-Steel - Silver",
+     "c": "the perfect food storage containers",
+     "p": 2787.0,
+     "rel": 0
+    },
+    {
+     "t": "Oraimo FastBrew Smart 1.7L 316 Stainless Steel Electric Kettle (OEK-261A)",
+     "c": "electric kettle",
+     "p": 3907.0,
+     "rel": 0
+    },
+    {
+     "t": "Exclusive 6 Pcs Dinner Spoon set Stainless steel. Tea Spoon Set. Dinner Spoon Cu",
+     "c": "dinner set",
+     "p": 162.0,
+     "rel": 0
+    },
+    {
+     "t": "500Ml Temperature Display Vacuum Insulated Water Bottle , Flask Made Of Stainles",
+     "c": "water bottles & pots",
+     "p": 516.0,
+     "rel": 0
+    },
+    {
+     "t": "ICY Water Bottle 450 ML Stainless Steel| Keep Cold and Hot for 12 Hours| BPA Fre",
+     "c": "water bottles & pots",
+     "p": 610.0,
+     "rel": 0
+    },
+    {
+     "t": "500ml Thermal Insulated Bottle | Stainless Steel Soldier Flask | Hot & Cold Vacu",
+     "c": "the perfect food storage containers",
+     "p": 1097.0,
+     "rel": 0
+    }
+   ]
+  },
+  {
+   "q": "something to relax after work",
+   "lang": "en",
+   "type": "vague",
+   "n_rel_catalog": 479,
+   "n_results": 10,
+   "ms": 463.4,
+   "p10": 0.0,
+   "hit1": 0,
+   "ndcg": 0.0,
+   "intent": {
+    "intents": [
+     "office"
+    ],
+    "affinities": [
+     "leather shoes",
+     "shirt",
+     "leather wallet",
+     "laptop",
+     "leather belt"
+    ]
+   },
+   "notes": [
+    "intent: office"
+   ],
+   "top": [
+    {
+     "t": "Manual Food Copper Blender (Hand Cutter Eotia)",
+     "c": "computers & laptops",
+     "p": 233.0,
+     "rel": 0
+    },
+    {
+     "t": "Multi Cutter With Peeler Vegetable N Fruits It has Extera  Sharp Stainless Steel",
+     "c": "computers & laptops",
+     "p": 172.0,
+     "rel": 0
+    },
+    {
+     "t": "PC-211 PC-211EV Toner Cartridge Chip Unlimited Pages for Pantum P2200/P2500W/P25",
+     "c": "computers & laptops",
+     "p": 589.0,
+     "rel": 0
+    },
+    {
+     "t": "WGP Mini UPS for Wifi Router 10400 mAh Battery 5,9,12",
+     "c": "computers & laptops",
+     "p": 1753.0,
+     "rel": 0
+    },
+    {
+     "t": "ups computer backup ups 650 va 300 watt plastic body, 12 volt to 220 volt AC,old",
+     "c": "computers & laptops",
+     "p": 1111.0,
+     "rel": 0
+    },
+    {
+     "t": "ups computer backup ups 650 va 300 watt plastic body, 12 volt to 220 volt AC,old",
+     "c": "computers & laptops",
+     "p": 1030.0,
+     "rel": 0
+    },
+    {
+     "t": "DS-0088 Universal 12-18V Power Module Switch Power Supply Board 300V for LCD LED",
+     "c": "computers & laptops",
+     "p": 100.0,
+     "rel": 0
+    },
+    {
+     "t": "ups computer backup ups 650 va 300 watt plastic  body, 12 volt to 220 volt AC,ol",
+     "c": "computers & laptops",
+     "p": 1001.0,
+     "rel": 0
+    },
+    {
+     "t": "ups computer backup ups 850 va 480 watt plastic body, 12 volt to 220 volt AC,old",
+     "c": "computers & laptops",
+     "p": 1642.0,
+     "rel": 0
+    },
+    {
+     "t": "PD65W Fast Charging Module Type-C Interface PD3.1 PPS Fast Charging QC3.0 SCP",
+     "c": "computers & laptops",
+     "p": 163.0,
+     "rel": 0
+    }
+   ]
+  },
+  {
+   "q": "camera tripod",
+   "lang": "en",
+   "type": "gap",
+   "n_rel_catalog": 68,
+   "n_results": 10,
+   "ms": 398.7,
+   "p10": 0.8,
+   "hit1": 1,
+   "ndcg": 0.857,
+   "intent": {
+    "category": "camera"
+   },
+   "notes": [
+    "product group: camera"
+   ],
+   "top": [
+    {
+     "t": "Jmary KP-2205 Tripod Stand for Camera and Mobile Tripod",
+     "c": "camera and accessories",
+     "p": 1479.0,
+     "rel": 1
+    },
+    {
+     "t": "Mini Metal Mobile Camera Tripod Stand - Tripod - Tripod For Mobile-Black",
+     "c": "audio & gadgets",
+     "p": 233.0,
+     "rel": 1
+    },
+    {
+     "t": "Jmary KP-2201 Tripod Stand for Camera Ring Light Mobile Tripod",
+     "c": "camera and accessories",
+     "p": 2266.0,
+     "rel": 1
+    },
+    {
+     "t": "Digipod TR688V Extendable Camera Tripod",
+     "c": "camera and accessories",
+     "p": 3402.0,
+     "rel": 1
+    },
+    {
+     "t": "Digipod TR472 Extendable Camera Tripod",
+     "c": "camera and accessories",
+     "p": 2309.0,
+     "rel": 1
+    },
+    {
+     "t": "Tripod 380A – Mobile and Camera Tripod Stand",
+     "c": "ট্রাইপড স্টেন্ড",
+     "p": 853.0,
+     "rel": 1
+    },
+    {
+     "t": "Phone Camera Tripod For Desktop Black",
+     "c": "computers & it",
+     "p": 185.0,
+     "rel": 0
+    },
+    {
+     "t": "3366 Camera Tripod with Carry Bag",
+     "c": "camera and accessories",
+     "p": 939.0,
+     "rel": 0
+    },
+    {
+     "t": "Digipod TR-452 Camera Tripod",
+     "c": "electronics & tech (camera/camera tripod",
+     "p": 2010.0,
+     "rel": 1
+    },
+    {
+     "t": "Yufeng 3388 tripod dslr camera mobile Professional tripod stand - Black",
+     "c": "audio & gadgets",
+     "p": 965.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "কফি মেকার",
+   "lang": "bn",
+   "type": "plain",
+   "n_rel_catalog": 78,
+   "n_results": 10,
+   "ms": 453.6,
+   "p10": 0.0,
+   "hit1": 0,
+   "ndcg": 0.0,
+   "intent": {},
+   "notes": [
+    "Bangla/Banglish query detected -> translated: 'coffee মেকার'"
+   ],
+   "top": [
+    {
+     "t": "ইলেকট্রিক রুটি মেকার",
+     "c": "electronics store",
+     "p": 3069.0,
+     "rel": 0
+    },
+    {
+     "t": "ওয়েদার মেকার",
+     "c": "books (সায়েন্স ফিকশন)",
+     "p": 80.0,
+     "rel": 0
+    },
+    {
+     "t": "মাইন্ড মেকার",
+     "c": "books (শিশু-কিশোর বই)",
+     "p": 88.0,
+     "rel": 0
+    },
+    {
+     "t": "কফি নোট সিরিজ সাদা নোটবুক (sn20218147) - notebook",
+     "c": "books & stationery",
+     "p": 125.0,
+     "rel": 0
+    },
+    {
+     "t": "চার্জিং কেবল সহ পোর্টেবল এবং রিচার্জেবল usb বৈদ্যুতিক স্মার্ট হোম ফ্রুট জুসার ভে",
+     "c": "audio & gadgets",
+     "p": 785.0,
+     "rel": 0
+    },
+    {
+     "t": "ফেনাযুক্ত কফি বানাতে মিনি হ্যান্ডহেল্ড কফি মিক্সার | MNK SHOP - Blue",
+     "c": "electronics store",
+     "p": 299.0,
+     "rel": 0
+    },
+    {
+     "t": "মিনি ইলেকট্রিক কফি বিটার দিয়ে ফোমি কফি বানান | MNK SHOP - Multicolor",
+     "c": "electronics store",
+     "p": 235.0,
+     "rel": 0
+    },
+    {
+     "t": "ফোমি কফি বানাতে মিনি পোর্টেবল কফি ব্লেন্ডার | MNK SHOP - Yellow",
+     "c": "electronics store",
+     "p": 297.0,
+     "rel": 0
+    },
+    {
+     "t": "ননস্টিক কফি ফ্রোথার সহজেই ফেনাযুক্ত কফি তৈরি করুন | MNK SHOP - Brown",
+     "c": "electronics store",
+     "p": 286.0,
+     "rel": 0
+    },
+    {
+     "t": "কফি শপের মতো কফি বানানোর জন্য পোর্টেবল হ্যান্ড মিক্সার | MNK SHOP - Green",
+     "c": "electronics store",
+     "p": 297.0,
+     "rel": 0
+    }
+   ]
+  },
+  {
+   "q": "কম্বল",
+   "lang": "bn",
+   "type": "plain",
+   "n_rel_catalog": 39,
+   "n_results": 10,
+   "ms": 546.9,
+   "p10": 0.0,
+   "hit1": 0,
+   "ndcg": 0.0,
+   "intent": {},
+   "notes": [
+    "Bangla/Banglish query detected -> translated: 'কম্বল'"
+   ],
+   "top": [
+    {
+     "t": "জুলিয়েট উইমেনস 811 স্প্যাগেটি স্ট্র্যাপস প্লেইন সুতি লাইক্রা ক্যামিসোল জেএসসি -",
+     "c": "ব্রা ও পেনটি",
+     "p": 2270.0,
+     "rel": 0
+    },
+    {
+     "t": "L’Oreal প্যারিস এক্সেলেন্স ফ্যাশন অবার্ন 5.54",
+     "c": "হেয়ার কেয়ার",
+     "p": 1405.0,
+     "rel": 0
+    },
+    {
+     "t": "জোভিস হার্বাল মেনস এসেনশিয়াল অ্যাডভান্সড 4 ইন 1 ময়েশ্চারাইজিং ফেস ওয়াশ সঙ্গে ",
+     "c": "ফেস কেয়ার",
+     "p": 435.0,
+     "rel": 0
+    },
+    {
+     "t": "জোভিস পার্ল হোয়াইটিং ফেস ওয়াশ, 60 গ্রাম",
+     "c": "ফেস কেয়ার",
+     "p": 530.0,
+     "rel": 0
+    },
+    {
+     "t": "পুরুষদের জন্য শার্ক পাওয়ার ক্রিম",
+     "c": "যৌন সুস্থতা",
+     "p": 1702.0,
+     "rel": 0
+    },
+    {
+     "t": "ডার্মা হাউস ডার্মোক্টোরেলা নির্যাসযুক্ত স্তন বর্ধন ক্রিম ১২৫ মিলি",
+     "c": "ব্রেষ্ট কেয়ার",
+     "p": 830.0,
+     "rel": 0
+    },
+    {
+     "t": "Prophecy কলগ্নে স্প্রে মিস্ট",
+     "c": "পারফিউম ও বডি স্প্রে",
+     "p": 952.0,
+     "rel": 0
+    },
+    {
+     "t": "ডেডলি শার্ক পাওয়ার 48000 বিলম্ব স্প্রে",
+     "c": "পুরুষের হেলথ কেয়ার",
+     "p": 1255.0,
+     "rel": 0
+    },
+    {
+     "t": "অরিজিনাল সুপার ভিগা 990000 ন্যাচারাল জিনসেং এক্সট্র্যাক্ট পুরুষদের জন্য দীর্ঘ সম",
+     "c": "পুরুষের হেলথ কেয়ার",
+     "p": 1195.0,
+     "rel": 0
+    },
+    {
+     "t": "নিউট্রোজেনা ড্রাই টাচ সানব্লক এসপিএফ 50+ (88 মিলি)",
+     "c": "স্কিন কেয়ার",
+     "p": 753.0,
+     "rel": 0
+    }
+   ]
+  },
+  {
+   "q": "২০০০ টাকার নিচে ব্যাকপ্যাক",
+   "lang": "bn",
+   "type": "price",
+   "n_rel_catalog": 269,
+   "n_results": 10,
+   "ms": 529.3,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "backpack",
+    "max_price": 2000.0,
+    "affinities": [
+     "backpack"
+    ]
+   },
+   "notes": [
+    "Bangla/Banglish query detected -> translated: 'backpack'",
+    "product group: backpack"
+   ],
+   "top": [
+    {
+     "t": "NAVY BLUE BACKPACK 0RV1R18",
+     "c": "backpacks",
+     "p": 1190.0,
+     "rel": 1
+    },
+    {
+     "t": "Sprint Backpack",
+     "c": "apex backpack",
+     "p": 1943.0,
+     "rel": 1
+    },
+    {
+     "t": "Sprint Everyday Backpack",
+     "c": "apex backpack",
+     "p": 1456.0,
+     "rel": 1
+    },
+    {
+     "t": "Sprint Men’s Backpack",
+     "c": "apex backpack",
+     "p": 1689.0,
+     "rel": 1
+    },
+    {
+     "t": "Sprint Men's Backpack",
+     "c": "apex backpack",
+     "p": 1677.0,
+     "rel": 1
+    },
+    {
+     "t": "Maverick Men's Backpack",
+     "c": "apex backpack",
+     "p": 1949.0,
+     "rel": 1
+    },
+    {
+     "t": "Apex Men's Backpack",
+     "c": "apex backpack",
+     "p": 1949.0,
+     "rel": 1
+    },
+    {
+     "t": "Star Backpack Blue",
+     "c": "electronics & tech (laptop bag backpack)",
+     "p": 1185.0,
+     "rel": 1
+    },
+    {
+     "t": "Dell CP3724 EcoLoop 16\" Laptop Backpack",
+     "c": "electronics & tech (dell laptop bag back",
+     "p": 1815.0,
+     "rel": 1
+    },
+    {
+     "t": "Most Popular High Huality backpack . ল্যাপটপ ব্যাকপ্যাক 15.6 ইঞ্চি, usb পোর্ট সহ",
+     "c": "fashion 5",
+     "p": 655.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "১০০০ থেকে ২০০০ টাকার মধ্যে কেটলি",
+   "lang": "bn",
+   "type": "price",
+   "n_rel_catalog": 299,
+   "n_results": 10,
+   "ms": 642.3,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "electric kettle",
+    "min_price": 1000.0,
+    "max_price": 2000.0,
+    "intents": [
+     "water_heating_kettle"
+    ],
+    "affinities": [
+     "electric kettle",
+     "kettle"
+    ]
+   },
+   "notes": [
+    "spelling corrected: 'kettle' -> 'electric kettle'",
+    "Bangla/Banglish query detected -> translated: 'electric kettle'",
+    "intent: water_heating_kettle",
+    "product group: electric kettle"
+   ],
+   "top": [
+    {
+     "t": "Ocean OEK1519 Electric Kettle",
+     "c": "electric kettle",
+     "p": 1987.0,
+     "rel": 1
+    },
+    {
+     "t": "Ocean 1.7L Electric Automatic Electric Kettle (OEK1792)",
+     "c": "electric kettle",
+     "p": 1792.0,
+     "rel": 1
+    },
+    {
+     "t": "Ocean 1L Electric Kettle (OEK1001)",
+     "c": "electric kettle",
+     "p": 1692.0,
+     "rel": 1
+    },
+    {
+     "t": "Kiam 1.8L 1500W Electric Kettle (M46)",
+     "c": "electric kettle",
+     "p": 1000.0,
+     "rel": 1
+    },
+    {
+     "t": "Miyako 1.8L Electric Kettle (MK-1918)",
+     "c": "electric kettle",
+     "p": 1392.0,
+     "rel": 1
+    },
+    {
+     "t": "Miyako 1 Liter Electric Kettle (MJK-2409)",
+     "c": "electric kettle",
+     "p": 1275.0,
+     "rel": 1
+    },
+    {
+     "t": "Miyako 2L 1500W Stainless Steel Electric Kettle",
+     "c": "electric kettle",
+     "p": 1260.0,
+     "rel": 1
+    },
+    {
+     "t": "Miyako 2.3 Liter Electric Kettle (MJK-2401)",
+     "c": "electric kettle",
+     "p": 1685.0,
+     "rel": 1
+    },
+    {
+     "t": "Miyako 1.8Ltr Electric Kettle (MJK-18 KN)",
+     "c": "electric kettle",
+     "p": 1235.0,
+     "rel": 1
+    },
+    {
+     "t": "Miyako MJK-18T 1.8L Electric Kettle-Blue",
+     "c": "electric kettle",
+     "p": 1398.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "কলগেট টুথপেস্ট",
+   "lang": "bn",
+   "type": "brand",
+   "n_rel_catalog": 18,
+   "n_results": 10,
+   "ms": 479.9,
+   "p10": 0.0,
+   "hit1": 0,
+   "ndcg": 0.0,
+   "intent": {},
+   "notes": [
+    "Bangla/Banglish query detected -> translated: 'কলগেটুথপেস্ট'"
+   ],
+   "top": [
+    {
+     "t": "জুলিয়েট উইমেনস 811 স্প্যাগেটি স্ট্র্যাপস প্লেইন সুতি লাইক্রা ক্যামিসোল জেএসসি -",
+     "c": "ব্রা ও পেনটি",
+     "p": 2270.0,
+     "rel": 0
+    },
+    {
+     "t": "জোভিস হার্বাল মেনস এসেনশিয়াল অ্যাডভান্সড 4 ইন 1 ময়েশ্চারাইজিং ফেস ওয়াশ সঙ্গে ",
+     "c": "ফেস কেয়ার",
+     "p": 435.0,
+     "rel": 0
+    },
+    {
+     "t": "জোভিস হারবাল ময়েশ্চারাইজিং অ্যাকোয়া বডি ওয়াশ, 300 মিলি",
+     "c": "বডি কেয়ার",
+     "p": 700.0,
+     "rel": 0
+    },
+    {
+     "t": "অরিজিনাল সুপার ভিগা 990000 ন্যাচারাল জিনসেং এক্সট্র্যাক্ট পুরুষদের জন্য দীর্ঘ সম",
+     "c": "পুরুষের হেলথ কেয়ার",
+     "p": 1195.0,
+     "rel": 0
+    },
+    {
+     "t": "জোভিস পার্ল হোয়াইটিং ফেস ওয়াশ, 60 গ্রাম",
+     "c": "ফেস কেয়ার",
+     "p": 530.0,
+     "rel": 0
+    },
+    {
+     "t": "ওয়াইল্ড স্টোন – পুরুষদের জন্য আল্ট্রা সেন্সুয়াল প্রিমিয়াম পারফিউম, দীর্ঘস্থায",
+     "c": "পারফিউম ও বডি স্প্রে",
+     "p": 790.0,
+     "rel": 0
+    },
+    {
+     "t": "এনভয় ফারারী পারমিউম -50 মিলি পুরুষদের জন্য",
+     "c": "পারফিউম ও বডি স্প্রে",
+     "p": 720.0,
+     "rel": 0
+    },
+    {
+     "t": "ডার্মা হাউস ডার্মোক্টোরেলা নির্যাসযুক্ত স্তন বর্ধন ক্রিম ১২৫ মিলি",
+     "c": "ব্রেষ্ট কেয়ার",
+     "p": 830.0,
+     "rel": 0
+    },
+    {
+     "t": "রেমেন’স ডোজ 14000 পুরুষদের জন্য  দীর্ঘ সময়ের বিলম্ব স্প্রে",
+     "c": "পুরুষের হেলথ কেয়ার",
+     "p": 1395.0,
+     "rel": 0
+    },
+    {
+     "t": "স্টাইলিশ ওয়ান পার্ট নাইটি -3283",
+     "c": "নাইট ড্রেস",
+     "p": 1365.0,
+     "rel": 0
+    }
+   ]
+  },
+  {
+   "q": "লিপিস্টিক",
+   "lang": "bn",
+   "type": "typo",
+   "n_rel_catalog": 1234,
+   "n_results": 10,
+   "ms": 490.2,
+   "p10": 0.0,
+   "hit1": 0,
+   "ndcg": 0.0,
+   "intent": {},
+   "notes": [
+    "Bangla/Banglish query detected -> translated: 'লিপিস্টিক'"
+   ],
+   "top": [
+    {
+     "t": "জোভিস হারবাল ময়েশ্চারাইজিং অ্যাকোয়া বডি ওয়াশ, 300 মিলি",
+     "c": "বডি কেয়ার",
+     "p": 700.0,
+     "rel": 0
+    },
+    {
+     "t": "জুলিয়েট উইমেনস 811 স্প্যাগেটি স্ট্র্যাপস প্লেইন সুতি লাইক্রা ক্যামিসোল জেএসসি -",
+     "c": "ব্রা ও পেনটি",
+     "p": 2270.0,
+     "rel": 0
+    },
+    {
+     "t": "Prophecy কলগ্নে স্প্রে মিস্ট",
+     "c": "পারফিউম ও বডি স্প্রে",
+     "p": 952.0,
+     "rel": 0
+    },
+    {
+     "t": "জোভিস পার্ল হোয়াইটিং ফেস ওয়াশ, 60 গ্রাম",
+     "c": "ফেস কেয়ার",
+     "p": 530.0,
+     "rel": 0
+    },
+    {
+     "t": "ডার্মা হাউস ডার্মোক্টোরেলা নির্যাসযুক্ত স্তন বর্ধন ক্রিম ১২৫ মিলি",
+     "c": "ব্রেষ্ট কেয়ার",
+     "p": 830.0,
+     "rel": 0
+    },
+    {
+     "t": "এনভয় ফারারী পারমিউম -50 মিলি পুরুষদের জন্য",
+     "c": "পারফিউম ও বডি স্প্রে",
+     "p": 720.0,
+     "rel": 0
+    },
+    {
+     "t": "ওয়াইল্ড স্টোন – পুরুষদের জন্য আল্ট্রা সেন্সুয়াল প্রিমিয়াম পারফিউম, দীর্ঘস্থায",
+     "c": "পারফিউম ও বডি স্প্রে",
+     "p": 790.0,
+     "rel": 0
+    },
+    {
+     "t": "জোভিস হার্বাল মেনস এসেনশিয়াল অ্যাডভান্সড 4 ইন 1 ময়েশ্চারাইজিং ফেস ওয়াশ সঙ্গে ",
+     "c": "ফেস কেয়ার",
+     "p": 435.0,
+     "rel": 0
+    },
+    {
+     "t": "মিরাকল শাইন অ্যান্ড গ্লো ক্রিম ১৫ গ্রাম",
+     "c": "স্কিন কেয়ার",
+     "p": 210.0,
+     "rel": 0
+    },
+    {
+     "t": "অলিভ প্লাস ক্রিম ব্রেস্ট এনলার্জমেন্ট ও হোয়াটেনিং এর জন্য",
+     "c": "ব্রেষ্ট কেয়ার",
+     "p": 605.0,
+     "rel": 0
+    }
+   ]
+  },
+  {
+   "q": "পায়ের ব্যথার জন্য",
+   "lang": "bn",
+   "type": "vague",
+   "n_rel_catalog": 95,
+   "n_results": 10,
+   "ms": 538.6,
+   "p10": 0.1,
+   "hit1": 0,
+   "ndcg": 0.073,
+   "intent": {},
+   "notes": [
+    "Bangla/Banglish query detected -> translated: 'পায়ের ব্যথার'"
+   ],
+   "top": [
+    {
+     "t": "পেইনকুল – জয়েন্টে ব্যথার প্রাকৃতিক প্রতিকার – 60 ক্যাপসুল",
+     "c": "ইউনানী ঔষুধ",
+     "p": 953.0,
+     "rel": 0
+    },
+    {
+     "t": "পায়ের তলায় সর্ষে-১ম খণ্ড",
+     "c": "books (ভ্রমণ ও প্রবাস)",
+     "p": 1193.0,
+     "rel": 0
+    },
+    {
+     "t": "পায়ের তলায় সর্ষে-২য় খণ্ড",
+     "c": "books (ভ্রমণ ও প্রবাস)",
+     "p": 1213.0,
+     "rel": 0
+    },
+    {
+     "t": "COMFORT DR. SHOE FOR WOMEN",
+     "c": "women's fashion",
+     "p": 1517.0,
+     "rel": 0
+    },
+    {
+     "t": "আইচুন বিউটি হোয়াইটেনিং রিপেয়ার ফুট ক্রিম",
+     "c": "স্কিন কেয়ার",
+     "p": 470.0,
+     "rel": 0
+    },
+    {
+     "t": "Ikebana Saffron Premium Handmade Soap- 90 gm",
+     "c": "beauty & personal care",
+     "p": 135.0,
+     "rel": 0
+    },
+    {
+     "t": "Donut Pillow For Tailbone Pain Relief Cushion Coccyx Cushion Foam Seat Cushion -",
+     "c": "furniture & decor",
+     "p": 396.0,
+     "rel": 1
+    },
+    {
+     "t": "Lemonvate Cream - 30gm (Italy)",
+     "c": "grocery & daily needs",
+     "p": 485.0,
+     "rel": 0
+    },
+    {
+     "t": "Premium Gold Plated Snake Chain Anklet with Heart Pendant for Women - 1 Pcs Eleg",
+     "c": "jewellery & watches",
+     "p": 115.0,
+     "rel": 0
+    },
+    {
+     "t": "জোভিস পার্ল হোয়াইটিং ফেস ওয়াশ, 60 গ্রাম",
+     "c": "ফেস কেয়ার",
+     "p": 530.0,
+     "rel": 0
+    }
+   ]
+  },
+  {
+   "q": "গ্যাস লাইটার",
+   "lang": "bn",
+   "type": "gap",
+   "n_rel_catalog": 38,
+   "n_results": 10,
+   "ms": 438.8,
+   "p10": 0.0,
+   "hit1": 0,
+   "ndcg": 0.0,
+   "intent": {},
+   "notes": [
+    "Bangla/Banglish query detected -> translated: 'গ্যাস লাইটার'"
+   ],
+   "top": [
+    {
+     "t": "গ্যাস-ও-আগুন নেই আপনার নতুন স্মার্ট লাইটার - White",
+     "c": "electronics store",
+     "p": 496.0,
+     "rel": 0
+    },
+    {
+     "t": "চায়না গ্যাস ব্রাশ ট্রিমার-1 পিস (255925358) Multicolor",
+     "c": "home cleaning items & floor brushes",
+     "p": 52.0,
+     "rel": 0
+    },
+    {
+     "t": "Sun Butane Gas Cartridge / সান বুটেন গ্যাস কার্টিজ, 220g",
+     "c": "computers & it",
+     "p": 201.0,
+     "rel": 0
+    },
+    {
+     "t": "Buy 1 Get 1 Free Gas Saving Nets for LPG NPG গ্যাস সেভার নেট - Silver",
+     "c": "electronics store",
+     "p": 103.0,
+     "rel": 0
+    },
+    {
+     "t": "পাবলিক ট্রান্সপোর্টেও নিরাপদ লাইটার - White",
+     "c": "electronics store",
+     "p": 538.0,
+     "rel": 0
+    },
+    {
+     "t": "বন্ধুকাপরিলে প্রদর্শনযোগ্য ফ্লেমলেস লাইটার - White",
+     "c": "electronics store",
+     "p": 730.0,
+     "rel": 0
+    },
+    {
+     "t": "ইনডোর ও আউটডোর ব্যবহারের জন্য লাইটার - White",
+     "c": "electronics store",
+     "p": 606.0,
+     "rel": 0
+    },
+    {
+     "t": "প্রাণবন্ত ডিজাইনের ফ্লেমলেস লাইটার - White",
+     "c": "electronics store",
+     "p": 500.0,
+     "rel": 0
+    },
+    {
+     "t": "পরিবারের জন্য নিরাপদ USB লাইটার - White",
+     "c": "audio & gadgets",
+     "p": 564.0,
+     "rel": 0
+    },
+    {
+     "t": "ক্যাজুয়াল লাইটিং জন্য USB লাইটার - White",
+     "c": "audio & gadgets",
+     "p": 531.0,
+     "rel": 0
+    }
+   ]
+  },
+  {
+   "q": "ওয়াটার হিটার",
+   "lang": "bn",
+   "type": "gap",
+   "n_rel_catalog": 162,
+   "n_results": 10,
+   "ms": 487.0,
+   "p10": 0.0,
+   "hit1": 0,
+   "ndcg": 0.0,
+   "intent": {},
+   "notes": [
+    "Bangla/Banglish query detected -> translated: 'ওয়াটার হিটার'"
+   ],
+   "top": [
+    {
+     "t": "ফোল্ডেবল ইলেকট্রিক ওয়াটার হিটার, খাদ্যগ্রেড সিলিকন দিয়ে তৈরি | MNK SHOP(Pink)",
+     "c": "electronics store",
+     "p": 1416.0,
+     "rel": 0
+    },
+    {
+     "t": "ভাঁজযোগ্য ওয়াটার হিটার, ছোট কিন্তু শক্তিশালী পারফরম্যান্স | MNK SHOP(Green)",
+     "c": "electronics store",
+     "p": 1442.0,
+     "rel": 0
+    },
+    {
+     "t": "ফোল্ডেবল ওয়াটার হিটার, সাশ্রয়ী ও সহজে বহনযোগ্য ডিজাইন | MNK SHOP(Green)",
+     "c": "electronics store",
+     "p": 1490.0,
+     "rel": 0
+    },
+    {
+     "t": "ট্রাভেল ওয়াটার হিটার, দ্রুত ও কার্যকর গরম পানির সমাধান | MNK SHOP(Blue)",
+     "c": "electronics store",
+     "p": 1468.0,
+     "rel": 0
+    },
+    {
+     "t": "পোর্টেবল ওয়াটার হিটার কেটলি, যেকোনো সময় গরম পানি পান | MNK SHOP - Green",
+     "c": "electronics store",
+     "p": 1435.0,
+     "rel": 0
+    },
+    {
+     "t": "ওয়াটার প্রুফ মোবাইল সেফটি ব্যাগ",
+     "c": "📱 এক্সেসরিজ",
+     "p": 165.0,
+     "rel": 0
+    },
+    {
+     "t": "পানি হিটার কেটল – ব্যবহারিক এবং স্টাইলিশ | MNK SHOP - Pink",
+     "c": "electronics store",
+     "p": 1695.0,
+     "rel": 0
+    },
+    {
+     "t": "পানি হিটার কেটল – দ্রুত এবং নির্ভরযোগ্য | MNK SHOP - Red",
+     "c": "electronics store",
+     "p": 1523.0,
+     "rel": 0
+    },
+    {
+     "t": "পানি হিটার কেটল – নির্ভরযোগ্য এবং শক্তি সাশ্রয়ী | MNK SHOP - Red",
+     "c": "electronics store",
+     "p": 1611.0,
+     "rel": 0
+    },
+    {
+     "t": "পানি হিটার কেটল – কার্যকর, ব্যবহারিক এবং নিরাপদ | MNK SHOP - Red",
+     "c": "electronics store",
+     "p": 1638.0,
+     "rel": 0
+    }
+   ]
+  },
+  {
+   "q": "bolpen",
+   "lang": "banglish",
+   "type": "plain",
+   "n_rel_catalog": 335,
+   "n_results": 10,
+   "ms": 613.0,
+   "p10": 0.0,
+   "hit1": 0,
+   "ndcg": 0.0,
+   "intent": {},
+   "notes": [
+    "no exact match - showing closest results"
+   ],
+   "top": [
+    {
+     "t": "à¦«à§à¦¯à¦¾à¦¬à§à¦°à¦¿à¦²à¦¾à¦‡à¦« à¦®à¦¹à¦¿à¦²à¦¾à¦¦à§‡à¦° à¦ªà§à¦°à¦¿à¦®à¦¿",
+     "c": "women's fashion",
+     "p": 2500.0,
+     "rel": 0
+    },
+    {
+     "t": "à¦œà§‡à¦†à¦° à¦…à¦°à§à¦—à¦¾à¦¨à¦¿à¦• à¦¬à¦¿à¦Ÿà¦°à§à¦Ÿ à¦ªà¦¾à¦‰à¦¡à¦¾à¦°/ à¦¬",
+     "c": "grocery & daily needs",
+     "p": 235.0,
+     "rel": 0
+    },
+    {
+     "t": "à¦«à§à¦¯à¦¾à¦¬à§à¦°à¦¿à¦²à¦¾à¦‡à¦« à¦Ÿà¦¿à¦¨à§‡à¦° à¦ªà§à¦°à¦¿à¦®à¦¿à¦¯à¦¼à¦¾",
+     "c": "women's fashion",
+     "p": 1438.0,
+     "rel": 0
+    },
+    {
+     "t": "The Qu'ran: A New Translation by M. A. S. Abdel Haleem (Paperback)",
+     "c": "books & stationery",
+     "p": 232.0,
+     "rel": 0
+    },
+    {
+     "t": "à¦«à§à¦¯à¦¾à¦¬à§à¦°à¦¿à¦²à¦¾à¦‡à¦« à¦®à¦¹à¦¿à¦²à¦¾à¦¦à§‡à¦° à¦ªà§à¦°à¦¿à¦®à¦¿",
+     "c": "women's fashion",
+     "p": 2235.0,
+     "rel": 0
+    },
+    {
+     "t": "Understanding the Qu'ran: Themes and Style by Muhammad Abdel-Haleem",
+     "c": "books & stationery",
+     "p": 339.0,
+     "rel": 0
+    },
+    {
+     "t": "à¦«à§à¦¯à¦¾à¦¬à§à¦°à¦¿à¦²à¦¾à¦‡à¦« à¦Ÿà¦¿à¦¨à§‡à¦° à¦ªà§à¦°à¦¿à¦®à¦¿à¦¯à¦¼à¦¾",
+     "c": "women's fashion",
+     "p": 2820.0,
+     "rel": 0
+    },
+    {
+     "t": "L’Oreal প্যারিস এক্সেলেন্স ফ্যাশন অবার্ন 5.54",
+     "c": "হেয়ার কেয়ার",
+     "p": 1405.0,
+     "rel": 0
+    },
+    {
+     "t": "জোভিস পার্ল হোয়াইটিং ফেস ওয়াশ, 60 গ্রাম",
+     "c": "ফেস কেয়ার",
+     "p": 530.0,
+     "rel": 0
+    },
+    {
+     "t": "Geronimo Stilton : 22 The Secret Of Cacklefur Castle",
+     "c": "books (শিশু-কিশোর বই)",
+     "p": 778.0,
+     "rel": 0
+    }
+   ]
+  },
+  {
+   "q": "chasma frame",
+   "lang": "banglish",
+   "type": "plain",
+   "n_rel_catalog": 39,
+   "n_results": 10,
+   "ms": 379.9,
+   "p10": 0.0,
+   "hit1": 0,
+   "ndcg": 0.0,
+   "intent": {
+    "category": "sunglasses"
+   },
+   "notes": [
+    "spelling corrected: 'chasma' -> 'sunglasses'",
+    "product group: sunglasses"
+   ],
+   "top": [
+    {
+     "t": "Branded Sunglasses For Men Metal Frame",
+     "c": "new sunglasses",
+     "p": 909.0,
+     "rel": 0
+    },
+    {
+     "t": "Stylish Sunglasses For Men Metal Frame",
+     "c": "new sunglasses",
+     "p": 989.0,
+     "rel": 0
+    },
+    {
+     "t": "Metal Frame Sunglasses Unique Design",
+     "c": "new sunglasses",
+     "p": 1048.0,
+     "rel": 0
+    },
+    {
+     "t": "Square Frame Sunglasses High Quality Metal",
+     "c": "new sunglasses",
+     "p": 1001.0,
+     "rel": 0
+    },
+    {
+     "t": "Transparent Frame Sunglasses For Men",
+     "c": "polarized sunglasses",
+     "p": 1240.0,
+     "rel": 0
+    },
+    {
+     "t": "Men Ploarized Fashion Sunglasses High Quality Driving Sunglasses Rectangle Desig",
+     "c": "stylish men's sunglasses",
+     "p": 1170.0,
+     "rel": 0
+    },
+    {
+     "t": "Wooden Frame Sunglasses Polarized UV Protected",
+     "c": "polarized sunglasses",
+     "p": 1340.0,
+     "rel": 0
+    },
+    {
+     "t": "TR90 Frame Sunglasses Polarized and UV Protected",
+     "c": "new sunglasses",
+     "p": 1347.0,
+     "rel": 0
+    },
+    {
+     "t": "Mens Fashion Sunglasses Aviator Metal Frame",
+     "c": "stylish men's sunglasses",
+     "p": 1165.0,
+     "rel": 0
+    },
+    {
+     "t": "Square Frame Sunglasses Mens Stylish and Protective",
+     "c": "new sunglasses",
+     "p": 1065.0,
+     "rel": 0
+    }
+   ]
+  },
+  {
+   "q": "1000 takar niche kettle",
+   "lang": "banglish",
+   "type": "price",
+   "n_rel_catalog": 23,
+   "n_results": 6,
+   "ms": 541.3,
+   "p10": 0.6,
+   "hit1": 1,
+   "ndcg": 0.727,
+   "intent": {
+    "category": "electric kettle",
+    "max_price": 1000.0,
+    "intents": [
+     "water_heating_kettle"
+    ],
+    "affinities": [
+     "electric kettle",
+     "kettle"
+    ]
+   },
+   "notes": [
+    "spelling corrected: 'kettle' -> 'electric kettle'",
+    "intent: water_heating_kettle",
+    "product group: electric kettle"
+   ],
+   "top": [
+    {
+     "t": "Prestige 2L 1500W Electric Kettle",
+     "c": "electric kettle",
+     "p": 695.0,
+     "rel": 1
+    },
+    {
+     "t": "Kiam 1.8L 1500W Electric Kettle (M46)",
+     "c": "electric kettle",
+     "p": 1000.0,
+     "rel": 1
+    },
+    {
+     "t": "Miyako 1.2L Electric Kettle-Blue (MJK-12 KN)",
+     "c": "electric kettle",
+     "p": 930.0,
+     "rel": 1
+    },
+    {
+     "t": "Vision 1500W 1.8L Electric Kettle VIS-EK-005 (823448)",
+     "c": "electric kettle",
+     "p": 840.0,
+     "rel": 1
+    },
+    {
+     "t": "Vision Electric Kettle VIS-EK-005",
+     "c": "electric kettle",
+     "p": 935.0,
+     "rel": 1
+    },
+    {
+     "t": "VISION Electric Kettle 0.8 Liter Red (VSN-EK-01)",
+     "c": "electric kettle",
+     "p": 895.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "100 takar niche biscuit",
+   "lang": "banglish",
+   "type": "price",
+   "n_rel_catalog": 107,
+   "n_results": 10,
+   "ms": 694.2,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "biscuit",
+    "max_price": 100.0
+   },
+   "notes": [
+    "product group: biscuit"
+   ],
+   "top": [
+    {
+     "t": "Olympics Marie Gold Biscuit 190gm",
+     "c": "biscuit",
+     "p": 65.0,
+     "rel": 1
+    },
+    {
+     "t": "Pran Special Toast Biscuit 250gm",
+     "c": "biscuit",
+     "p": 57.0,
+     "rel": 1
+    },
+    {
+     "t": "Bisk Club Shero Cream Biscuit 85gm",
+     "c": "biscuit",
+     "p": 40.0,
+     "rel": 1
+    },
+    {
+     "t": "Bangasgrand Choice Salted Biscuit 70gm",
+     "c": "biscuit",
+     "p": 5.0,
+     "rel": 1
+    },
+    {
+     "t": "Pran Potata Spicy Biscuit 100gm",
+     "c": "biscuit",
+     "p": 50.0,
+     "rel": 1
+    },
+    {
+     "t": "Bisk Club Rusk Premium Bake Biscuit 250gm",
+     "c": "biscuit",
+     "p": 55.0,
+     "rel": 1
+    },
+    {
+     "t": "Bakeman’sglaze Sugarglazed Biscuit 180gm",
+     "c": "biscuit",
+     "p": 35.0,
+     "rel": 1
+    },
+    {
+     "t": "Olympic Milk Plus Biscuit 42gm",
+     "c": "biscuit",
+     "p": 5.0,
+     "rel": 1
+    },
+    {
+     "t": "Pran All Time Sweet Toast Biscuit 250gm",
+     "c": "biscuit",
+     "p": 73.0,
+     "rel": 1
+    },
+    {
+     "t": "All Time Premium Bake Rusk Biscuit 250gm",
+     "c": "biscuit",
+     "p": 73.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "lipton er cha",
+   "lang": "banglish",
+   "type": "brand",
+   "n_rel_catalog": 5,
+   "n_results": 5,
+   "ms": 443.2,
+   "p10": 0.5,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "brand": "lipton"
+   },
+   "notes": [],
+   "top": [
+    {
+     "t": "Lipton Green Tea Pure and Light 50ct",
+     "c": "personal care",
+     "p": 220.0,
+     "rel": 1
+    },
+    {
+     "t": "Lipton Green Tea Pure and Light 25ct",
+     "c": "personal care",
+     "p": 122.0,
+     "rel": 1
+    },
+    {
+     "t": "Lipton green Teapure And light 25pcs",
+     "c": "grocery",
+     "p": 165.0,
+     "rel": 1
+    },
+    {
+     "t": "Lipton green Tea Bag Honey andlemon 25pcs",
+     "c": "grocery",
+     "p": 175.0,
+     "rel": 1
+    },
+    {
+     "t": "Lipton Green Tea Bag Honey and Lemon 25pcs",
+     "c": "grocery",
+     "p": 185.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "philips er iron",
+   "lang": "banglish",
+   "type": "brand",
+   "n_rel_catalog": 53,
+   "n_results": 10,
+   "ms": 447.2,
+   "p10": 1.0,
+   "hit1": 1,
+   "ndcg": 1.0,
+   "intent": {
+    "category": "iron",
+    "brand": "philips"
+   },
+   "notes": [
+    "product group: iron"
+   ],
+   "top": [
+    {
+     "t": "Philips DST0600 Dry Iron",
+     "c": "iron",
+     "p": 1988.0,
+     "rel": 1
+    },
+    {
+     "t": "Philips DST0610/30 Dry Iron",
+     "c": "iron",
+     "p": 2210.0,
+     "rel": 1
+    },
+    {
+     "t": "Philips 1200W Steam Iron (GC1015)",
+     "c": "iron",
+     "p": 3010.0,
+     "rel": 1
+    },
+    {
+     "t": "Philips Affinia Dry Iron (GC160/22)",
+     "c": "iron",
+     "p": 3585.0,
+     "rel": 1
+    },
+    {
+     "t": "Philips Steam Iron (DST3010/30)",
+     "c": "iron",
+     "p": 5195.0,
+     "rel": 1
+    },
+    {
+     "t": "Philips 2000W Steam Iron (DST1040)",
+     "c": "iron",
+     "p": 4810.0,
+     "rel": 1
+    },
+    {
+     "t": "Philips 750W Classic Dry Iron (GC090)",
+     "c": "iron",
+     "p": 1493.0,
+     "rel": 1
+    },
+    {
+     "t": "Philips DST0810/30 1250W Steam Iron",
+     "c": "iron",
+     "p": 2380.0,
+     "rel": 1
+    },
+    {
+     "t": "Philips 1350W Steam Iron (DST1510/20)",
+     "c": "iron",
+     "p": 3288.0,
+     "rel": 1
+    },
+    {
+     "t": "Philips 2600W HV Steam Iron (DST7012/76)",
+     "c": "iron",
+     "p": 7318.0,
+     "rel": 1
+    }
+   ]
+  },
+  {
+   "q": "kofee mesin",
+   "lang": "banglish",
+   "type": "typo",
+   "n_rel_catalog": 78,
+   "n_results": 10,
+   "ms": 429.0,
+   "p10": 0.0,
+   "hit1": 0,
+   "ndcg": 0.0,
+   "intent": {},
+   "notes": [
+    "spelling corrected: 'kofee' -> 'koffee'"
+   ],
+   "top": [
+    {
+     "t": "Mad Koffee No Iron Cuban – Marsmallow",
+     "c": "women’s fashion",
+     "p": 1164.0,
+     "rel": 0
+    },
+    {
+     "t": "Mad Koffee No Iron Cuban Muted Mint",
+     "c": "women’s fashion",
+     "p": 1167.0,
+     "rel": 0
+    },
+    {
+     "t": "Mad Koffee No Iron Cuban – Iced Espresso",
+     "c": "women’s fashion",
+     "p": 1154.0,
+     "rel": 0
+    },
+    {
+     "t": "Mad Koffee No Iron Cuban – Spanish Olive",
+     "c": "men’s fashion & style",
+     "p": 1179.0,
+     "rel": 0
+    },
+    {
+     "t": "Mad Koffee 8 pock baggies – Khaki",
+     "c": "men’s fashion & style",
+     "p": 1090.0,
+     "rel": 0
+    },
+    {
+     "t": "Mad Koffee Button-Down Oxford Shirt – Mocha Dust",
+     "c": "men's & women's fashion",
+     "p": 1255.0,
+     "rel": 0
+    },
+    {
+     "t": "Mad Koffee Button-Down Oxford Shirt – Storm White",
+     "c": "men's & women's fashion",
+     "p": 1258.0,
+     "rel": 0
+    },
+    {
+     "t": "Mad Koffee Button-Down Oxford Shirt – Vanilla Cream",
+     "c": "men's & women's fashion",
+     "p": 1275.0,
+     "rel": 0
+    },
+    {
+     "t": "Mad Koffee Button-Down Oxford Shirt – Carbon Black",
+     "c": "men's & women's fashion",
+     "p": 1240.0,
+     "rel": 0
+    },
+    {
+     "t": "Mad Koffee Button-Down Oxford Shirt – Ocean Breeze",
+     "c": "men's & women's fashion",
+     "p": 1265.0,
+     "rel": 0
+    }
+   ]
+  },
+  {
+   "q": "office er jonno chair",
+   "lang": "banglish",
+   "type": "vague",
+   "n_rel_catalog": 152,
+   "n_results": 10,
+   "ms": 406.8,
+   "p10": 0.0,
+   "hit1": 0,
+   "ndcg": 0.0,
+   "intent": {
+    "intents": [
+     "office"
+    ],
+    "affinities": [
+     "leather shoes",
+     "shirt",
+     "leather wallet",
+     "laptop",
+     "leather belt"
+    ]
+   },
+   "notes": [
+    "intent: office"
+   ],
+   "top": [
+    {
+     "t": "Back Support for Office Chair, Memory Foam Back Rest for Office Chair, Chair Bac",
+     "c": "car seat cover",
+     "p": 2341.0,
+     "rel": 0
+    },
+    {
+     "t": "Back Support Memory Foam Back Rest for Office Chair, Chair Back Support for Back",
+     "c": "car seat cover",
+     "p": 2346.0,
+     "rel": 0
+    },
+    {
+     "t": "RFL Decorator Chair Diamond Design Tulip Green | Durable Plastic Chair for Home ",
+     "c": "plastic chair",
+     "p": 512.0,
+     "rel": 0
+    },
+    {
+     "t": "RFL Dining Super Chair (Tree) Tulip Green Plastic Dining Chair for Home & Office",
+     "c": "plastic chair",
+     "p": 525.0,
+     "rel": 0
+    },
+    {
+     "t": "RFL Decorate Chair Tube Rose | Rose Wood | Durable Plastic Chair for Home & Offi",
+     "c": "plastic chair",
+     "p": 532.0,
+     "rel": 0
+    },
+    {
+     "t": "RFL Decorator Chair Tube Rose Tulip Green | Durable PP Plastic Chair for Home & ",
+     "c": "plastic chair",
+     "p": 532.0,
+     "rel": 0
+    },
+    {
+     "t": "Memory Foam Office Chair Head Support Pillow for Computer Chairs Adjustable Head",
+     "c": "furniture & decor",
+     "p": 1640.0,
+     "rel": 0
+    },
+    {
+     "t": "Cushion Seat Flex Pillow, Gel Orthopedic Seat Cushion Pad for Car, Office Chair,",
+     "c": "wheelchair",
+     "p": 669.0,
+     "rel": 0
+    },
+    {
+     "t": "Lumbar Support Back Cushion  Back Pain Relief Pillow for office chair",
+     "c": "furniture & decor",
+     "p": 515.0,
+     "rel": 0
+    },
+    {
+     "t": "Office Chair Headrest Pillow Head Neck Shoulder Support Cushion Ergonomic Neck P",
+     "c": "furniture & decor",
+     "p": 2303.0,
+     "rel": 0
+    }
+   ]
+  },
+  {
+   "q": "fan er regulator",
+   "lang": "banglish",
+   "type": "gap",
+   "n_rel_catalog": 2,
+   "n_results": 10,
+   "ms": 376.1,
+   "p10": 0.0,
+   "hit1": 0,
+   "ndcg": 0.0,
+   "intent": {
+    "category": "fan"
+   },
+   "notes": [
+    "product group: fan"
+   ],
+   "top": [
+    {
+     "t": "Piano Fan Dimmer Regulator AC 250V 6A 200W Heavy Duty Fan Dimmer On Off System F",
+     "c": "appliances",
+     "p": 63.0,
+     "rel": 0
+    },
+    {
+     "t": "VIS S Ceiling Fan 56\" (Ivory)Without Regulator",
+     "c": "appliances",
+     "p": 4105.0,
+     "rel": 0
+    },
+    {
+     "t": "Bundle of 12 PCS Piano Fan Dimmer Regulator Common Model",
+     "c": "appliances",
+     "p": 485.0,
+     "rel": 0
+    },
+    {
+     "t": "Ceiling Fan BRB Lovely 56'' Exclusive Aluminium Blade(1400mm) With Free Regulato",
+     "c": "appliances",
+     "p": 4328.0,
+     "rel": 0
+    },
+    {
+     "t": "Fan Dimmer With Switch AC 250V 10A 200W Heavy Duty Brass Contact Wall Mount Swit",
+     "c": "computers & it",
+     "p": 186.0,
+     "rel": 0
+    },
+    {
+     "t": "Ceiling Fan Click 56 inch Crown Series Blade Size 1400 mm Aluminium Blade With F",
+     "c": "appliances",
+     "p": 4014.0,
+     "rel": 0
+    },
+    {
+     "t": "Universal 5 In 1 AC 250V 6A Combine 4 Pcs Gang Switch Fan Dimmer Regulator 2 Pin",
+     "c": "computers & it",
+     "p": 309.0,
+     "rel": 0
+    },
+    {
+     "t": "Nova Tower Fan",
+     "c": "fan",
+     "p": 9488.0,
+     "rel": 0
+    },
+    {
+     "t": "Hoco HX607 Slim Desktop Fan - Fan",
+     "c": "fan",
+     "p": 1038.0,
+     "rel": 0
+    },
+    {
+     "t": "ACEFAST YF2 Handheld Fan",
+     "c": "fan",
+     "p": 1578.0,
+     "rel": 0
+    }
+   ]
+  }
+ ]
+}
