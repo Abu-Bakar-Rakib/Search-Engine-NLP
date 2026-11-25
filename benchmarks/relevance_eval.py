@@ -73,6 +73,25 @@ def ndcg(rels, n_rel):
     return dcg / ideal if ideal else 0.0
 
 
+def load_qrels():
+    """Judged labels (benchmarks/judge_pool.py): {(query, product id): grade 0/1/2}."""
+    p = os.path.join(HERE, "qrels", "qrels.jsonl")
+    out = {}
+    if os.path.exists(p):
+        for ln in open(p, encoding="utf-8"):
+            if ln.strip():
+                d = json.loads(ln)
+                out[(d["q"], str(d["id"]))] = int(d["grade"])
+    return out
+
+
+def ndcg_graded(grades, ideal_grades):
+    gain = lambda g: (2 ** g) - 1
+    dcg = sum(gain(g) / math.log2(i + 2) for i, g in enumerate(grades))
+    ideal = sum(gain(g) / math.log2(i + 2) for i, g in enumerate(sorted(ideal_grades, reverse=True)[:K]))
+    return dcg / ideal if ideal else 0.0
+
+
 def summarize(rows):
     n = len(rows) or 1
     lat = sorted(r["ms"] for r in rows) or [0]
@@ -84,6 +103,8 @@ def summarize(rows):
         "Zero%": round(100 * sum(r["n_results"] == 0 for r in rows) / n, 1),
         "lat_p50_ms": round(lat[len(lat) // 2], 1),
         "lat_p95_ms": round(lat[min(len(lat) - 1, int(0.95 * len(lat)))], 1),
+        **({"judged%": round(100 * sum(r["judged"] for r in rows) / max(1, sum(r["n_results"] for r in rows)), 1)}
+           if rows and "judged" in rows[0] else {}),
     }
 
 
@@ -92,6 +113,7 @@ def main():
     ap.add_argument("dataset", choices=["live", "curated"])
     ap.add_argument("--tag", default="baseline")
     ap.add_argument("--sets", default=None, help="comma list of query files, default: <dataset>")
+    ap.add_argument("--judged", action="store_true", help="score with judged labels (benchmarks/qrels) instead of regex labels")
     ap.add_argument("--dense-only", action="store_true", help="rank by embedding cosine only (measures the model, not the engine)")
     a = ap.parse_args()
 
@@ -103,6 +125,12 @@ def main():
         a.tag = f"{a.tag}__{a.sets.replace(',', '+')}"
     if a.dense_only:
         a.tag += "__dense"
+    qrels = load_qrels() if a.judged else None
+    if a.judged:
+        a.tag += "__judged"
+        ideal = {}
+        for (q, _), g in qrels.items():
+            ideal.setdefault(q, []).append(g)
 
     t0 = time.perf_counter()
     eng = build_engine(settings_for(a.dataset))
@@ -112,7 +140,7 @@ def main():
 
     rows, skipped = [], []
     for qd in queries:
-        n_rel = catalog_rel_count(df, qd, a.dataset)
+        n_rel = catalog_rel_count(df, qd, a.dataset) if not a.judged else sum(g > 0 for g in ideal.get(qd["q"], []))
         if n_rel == 0:
             skipped.append(qd["q"])
             continue
@@ -124,11 +152,19 @@ def main():
             out = eng.search(qd["q"], k=K, use_cache=False)
         ms = (time.perf_counter() - t) * 1000
         res = out.get("results", [])[:K]
-        rels = [1 if is_rel(r, qd, a.dataset) else 0 for r in res]
+        if a.judged:
+            grades = [qrels.get((qd["q"], str(r["id"]))) for r in res]
+            judged = sum(g is not None for g in grades)
+            grades = [g or 0 for g in grades]  # unjudged counts as not relevant (pooling convention)
+            rels = [1 if g > 0 else 0 for g in grades]
+        else:
+            rels = [1 if is_rel(r, qd, a.dataset) else 0 for r in res]
         rows.append({
             "q": qd["q"], "lang": qd.get("lang", "en"), "type": qd.get("type", "plain"),
             "n_rel_catalog": n_rel, "n_results": len(res), "ms": round(ms, 1),
-            "p10": sum(rels) / K, "hit1": rels[0] if rels else 0, "ndcg": round(ndcg(rels, n_rel), 3),
+            "p10": sum(rels) / K, "hit1": rels[0] if rels else 0,
+            "ndcg": round(ndcg_graded(grades, ideal[qd["q"]]) if a.judged else ndcg(rels, n_rel), 3),
+            **({"judged": judged} if a.judged else {}),
             "intent": out.get("intent", {}), "notes": out.get("notes", []),
             "top": [{"t": str(r["title"])[:80], "c": str(r["category"])[:40], "p": r["price"], "rel": x}
                     for r, x in zip(res, rels)],

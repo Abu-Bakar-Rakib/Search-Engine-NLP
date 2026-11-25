@@ -40,6 +40,40 @@ Before each step, answer in the Progress log:
 3. Does it move logic into config, or add more code-side rules?
 4. Gate: tuning set up, curated within 0.01, holdout not down.
 
+## 1.3 Original architecture and business invariants (reviewed 2026-11-25)
+
+**Original design** (first commit, Oct 2026; engine 324 lines) was a clean tiered pipeline:
+`cache → normalize (Banglish→EN aliases) → rule parser (catalog-built vocabulary: price, size, gender, category, brand,
+color, material) → LLM fallback only when rules find nothing → hybrid ranking (BM25 + embedding) with explainable tiers
+(same product group first, inside price range, attribute bonuses) → relax waterfall (size → gender → price) → rerank → cache`.
+Strengths to keep: catalog-built vocabulary, explainable tiers and notes, no dead ends, connectors, settings from env.
+Later additions bolted on a second parser (`nlp.py`: Bangla/Banglish, persona, occasion, domain pack) and about 25
+per-product rules inside `_search`. The engine grew to 1,200 lines. That growth, not the original design, caused most root causes.
+
+**Business invariants: every change must keep these.** The `tests/` suite (original) is the contract.
+1. API: same endpoints (`/search` GET/POST, `/intent/parse`, `/products`, `/suggest`, `/similar`, `/reload`,
+   `/cache/invalidate`, `/health`, `/catalog/stats`, `/benchmark`) and response fields (`query, normalized, corrections,
+   intent, parsed_intent, source, notes, results[id, product_id, title, category, brand, price, currency, image_url, rank,
+   score, match, matched, decision_explanation …], took_ms, cached`).
+2. Filters stated in the query are honoured: price (min/max, also Bangla/Banglish phrases), brand, size, gender,
+   color/material when the catalog has them. Inside-range items rank first. The relax waterfall explains itself in `notes`.
+   `HARD_PRICE` keeps prices strict.
+3. Negations ("not samsung", "without X") are never violated.
+4. No dead ends: closest results with a note (`NEVER_EMPTY`), unless the business turns it off.
+5. Persona and occasion queries (gift for father, office, gym) return items that fit the need.
+6. Multilingual input: Bangla digits, Bangla/Banglish price phrases, Banglish words.
+7. Cache, reload, suggest and similar keep working.
+
+**Foundational issues and the planned fix** (each is justified by the root causes above and done inside a roadmap step):
+| # | Issue | Fix (step) |
+|---|---|---|
+| F1 | Two parsers merged ad hoc | One query-understanding module (roadmap 3) |
+| F2 | Scores on mixed scales (rank fusion ~0.02 vs tiers ~50) | Partly fixed (Step 7). Normalize every signal to 0–1 with one weight each (roadmap 4) |
+| F3 | 800-line `_search` with per-product rules | Retire by rule family with ablation (roadmap 3) |
+| F4 | Bangla understanding is dictionary-only | Transliteration + catalog-built lexicon (roadmap 2) |
+| F5 | Cache keys lack code/config version (R11) | Add version + settings hash (with Step 4 profile) |
+| F6 | Original test suite not runnable (no pytest; 3 env failures) | Make it run and pass; run it before every commit |
+
 ## 2. Baseline (before any change)
 
 | Dataset | Products | Queries | P@10 | Hit@1 | nDCG@10 | Zero-result | p50 / p95 latency |

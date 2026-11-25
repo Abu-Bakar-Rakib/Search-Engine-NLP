@@ -97,9 +97,12 @@ def test_embeddings_persisted_and_reused(tmp_path):
 
 def test_http_api(tmp_path, monkeypatch):
     monkeypatch.setenv("CATALOG_CSV", CSV)
+    monkeypatch.setenv("DATABASE_URL", "")  # .env points at the live DB; tests use the demo CSV
+    monkeypatch.setenv("REDIS_URL", "")
     monkeypatch.setenv("EMBEDDER", "hashing")
     monkeypatch.setenv("INDEX_DIR", str(tmp_path))
     from lite_search import server
+    monkeypatch.setattr(server, "API_KEY", "")  # test client host is not on the local allow-list; auth is tested elsewhere
     with TestClient(server.app) as c:
         assert c.get("/health").json()["products"] > 100
         r = c.get("/search", params={"q": "black casio watch", "k": 3}).json()
@@ -118,7 +121,7 @@ def test_check_diagnose_and_dotenv(tmp_path, monkeypatch):
     from lite_search.catalog import load_dataframe
     from lite_search.diagnose import diagnose
     rep = diagnose(load_dataframe(Settings(catalog_csv=CSV)))
-    assert "products loaded : 236" in rep and "Looks good" in rep
+    assert "products loaded : 886" in rep and "Looks good" in rep  # demo_products.csv grew from 236 to 886 rows (2cccfb6)
     # a DB with different column names + COLUMN_MAP
     p = tmp_path / "x.csv"
     p.write_text("sku,name,cat,cost\n1,Red Shirt,shirt,500\n2,Blue Jeans,jeans,900\n")
@@ -129,15 +132,19 @@ def test_check_diagnose_and_dotenv(tmp_path, monkeypatch):
     env.write_text("LLM_MODEL=abc # c\nTTL_RESULT=5\n")
     monkeypatch.chdir(tmp_path)
     monkeypatch.delenv("LLM_MODEL", raising=False)
+    monkeypatch.delenv("TTL_RESULT", raising=False)  # earlier tests load the repo .env into os.environ
     s = Settings.from_env()
     assert s.llm_model == "abc" and s.ttl_result == 5
 
 
 def test_http_new_endpoints(tmp_path, monkeypatch):
     monkeypatch.setenv("CATALOG_CSV", CSV)
+    monkeypatch.setenv("DATABASE_URL", "")  # .env points at the live DB; tests use the demo CSV
+    monkeypatch.setenv("REDIS_URL", "")
     monkeypatch.setenv("EMBEDDER", "hashing")
     monkeypatch.setenv("INDEX_DIR", str(tmp_path))
     from lite_search import server
+    monkeypatch.setattr(server, "API_KEY", "")  # test client host is not on the local allow-list; auth is tested elsewhere
     with TestClient(server.app) as c:
         assert c.get("/suggest", params={"q": "nik"}).json()["suggestions"]
         assert c.get("/similar/P001", params={"k": 2}).status_code == 200
