@@ -81,6 +81,18 @@ Step 7 — meaning-score weight. Alignment check:
 Cause: the keyword score added up to 15 bonus points, the meaning score only ~0.02 (via rank fusion), so rules decided ranking.
 Sweep (tuning / curated): w=0 0.602/0.941 · 10 0.622/0.942 · 15 0.625/0.939 · **25 0.641/0.936** · 40 0.635/0.927 (fails curated).
 Holdout with 25: 0.476 → **0.492** (typo 0.34→0.37, vague 0.31→0.33, banglish 0.42→0.45). Adopted `DENSE_TIER=25`.
+
+Step 3 — typo and partial-word matching (R4). Alignment check:
+1. Intent: *same core features as Typesense* (typo tolerance, prefix search) and *robust core* (any catalog, any language).
+2. General: the vocabulary and word frequencies come from the catalog itself. Typo rule: a query word also matches catalog words
+   1 edit away (2 for words of 7+ letters, Typesense defaults) that are at least 10x more common. Prefix rule: a rare or unknown LAST word also
+   matches the most common catalog words that start with it. Works the same for English, Banglish and Bangla script.
+   No word lists and no per-query maps (the old `_TYPO_MAP` is left as is for now and removed in a later cleanup).
+3. Config: `TYPO_EXPAND` on/off. Edit distances and weights are constants for now (to the profile in Step 4).
+4. Gate: tuning up, curated within 0.01, holdout not down. Also compare typo and partial-word groups with Typesense.
+Result: tuning 0.641 → **0.647** (typo 0.54 → 0.58), curated 0.936 (no change), holdout 0.492 → **0.508** (typo 0.37 → 0.46,
+banglish 0.45 → 0.48, bn 0.24 → 0.26). Index: 31k words, 0.3 s build, ~90 MB RAM, <0.1 ms per query. Adopted `TYPO_EXPAND=true`.
+Known limit: Bangla-script misspellings rarely fix, because most catalog titles are English (the right Bangla spelling is not in the vocabulary).
 This is the number later steps must beat. `holdout.jsonl` (30) is checked only at the end of each step.
 
 The engine scores well on the clean catalog it was tuned on, and poorly on the real catalog. Most of the gap comes from the design, not from the models.

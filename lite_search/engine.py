@@ -626,7 +626,7 @@ class SearchEngine:
         emb_text = raw if mode == "raw" else f"{raw} {q_clean}" if (mode == "both" and raw.lower() != q_clean.lower()) else q_clean
         cos = c.emb @ self.qemb.encode_query(emb_text)
         q_bm25 = f"{q_clean} {re.sub(r'[0-9০-৯]+', ' ', nfc(query.lower()))}" if nlp_intent.language == "bn" else q_clean
-        bm = c.bm25(q_bm25)
+        bm = c.bm25(q_bm25, expand=s.typo_expand)
 
         # ── Step 4: Intent compatibility scores (persona/affinity) ──
         # Product-term gate: "baby diaper" -> 'diaper' is the product, 'baby' only a modifier,

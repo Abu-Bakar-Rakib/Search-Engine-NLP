@@ -157,15 +157,26 @@ class Catalog:
         self.idf = np.log(1 + (self.n - dfv + 0.5) / (dfv + 0.5))
         self.k1, self.b = k1, b
 
-    def bm25(self, query: str) -> np.ndarray:
+    _expander = None
+
+    def bm25(self, query: str, expand: bool = False) -> np.ndarray:
+        """expand=True adds typo corrections and last-word prefix matches (lite_search/typo.py), down-weighted."""
+        words = list(dict.fromkeys(toks(query)))
+        if expand:
+            if self._expander is None:
+                from .typo import TermExpander
+                self._expander = TermExpander(self.doc_freq)
+            terms = self._expander.expand(words)
+        else:
+            terms = dict.fromkeys(words, 1.0)
         out = np.zeros(self.n)
-        for w in set(toks(query)):
+        for w, wt in terms.items():
             j = self.vocab.get(w)
             if j is None:
                 continue
             s, e = self.tf.indptr[j], self.tf.indptr[j + 1]
             r, tf = self.tf.indices[s:e], self.tf.data[s:e]
-            out[r] += self.idf[j] * tf * (self.k1 + 1) / (tf + self.k1 * (1 - self.b + self.b * self.dl[r] / self.avg))
+            out[r] += wt * self.idf[j] * tf * (self.k1 + 1) / (tf + self.k1 * (1 - self.b + self.b * self.dl[r] / self.avg))
         return out
 
     # ---- arrays for filters / boosts (string work is done per UNIQUE value, not per product) ----

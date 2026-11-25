@@ -65,6 +65,7 @@ class Settings:
     boost_scale: float = 1.0
     pool: int = 20                # candidates kept for tiers / rerank
     ce_weight: float = 0.5
+    typo_expand: bool = True      # typo + last-word prefix matching from catalog vocabulary (lite_search/typo.py)
     dense_tier: float = 25.0      # max bonus from the meaning (embedding) score; keyword bonus max is 15
     group_tier: float = 50.0      # same product type as the query always ranks first
     price_tier: float = 6.0       # inside the price range
